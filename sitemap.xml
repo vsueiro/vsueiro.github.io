@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://vsueiro.com/</loc>
+  <lastmod>2018-05-07T00:0:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/barbecues</loc>
+  <lastmod>2018-05-07T00:0:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/scoreboard</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/central</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/astronomy</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/microcephaly</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>http://vsueiro.com/work/montadino</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+</urlset>
