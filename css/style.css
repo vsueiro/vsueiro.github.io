@@ -661,7 +661,8 @@ nav a.active {
 	z-index: 1;
 	overflow: hidden;
 	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden
+	backface-visibility: hidden;
+	box-shadow: none !important;
 }
 
 [data-device=phone] .screen:empty {
@@ -920,14 +921,16 @@ nav a.active {
 
 [data-touch=false] .portfolio li:not(.filler):hover a {
 	transform: scale(1.02);
-	box-shadow: 0 .4rem 1.6rem rgba(0, 0, 0, .33)
+	/* box-shadow: 0 .4rem 1.6rem rgba(0, 0, 0, .33); */
+	box-shadow: 0 0 .8rem rgba(0, 0, 0, .33);
 }
 
 [data-project=barbecues] [data-device=phone],
 [data-project=scoreboard] [data-device=phone],
 [data-project=microcephaly] [data-device=phone],
 [data-project=astronomy] [data-device=phone],
-[data-project=central] [data-device=phone] {
+[data-project=central] [data-device=phone],
+[data-project=capivara] [data-device=phone] {
 	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .33)
 }
 
@@ -982,7 +985,7 @@ nav a.active {
 
 [data-frame=phone] {
 	border-radius: 8px;
-	background: rgba(0, 0, 0, .75);
+	background: rgba(0, 0, 0, 1);
 	padding: 0 .66%
 }
 
@@ -1408,7 +1411,28 @@ footer .phone a {
 	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .25)
 }
 
+[data-project=capivara] .cover,
+[data-project=capivara]>a:first-child:last-child {
+	/* background: #dc896b; */
+	/* background: #e0957b */
+	background: #f2cbaf;
+}
 
+[data-project=capivara] [data-device=notebook] {
+	box-shadow: 0 0 2.4rem 0 rgb(224,149,123)
+}
+
+[data-project=capivara] [data-device=notebook] .screen {
+	background-image: url(../img/portfolio/ideo-u/capivara/001.jpg);
+	background: white;
+}
+
+[data-project=capivara] [data-device=phone] .screen {
+	background-image: url(../img/portfolio/ideo-u/capivara/002.jpg);
+	background: white;
+}
+
+/* img/portfolio/ideo-u/capivara/001.png */
 
 .portfolio li,
 nav a {
