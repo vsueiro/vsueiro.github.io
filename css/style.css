@@ -79,7 +79,8 @@ ul {
 }
 
 figure,
-img {
+img,
+video {
 	display: block
 }
 
@@ -1392,6 +1393,21 @@ footer .phone a {
 [data-project=montadino] [data-device=phone] .screen {
 	background-image: url(../img/portfolio/usp/montadino/002.jpg)
 }
+
+[data-project=uva] .cover,
+[data-project=uva]>a:first-child:last-child {
+	background: #907ea5
+}
+
+[data-project=uva] [data-device=notebook] {
+	box-shadow: 0 0 2.4rem 0 rgb(95, 79, 113)
+}
+
+[data-project=uva] [data-device=phone] {
+	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .25)
+}
+
+
 
 .portfolio li,
 nav a {
