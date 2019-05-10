@@ -6,12 +6,12 @@
   http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://vsueiro.github.io/</loc>
-  <lastmod>2018-05-07T00:0:00+00:00</lastmod>
+  <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 <url>
   <loc>https://vsueiro.github.io/work/barbecues</loc>
-  <lastmod>2018-05-07T00:0:00+00:00</lastmod>
+  <lastmod>2018-05-07T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 <url>
@@ -37,6 +37,16 @@
 <url>
   <loc>https://vsueiro.github.io/work/montadino</loc>
   <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://vsueiro.github.io/work/barbecues</loc>
+  <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://vsueiro.github.io/work/uva</loc>
+  <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 </urlset>
