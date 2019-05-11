@@ -1498,6 +1498,16 @@ h1 {
 	animation-delay: 2.2s
 }
 
+.portfolio li:nth-child( 7) {
+	-webkit-animation-delay: 2.4s;
+	animation-delay: 2.4s
+}
+
+.portfolio li:nth-child( 8) {
+	-webkit-animation-delay: 2.6s;
+	animation-delay: 2.6s
+}
+
 @-webkit-keyframes fade-up {
 	0% {
 		opacity: 0;
