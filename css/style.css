@@ -1435,7 +1435,12 @@ footer .phone a {
 /* img/portfolio/ideo-u/capivara/001.png */
 
 .portfolio li,
-nav a {
+nav a,
+h1,
+[data-page="work"] .cover,
+[data-page="work"] .cover .button,
+[data-page="work"] .composition,
+[data-page="work"] .client {
 	opacity: 0;
 	-webkit-transform: translateY(12.5%);
 	transform: translateY(12.5%);
@@ -1459,13 +1464,33 @@ nav li:nth-child( 3) a {
 }
 
 h1 {
-	opacity: 0;
-	-webkit-transform: translateY(12.5%);
-	transform: translateY(12.5%);
-	-webkit-animation: fade-up .4s forwards;
-	animation: fade-up .4s forwards;
 	-webkit-animation-delay: 1s;
 	animation-delay: 1s
+}
+
+[data-page="work"] .cover {
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s
+}
+
+[data-page="work"] .client {
+	-webkit-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+
+[data-page="work"] h1 {
+	-webkit-animation-delay: 1.4s;
+	animation-delay: 1.4s;
+}
+
+[data-page="work"] .cover .button {
+	-webkit-animation-delay: 1.6s;
+	animation-delay: 1.6s;
+}
+
+[data-page="work"] .composition {
+	-webkit-animation-delay: 1.8s;
+	animation-delay: 1.8s;
 }
 
 .portfolio li:nth-child( 1) {
@@ -1506,6 +1531,16 @@ h1 {
 .portfolio li:nth-child( 8) {
 	-webkit-animation-delay: 2.6s;
 	animation-delay: 2.6s
+}
+
+.portfolio li:nth-child( 9) {
+	-webkit-animation-delay: 2.8s;
+	animation-delay: 2.8s
+}
+
+.portfolio li:nth-child(10) {
+	-webkit-animation-delay: 3s;
+	animation-delay: 3s
 }
 
 @-webkit-keyframes fade-up {
