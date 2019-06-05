@@ -1413,9 +1413,7 @@ footer .phone a {
 
 [data-project=capivara] .cover,
 [data-project=capivara]>a:first-child:last-child {
-	/* background: #dc896b; */
-	/* background: #e0957b */
-	background: #f2cbaf;
+	background: #f8c794;
 }
 
 [data-project=capivara] [data-device=notebook] {
