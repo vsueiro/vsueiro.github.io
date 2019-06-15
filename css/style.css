@@ -610,6 +610,7 @@ nav a.active {
 	height: 4.8rem;
 	font-size: 80%;
 	text-transform: uppercase;
+	user-select: none;
 	transition: background .4s, color .4s, height .4s, padding .4s
 }
 
