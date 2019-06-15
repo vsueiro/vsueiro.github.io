@@ -522,9 +522,6 @@ nav ul a {
 	body {
 		font-size: 1.6rem
 	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.2rem
-	}
 }
 
 @media (max-width:336px) {
