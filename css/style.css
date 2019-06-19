@@ -1346,7 +1346,7 @@ footer .phone a {
 
 [data-project=microcephaly] .cover,
 [data-project=microcephaly]>a:first-child:last-child {
-	background: #80b4fd
+	background: #69a6fc
 }
 
 [data-project=microcephaly] [data-device=notebook] {
@@ -1398,7 +1398,7 @@ footer .phone a {
 
 [data-project=montadino] .cover,
 [data-project=montadino]>a:first-child:last-child {
-	background: #ffbdb6
+	background: #ff9a99
 }
 
 [data-project=montadino] [data-device=notebook] {
