@@ -131,6 +131,7 @@ header {
 }
 
 .list,
+.split,
 h1,
 h2,
 h3,
@@ -169,6 +170,16 @@ a {
 .list {
 	font-size: 125%
 }
+
+.split {
+  display: flex;
+  margin: 2em auto;
+}
+
+.split .composition {
+  padding: 1em;
+}
+
 
 .contain,
 .content {
