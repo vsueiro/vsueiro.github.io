@@ -181,7 +181,6 @@ a {
   padding: 1em;
 }
 
-
 .contain,
 .content {
 	-webkit-flex-direction: column
@@ -681,7 +680,6 @@ nav a.active {
 	overflow: hidden;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	box-shadow: none !important;
 }
 
 [data-device=phone] .screen:empty {
@@ -940,17 +938,7 @@ nav a.active {
 
 [data-touch=false] .portfolio li:not(.filler):hover a {
 	transform: scale(1.02);
-	/* box-shadow: 0 .4rem 1.6rem rgba(0, 0, 0, .33); */
 	box-shadow: 0 0 .8rem rgba(0, 0, 0, .33);
-}
-
-[data-project=barbecues] [data-device=phone],
-[data-project=scoreboard] [data-device=phone],
-[data-project=microcephaly] [data-device=phone],
-[data-project=astronomy] [data-device=phone],
-[data-project=central] [data-device=phone],
-[data-project=camping] [data-device=phone] {
-	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .33)
 }
 
 .portfolio li a [data-device] {
@@ -1301,25 +1289,13 @@ footer .phone a {
 	background: #a87094
 }
 
-[data-project=barbecues] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(113, 69, 97, 1)
-}
-
 [data-project=barbecues] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/personal/barbecues/001.png)
-}
-
-[data-project=barbecues] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/personal/barbecues/002.png)
 }
 
 [data-project=scoreboard] .cover,
 [data-project=scoreboard]>a:first-child:last-child {
 	background: #75c9ee
-}
-
-[data-project=scoreboard] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(30, 167, 227, 1)
 }
 
 [data-project=scoreboard] [data-device=notebook] .screen {
@@ -1349,34 +1325,13 @@ footer .phone a {
 	background: #69a6fc
 }
 
-[data-project=microcephaly] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(31, 123, 251, 1)
-}
-
-[data-project=microcephaly] [data-device=notebook] .screen {
-	padding-top: 61.53846153846154%;
-	background-image: url(../img/portfolio/usp/microcephaly/001.gif)
-}
-
-[data-project=microcephaly] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/usp/microcephaly/002.jpg)
-}
-
 [data-project=astronomy] .cover,
 [data-project=astronomy]>a:first-child:last-child {
 	background: #f2cbaf
 }
 
-[data-project=astronomy] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(228, 148, 91, 1)
-}
-
 [data-project=astronomy] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/estadao/astronomy/001-crop.jpg)
-}
-
-[data-project=astronomy] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/estadao/astronomy/002.jpg)
 }
 
 [data-project=central] .cover,
@@ -1384,16 +1339,8 @@ footer .phone a {
 	background: #f27781
 }
 
-[data-project=central] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(233, 29, 46, 1)
-}
-
 [data-project=central] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/central/website/001.jpg)
-}
-
-[data-project=central] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/central/website/002.jpg)
 }
 
 [data-project=montadino] .cover,
@@ -1401,20 +1348,8 @@ footer .phone a {
 	background: #ff9a99
 }
 
-[data-project=montadino] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgba(255, 100, 84, 1)
-}
-
-[data-project=montadino] [data-device=phone] {
-	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .25)
-}
-
 [data-project=montadino] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/usp/montadino/001.jpg)
-}
-
-[data-project=montadino] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/usp/montadino/002.jpg)
 }
 
 [data-project=uva] .cover,
@@ -1422,34 +1357,14 @@ footer .phone a {
 	background: #907ea5
 }
 
-[data-project=uva] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgb(95, 79, 113)
-}
-
-[data-project=uva] [data-device=phone] {
-	box-shadow: 0 0 2.4rem 0 rgba(0, 0, 0, .25)
-}
-
 [data-project=camping] .cover,
 [data-project=camping]>a:first-child:last-child {
 	background: #f8c794;
 }
 
-[data-project=camping] [data-device=notebook] {
-	box-shadow: 0 0 2.4rem 0 rgb(224,149,123)
-}
-
-[data-project=camping] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/ideo-u/camping/001.jpg);
-	background: white;
-}
-
 [data-project=camping] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/ideo-u/camping/002.jpg);
 	background: black;
 }
-
-/* img/portfolio/ideo-u/camping/001.png */
 
 .portfolio li,
 nav a,
@@ -1584,24 +1499,6 @@ h1 {
 		-webkit-transform: translateY(0);
 		transform: translateY(0)
 	}
-}
-
-body.wireframe {
-	background: #222
-}
-
-body.wireframe * {
-	box-shadow: none!important;
-	box-shadow: 0 0 1px 0 rgba(255, 255, 255, .25)!important;
-	background-color: transparent!important;
-	color: #222!important;
-	text-shadow: 0 0 .5px #ddd;
-	background-image: none!important;
-	border: 0
-}
-
-body.wireframe img {
-	content: url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
 }
 
 .list {
