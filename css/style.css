@@ -619,6 +619,7 @@ nav a.active {
 	font-size: 80%;
 	text-transform: uppercase;
 	user-select: none;
+	white-space: nowrap;
 	transition: background .4s, color .4s, height .4s, padding .4s
 }
 
@@ -961,8 +962,12 @@ nav a.active {
 	display: flex;
 	align-self: flex-start;
 	text-align: left;
-	padding: 1.6rem 0;
+	padding: .4em 0;
 	width: 66.666%
+}
+
+[data-page=work] .header h1 {
+	padding-bottom: 0;
 }
 
 .composition {
@@ -1060,9 +1065,21 @@ nav a.active {
 	justify-self: flex-end;
 	align-self: flex-end;
 	bottom: 0;
-	margin: 0 0 2.1em;
+	margin: 0 0 2em;
 	border-color: #fff;
 	color: #fff
+}
+
+@media (max-width:960px) {
+	[data-page=work] .header .button {
+    margin: 0 0 1.4em
+	}
+}
+
+@media (max-width:960px) {
+	[data-page=work] .header .button {
+    margin: 0 0 1.2em
+	}
 }
 
 [data-touch=false] [data-page=work] .header .button:hover,
