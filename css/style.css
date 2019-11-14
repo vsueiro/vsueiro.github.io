@@ -749,6 +749,24 @@ nav a.active {
 	animation-delay: 6s
 }
 
+[data-project=adoption] .scroll {
+	-webkit-animation-name: scroll-adoption;
+	animation-name: scroll-adoption;
+	-webkit-animation-duration: 16s;
+	animation-duration: 16s;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s
+}
+
+[data-project=faceapp] .scroll {
+	-webkit-animation-name: scroll-faceapp;
+	animation-name: scroll-faceapp;
+	-webkit-animation-duration: 24s;
+	animation-duration: 24s;
+	-webkit-animation-delay: 6s;
+	animation-delay: 2s
+}
+
 @-webkit-keyframes scroll-barbecues {
 	0%,
 	10%,
@@ -906,6 +924,62 @@ nav a.active {
 	65%,
 	75% {
 		background-position: center 100%
+	}
+}
+
+@-webkit-keyframes scroll-adoption {
+	0%,
+	10%,
+	100% {
+		background-position: center 2%
+	}
+	66%,
+	76% {
+		background-position: center 74%
+	}
+}
+
+@keyframes scroll-adoption {
+	0%,
+	10%,
+	100% {
+		background-position: center 2%
+	}
+	66%,
+	76% {
+		background-position: center 74%
+	}
+}
+
+@-webkit-keyframes scroll-faceapp {
+	0%,
+	10%,
+	100% {
+		background-position: center 17%
+	}
+	33%,
+	43% {
+		background-position: center 40%
+	}
+	66%,
+	76% {
+		background-position: center 71%
+	}
+}
+
+@keyframes scroll-faceapp {
+	0%,
+	10%,
+	100% {
+		background-position: center 17%
+	}
+	33%,
+	43% {
+		background-position: center 40%
+	}
+	66%,
+	76% {
+		background-position: center 71%
 	}
 }
 
@@ -1379,6 +1453,35 @@ footer .phone a {
 
 [data-project=camping] [data-device=phone] .screen {
 	background: black;
+}
+
+[data-project=adoption] .cover,
+[data-project=adoption]>a:first-child:last-child {
+	background: #84a86c;
+}
+
+[data-project=adoption] [data-device=phone] .screen {
+	background: black;
+}
+
+[data-project=adoption] [data-device=notebook] .screen {
+	background-image: url(../img/portfolio/estadao/adoption/001.png)
+}
+
+[data-project=faceapp] .cover,
+[data-project=faceapp]>a:first-child:last-child {
+	background: #f2cbaf
+}
+
+[data-project=faceapp] [data-device=notebook] .screen {
+	background-image: url(../img/portfolio/estadao/faceapp/001.png)
+}
+
+[data-project=faceapp] [data-device=phone] .screen {
+	background-image: url(../img/portfolio/estadao/faceapp/002.gif);
+	background-position: center center;
+	background-color: white;
+	background-size: 91.47%;
 }
 
 .portfolio li,
