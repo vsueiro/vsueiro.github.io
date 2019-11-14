@@ -759,8 +759,8 @@ nav a.active {
 }
 
 [data-project=faceapp] .scroll {
-	-webkit-animation-name: scroll-faceapp;
-	animation-name: scroll-faceapp;
+	/* -webkit-animation-name: scroll-faceapp;
+	animation-name: scroll-faceapp; */
 	-webkit-animation-duration: 24s;
 	animation-duration: 24s;
 	-webkit-animation-delay: 6s;
@@ -1474,14 +1474,17 @@ footer .phone a {
 }
 
 [data-project=faceapp] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/estadao/faceapp/001.png)
+	/* background-image: url(../img/portfolio/estadao/faceapp/001.png); */
+
+	background-image: url(../img/portfolio/estadao/faceapp/001.gif);
+	background-position: center center;
+	background-color: white;
+	background-size: 50%;
+
 }
 
 [data-project=faceapp] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/estadao/faceapp/002.gif);
-	background-position: center center;
-	background-color: white;
-	background-size: 91.47%;
+	background-image: url(../img/portfolio/estadao/faceapp/002.png);
 }
 
 .portfolio li,
