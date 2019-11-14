@@ -80,10 +80,24 @@
 				<section>
 					<div class="contain">
 						<header>
+							<h2 class="shuffle"></h2>
+						</header>
+						<!--
+						<div class="content">
+							<p>Central is a small agency that creates PowerPoint and Prezi presentations for large companies to independent speakers. I joined it soon after launch, so I was able to design their <strong>brand from scratch</strong>. Although almost everything you’ll see next was designed by me, this case study is focused on their new website and it’s results. You may be asking yourself why did Central need a new website in the first place… </p>
+							<p>Simply put, the old one was a bloated WordPress theme with much room for improvements on SEO, <strong>mobile experience</strong> and graphic design. Plus, the company was spending a lot on Google Ads, but their landings pages could be inspiring more confidence from potential clients. This is how the project began.</p>
+						</div>
+					-->
+					</div>
+				</section>
+				<section>
+					<div class="contain">
+						<header>
 							<h2>Case study soon&hellip;</h2>
 						</header>
 					</div>
 				</section>
+
 				<div id="contact" class="contact">
 					<footer>
 						<div class="contain">
@@ -108,6 +122,138 @@
 				</div>
 			</main>
 		</div>
+
+		<style>
+		.shuffle {
+			font-family: Nunito;
+			font-weight: 900;
+			font-size: 250%;
+			margin: 240px auto 196px;
+			user-select: none;
+			cursor: pointer;
+		}
+		.shuffle span {
+			position: relative;
+			display: inline-flex;
+			transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			color: #404040;
+		}
+		.shuffle span:nth-child(n+6) {
+			color: #FF7272;
+		}
+		</style>
+		<script>
+		( function() {
+
+		  let shuffle = {
+
+		    container : document.querySelector( '.shuffle' ),
+
+		    render : function( string ) {
+
+		      for ( let i = 0; i < string.length; i++ ) {
+
+		        let char = string.charAt( i )
+
+		        let
+		        letter = document.createElement( 'span' )
+		        letter.innerHTML = char
+
+		        shuffle.container.appendChild( letter )
+
+		      }
+
+		      shuffle.standard()
+
+		    },
+
+		    random : function( start, end, increments ) {
+
+		      let numbers = []
+
+		      for ( let n = start; n <= end; n += increments ) {
+		        numbers.push( n )
+		      }
+
+		      let randomIndex = Math.floor( Math.random() * numbers.length )
+		      return numbers[ randomIndex ]
+
+		    },
+
+		    update : function() {
+
+		      for ( let letter of shuffle.container.childNodes ) {
+
+		        let translate = shuffle.random( -16, 16, 16 )
+
+		        letter.style.transform = 'translateY( ' + translate + '% )'
+
+		      }
+
+		    },
+
+		    standard : function() {
+
+		      let positions = [ 0, 0, -16, 0, -16, 0, -16, 0, -16 ]
+		      let count = 0
+
+		      for ( let letter of shuffle.container.childNodes ) {
+
+		        let translate = positions[ count ]
+
+		        letter.style.transform = 'translateY( ' + translate + '% )'
+
+		        count++
+
+		      }
+
+		    },
+
+		    auto : function() {
+
+		      let count = 0
+
+		      let interval = setInterval( function() {
+
+		        shuffle.update()
+
+		        if ( count >= 3 ) {
+
+		          clearInterval( interval )
+		          shuffle.standard()
+		          count = 0
+
+		        } else {
+
+		          count++
+
+		        }
+
+		      }, 400 )
+
+		    },
+
+		  }
+
+		  shuffle.render( 'Montadino' )
+
+		  shuffle.container.addEventListener( 'click', function( event ) {
+		    shuffle.update()
+		    event.stopPropagation()
+		  } )
+
+		  document.addEventListener( 'click', function( event ) {
+		    if ( !shuffle.container.contains( event.target ) )
+		      shuffle.standard()
+		  } )
+
+		  setInterval( function() {
+		    shuffle.auto()
+		  }, 6000 )
+
+		} )()
+		</script>
+
 		<script type="text/javascript" src="../js/helpers.js"></script>
 		<script type="text/javascript" src="../js/script.js"></script>
 	</body>
