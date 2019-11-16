@@ -131,7 +131,7 @@
 			font-size: 250%;
 			margin: 240px auto 196px;
 			user-select: none;
-			cursor: pointer;
+			/* cursor: pointer; */
 		}
 		.shuffle span {
 			position: relative;
@@ -238,6 +238,7 @@
 
 		  shuffle.render( 'Montadino' )
 
+			/*
 		  shuffle.container.addEventListener( 'click', function( event ) {
 		    shuffle.update()
 		    event.stopPropagation()
@@ -247,10 +248,11 @@
 		    if ( !shuffle.container.contains( event.target ) )
 		      shuffle.standard()
 		  } )
+			*/
 
 		  setInterval( function() {
 		    shuffle.auto()
-		  }, 6000 )
+		  }, 4000 )
 
 		} )()
 		</script>
