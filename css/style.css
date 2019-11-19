@@ -1460,8 +1460,8 @@ footer .phone a {
 	background: #f8c794;
 }
 
-[data-project=camping] [data-device=phone] .screen {
-	background: black;
+[data-project=camping] [data-device=phone] .screen video {
+	background-color: black;
 }
 
 [data-project=adoption] .cover,
@@ -1469,8 +1469,8 @@ footer .phone a {
 	background: #84a86c;
 }
 
-[data-project=adoption] [data-device=phone] .screen {
-	background: black;
+[data-project=adoption] [data-device=phone] .screen video {
+	background-color: black;
 }
 
 [data-project=adoption] [data-device=notebook] .screen {
@@ -1781,4 +1781,49 @@ i.approx::before {
 
 .dom-highlighter-container {
 	display: none
+}
+
+/* custom pages */
+
+[data-project=adoption] [data-adoption-explainer] {
+	position: relative;
+}
+
+[data-project=adoption] [data-adoption-explainer="age"]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../img/portfolio/estadao/adoption/branch-age.gif);
+	background-repeat: no-repeat;
+	background-position: center 37%;
+	background-size: 20%;
+}
+
+[data-project=adoption] [data-adoption-explainer="disability"]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../img/portfolio/estadao/adoption/branch-disability.gif);
+	background-repeat: no-repeat;
+	background-position: center 37%;
+	background-size: 20%;
+}
+
+[data-project=adoption] [data-adoption-explainer="siblings"]::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: url(../img/portfolio/estadao/adoption/branch-siblings.gif);
+	background-repeat: no-repeat;
+	background-position: center 43%;
+	background-size: 20%;
 }
