@@ -90,15 +90,17 @@
 				</section>
 				<section>
 					<div class="contain">
-						<!--
 						<header>
-							<h2>Context</h2>
+							<h2>Overview</h2>
 						</header>
-						-->
 						<div class="content">
-							<p>In Brazil, couples that want to adopt children need to go through an extensive examination and backround check. After they are accepted into the adoption proccess, they also need to fill a form in which they declare which kind of child they are willing to take in. This is when characteristics such as age, existance of siblings, special needs, gender and race come into play.</p>
-							<p>Long story short: the wannabe adoptive parents are looking for very specific traits. For most of the children and teenagers living at government foster homes, this makes the odds of moving in with a new family very low. Age is the most decisive factor: after one turns 10, the chances drop drastically. Along with that, having disabilities and siblings are also key factors.</p>
-							<p>To show how parental preferences impact the likelihood of adoption, I’ve developed a simulator that displays how long it would take for specific kid to be selected. Each child is represented as a plant that grows as time passes.</p>
+							<p>Among children living at a temporary home, you could probably find a 14-year-old black boy who has a brother or sister. These are the most common attributes of children available for adoption.</p>
+							<p>However, the profile most sought out by future parents is that of a 2-year-old white girl and only child.</p>
+							<p>According to our simulation, the 14-year-old’s chance of being adopted within 12 months is <strong>1 in 1,000</strong>. The girl’s adoption is taken for granted.</p>
+							<p>In search for a more sensitive approach, we opted for a visual metaphor and represented each child as a small plant <span style="color: black">🌻</span> that grows as the years go by.</p>
+							<!-- <p>In Brazil, couples that want to adopt children need to go through an extensive examination and backround check. After they are accepted into the adoption proccess, they also need to fill a form in which they declare which kind of child they are willing to take in. This is when characteristics such as age, existance of siblings, special needs, gender and race come into play.</p> -->
+							<!-- <p>Long story short: the wannabe adoptive parents are looking for very specific traits. For most of the children and teenagers living at government foster homes, this makes the odds of moving in with a new family very low. Age is the most decisive factor: after one turns 10, the chances drop drastically. Along with that, having disabilities and siblings are also key factors.</p> -->
+							<!-- <p>To show how parental preferences impact the likelihood of adoption, I’ve developed a simulator that displays how long it would take for specific kid to be selected. Each child is represented as a plant that grows as time passes.</p> -->
 						</div>
 					</div>
 				</section>
@@ -108,25 +110,52 @@
 						<div class="shots">
 							<figure data-device="phone">
 								<div class="screen" data-adoption-explainer="age">
-									<!-- <img src="../img/portfolio/estadao/adoption/explainer-placeholder.png"> -->
 									<img src="../img/portfolio/estadao/adoption/explainer-age.png" alt="">
 								</div>
 							</figure>
 							<figure data-device="phone">
 								<div class="screen" data-adoption-explainer="disability">
-									<!-- <img src="../img/portfolio/estadao/adoption/explainer-placeholder.png"> -->
 									<img src="../img/portfolio/estadao/adoption/explainer-disability.png" alt="">
 								</div>
 							</figure>
 							<figure data-device="phone">
 								<div class="screen" data-adoption-explainer="siblings">
-									<!-- <img src="../img/portfolio/estadao/adoption/explainer-placeholder.png"> -->
 									<img src="../img/portfolio/estadao/adoption/explainer-siblings.png" alt="">
 								</div>
 							</figure>
 						</div>
 						<div class="caption">
-							<p>Seeking a more sensitive approach, we opted for a visual metaphor and represented each child as a small plant that grows as the years go by</p>
+							<p>The higher the plant, the older the child. The V-shaped ending means that the child has at least one brother or sister. The <strong>flower</strong> indicates that this child has a physical or cognitive disability.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>When this story was published, the link between prospective parents and children available for adoption was manually performed by judges – through their own spreadsheets, for example.</p>
+							<p>But a new tool was on the horizon. It would match parents and children using an integrated national system.</p>
+							<p>Inspired by this new system, I developed an <a href="https://github.com/estadao/simulador-de-adocao/blob/master/scripts/simulation.min.js" target="_blank">open source</a> simulator of our own, which also matches prospective parents and children.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure data-device="notebook" style="max-width: 80rem">
+								<div class="screen"><img src="../img/portfolio/estadao/adoption/animated.gif" alt=""></div>
+							</figure>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>This simulator lets you interactively track <strong>how long</strong> it would take for a 2-year-old to be adopted – and compare it with the waiting time of a 10-year-old.</p>
+							<p>Users probably ran this simulation once. We have performed it <strong>thousands of times</strong>.</p>
+							<p>Doing so, it was possible to identify the attributes that most facilitate or hinder the adoption of a child. Being over 5 years old, having siblings or some kind of disability makes adoption extremely difficult.</p>
 						</div>
 					</div>
 				</section>
@@ -145,7 +174,41 @@
 							</figure>
 						</div>
 						<div class="caption">
-							<p>By running the simulation thousands of times, it was also possible to identify the features that most facilitate or hinder the adoption of a child. Being over 5 years old, having siblings and some kind of disability make adoption very difficult.</p>
+							<p>After running the simulation up until a total of 1,000 children were adopted, we grouped them by different categories: race, disability, and siblings</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>We then compared the characteristics of children available for adoption with those of children who were adopted. This indicates that, although skin color plays an important role during selection, there are other more selective filters in action.</p>
+							<p>For example, almost half of the children with cognitive impairments are not adopted. In addition, children that have brothers or sisters are much less likely to be adopted if they are over 10.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<header>
+							<h2>Outcomes</h2>
+						</header>
+						<div class="content">
+							<p>Before talking about some actual results, let’s look at the situation we were in.</p>
+							<p>The charts below represent the prospective parents preferences around August 2019, at the time when the article was being created.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure data-device="notebook" style="max-width: 57.6rem">
+								<div class="screen"><img src="../img/portfolio/estadao/adoption/age-histogram.png" alt=""></div>
+								<figcaption class="caption">
+									<p>It seems harsh to me that only 1% of parents accept children over 10.</p>
+								</figcaption>
+							</figure>
 						</div>
 					</div>
 				</section>
@@ -164,7 +227,69 @@
 							</figure>
 						</div>
 						<div class="caption">
-							<p>When a couple or a single person becomes fit to adopt, it is necessary to define the profile of the desired child. These decisions go through maximum age, sex and race</p>
+							<p>When a couple or a single person is able to apply for the adoption process, it is necessary for them to define the attributes of the desired child. These decisions involve maximum age, sex, race and many others.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p style="width: 100%">Just to name a couple of discrepancies:</p>
+							<p>White kids are accepted by 92% of the prospects, but only 56% of them accept black boys and girls. Also, children that have at least one brother or sister are only accepted by 37% of the prospective parents.</p>
+							<p>These numbers don’t add up when you compare them with the Brazilian population, from babies to teenagers.</p>
+							<p>To address this kind of problem, a Brazilian senator spoke up the at the national Upper House.</p>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure data-device="notebook" style="max-width: 80rem; padding: 2.4rem; border: .2rem solid rgba(0, 0, 0, .05)">
+								<div class="screen" style="background: none"><img src="../img/portfolio/estadao/adoption/senate.png" alt=""></div>
+							</figure>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>The adoption of older kids <a href="https://www12.senado.leg.br/noticias/materias/2019/09/11/katia-abreu-defende-adocao-de-criancas-com-mais-de-3-anos-de-idade" target="_blank">was promoted</a> by a Kátia Abreu only two days after this article was published – and the newspaper’s name was mentioned during her speech.</p>
+							<p>She was announcing the creation of a local branch for the National Association of Adoption Support Groups, at the state that she represents.</p>
+							<p>But it’s not all about official repercussion. The quotes below were extracted from tweets that shared the online article – and I feel like the comments they wrote really made all the months spent on this project worth it.</p>
+
+							<figure class="circle">
+								<img src="../img/portfolio/estadao/adoption/@julliocardia.jpg">
+							</figure>
+							<blockquote>
+								<p>It’s time to adopt a new way of thinking</p>
+								<footer>
+									<cite><a href="https://twitter.com/julliocardia/status/1171170376426098690" target="_blank"><i class="fa fa-twitter"></i> Julio</a>, Director of the LGBTS+ Center in Brasília</cite>
+								</footer>
+							</blockquote>
+
+							<figure class="circle">
+								<img src="../img/portfolio/estadao/adoption/@acarolinacp.jpg">
+							</figure>
+							<blockquote>
+								<p>Reading about adoption, watching the simulator they developed and crying inside an Uber. I really want to be a stable adult to be the mother of these kids</p>
+								<footer>
+									<cite>
+									<a href="https://twitter.com/acarolinacp/status/1171535887206928384" target="_blank"><i class="fa fa-twitter"></i> Carol</a>, on September 10
+									</cite>
+								</footer>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>Besides publishing a delicate visual story about adoption, our underlying goal was to promote a shift in perception, so that those charts and numbers could look – a few years from now – a bit different.</p>
 						</div>
 					</div>
 				</section>
@@ -184,23 +309,6 @@
 				</section>
 				-->
 
-				<section>
-					<div class="contain">
-						<div class="content">
-							<figure data-device="notebook" style="max-width: 80rem">
-								<div class="screen"><img src="../img/portfolio/estadao/adoption/animated.gif" alt=""></div>
-							</figure>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<div class="contain">
-						<header>
-							<h2>Case study soon&hellip;</h2>
-						</header>
-					</div>
-				</section>
 				<div id="contact" class="contact">
 					<footer>
 						<div class="contain">

@@ -260,7 +260,12 @@ blockquote {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	padding: 7.2rem 0 7.2rem 4.8rem;
+	width: 100%;
 	max-width: 57.6rem
+}
+
+blockquote p {
+	width: 100%;
 }
 
 .brand,
@@ -278,15 +283,27 @@ blockquote::before {
 	color: rgba(0, 0, 0, .25)
 }
 
-blockquote p::after {
+/* blockquote p::after {
 	content: '”';
 	margin-left: .2em
-}
+} */
 
 blockquote cite {
 	font-size: 66.666%;
 	font-style: inherit;
 	margin-top: 2.4rem
+}
+
+figure.circle {
+  width: 7.2rem;
+  border-radius: 999px;
+  overflow: hidden;
+  display: inline-flex;
+  margin-top: 7.2rem;
+}
+
+figure.circle + blockquote {
+  padding-top: 2.4rem;
 }
 
 ::-moz-selection {
