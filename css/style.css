@@ -2,7 +2,7 @@
 .list li:before,
 blockquote cite,
 p {
-	color: rgba(0, 0, 0, .5)
+	color: #7f7f7f
 }
 
 .contain,
@@ -1514,6 +1514,10 @@ footer .phone a {
 	background-image: url(../img/portfolio/estadao/faceapp/002.png);
 }
 
+.content .screen {
+	background-image: none !important;
+}
+
 .portfolio li,
 nav a,
 h1,
@@ -1799,6 +1803,13 @@ i.approx::before {
 
 .dom-highlighter-container {
 	display: none
+}
+
+/* embeds */
+
+.spotify {
+	max-width: 57.6rem;
+	margin: 7.2rem auto;
 }
 
 /* custom pages */
