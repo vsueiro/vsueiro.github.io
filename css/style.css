@@ -759,7 +759,7 @@ nav a.active {
 	animation-iteration-count: infinite
 }
 
-[data-project=barbecues] .scroll {
+[data-project=barbecues] .scroll img {
 	-webkit-animation-name: scroll-barbecues;
 	animation-name: scroll-barbecues;
 	-webkit-animation-duration: 16s;
@@ -790,11 +790,11 @@ nav a.active {
 	0%,
 	10%,
 	100% {
-		background-position: center 0
+		transform: translateY( 0 )
 	}
 	66%,
 	76% {
-		background-position: center 100%
+		transform: translateY( -66% )
 	}
 }
 
@@ -802,11 +802,11 @@ nav a.active {
 	0%,
 	10%,
 	100% {
-		background-position: center 0
+		transform: translateY( 0 )
 	}
 	66%,
 	76% {
-		background-position: center 100%
+		transform: translateY( -66% )
 	}
 }
 
@@ -1268,10 +1268,6 @@ footer .phone a {
 [data-project=barbecues] .cover,
 [data-project=barbecues]>a:first-child:last-child {
 	background: #a87094
-}
-
-[data-project=barbecues] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/personal/barbecues/001.png)
 }
 
 [data-project=scoreboard] .cover,
