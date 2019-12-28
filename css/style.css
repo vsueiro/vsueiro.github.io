@@ -710,7 +710,7 @@ nav a.active {
 	backface-visibility: hidden;
 }
 
-[data-device=phone] .screen:empty {
+/* [data-device=phone] .screen:empty {
 	padding-top: 160%;
 	width: 37.5rem
 }
@@ -723,9 +723,37 @@ nav a.active {
 [data-device=notebook] .screen:empty {
 	padding-top: 62.5%;
 	width: 128rem
+} */
+
+[data-device=phone] .screen.scroll {
+	padding-top: 160%;
+	/* width: 37.5rem */
 }
 
-.scroll {
+[data-device=tablet] .screen.scroll {
+	padding-top: 75%;
+	/* width: 102.4rem */
+}
+
+[data-device=notebook] .screen.scroll {
+	padding-top: 62.5%;
+	/* width: 128rem */
+}
+
+.screen.scroll {
+	position: relative
+}
+
+.screen.scroll img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+
+}
+
+.scroll img {
 	transition-timing-function: cubic-bezier(.6, 0, .3, 1);
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite
@@ -749,40 +777,13 @@ nav a.active {
 	animation-delay: 0s
 }
 
-[data-project=central] .scroll {
-	-webkit-animation-name: scroll-central;
-	animation-name: scroll-central;
-	-webkit-animation-duration: 12s;
-	animation-duration: 12s;
-	-webkit-animation-delay: 3s;
-	animation-delay: 3s
-}
-
-[data-project=astronomy] .scroll {
-	-webkit-animation-name: scroll-astronomy;
-	animation-name: scroll-astronomy;
-	-webkit-animation-duration: 18s;
-	animation-duration: 18s;
-	-webkit-animation-delay: 4.5s;
-	animation-delay: 4.5s
-}
-
-[data-project=adoption] .scroll {
+[data-project=adoption] .scroll img {
 	-webkit-animation-name: scroll-adoption;
 	animation-name: scroll-adoption;
 	-webkit-animation-duration: 20s;
 	animation-duration: 20s;
 	-webkit-animation-delay: 0s;
 	animation-delay: 0s
-}
-
-[data-project=faceapp] .scroll {
-	/* -webkit-animation-name: scroll-faceapp;
-	animation-name: scroll-faceapp; */
-	-webkit-animation-duration: 24s;
-	animation-duration: 24s;
-	-webkit-animation-delay: 6s;
-	animation-delay: 2s
 }
 
 @-webkit-keyframes scroll-barbecues {
@@ -841,155 +842,35 @@ nav a.active {
 	}
 }
 
-@-webkit-keyframes scroll-central {
-	0%,
-	10%,
-	100% {
-		background-position: center 0
-	}
-	33%,
-	43% {
-		background-position: center 64%
-	}
-	66%,
-	76% {
-		background-position: center 100%
-	}
-}
-
-@keyframes scroll-central {
-	0%,
-	10%,
-	100% {
-		background-position: center 0
-	}
-	33%,
-	43% {
-		background-position: center 64%
-	}
-	66%,
-	76% {
-		background-position: center 100%
-	}
-}
-
-@-webkit-keyframes scroll-astronomy {
-	0%,
-	10%,
-	100% {
-		background-position: center 0
-	}
-	33%,
-	43% {
-		background-position: center 64.5%
-	}
-	66%,
-	76% {
-		background-position: center 97.9%
-	}
-}
-
-@keyframes scroll-astronomy {
-	0%,
-	10%,
-	100% {
-		background-position: center 0
-	}
-	33%,
-	43% {
-		background-position: center 64.5%
-	}
-	66%,
-	76% {
-		background-position: center 97.9%
-	}
-}
-
 @-webkit-keyframes scroll-adoption {
-
-	/* 0%,
-	10%,
-	100% {
-		background-position: center 2%
-	}
-	66%,
-	76% {
-		background-position: center 74%
-	} */
-
 	0%,
 	10%,
 	100% {
-		background-position: center 2%
+		transform: translateY( -1.5% )
 	}
 	33%,
 	43% {
-		background-position: center 35%
+		transform: translateY( -26% )
 	}
 	66%,
 	76% {
-		background-position: center 74%
+		transform: translateY( -54% )
 	}
-
 }
 
 @keyframes scroll-adoption {
-
-	/* 0%,
-	10%,
-	100% {
-		background-position: center 2%
-	}
-	66%,
-	76% {
-		background-position: center 74%
-	} */
-
 	0%,
 	10%,
 	100% {
-		background-position: center 2%
+		transform: translateY( -1.5% )
 	}
 	33%,
 	43% {
-		background-position: center 35%
+		transform: translateY( -26% )
 	}
 	66%,
 	76% {
-		background-position: center 74%
-	}
-
-}
-
-@-webkit-keyframes scroll-faceapp {
-	0%,
-	10%,
-	100% {
-		background-position: center 17%
-	}
-	33%,
-	43% {
-		background-position: center 40%
-	}
-	66%,
-	76% {
-		background-position: center 71%
-	}
-}
-
-@keyframes scroll-faceapp {
-	0%,
-	10%,
-	100% {
-		background-position: center 17%
-	}
-	33%,
-	43% {
-		background-position: center 40%
-	}
-	66%,
-	76% {
-		background-position: center 71%
+		transform: translateY( -54% )
 	}
 }
 
@@ -1471,9 +1352,9 @@ footer .phone a {
 	background-color: black;
 }
 
-[data-project=adoption] [data-device=notebook] .screen {
+/* [data-project=adoption] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/estadao/adoption/001.png)
-}
+} */
 
 [data-project=faceapp] .cover,
 [data-project=faceapp]>a:first-child:last-child {
