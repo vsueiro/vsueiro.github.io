@@ -767,22 +767,13 @@ nav a.active {
 	animation-delay: 4.5s
 }
 
-[data-project=montadino] .scroll {
-	-webkit-animation-name: scroll-montadino;
-	animation-name: scroll-montadino;
-	-webkit-animation-duration: 18s;
-	animation-duration: 18s;
-	-webkit-animation-delay: 6s;
-	animation-delay: 6s
-}
-
 [data-project=adoption] .scroll {
 	-webkit-animation-name: scroll-adoption;
 	animation-name: scroll-adoption;
-	-webkit-animation-duration: 16s;
-	animation-duration: 16s;
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s
+	-webkit-animation-duration: 20s;
+	animation-duration: 20s;
+	-webkit-animation-delay: 0s;
+	animation-delay: 0s
 }
 
 [data-project=faceapp] .scroll {
@@ -914,48 +905,9 @@ nav a.active {
 	}
 }
 
-@-webkit-keyframes scroll-montadino {
-	0%,
-	100%,
-	90% {
-		background-position: center 0
-	}
-	15%,
-	25% {
-		background-position: center 33.333%
-	}
-	40%,
-	50% {
-		background-position: center 66.666%
-	}
-	65%,
-	75% {
-		background-position: center 100%
-	}
-}
-
-@keyframes scroll-montadino {
-	0%,
-	100%,
-	90% {
-		background-position: center 0
-	}
-	15%,
-	25% {
-		background-position: center 33.333%
-	}
-	40%,
-	50% {
-		background-position: center 66.666%
-	}
-	65%,
-	75% {
-		background-position: center 100%
-	}
-}
-
 @-webkit-keyframes scroll-adoption {
-	0%,
+
+	/* 0%,
 	10%,
 	100% {
 		background-position: center 2%
@@ -963,11 +915,27 @@ nav a.active {
 	66%,
 	76% {
 		background-position: center 74%
+	} */
+
+	0%,
+	10%,
+	100% {
+		background-position: center 2%
 	}
+	33%,
+	43% {
+		background-position: center 35%
+	}
+	66%,
+	76% {
+		background-position: center 74%
+	}
+
 }
 
 @keyframes scroll-adoption {
-	0%,
+
+	/* 0%,
 	10%,
 	100% {
 		background-position: center 2%
@@ -975,7 +943,22 @@ nav a.active {
 	66%,
 	76% {
 		background-position: center 74%
+	} */
+
+	0%,
+	10%,
+	100% {
+		background-position: center 2%
 	}
+	33%,
+	43% {
+		background-position: center 35%
+	}
+	66%,
+	76% {
+		background-position: center 74%
+	}
+
 }
 
 @-webkit-keyframes scroll-faceapp {
@@ -1081,7 +1064,8 @@ nav a.active {
 
 .composition [data-device] {
 	align-self: center;
-	max-width: 100%
+	max-width: 100%;
+	width: 100%;
 }
 
 .composition [data-device=phone] {
@@ -1462,10 +1446,6 @@ footer .phone a {
 [data-project=montadino] .cover,
 [data-project=montadino]>a:first-child:last-child {
 	background: #ff9a99
-}
-
-[data-project=montadino] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/usp/montadino/001.jpg)
 }
 
 [data-project=uva] .cover,
