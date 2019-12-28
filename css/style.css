@@ -1299,15 +1299,6 @@ footer .phone a {
 	background: #69a6fc
 }
 
-[data-project=astronomy] .cover,
-[data-project=astronomy]>a:first-child:last-child {
-	background: #f2cbaf
-}
-
-[data-project=astronomy] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/estadao/astronomy/001-crop.jpg)
-}
-
 [data-project=montadino] .cover,
 [data-project=montadino]>a:first-child:last-child {
 	background: #ff9a99
@@ -1336,23 +1327,16 @@ footer .phone a {
 	background-color: black;
 }
 
-/* [data-project=adoption] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/estadao/adoption/001.png)
-} */
-
 [data-project=faceapp] .cover,
 [data-project=faceapp]>a:first-child:last-child {
 	background: #f2cbaf
 }
 
 [data-project=faceapp] [data-device=notebook] .screen {
-	/* background-image: url(../img/portfolio/estadao/faceapp/001.png); */
-
 	background-image: url(../img/portfolio/estadao/faceapp/001.gif);
 	background-position: center center;
 	background-color: white;
 	background-size: 50%;
-
 }
 
 [data-project=faceapp] [data-device=phone] .screen {
