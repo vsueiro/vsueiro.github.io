@@ -768,7 +768,7 @@ nav a.active {
 	animation-delay: 2s
 }
 
-[data-project=scoreboard] .scroll {
+[data-project=scoreboard] .scroll img {
 	-webkit-animation-name: scroll-scoreboard;
 	animation-name: scroll-scoreboard;
 	-webkit-animation-duration: 24s;
@@ -814,15 +814,15 @@ nav a.active {
 	0%,
 	10%,
 	100% {
-		background-position: center 0
+		transform: translateY( 0% )
 	}
 	33%,
 	43% {
-		background-position: center 47.5%
+		transform: translateY( -34.6% )
 	}
 	66%,
 	76% {
-		background-position: center 100%
+		transform: translateY( -72.8% )
 	}
 }
 
@@ -830,15 +830,15 @@ nav a.active {
 	0%,
 	10%,
 	100% {
-		background-position: center 0
+		transform: translateY( 0% )
 	}
 	33%,
 	43% {
-		background-position: center 47.5%
+		transform: translateY( -34.6% )
 	}
 	66%,
 	76% {
-		background-position: center 100%
+		transform: translateY( -72.8% )
 	}
 }
 
@@ -1275,10 +1275,6 @@ footer .phone a {
 	background: #75c9ee
 }
 
-[data-project=scoreboard] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/estadao/scoreboard/001-a.jpg)
-}
-
 [data-project=scoreboard] [data-device=notebook] .screen::before {
 	content: '';
 	display: flex;
@@ -1289,7 +1285,8 @@ footer .phone a {
 	left: 0;
 	background-image: url(../img/portfolio/estadao/scoreboard/001-b.jpg);
 	background-size: contain;
-	background-repeat: no-repeat
+	background-repeat: no-repeat;
+	z-index: 2;
 }
 
 [data-project=scoreboard] [data-device=phone] .screen {
@@ -1309,15 +1306,6 @@ footer .phone a {
 
 [data-project=astronomy] [data-device=notebook] .screen {
 	background-image: url(../img/portfolio/estadao/astronomy/001-crop.jpg)
-}
-
-[data-project=central] .cover,
-[data-project=central]>a:first-child:last-child {
-	background: #f27781
-}
-
-[data-project=central] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/central/website/001.jpg)
 }
 
 [data-project=montadino] .cover,
