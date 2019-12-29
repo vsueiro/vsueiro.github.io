@@ -151,6 +151,10 @@ p+p {
 	margin-top: 1em
 }
 
+.content p {
+	width: 100%;
+}
+
 main>header {
 	padding: 7.2rem 0
 }
@@ -1532,6 +1536,10 @@ h1 {
 	align-items: center;
 	margin: 0;
 	padding: 1.6rem 2.4rem
+}
+
+.list.results li .label {
+	text-align: center;
 }
 
 i.approx::before,
