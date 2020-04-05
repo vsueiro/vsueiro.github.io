@@ -792,24 +792,24 @@ nav a.active {
 
 @-webkit-keyframes scroll-barbecues {
 	0%,
-	10%,
+	5%,
 	100% {
 		transform: translateY( 0 )
 	}
-	66%,
-	76% {
+	25%,
+	80% {
 		transform: translateY( -66% )
 	}
 }
 
 @keyframes scroll-barbecues {
 	0%,
-	10%,
+	5%,
 	100% {
 		transform: translateY( 0 )
 	}
-	66%,
-	76% {
+	25%,
+	80% {
 		transform: translateY( -66% )
 	}
 }
