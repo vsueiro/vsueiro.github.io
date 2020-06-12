@@ -243,8 +243,9 @@ footer .content {
 	background: rgba(0, 0, 0, .05)
 }
 
-.feature.skills {
-	margin: 4.8rem 0 0;
+#about {
+	position: relative;
+	margin: 14.4rem 0 0;
 	padding: 4.8rem 0 0
 }
 
@@ -416,7 +417,9 @@ nav {
 }
 
 h1 {
-	font-size: 4.8rem
+	text-align: left;
+	font-size: 3.6rem;
+	max-width: 92rem;
 }
 
 h2 {
@@ -464,6 +467,10 @@ nav ul a {
 
 [data-page=index] .portfolio h1 {
 	font-size: 3.6rem
+}
+
+[data-page=index] header h1 {
+	align-self: flex-start;
 }
 
 [data-page=work] .cover h1 {
@@ -603,7 +610,8 @@ nav ul {
 }
 
 nav ul {
-	line-height: 4.8rem
+	line-height: 4.8rem;
+	display: none;
 }
 
 nav li {
@@ -651,7 +659,7 @@ nav a.active {
 	text-transform: uppercase;
 	user-select: none;
 	white-space: nowrap;
-	transition: background .4s, color .4s, height .4s, padding .4s
+	transition: background-color .4s, color .4s, height .4s, padding .4s
 }
 
 .button.live::before {
@@ -714,34 +722,16 @@ nav a.active {
 	backface-visibility: hidden;
 }
 
-/* [data-device=phone] .screen:empty {
-	padding-top: 160%;
-	width: 37.5rem
-}
-
-[data-device=tablet] .screen:empty {
-	padding-top: 75%;
-	width: 102.4rem
-}
-
-[data-device=notebook] .screen:empty {
-	padding-top: 62.5%;
-	width: 128rem
-} */
-
 [data-device=phone] .screen.scroll {
 	padding-top: 160%;
-	/* width: 37.5rem */
 }
 
 [data-device=tablet] .screen.scroll {
 	padding-top: 75%;
-	/* width: 102.4rem */
 }
 
 [data-device=notebook] .screen.scroll {
 	padding-top: 62.5%;
-	/* width: 128rem */
 }
 
 .screen.scroll {
@@ -1183,18 +1173,14 @@ nav a.active {
 }
 
 .profile {
-	position: absolute;
-	top: 0;
-	left: 50%;
+	margin: 0 auto;
 	width: 12.8rem;
 	height: 12.8rem;
 	border-radius: 50%;
 	overflow: hidden;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%)
 }
 
-.skills .button {
+#about .button {
 	margin: 12rem 0 0
 }
 
