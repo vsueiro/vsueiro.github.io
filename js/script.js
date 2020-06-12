@@ -21,10 +21,10 @@ var app = {
             }
         },
         update: function() {
-            this.borders.resize()
+            // this.borders.resize()
         },
         initialize: function() {
-            this.borders.resize()
+            // this.borders.resize()
         }
     },
     environment: {
@@ -83,3 +83,13 @@ var app = {
     }
 };
 app.initialize();
+
+var mySwiper = new Swiper ( '.swiper-container', {
+
+  freeMode: true,
+  // watchOverflow: true,
+  // autoplay: {
+  //   delay: 1000,
+  // },
+
+})

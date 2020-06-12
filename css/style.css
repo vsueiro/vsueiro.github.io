@@ -1628,6 +1628,105 @@ i.approx::before {
 	display: none
 }
 
+/* news */
+
+.news {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: 0 0 7.2rem;
+}
+
+.news header {
+	padding: 2.4rem 0;
+}
+
+.news header h4 {
+	align-self: flex-start;
+}
+
+.news .complement span:not(.emoji) {
+	font-size: 80%;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgba( 0, 0, 0, .25 );
+}
+/*
+.news .swiper-container {
+  margin-left: initial;
+  margin-right: initial;
+}
+
+.news .swiper-slide {
+	background: pink;
+	max-width: calc( 36rem + 3.6rem);
+}
+
+.news .swiper-slide .contain {
+	margin: initial;
+	padding-right: 0;
+}
+
+.news .swiper-slide .news-item {
+	align-self: flex-start;
+	width: 100%;
+	min-width: 28.8rem;
+	max-width: 36rem;
+	background: #eee
+}
+
+@media (max-width: 640px) {
+	.news .swiper-slide .news-item {
+		max-width: 28.8rem;
+	}
+}
+*/
+
+.news .news-list {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: auto;
+	padding-bottom: 2.4rem;
+}
+
+.news .news-list .news-group {
+	min-width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.news .contain {
+	margin: initial;
+	padding-right: 0;
+}
+
+.news .contain p {
+	align-self: flex-start;
+	max-width: calc( 36rem * .8 );
+	font-size: 80%;
+}
+
+.news .news-item {
+	align-self: flex-start;
+	flex-shrink: 0;
+}
+
+@media (max-width: 920px) {
+	.news .news-list {
+		overflow-y: scroll;
+  	-webkit-overflow-scrolling: touch;
+	}
+
+	.news .news-item:last-child {
+		width: 100vw;
+	}
+
+	.news .contain p {
+		max-width: calc( 28.8rem );
+	}
+}
+
 /* embeds */
 
 .spotify {
