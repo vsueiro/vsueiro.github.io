@@ -1690,8 +1690,9 @@ i.approx::before {
 */
 
 .news .news-list {
+	margin: 0 auto;
 	width: 100%;
-	max-width: 100%;
+	max-width: calc(128rem + 14.4rem);
 	overflow-x: auto;
 	padding-bottom: 2.4rem;
 }
@@ -1703,7 +1704,7 @@ i.approx::before {
 }
 
 .news .contain {
-	margin: initial;
+	margin: 0 auto;
 	padding-right: 0;
 }
 
@@ -1711,6 +1712,7 @@ i.approx::before {
 	align-self: flex-start;
 	max-width: calc( 36rem * .8 );
 	font-size: 80%;
+	line-height: 1.5;
 }
 
 .news .news-item {
@@ -1730,6 +1732,18 @@ i.approx::before {
 
 	.news .contain p {
 		max-width: calc( 28.8rem );
+	}
+}
+
+@media (max-width: 720px) {
+	.news .contain p {
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 400px) {
+	.news .contain p {
+		font-size: 100%;
 	}
 }
 
