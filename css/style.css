@@ -1225,20 +1225,16 @@ footer .button+.button {
 	margin-left: 2.4rem
 }
 
-footer .email a,
-footer .phone a {
+footer .email span,
+footer .phone span {
 	font-weight: 400;
 	border-color: transparent;
-	transition: border-color .4s
+	transition: border-color .4s;
+	user-select: all;
 }
 
-.phone a {
+.phone span {
 	font-size: 80%
-}
-
-[data-touch=false] footer .email a:hover,
-[data-touch=false] footer .phone a:hover {
-	border-color: currentColor
 }
 
 @media (max-width:720px) {
