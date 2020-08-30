@@ -83,13 +83,3 @@ var app = {
     }
 };
 app.initialize();
-
-var mySwiper = new Swiper ( '.swiper-container', {
-
-  freeMode: true,
-  // watchOverflow: true,
-  // autoplay: {
-  //   delay: 1000,
-  // },
-
-})
