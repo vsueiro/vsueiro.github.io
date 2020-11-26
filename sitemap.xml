@@ -10,28 +10,13 @@
   <changefreq>yearly</changefreq>
 </url>
 <url>
-  <loc>https://vsueiro.com/work/barbecues</loc>
-  <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+  <loc>https://vsueiro.com/work/adoption</loc>
+  <lastmod>2019-11-14T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 <url>
-  <loc>https://vsueiro.com/work/camping</loc>
-  <lastmod>2019-06-14T00:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-</url>
-<url>
-  <loc>https://vsueiro.com/work/scoreboard</loc>
-  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-</url>
-<url>
-  <loc>https://vsueiro.com/work/central</loc>
-  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-</url>
-<url>
-  <loc>https://vsueiro.com/work/microcephaly</loc>
-  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <loc>https://vsueiro.com/work/faceapp</loc>
+  <lastmod>2019-11-16T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
 <url>
@@ -44,19 +29,40 @@
   <lastmod>2018-05-07T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
+<!--
+<url>
+  <loc>https://vsueiro.com/work/camping</loc>
+  <lastmod>2019-06-14T00:00:00+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+-->
+<!--
+<url>
+  <loc>https://vsueiro.com/work/scoreboard</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+-->
+<!--
+<url>
+  <loc>https://vsueiro.com/work/central</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+-->
+<!--
+<url>
+  <loc>https://vsueiro.com/work/microcephaly</loc>
+  <lastmod>2017-08-05T05:11:25+00:00</lastmod>
+  <changefreq>yearly</changefreq>
+</url>
+-->
+
+<!--
 <url>
   <loc>https://vsueiro.com/work/uva</loc>
   <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   <changefreq>yearly</changefreq>
 </url>
-<url>
-  <loc>https://vsueiro.com/work/faceapp</loc>
-  <lastmod>2019-11-16T00:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-</url>
-<url>
-  <loc>https://vsueiro.com/work/adoption</loc>
-  <lastmod>2019-11-14T00:00:00+00:00</lastmod>
-  <changefreq>yearly</changefreq>
-</url>
+-->
 </urlset>
