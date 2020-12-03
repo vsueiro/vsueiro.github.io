@@ -181,6 +181,12 @@ a {
 	border-bottom: .2rem solid currentColor
 }
 
+a.invisible {
+	font-weight: inherit;
+	border: none;
+	color: inherit;
+}
+
 .list {
 	font-size: 125%
 }
