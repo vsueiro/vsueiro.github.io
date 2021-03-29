@@ -731,6 +731,7 @@ nav a {
 }
 
 .portfolio li a {
+	padding: 0;
 	border: 0;
 	width: 100%;
 	transition: transform .2s
@@ -740,9 +741,11 @@ nav a {
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	width: 100%;
-	height: 100%;
 	padding: 0;
+	flex-shrink: 0;
+	align-items: flex-start;
 }
 
 .portfolio li:nth-child(odd) article {
@@ -758,9 +761,15 @@ nav a {
 	max-width: 50%;
 }
 
-.portfolio .context {
-	position: relative;
-	padding: 5%;
+.portfolio .context-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 }
@@ -772,16 +781,20 @@ nav a {
 	margin: 0 0 3.2rem;
 }
 
-.composition {
+.composition,
+.context {
 	position: relative;
 }
 
-.composition::before {
+.composition::before,
+.context::before {
 	content: '';
-	display: block;
+	display: flex;
 	position: relative;
 	height: 0;
 	padding-top: 100%;
+	flex-shrink: 0;
+	min-width: 100%;
 }
 
 .composition figure,
@@ -963,7 +976,7 @@ nav a {
 
 @media (max-width:960px) {
 	.portfolio li a {
-		padding: 3.2rem
+		/*padding: 3.2rem*/
 	}
 }
 
@@ -972,7 +985,7 @@ nav a {
 		width: 100%
 	}
 	.portfolio li a {
-		padding: 4.8rem
+		/*padding: 4.8rem*/
 	}
 	.feature {
 		padding: 4.8rem 0;
@@ -985,7 +998,7 @@ nav a {
 
 @media (max-width:520px) {
 	.portfolio li a {
-		padding: 3.2rem
+		/*padding: 3.2rem*/
 	}
 	.feature {
 		margin-bottom: 7.2rem
@@ -1007,7 +1020,7 @@ nav a {
 
 @media (max-width:480px) {
 	.portfolio li a {
-		padding: 2.4rem
+		/*padding: 2.4rem*/
 	}
 	.contain {
 		padding: 0 2.4rem
@@ -1016,7 +1029,7 @@ nav a {
 
 @media (max-width:360px) {
 	.portfolio li a {
-		padding: 2.1rem
+		/*padding: 2.1rem*/
 	}
 	.contain {
 		padding: 0 2.1rem
