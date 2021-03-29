@@ -742,6 +742,7 @@ nav a {
 	flex-direction: row;
 	width: 100%;
 	height: 100%;
+	padding: 0;
 }
 
 .portfolio li:nth-child(odd) article {
@@ -787,7 +788,9 @@ nav a {
 .composition figure::before,
 .composition figure::after {
 	content: '';
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -849,7 +852,6 @@ nav a {
 	height: 42%;
 }
 
-
 .composition figure[data-device="laptop"] video,
 .composition figure[data-device="laptop"] img {
 	position: absolute;
@@ -857,6 +859,10 @@ nav a {
 	left: 15%;
 	width: 70%;
 	height: 43.75%;
+}
+
+.composition figure:not([data-device]) img {
+    width: 80%;
 }
 
 .portfolio header {
@@ -1111,7 +1117,7 @@ footer .phone span {
 
 [data-project=montadino] .cover,
 [data-project=montadino] .composition {
-	background: #ff9a99
+	background: #ffcbca
 }
 
 [data-project=adoption] .cover,
