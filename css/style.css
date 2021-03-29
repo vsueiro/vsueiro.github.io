@@ -744,6 +744,10 @@ nav a {
 	height: 100%;
 }
 
+.portfolio li:nth-child(odd) article {
+	flex-direction: row-reverse;
+}
+
 .portfolio .context,
 .portfolio .composition {
 	position: relative;
@@ -751,6 +755,19 @@ nav a {
 	flex-direction: column;
 	width: 50%;
 	max-width: 50%;
+}
+
+.portfolio .context {
+	padding: 5%;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.portfolio .context .client,
+.portfolio .context h1,
+.portfolio .context p,
+.portfolio .context .button {
+	margin: 0 0 3.2rem;
 }
 
 .composition {
