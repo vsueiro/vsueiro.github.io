@@ -325,17 +325,26 @@ figure.circle + blockquote {
 	.contain {
 		padding: 0 4.8rem
 	}
+	.portfolio .context-content {
+		padding: 4.8rem;
+	}
 }
 
 @media (max-width:960px) {
 	.portfolio .contain {
 		padding: 0 3.2rem
 	}
+	.portfolio .context-content {
+		padding: 3.2rem;
+	}
 }
 
 @media (max-width:720px) {
 	.portfolio .contain {
 		padding: 0 4.8rem
+	}
+	.portfolio .context-content {
+		padding: 4.8rem;
 	}
 }
 
@@ -346,6 +355,9 @@ figure.circle + blockquote {
 	.contain,
 	.portfolio .contain {
 		padding: 0 3.2rem
+	}
+	.portfolio .context-content {
+		padding: 3.2rem;
 	}
 	article,
 	footer,
@@ -365,12 +377,18 @@ figure.circle + blockquote {
 	.portfolio .contain {
 		padding: 0 2.4rem
 	}
+	.portfolio .context-content {
+		padding: 2.4rem;
+	}
 }
 
 @media (max-width:320px) {
 	.contain,
 	.portfolio .contain {
 		padding: 0 2.1rem
+	}
+	.portfolio .context-content {
+		padding: 2.1rem;
 	}
 }
 
@@ -631,6 +649,7 @@ nav a {
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
+	flex-shrink: 0;
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -655,7 +674,7 @@ nav a {
 }
 
 .button.disabled {
-	opacity: .5;
+	opacity: .25;
 	border-style: dashed;
 	pointer-events: none
 }
@@ -776,9 +795,12 @@ nav a {
 
 .portfolio .context .client,
 .portfolio .context h1,
-.portfolio .context p,
+.portfolio .context p {
+	margin: 0 0 3.2rem
+}
+
 .portfolio .context .button {
-	margin: 0 0 3.2rem;
+	margin: 0;
 }
 
 .composition,
@@ -923,6 +945,49 @@ nav a {
 	/*padding-bottom: 4.8rem*/
 }
 
+@media (max-width:1151px) {
+	.portfolio .context .client,
+	.portfolio .context h1,
+	.portfolio .context p {
+		margin: 0 0 2.4rem
+	}
+	.description {
+		font-size: 80%
+	}
+}
+
+@media (max-width:800px) {
+
+	.description {
+		font-size: 100%
+	}
+
+	.portfolio article,
+	.portfolio li:nth-child(odd) article {
+		flex-direction: column-reverse;
+		width: 100%;
+	}
+
+	.portfolio .context,
+	.portfolio .composition {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.portfolio .context {
+		padding: 1.6rem 0;
+	}
+
+	.portfolio .context-content {
+		position: relative;
+	}	
+
+	.context::before {
+		display: none;
+	}
+
+}
+
 .feature {
 	padding: 9.6rem 0;
 	margin-bottom: 14.4rem
@@ -1006,6 +1071,9 @@ nav a {
 	.contain {
 		padding: 0 3.2rem
 	}
+	.portfolio .context-content {
+		padding: 3.2rem;
+	}
 	.column-container {
 		flex-direction: column
 	}
@@ -1025,6 +1093,9 @@ nav a {
 	.contain {
 		padding: 0 2.4rem
 	}
+	.portfolio .context-content {
+		padding: 2.4rem;
+	}
 }
 
 @media (max-width:360px) {
@@ -1034,6 +1105,9 @@ nav a {
 	.contain {
 		padding: 0 2.1rem
 	}
+	.portfolio .context-content {
+		padding: 2.1rem;
+	}
 	[data-page=work] .header h1 {
 		font-size: 3.2rem
 	}
@@ -1041,8 +1115,8 @@ nav a {
 
 .profile {
 	margin: 0 auto;
-	width: 12.8rem;
-	height: 12.8rem;
+	width: 19.2rem;
+	height: 19.2rem;
 	border-radius: 50%;
 	overflow: hidden;
 }
