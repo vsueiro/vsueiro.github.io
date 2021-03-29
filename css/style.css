@@ -758,6 +758,7 @@ nav a {
 }
 
 .portfolio .context {
+	position: relative;
 	padding: 5%;
 	justify-content: center;
 	align-items: flex-start;
@@ -782,13 +783,80 @@ nav a {
 	padding-top: 100%;
 }
 
-.composition .frame,
-.composition .fill, {
+.composition figure,
+.composition figure::before,
+.composition figure::after {
+	content: '';
+	display: block;
 	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 100% 100%;
+}
+
+.composition figure[data-device="phone"]::before {
+	background-image: url(../img/devices/fill-phone.svg);
+}
+
+.composition figure[data-device="phone"]::after {
+	background-image: url(../img/devices/frame-phone.svg);
+}
+
+.composition figure[data-device="phone-tablet"]::before {
+	background-image: url(../img/devices/fill-phone-tablet.svg);
+}
+
+.composition figure[data-device="phone-tablet"]::after {
+	background-image: url(../img/devices/frame-phone-tablet.svg);
+}
+
+.composition figure[data-device="laptop"]::before {
+	background-image: url(../img/devices/fill-laptop.svg);
+}
+
+.composition figure[data-device="laptop"]::after {
+	background-image: url(../img/devices/frame-laptop.svg);
+}
+
+.composition figure[data-device="phone"] video,
+.composition figure[data-device="phone"] img {
+	position: absolute;
+	top: 15%;
+	left: 33.836%;
+	width: 32.328%;
+	height: 70%;
+}
+
+.composition figure[data-device="phone-tablet"] video:nth-child(1),
+.composition figure[data-device="phone-tablet"] img:nth-child(1) {
+	position: absolute;
+	top: 15%;
+	left: 31.5%;
+	width: 52.5%;
+	height: 70%;
+}
+
+.composition figure[data-device="phone-tablet"] video:nth-child(2),
+.composition figure[data-device="phone-tablet"] img:nth-child(2) {
+	position: absolute;
+	top: 44%;
+	left: 15.05%;
+	width: 19.4%;
+	height: 42%;
+}
+
+
+.composition figure[data-device="laptop"] video,
+.composition figure[data-device="laptop"] img {
+	position: absolute;
+	top: 28.125%;
+	left: 15%;
+	width: 70%;
+	height: 43.75%;
 }
 
 .portfolio header {
