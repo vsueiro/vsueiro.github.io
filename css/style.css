@@ -489,11 +489,20 @@ nav {
 }
 
 [data-page=work] .cover h1 {
-	font-size: 7.2rem
+	font-size: 6.4rem;
+	text-align: center;
+}
+
+[data-page=work] .cover {
+	padding-bottom: 0;
 }
 
 [data-page=index] .portfolio .client {
 	font-size: 1.6rem
+}
+
+[data-page=work] .client {
+	justify-content: center
 }
 
 @media (max-width:960px) {
@@ -832,8 +841,8 @@ nav a {
 	bottom: 0;
 	left: 0;
 	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: 100% 100%;
+	background-position: center;
+	background-size: cover;
 }
 
 .composition figure[data-device="phone"]::before {
@@ -896,6 +905,28 @@ nav a {
 	height: 43.75%;
 }
 
+[data-page=work] .composition figure[data-device="laptop"] video,
+[data-page=work] .composition figure[data-device="laptop"] img {
+	position: absolute;
+	top: 19.685%;
+	left: 15%;
+	width: 70%;
+	height: 57.415%;
+}
+
+[data-page=work][data-project=barbecues] .composition::before,
+[data-page=work][data-project=faceapp] .composition::before {
+	padding-top: 76.2%;
+}
+
+[data-page=work][data-project=barbecues] .composition figure::before,
+[data-page=work][data-project=barbecues] .composition figure::after,
+[data-page=work][data-project=faceapp] .composition figure::before,
+[data-page=work][data-project=faceapp] .composition figure::after {	
+	background-position: 50% 55%;
+}
+
+
 .composition figure:not([data-device]) img {
     width: 80%;
 }
@@ -937,12 +968,9 @@ nav a {
 }
 
 [data-page=work] .cover {
-	margin-bottom: 14.4rem
-}
-
-[data-page=work] .header {
-	/*color: #fff;*/
-	/*padding-bottom: 4.8rem*/
+	margin-bottom: 14.4rem;
+	color: #fff;
+	text-align: center;
 }
 
 @media (max-width:1151px) {
