@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-touch="false" data-browser="">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title>Vinicius Sueiro — interaction designer & dataviz specialist</title>
@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Vinicius Sueiro">
 		<meta name="description" content="Brazilian designer helping organizations use technology for positive social impact. Master’s student at Malmö University. Former lead of a data visualization team.">
-		<meta  property="og:title" name="title" content="Vinicius Sueiro — interaction designer & dataviz specialist">
+		<meta property="og:title" name="title" content="Vinicius Sueiro — interaction designer & dataviz specialist">
 		<meta property="og:image" content="https://vsueiro.com/img/share/1200x630.png">
 		<meta name="theme-color" content="#ffffff">
 		<link rel="canonical" href="https://vsueiro.com/">
@@ -58,10 +58,16 @@
 					</div>
 					<div class="news-list">
 						<div class="news-group">
-							<div class="news-item">
+							<!--<div class="news-item">
 								<div class="contain">
 									<p>I helped <a href="https://newsinitiative.withgoogle.com/" target="_blank">Google</a> humanize Covid-19 death data by creating <a href="https://piaui.folha.uol.com.br/lupa/epicentro/en/" target="_blank">No Epicentro</a></p>
 									<p class="complement"><span>Case study soon</span> <span class="emoji">🥁</span></p>
+								</div>
+							</div>-->
+							<div class="news-item">
+								<div class="contain">
+									<p>I’ll be a dataviz teacher for a graduate-level journalism specialization at <a href="" target="_blank">IDP</a></p>
+									<p class="complement"><span>Classes begin late ’21</span> <span class="emoji">🥁</span></p>
 								</div>
 							</div>
 							<div class="news-item">
@@ -87,110 +93,63 @@
 							</div>
 						</div>
 					</div>
-
-					<!--
-					<div class="swiper-container">
-				    <div class="swiper-wrapper">
-			        <div class="swiper-slide">
-								<div class="contain">
-									<div class="news-item">
-										<p>I’m collaborating with <a href="https://newsinitiative.withgoogle.com/" target="_blank">Google</a> and a fact-checking agency on a dataviz</p>
-										<p class="complement"><span>Details soon</span> <span class="emoji">✨</span></p>
-									</div>
-								</div>
-							</div>
-			        <div class="swiper-slide">
-								<div class="contain">
-									<div class="news-item">
-										<p>I’m looking forward to my <a href="https://edu.mah.se/sv/program/taine" target="_blank">Master’s Programme</a> in Interaction Design</p>
-										<p class="complement"><span>Starting this fall</span> <span class="emoji">🍁</span></p>
-									</div>
-								</div>
-							</div>
-			        <div class="swiper-slide">
-								<div class="contain">
-									<div class="news-item">
-										<p>I’m mentoring designers that are curious about data on <a href="https://www.adplist.org/mentors" target="_blank">adplist.org</a>
-										<p class="complement"><span>It’s free</span> <span class="emoji">🤓</span></p>
-									</div>
-								</div>
-							</div>
-				    </div>
-					</div>
-					-->
 				</section>
 				<div id="work" class="portfolio">
 					<div class="contain">
 						<ul>
+							<li data-project="epicenter">
+								<a href="javascript:void(0)" style="pointer-events: none"> <!-- work/epicenter -->
+									<article>
+										<div class="context">
+											<div class="context-content">
+												<header>
+													<div class="client">
+														<span>Google & Lupa</span>
+														<time datetime="2020">2020</time>
+													</div>
+													<h1>Humanizing  <br>Covid&#8209;19&nbsp;Data</h1>
+												</header>
+												<p class="description">By simulating what would happen if all Covid‑19 deaths in Brazil happened in your neighborhood, “No Epicentro” tries to humanize an evergrowing number</p>
+												<span class="button disabled">Case study soon</span>
+											</div>
+										</div>
+										<div class="composition">
+											<figure data-device="phone">
+												<video autoplay muted loop playsinline>
+													<source src="img/portfolio/google/epicenter/phone.mp4" type="video/mp4">
+												</video>
+												<figcaption class="screen-reader">Screen-recording of the mobile version of the website, after a user entered an address. The main visual of the interface is a black map with white dots (each dot represents one death), displayed in a huge circle around the user’s location.</figcaption>
+											</figure>
+										</div>
+									</article>
+								</a>
+							</li>
 							<li data-project="adoption">
 								<a href="work/adoption">
 									<article>
-										<header>
-											<div class="client">
-												<span>Estadão</span>
-												<time datetime="2019">2019</time>
+										<div class="context">
+											<div class="context-content">
+												<header>
+													<div class="client">
+														<span>Estadão</span>
+														<time datetime="2019">2019</time>
+													</div>
+													<h1>Child&nbsp;Adoption <br>Simulation&nbsp;</h1>
+												</header>
+												<p class="description">A story on how age & disabilities impact a child’s likelihood of being chosen by a foster parent, using growing plants as a metaphor.</p>
+												<span class="button goto">Learn more</span>
 											</div>
-											<h1>Child&nbsp;Adoption Simulation&nbsp;🏆</h1>
-										</header>
-										<div class="composition">
-											<figure data-device="notebook">
-												<figcaption class="screen-reader">Desktop version of an interactive chart that represents children as tiny plants, that grow as time passes – while they wait for a new parent to adopt them. These plants are also grouped by categories such as ethnicity, siblings and disabilities.</figcaption>
-												<div class="screen scroll">
-													<img src="img/portfolio/estadao/adoption/001.png" alt="Desktop version of an interactive chart that represents children as tiny plants, that grow as time passes – while they wait for a new parent to adopt them. These plants are also grouped by categories such as ethnicity, siblings and disabilities.">
-												</div>
-											</figure>
-											<figure data-device="phone" data-frame="phone">
-												<div class="screen">
-													<video autoplay muted loop playsinline>
-														<source src="img/portfolio/estadao/adoption/002.mp4" type="video/mp4">
-													</video>
-												</div>
-												<figcaption class="screen-reader">Animated mobile version of an interactive chart that represents children as tiny plants, that grow as time passes – while they wait for being adopted.</figcaption>
-											</figure>
 										</div>
-									</article>
-								</a>
-							</li>
-							<li data-project="faceapp">
-								<a href="work/faceapp">
-									<article>
-										<header>
-											<div class="client">
-												<span>Estadão</span>
-												<time datetime="2019">2019</time>
-											</div>
-											<h1>FaceApp’s&nbsp;Racial Bias&nbsp;Experiment</h1>
-										</header>
 										<div class="composition">
-											<figure data-device="notebook">
-												<img class="screen-reader" src="img/portfolio/estadao/faceapp/001.png">
-												<div class="screen scroll"></div>
-											</figure>
-											<figure data-device="phone" data-frame="phone">
-												<img src="img/portfolio/estadao/faceapp/002.png">
-											</figure>
-										</div>
-									</article>
-								</a>
-							</li>
-							<li data-project="montadino">
-								<a href="work/montadino">
-									<article>
-										<header>
-											<div class="client">
-												<span>Personal</span>
-												<time datetime="2019">2019</time>
-											</div>
-											<h1>Eco‑friendly Dinosaur&nbsp;Toys</h1>
-										</header>
-										<div class="composition">
-											<figure data-device="notebook">
-												<div class="screen">
-													<video autoplay muted loop playsinline>
-														<source src="img/portfolio/personal/montadino/001.mp4" type="video/mp4">
-													</video>
-												</div>
-												<figcaption class="screen-reader">Animated example of a landing page for a dinosaur toys company that uses recycled material from schools</figcaption>
+											<figure data-device="phone-tablet">
+
+												<img src="img/portfolio/estadao/adoption/tablet.png" alt="">
+
+												<video autoplay muted loop playsinline>
+													<source src="img/portfolio/estadao/adoption/phone.mp4" type="video/mp4">
+												</video>
+
+												<figcaption class="screen-reader">Desktop and mobile version of an interactive chart that represents children as tiny plants, that grow as time passes – while they wait for a new parent to adopt them. These plants are also grouped by categories such as ethnicity, siblings and disabilities.</figcaption>
 											</figure>
 										</div>
 									</article>
@@ -199,35 +158,81 @@
 							<li data-project="barbecues">
 								<a href="work/barbecues">
 									<article>
-										<header>
-											<div class="client">
-												<span>Personal</span>
-												<time datetime="2017">2017</time>
+										<div class="context">
+											<div class="context-content">
+												<header>
+													<div class="client">
+														<span>Personal</span>
+														<time datetime="2017">2017</time>
+													</div>
+													<h1>Government <br>Barbecues</h1>
+												</header>
+												<p class="description">Thousands of overpriced meals were purchased by the Brazilian government with public money. This firery chart shows them all</p>
+												<span class="button goto">Learn more</span>
 											</div>
-											<h1>Government Barbecues&nbsp;🏆</h1>
-										</header>
+										</div>
 										<div class="composition">
-											<figure data-device="notebook">
-												<figcaption class="screen-reader">Desktop version of website design for data journalism news article focused on government expenses on barbecues</figcaption>
-												<div class="screen scroll">
-													<img src="img/portfolio/personal/barbecues/001.png" alt="Desktop version of a data visualization article where a chart is designed as flames">
-												</div>
+											<figure data-device="laptop">
+												<video autoplay muted loop playsinline>
+													<source src="img/portfolio/personal/barbecues/laptop.mp4" type="video/mp4">
+												</video>
+												<figcaption class="screen-reader">Desktop version of website design for data journalism news article focused on government expenses on barbecues.</figcaption>
 											</figure>
-											<!--
-											<figure data-device="phone" data-frame="phone">
-												<img src="img/portfolio/personal/barbecues/002.png" alt="Mobile version of a data visualization article where a chart is designed as flames">
-												<figcaption class="screen-reader">Mobile version of website design for data journalism news article focused on government expenses on barbecues</figcaption>
-											</figure>
-											-->
 										</div>
 									</article>
 								</a>
 							</li>
-							<li class="filler">
-								<a>
-									<p>Your next project<br>could be here :)</p>
+							<li data-project="faceapp">
+								<a href="work/faceapp">
+									<article>
+										<div class="context">
+											<div class="context-content">
+												<header>
+													<div class="client">
+														<span>Estadão</span>
+														<time datetime="2019">2019</time>
+													</div>
+													<h1>FaceApp’s&nbsp;Racial Bias&nbsp;Experiment</h1>
+												</header>
+												<p class="description">After applying the aging filter 5× on the same photos, all faces were whitened, indicating a racially biased dataset was used by the AI</p>
+												<span class="button goto">Learn more</span>
+											</div>
+										</div>
+										<div class="composition">
+											<figure data-device="laptop">
+												<img src="img/portfolio/estadao/faceapp/laptop.gif" alt="">
+												<figcaption class="screen-reader">A visual composition showcasing black actor Terry Crews as an animation: from his original photo, then to the result of the first image filter, then to the second, and so on. The result is a looped animation in which his face gets more white after each filter (and also extremely distorted by excessive wrinkles).</figcaption>
+											</figure>
+										</div>
+									</article>
 								</a>
 							</li>
+							<li data-project="montadino">
+								<a href="work/montadino">
+									<article>
+										<div class="context">
+											<div class="context-content">
+												<header>
+													<div class="client">
+														<span>Personal</span>
+														<time datetime="2019">2019</time>
+													</div>
+													<h1>Eco‑friendly <br>Dinosaur&nbsp;Toys</h1>
+												</header>
+												<p class="description">“Montadino” is a concept initiative for crafting toys from reused EVA foam, which is largely used in schools and often goes to waste</p>
+												<span class="button goto">Learn more</span>
+											</div>
+										</div>
+										<div class="composition">
+											<figure>
+												<img src="img/portfolio/personal/montadino/mounting-animated.png" alt="">											
+												<figcaption class="screen-reader">Animation where a cute T-Rex (toy in red) is mounting a Brontosaur (toy in brown), which sucumbs to the T-Rex weight. The dinosaur on top keeps moving his head in loop – as if trying to understand the situation.</figcaption>
+											</figure>
+										</div>
+									</article>
+								</a>
+							</li>
+							
 						</ul>
 					</div>
 				</div>
@@ -254,10 +259,10 @@
 
 									<p>These were some of our projects&nbsp;→</p>
 
-									<div class="composition">
+									<div>
 										<a style="border:none" href="https://politica.estadao.com.br/eleicoes/2018/analises-graficas" target="_blank">
-											<figure data-device="notebook">
-												<img src="img/portfolio/estadao/general/001.gif" alt="Examples of minmalist charts, infographics and data visualization projects from Estadão – covering politics, economy, sports and culture – on light gray background">
+											<figure>
+												<img src="img/portfolio/estadao/general/001.gif" alt="Examples of minmalist charts, infographics and data visualization projects from Estadão – covering politics, economy, sports and culture – on light gray background" style="padding-left: 2.4rem;">
 												<figcaption class="screen-reader">Examples of charts, infographics and data visualization projects from Estadão – covering politics, economy, sports and culture</figcaption>
 											</figure>
 										</a>
@@ -301,7 +306,6 @@
 				</div>
 			</main>
 		</div>
-		<script type="text/javascript" src="js/helpers.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>

@@ -12,8 +12,7 @@ nav li {
 
 .button,
 .caption,
-.lead,
-.portfolio .filler p {
+.lead {
 	text-align: center
 }
 
@@ -157,10 +156,6 @@ p+p {
 
 main>header {
 	padding: 7.2rem 0
-}
-
-[data-page=work] .cover {
-	padding: 9.6rem 0 14.4rem
 }
 
 footer {
@@ -330,8 +325,8 @@ figure.circle + blockquote {
 	.contain {
 		padding: 0 4.8rem
 	}
-	[data-page=work] .cover {
-		padding: 7.2rem 0 9.6rem
+	.portfolio .context-content {
+		padding: 4.8rem;
 	}
 }
 
@@ -339,11 +334,17 @@ figure.circle + blockquote {
 	.portfolio .contain {
 		padding: 0 3.2rem
 	}
+	.portfolio .context-content {
+		padding: 3.2rem;
+	}
 }
 
 @media (max-width:720px) {
 	.portfolio .contain {
 		padding: 0 4.8rem
+	}
+	.portfolio .context-content {
+		padding: 4.8rem;
 	}
 }
 
@@ -354,6 +355,9 @@ figure.circle + blockquote {
 	.contain,
 	.portfolio .contain {
 		padding: 0 3.2rem
+	}
+	.portfolio .context-content {
+		padding: 3.2rem;
 	}
 	article,
 	footer,
@@ -373,12 +377,18 @@ figure.circle + blockquote {
 	.portfolio .contain {
 		padding: 0 2.4rem
 	}
+	.portfolio .context-content {
+		padding: 2.4rem;
+	}
 }
 
 @media (max-width:320px) {
 	.contain,
 	.portfolio .contain {
 		padding: 0 2.1rem
+	}
+	.portfolio .context-content {
+		padding: 2.1rem;
 	}
 }
 
@@ -454,21 +464,20 @@ nav {
 }
 
 .portfolio header {
-	color: #fff
+	
 }
 
-.portfolio .filler p,
-nav ul a {
-	color: rgba(0, 0, 0, .25)
+.portfolio .context {
+	background: #f5f5f5
+}
+
+.portfolio .description {
+	font-weight: 400
 }
 
 .portfolio .client {
 	font-size: 1.6rem;
 	letter-spacing: .033em
-}
-
-.portfolio .filler p {
-	font-size: 1.6rem
 }
 
 [data-page=index] .portfolio h1 {
@@ -480,11 +489,20 @@ nav ul a {
 }
 
 [data-page=work] .cover h1 {
-	font-size: 7.2rem
+	font-size: 6.4rem;
+	text-align: center;
+}
+
+[data-page=work] .cover {
+	padding-bottom: 0;
 }
 
 [data-page=index] .portfolio .client {
 	font-size: 1.6rem
+}
+
+[data-page=work] .client {
+	justify-content: center
 }
 
 @media (max-width:960px) {
@@ -629,16 +647,6 @@ nav a {
 	transition: color .2s
 }
 
-[data-touch=false] nav a:hover,
-[data-touch=true] nav a:active,
-nav a.active {
-	color: rgba(0, 0, 0, 1)
-}
-
-[data-page]:not([data-page=index]) nav li:last-child {
-	padding-right: 0
-}
-
 @media (max-width:336px) {
 	nav li {
 		padding: 0 .8rem
@@ -650,6 +658,7 @@ nav a.active {
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
+	flex-shrink: 0;
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -668,13 +677,13 @@ nav a.active {
 	transition: background-color .4s, color .4s, height .4s, padding .4s
 }
 
-.button.live::before {
+.button.goto::after {
 	content: '→';
-	margin-right: .5em
+	margin-left: .5em
 }
 
 .button.disabled {
-	opacity: .5;
+	opacity: .25;
 	border-style: dashed;
 	pointer-events: none
 }
@@ -694,8 +703,8 @@ nav a.active {
 	margin-top: .2rem
 }
 
-[data-touch=false] .button:hover,
-[data-touch=true] .button:active {
+.button:hover,
+.button:active {
 	background: rgba(0, 0, 0, 1);
 	color: #fff
 }
@@ -728,194 +737,208 @@ nav a.active {
 	backface-visibility: hidden;
 }
 
-[data-device=phone] .screen.scroll {
-	padding-top: 160%;
-}
-
-[data-device=tablet] .screen.scroll {
-	padding-top: 75%;
-}
-
-[data-device=notebook] .screen.scroll {
-	padding-top: 62.5%;
-}
-
-.screen.scroll {
-	position: relative
-}
-
-.screen.scroll img {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: 100%;
-
-}
-
-.scroll img {
-	transition-timing-function: cubic-bezier(.6, 0, .3, 1);
-	-webkit-animation-iteration-count: infinite;
-	animation-iteration-count: infinite
-}
-
-[data-project=barbecues] .scroll img {
-	-webkit-animation-name: scroll-barbecues;
-	animation-name: scroll-barbecues;
-	-webkit-animation-duration: 16s;
-	animation-duration: 16s;
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s
-}
-
-[data-project=scoreboard] .scroll img {
-	-webkit-animation-name: scroll-scoreboard;
-	animation-name: scroll-scoreboard;
-	-webkit-animation-duration: 24s;
-	animation-duration: 24s;
-	-webkit-animation-delay: 0s;
-	animation-delay: 0s
-}
-
-[data-project=adoption] .scroll img {
-	-webkit-animation-name: scroll-adoption;
-	animation-name: scroll-adoption;
-	-webkit-animation-duration: 20s;
-	animation-duration: 20s;
-	-webkit-animation-delay: 0s;
-	animation-delay: 0s
-}
-
-@-webkit-keyframes scroll-barbecues {
-	0%,
-	5%,
-	100% {
-		transform: translateY( 0 )
-	}
-	25%,
-	80% {
-		transform: translateY( -66% )
-	}
-}
-
-@keyframes scroll-barbecues {
-	0%,
-	5%,
-	100% {
-		transform: translateY( 0 )
-	}
-	25%,
-	80% {
-		transform: translateY( -66% )
-	}
-}
-
-@-webkit-keyframes scroll-scoreboard {
-	0%,
-	10%,
-	100% {
-		transform: translateY( 0% )
-	}
-	33%,
-	43% {
-		transform: translateY( -34.6% )
-	}
-	66%,
-	76% {
-		transform: translateY( -72.8% )
-	}
-}
-
-@keyframes scroll-scoreboard {
-	0%,
-	10%,
-	100% {
-		transform: translateY( 0% )
-	}
-	33%,
-	43% {
-		transform: translateY( -34.6% )
-	}
-	66%,
-	76% {
-		transform: translateY( -72.8% )
-	}
-}
-
-@-webkit-keyframes scroll-adoption {
-	0%,
-	10%,
-	100% {
-		transform: translateY( -1.5% )
-	}
-	33%,
-	43% {
-		transform: translateY( -26% )
-	}
-	66%,
-	76% {
-		transform: translateY( -54% )
-	}
-}
-
-@keyframes scroll-adoption {
-	0%,
-	10%,
-	100% {
-		transform: translateY( -1.5% )
-	}
-	33%,
-	43% {
-		transform: translateY( -26% )
-	}
-	66%,
-	76% {
-		transform: translateY( -54% )
-	}
-}
-
 .portfolio {
 	margin: 4.8rem 0 0
 }
 
 .portfolio ul {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .portfolio li {
 	position: relative;
 	display: flex;
-	width: 50%;
+	width: 100%;
 	z-index: 1
 }
 
+.portfolio li+li {
+	margin-top: 9.6rem;
+}
+
 .portfolio li a {
+	padding: 0;
 	border: 0;
-	padding: 4.8rem;
 	width: 100%;
-	transition: padding .2s, transform .2s, box-shadow .2s
-}
-
-.portfolio li:hover {
-	z-index: 2
-}
-
-[data-touch=false] .portfolio li:not(.filler):hover a {
-	transform: scale(1.02);
-	box-shadow: 0 0 .8rem rgba(0, 0, 0, .33);
-}
-
-.portfolio li a [data-device] {
-	animation-play-state: running
+	transition: transform .2s
 }
 
 .portfolio article {
-	justify-content: space-between;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	width: 100%;
-	height: 100%;
-  padding: 6% 0 8% 0;
+	padding: 0;
+	flex-shrink: 0;
+	align-items: flex-start;
+}
+
+.portfolio li:nth-child(odd) article {
+	flex-direction: row-reverse;
+}
+
+.portfolio .context,
+.portfolio .composition {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	max-width: 50%;
+}
+
+.portfolio .context-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.portfolio .context .client,
+.portfolio .context h1,
+.portfolio .context p {
+	margin: 0 0 3.2rem
+}
+
+.portfolio .context .button {
+	margin: 0;
+}
+
+.composition,
+.context {
+	position: relative;
+}
+
+.composition::before,
+.context::before {
+	content: '';
+	display: flex;
+	position: relative;
+	height: 0;
+	padding-top: 100%;
+	flex-shrink: 0;
+	min-width: 100%;
+}
+
+.composition figure,
+.composition figure::before,
+.composition figure::after {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.composition figure[data-device="phone"]::before {
+	background-image: url(../img/devices/fill-phone.svg);
+}
+
+.composition figure[data-device="phone"]::after {
+	background-image: url(../img/devices/frame-phone.svg);
+}
+
+.composition figure[data-device="phone-tablet"]::before {
+	background-image: url(../img/devices/fill-phone-tablet.svg);
+}
+
+.composition figure[data-device="phone-tablet"]::after {
+	background-image: url(../img/devices/frame-phone-tablet.svg);
+}
+
+.composition figure[data-device="laptop"]::before {
+	background-image: url(../img/devices/fill-laptop.svg);
+}
+
+.composition figure[data-device="laptop"]::after {
+	background-image: url(../img/devices/frame-laptop.svg);
+}
+
+.composition figure[data-device="phone"] video,
+.composition figure[data-device="phone"] img {
+	position: absolute;
+	top: 15%;
+	left: 33.836%;
+	width: 32.328%;
+	height: 70%;
+}
+
+.composition figure[data-device="phone-tablet"] video:nth-child(1),
+.composition figure[data-device="phone-tablet"] img:nth-child(1) {
+	position: absolute;
+	top: 15%;
+	left: 31.5%;
+	width: 52.5%;
+	height: 70%;
+}
+
+.composition figure[data-device="phone-tablet"] video:nth-child(2),
+.composition figure[data-device="phone-tablet"] img:nth-child(2) {
+	position: absolute;
+	top: 44%;
+	left: 15.05%;
+	width: 19.4%;
+	height: 42%;
+}
+
+.composition figure[data-device="laptop"] video,
+.composition figure[data-device="laptop"] img {
+	position: absolute;
+	top: 28.125%;
+	left: 15%;
+	width: 70%;
+	height: 43.75%;
+}
+
+[data-page=work] .composition {
+	margin: 0 auto;
+	width: 100%;
+}
+
+[data-page=work] .composition figure[data-device="laptop"] video,
+[data-page=work] .composition figure[data-device="laptop"] img {
+	position: absolute;
+	top: 19.685%;
+	left: 15%;
+	width: 70%;
+	height: 57.415%;
+}
+
+[data-page=work][data-project=barbecues] .composition::before,
+[data-page=work][data-project=faceapp] .composition::before {
+	padding-top: 76.2%;
+}
+
+[data-page=work][data-project=barbecues] .composition figure::before,
+[data-page=work][data-project=barbecues] .composition figure::after,
+[data-page=work][data-project=faceapp] .composition figure::before,
+[data-page=work][data-project=faceapp] .composition figure::after {	
+	background-position: 50% 55%;
+}
+
+[data-page=work][data-project=montadino] .composition,
+[data-page=work][data-project=epicenter] .composition {
+	max-width: 80rem;
+}
+
+
+.composition figure:not([data-device]) img {
+    width: 80%;
 }
 
 .portfolio header {
@@ -924,62 +947,15 @@ nav a.active {
 
 .portfolio h1,
 [data-page=work] .header h1 {
-	display: flex;
-	align-self: flex-start;
-	text-align: left;
-	padding: .4em 0;
-	width: 66.666%
+	/*display: flex;*/
+	/*align-self: flex-start;*/
+	/*text-align: left;*/
+	/*padding: .4em 0;*/
+	/*width: 66.666%*/
 }
 
 [data-page=work] .header h1 {
-	padding-bottom: 0;
-}
-
-.composition {
-	position: relative;
-	flex-direction: row;
-	display: flex;
-	align-content: flex-end;
-	width: 100%
-}
-
-.composition [data-device] {
-	align-self: center;
-	max-width: 100%;
-	width: 100%;
-}
-
-.composition [data-device=phone] {
-	position: relative;
-	align-self: flex-end;
-	transform: translateX(-15%) translateY(8.45070422535%);
-	max-width: 25%;
-	margin-left: -25%
-}
-
-.composition [data-device=phone][data-frame] {
-	transform: translateX(-15%) translateY(15.7894%)
-}
-
-[data-frame=phone] {
-	border-radius: 8px;
-	background: rgba(0, 0, 0, 1);
-	padding: 0 .66%
-}
-
-[data-frame=tablet] {
-	border-radius: 8px;
-	background: rgba(0, 0, 0, .75);
-	padding: 1.32% 6%
-}
-
-[data-frame=phone]::after,
-[data-frame=phone]::before {
-	content: '';
-	display: block;
-	height: 0;
-	padding-top: 15%;
-	width: 100%
+	/*padding-bottom: 0;*/
 }
 
 .client {
@@ -996,62 +972,58 @@ nav a.active {
 	font-size: 66.666%
 }
 
-.portfolio .filler {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0, 0, 0, .05)
-}
-
-.portfolio .filler p {
-	font-family: 'League Spartan', sans-serif
-}
-
-.portfolio .filler:nth-child( odd) {
-	display: none
-}
-
 .column-container {
 	display: flex;
 	flex-direction: row
 }
 
 [data-page=work] .cover {
-	margin-bottom: 14.4rem
-}
-
-[data-page=work] .header {
+	margin-bottom: 14.4rem;
 	color: #fff;
-	padding-bottom: 4.8rem
+	text-align: center;
 }
 
-[data-page=work] .header .button {
-	position: absolute;
-	display: inline-flex;
-	justify-self: flex-end;
-	align-self: flex-end;
-	bottom: 0;
-	margin: 0 0 2em;
-	border-color: #fff;
-	color: #fff
-}
-
-@media (max-width:960px) {
-	[data-page=work] .header .button {
-    margin: 0 0 1.4em
+@media (max-width:1151px) {
+	.portfolio .context .client,
+	.portfolio .context h1,
+	.portfolio .context p {
+		margin: 0 0 2.4rem
+	}
+	.description {
+		font-size: 80%
 	}
 }
 
-@media (max-width:960px) {
-	[data-page=work] .header .button {
-    margin: 0 0 1.2em
-	}
-}
+@media (max-width:800px) {
 
-[data-touch=false] [data-page=work] .header .button:hover,
-[data-touch=true] [data-page=work] .header .button:active {
-	background: rgba(255, 255, 255, 1);
-	color: #000
+	.description {
+		font-size: 100%
+	}
+
+	.portfolio article,
+	.portfolio li:nth-child(odd) article {
+		flex-direction: column-reverse;
+		width: 100%;
+	}
+
+	.portfolio .context,
+	.portfolio .composition {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.portfolio .context {
+		padding: 1.6rem 0;
+	}
+
+	.portfolio .context-content {
+		position: relative;
+	}	
+
+	.context::before {
+		display: none;
+	}
+
 }
 
 .feature {
@@ -1107,7 +1079,7 @@ nav a.active {
 
 @media (max-width:960px) {
 	.portfolio li a {
-		padding: 3.2rem
+		/*padding: 3.2rem*/
 	}
 }
 
@@ -1116,7 +1088,7 @@ nav a.active {
 		width: 100%
 	}
 	.portfolio li a {
-		padding: 4.8rem
+		/*padding: 4.8rem*/
 	}
 	.feature {
 		padding: 4.8rem 0;
@@ -1125,14 +1097,11 @@ nav a.active {
 	.caption {
 		padding-top: 4.8rem
 	}
-	.portfolio .filler {
-		display: none
-	}
 }
 
 @media (max-width:520px) {
 	.portfolio li a {
-		padding: 3.2rem
+		/*padding: 3.2rem*/
 	}
 	.feature {
 		margin-bottom: 7.2rem
@@ -1140,17 +1109,15 @@ nav a.active {
 	.contain {
 		padding: 0 3.2rem
 	}
+	.portfolio .context-content {
+		padding: 3.2rem;
+	}
 	.column-container {
 		flex-direction: column
 	}
-	[data-page=work] .header .button {
-		position: relative;
-		align-self: flex-start;
-		margin: 1em 0 0
-	}
 	[data-page=work] .cover {
-		padding: 4.8rem 0;
-		margin-bottom: 9.6rem
+		/*padding: 4.8rem 0;*/
+		/*margin-bottom: 9.6rem*/
 	}
 	[data-page=work] .header h1 {
 		width: 100%
@@ -1159,19 +1126,25 @@ nav a.active {
 
 @media (max-width:480px) {
 	.portfolio li a {
-		padding: 2.4rem
+		/*padding: 2.4rem*/
 	}
 	.contain {
 		padding: 0 2.4rem
+	}
+	.portfolio .context-content {
+		padding: 2.4rem;
 	}
 }
 
 @media (max-width:360px) {
 	.portfolio li a {
-		padding: 2.1rem
+		/*padding: 2.1rem*/
 	}
 	.contain {
 		padding: 0 2.1rem
+	}
+	.portfolio .context-content {
+		padding: 2.1rem;
 	}
 	[data-page=work] .header h1 {
 		font-size: 3.2rem
@@ -1180,8 +1153,8 @@ nav a.active {
 
 .profile {
 	margin: 0 auto;
-	width: 12.8rem;
-	height: 12.8rem;
+	width: 19.2rem;
+	height: 19.2rem;
 	border-radius: 50%;
 	overflow: hidden;
 }
@@ -1257,82 +1230,29 @@ footer .phone span {
 	}
 }
 
+[data-project=epicenter] .cover,
+[data-project=epicenter] .composition {
+	background: #d6c2b0
+}
+
 [data-project=barbecues] .cover,
-[data-project=barbecues]>a:first-child:last-child {
+[data-project=barbecues] .composition {
 	background: #a87094
 }
 
-[data-project=scoreboard] .cover,
-[data-project=scoreboard]>a:first-child:last-child {
-	background: #75c9ee
-}
-
-[data-project=scoreboard] [data-device=notebook] .screen::before {
-	content: '';
-	display: flex;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-image: url(../img/portfolio/estadao/scoreboard/001-b.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	z-index: 2;
-}
-
-[data-project=scoreboard] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/estadao/scoreboard/002.jpg);
-	background-position: center 49.2%
-}
-
-[data-project=microcephaly] .cover,
-[data-project=microcephaly]>a:first-child:last-child {
-	background: #69a6fc
-}
-
 [data-project=montadino] .cover,
-[data-project=montadino]>a:first-child:last-child {
-	background: #ff9a99
-}
-
-[data-project=uva] .cover,
-[data-project=uva]>a:first-child:last-child {
-	background: #907ea5
-}
-
-[data-project=camping] .cover,
-[data-project=camping]>a:first-child:last-child {
-	background: #f8c794;
-}
-
-[data-project=camping] [data-device=phone] .screen video {
-	background-color: black;
+[data-project=montadino] .composition {
+	background: #ffcbca
 }
 
 [data-project=adoption] .cover,
-[data-project=adoption]>a:first-child:last-child {
+[data-project=adoption] .composition {
 	background: #84a86c;
 }
 
-[data-project=adoption] [data-device=phone] .screen video {
-	background-color: black;
-}
-
 [data-project=faceapp] .cover,
-[data-project=faceapp]>a:first-child:last-child {
+[data-project=faceapp] .composition {
 	background: #f2cbaf
-}
-
-[data-project=faceapp] [data-device=notebook] .screen {
-	background-image: url(../img/portfolio/estadao/faceapp/001.gif);
-	background-position: center center;
-	background-color: white;
-	background-size: 50%;
-}
-
-[data-project=faceapp] [data-device=phone] .screen {
-	background-image: url(../img/portfolio/estadao/faceapp/002.png);
 }
 
 .content .screen {
@@ -1660,36 +1580,6 @@ i.approx::before {
 	font-weight: bold;
 	color: rgba( 0, 0, 0, .25 );
 }
-/*
-.news .swiper-container {
-  margin-left: initial;
-  margin-right: initial;
-}
-
-.news .swiper-slide {
-	background: pink;
-	max-width: calc( 36rem + 3.6rem);
-}
-
-.news .swiper-slide .contain {
-	margin: initial;
-	padding-right: 0;
-}
-
-.news .swiper-slide .news-item {
-	align-self: flex-start;
-	width: 100%;
-	min-width: 28.8rem;
-	max-width: 36rem;
-	background: #eee
-}
-
-@media (max-width: 640px) {
-	.news .swiper-slide .news-item {
-		max-width: 28.8rem;
-	}
-}
-*/
 
 .news .news-list {
 	margin: 0 auto;
