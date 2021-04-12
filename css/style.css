@@ -464,7 +464,7 @@ nav {
 }
 
 .portfolio header {
-	
+
 }
 
 .portfolio .context {
@@ -927,7 +927,7 @@ nav a {
 [data-page=work][data-project=barbecues] .composition figure::before,
 [data-page=work][data-project=barbecues] .composition figure::after,
 [data-page=work][data-project=faceapp] .composition figure::before,
-[data-page=work][data-project=faceapp] .composition figure::after {	
+[data-page=work][data-project=faceapp] .composition figure::after {
 	background-position: 50% 55%;
 }
 
@@ -1018,7 +1018,7 @@ nav a {
 
 	.portfolio .context-content {
 		position: relative;
-	}	
+	}
 
 	.context::before {
 		display: none;
@@ -1257,6 +1257,10 @@ footer .phone span {
 
 .content .screen {
 	background-image: none !important;
+}
+
+[data-page="work"][data-project] .composition {
+	background: transparent;
 }
 
 .portfolio li,
