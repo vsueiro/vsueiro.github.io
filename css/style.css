@@ -920,14 +920,17 @@ nav a {
 }
 
 [data-page=work][data-project=barbecues] .composition::before,
-[data-page=work][data-project=faceapp] .composition::before {
+[data-page=work][data-project=faceapp] .composition::before,
+[data-page=work][data-project=supertunnel] .composition::before {
 	padding-top: 76.2%;
 }
 
 [data-page=work][data-project=barbecues] .composition figure::before,
 [data-page=work][data-project=barbecues] .composition figure::after,
 [data-page=work][data-project=faceapp] .composition figure::before,
-[data-page=work][data-project=faceapp] .composition figure::after {
+[data-page=work][data-project=faceapp] .composition figure::after,
+[data-page=work][data-project=supertunnel] .composition figure::before,
+[data-page=work][data-project=supertunnel] .composition figure::after {
 	background-position: 50% 55%;
 }
 
@@ -1253,6 +1256,11 @@ footer .phone span {
 [data-project=faceapp] .cover,
 [data-project=faceapp] .composition {
 	background: #f2cbaf
+}
+
+[data-project=supertunnel] .cover,
+[data-project=supertunnel] .composition {
+	background: #ec7b80
 }
 
 .content .screen {
