@@ -1,19 +1,9 @@
-.list,
-.list li:before,
-blockquote cite,
-p {
-	color: #7f7f7f
-}
-
-.contain,
-nav li {
-	transition: padding .4s
-}
-
-.button,
-.caption,
-.lead {
-	text-align: center
+@font-face {
+	font-family: 'League Spartan';
+	src: url(../fonts/leaguespartan-bold.eot);
+	src: url(../fonts/leaguespartan-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/leaguespartan-bold.woff2) format('woff2'), url(../fonts/leaguespartan-bold.woff) format('woff'), url(../fonts/leaguespartan-bold.ttf) format('truetype'), url(../fonts/leaguespartan-bold.svg#league_spartanbold) format('svg');
+	font-weight: 700;
+	font-style: normal
 }
 
 @font-face {
@@ -30,12 +20,24 @@ nav li {
 	src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype')
 }
 
-@font-face {
-	font-family: 'League Spartan';
-	src: url(../fonts/leaguespartan-bold.eot);
-	src: url(../fonts/leaguespartan-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/leaguespartan-bold.woff2) format('woff2'), url(../fonts/leaguespartan-bold.woff) format('woff'), url(../fonts/leaguespartan-bold.ttf) format('truetype'), url(../fonts/leaguespartan-bold.svg#league_spartanbold) format('svg');
-	font-weight: 700;
-	font-style: normal
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.list,
+.list li:before,
+blockquote cite,
+p {
+	color: #7f7f7f
+}
+
+.contain,
+nav li {
+	transition: padding .4s
+}
+
+.button,
+.caption,
+.lead {
+	text-align: center
 }
 
 .screen-reader {
@@ -683,6 +685,7 @@ nav a {
 
 .button.goto::after {
 	content: '→';
+	font-family: Inter;
 	margin-left: .5em
 }
 
