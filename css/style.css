@@ -1,10 +1,24 @@
+:root {
+
+	/* Scaling factor for headings (from old to new version of League Spartan) */
+	--factor: 1.25;
+
+}
+
 @font-face {
 	font-family: 'League Spartan';
-	src: url(../fonts/leaguespartan-bold.eot);
-	src: url(../fonts/leaguespartan-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/leaguespartan-bold.woff2) format('woff2'), url(../fonts/leaguespartan-bold.woff) format('woff'), url(../fonts/leaguespartan-bold.ttf) format('truetype'), url(../fonts/leaguespartan-bold.svg#league_spartanbold) format('svg');
-	font-weight: 700;
-	font-style: normal
+	src: url('../fonts/LeagueSpartan-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
 }
+
+@font-face {
+	font-family: 'League Spartan';
+	src: url('../fonts/LeagueSpartan-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
 
 @font-face {
 	font-family: Lato;
@@ -29,8 +43,7 @@ p {
 	color: #7f7f7f
 }
 
-.contain,
-nav li {
+.contain {
 	transition: padding .4s
 }
 
@@ -289,7 +302,6 @@ nav {
 blockquote::before {
 	content: '“';
 	position: absolute;
-	font-family: 'League Spartan';
 	left: 0;
 	font-size: 150%;
 	color: rgba(0, 0, 0, .25)
@@ -414,6 +426,8 @@ body {
 }
 
 blockquote p,
+blockquote::before,
+strong.number,
 h1,
 h2,
 h3,
@@ -422,7 +436,10 @@ h5,
 h6,
 header,
 nav {
-	font-family: 'League Spartan', sans-serif
+	font-family: 'League Spartan', sans-serif;
+	line-height: calc( 1.5 * 1 / var(--factor) );
+	letter-spacing: -0.024em;
+	font-weight: 700;
 }
 
 h1,
@@ -433,19 +450,29 @@ h5,
 h6,
 header,
 nav {
-	letter-spacing: 0;
 	text-align: center;
 	transition: font-size .4s
 }
 
-h1 {
+h1,
+strong.number {
 	text-align: left;
-	font-size: 3.6rem;
+	font-size: calc( 3.6rem * var(--factor) );
 	max-width: 92rem;
 }
 
 h2 {
-	font-size: 3.2rem
+	font-size: calc( 3.2rem * var(--factor) )
+}
+
+h3,
+nav {
+	font-size: calc( 2.4rem * var(--factor) )
+}
+
+h4,
+blockquote p {
+	font-size: calc( 2.1rem * var(--factor) )
 }
 
 p .emoji {
@@ -462,15 +489,8 @@ p .emoji {
 }
 
 nav {
-	font-size: 1.6rem;
-	text-transform: lowercase;
-	background: 0 0;
 	align-items: center;
 	padding: 4.8rem 0
-}
-
-.portfolio header {
-
 }
 
 .portfolio .context {
@@ -482,12 +502,12 @@ nav {
 }
 
 .portfolio .client {
-	font-size: 1.6rem;
-	letter-spacing: .033em
+	/* font-size: calc( 1.6rem * var(--factor) ); */
+	letter-spacing: .033em;
 }
 
 [data-page=index] .portfolio h1 {
-	font-size: 3.6rem
+	font-size: calc( 3.6rem * var(--factor) )
 }
 
 [data-page=index] header h1 {
@@ -495,7 +515,7 @@ nav {
 }
 
 [data-page=work] .cover h1 {
-	font-size: 6.4rem;
+	font-size: calc( 6.4rem * var(--factor) );
 	text-align: center;
 }
 
@@ -504,19 +524,20 @@ nav {
 }
 
 [data-page=index] .portfolio .client {
-	font-size: 1.6rem
+	font-size: calc( 1.6rem * var(--factor) );
 }
 
 [data-page=work] .client {
-	justify-content: center
+	justify-content: center;
+	font-size: calc( 2.1rem * var(--factor) );
 }
 
 @media (max-width:960px) {
 	[data-page=index] .portfolio h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 4.8rem
+		font-size: calc( 4.8rem * var(--factor) )
 	}
 	[data-page=index] .portfolio .client {
 		font-size: 1.4rem
@@ -525,19 +546,19 @@ nav {
 
 @media (max-width:720px) {
 	h1 {
-		font-size: 4.2rem
+		font-size: calc( 4.2rem * var(--factor) )
 	}
 	h2 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	body {
 		font-size: 1.8rem
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 3.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 4.2rem
+		font-size: calc( 4.2rem * var(--factor) )
 	}
 	[data-page=index] .portfolio .client {
 		font-size: 1.6rem
@@ -549,13 +570,13 @@ nav {
 
 @media (max-width:580px) {
 	h1 {
-		font-size: 3.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 3.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=index] .portfolio .client {
 		font-size: 1.6rem
@@ -564,16 +585,16 @@ nav {
 
 @media (max-width:520px) {
 	h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	nav {
-		font-size: 1.4rem
+		font-size: calc( 2.1rem * var(--factor) )
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	[data-page=index] .portfolio .client {
 		font-size: 1.4rem
@@ -585,7 +606,7 @@ nav {
 
 @media (max-width:480px) {
 	h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	nav {
 		padding: 3.2rem 0
@@ -596,7 +617,7 @@ nav {
 	[data-page=index] .portfolio h1,
 	h1,
 	h2 {
-		font-size: 2.4rem
+		font-size: calc( 2.4rem * var(--factor) )
 	}
 	body {
 		font-size: 1.6rem
@@ -607,10 +628,10 @@ nav {
 	[data-page=index] .portfolio h1,
 	h1,
 	h2 {
-		font-size: 2.1rem
+		font-size: calc( 2.1rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 }
 
@@ -621,11 +642,6 @@ nav .contain {
 	width: 100%
 }
 
-.brand {
-	align-items: center;
-	font-size: 150%
-}
-
 [data-page=index] nav .contain {
 	justify-content: center
 }
@@ -634,29 +650,13 @@ nav .contain {
 	display: none
 }
 
-nav a,
-nav ul {
+nav a {
 	display: flex
-}
-
-nav ul {
-	line-height: 4.8rem;
-	display: none;
-}
-
-nav li {
-	padding: 0 1.2rem
 }
 
 nav a {
 	border: 0;
 	transition: color .2s
-}
-
-@media (max-width:336px) {
-	nav li {
-		padding: 0 .8rem
-	}
 }
 
 .button {
@@ -1157,7 +1157,7 @@ nav a {
 		padding: 2.1rem;
 	}
 	[data-page=work] .header h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 }
 
@@ -1292,21 +1292,6 @@ h1,
 	-webkit-animation: fade-up .4s forwards;
 	animation: fade-up .4s forwards
 }
-
-/* nav li:nth-child( 1) a {
-	-webkit-animation-delay: .4s;
-	animation-delay: .4s
-}
-
-nav li:nth-child( 2) a {
-	-webkit-animation-delay: .6s;
-	animation-delay: .6s
-}
-
-nav li:nth-child( 3) a {
-	-webkit-animation-delay: .8s;
-	animation-delay: .8s
-} */
 
 h1 {
 	-webkit-animation-delay: 1s;
@@ -1501,11 +1486,6 @@ i.plus::before {
 i.decrease::before,
 i.increase::before {
 	content: '➔'
-}
-
-strong.number {
-	font-size: 150%;
-	font-family: League Spartan
 }
 
 i.approx::before,
