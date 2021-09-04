@@ -626,9 +626,6 @@ nav .contain {
 
 nav a {
 	display: flex
-}
-
-nav a {
 	border: 0;
 	transition: color .2s
 }
@@ -1555,7 +1552,7 @@ i.approx::before {
 }
 
 .news .complement span:not(.emoji) {
-	font-size: 80%;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: rgba( 0, 0, 0, .25 );
