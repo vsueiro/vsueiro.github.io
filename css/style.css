@@ -303,7 +303,6 @@ blockquote::before {
 	content: '“';
 	position: absolute;
 	left: 0;
-	font-size: 150%;
 	color: rgba(0, 0, 0, .25)
 }
 
@@ -455,7 +454,8 @@ nav {
 }
 
 h1,
-strong.number {
+strong.number,
+blockquote::before {
 	text-align: left;
 	font-size: calc( 3.6rem * var(--factor) );
 	max-width: 92rem;
