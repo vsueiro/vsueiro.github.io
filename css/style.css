@@ -720,7 +720,7 @@ nav a {
 	z-index: 2
 }
 
-[data-device] {
+[data-device] figure {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
@@ -836,32 +836,32 @@ nav a {
 	background-size: cover;
 }
 
-.composition figure[data-device="phone"]::before {
+.composition[data-device="phone"] figure::before {
 	background-image: url(../img/devices/fill-phone.svg);
 }
 
-.composition figure[data-device="phone"]::after {
+.composition[data-device="phone"] figure::after {
 	background-image: url(../img/devices/frame-phone.svg);
 }
 
-.composition figure[data-device="phone-tablet"]::before {
+.composition[data-device="phone-tablet"] figure::before {
 	background-image: url(../img/devices/fill-phone-tablet.svg);
 }
 
-.composition figure[data-device="phone-tablet"]::after {
+.composition[data-device="phone-tablet"] figure::after {
 	background-image: url(../img/devices/frame-phone-tablet.svg);
 }
 
-.composition figure[data-device="laptop"]::before {
+.composition[data-device="laptop"] figure::before {
 	background-image: url(../img/devices/fill-laptop.svg);
 }
 
-.composition figure[data-device="laptop"]::after {
+.composition[data-device="laptop"] figure::after {
 	background-image: url(../img/devices/frame-laptop.svg);
 }
 
-.composition figure[data-device="phone"] video,
-.composition figure[data-device="phone"] img {
+.composition[data-device="phone"] figure video,
+.composition[data-device="phone"] figure img {
 	position: absolute;
 	top: 15%;
 	left: 33.836%;
@@ -869,8 +869,8 @@ nav a {
 	height: 70%;
 }
 
-.composition figure[data-device="phone-tablet"] video:nth-child(1),
-.composition figure[data-device="phone-tablet"] img:nth-child(1) {
+.composition[data-device="phone-tablet"] figure video:nth-child(1),
+.composition[data-device="phone-tablet"] figure img:nth-child(1) {
 	position: absolute;
 	top: 15%;
 	left: 31.5%;
@@ -878,8 +878,8 @@ nav a {
 	height: 70%;
 }
 
-.composition figure[data-device="phone-tablet"] video:nth-child(2),
-.composition figure[data-device="phone-tablet"] img:nth-child(2) {
+.composition[data-device="phone-tablet"] figure video:nth-child(2),
+.composition[data-device="phone-tablet"] figure img:nth-child(2) {
 	position: absolute;
 	top: 44%;
 	left: 15.05%;
@@ -887,8 +887,8 @@ nav a {
 	height: 42%;
 }
 
-.composition figure[data-device="laptop"] video,
-.composition figure[data-device="laptop"] img {
+.composition[data-device="laptop"] figure video,
+.composition[data-device="laptop"] figure img {
 	position: absolute;
 	top: 28.125%;
 	left: 15%;
@@ -901,8 +901,8 @@ nav a {
 	width: 100%;
 }
 
-[data-page=work] .composition figure[data-device="laptop"] video,
-[data-page=work] .composition figure[data-device="laptop"] img {
+[data-page=work] .composition[data-device="laptop"] figure video,
+[data-page=work] .composition[data-device="laptop"] figure img {
 	position: absolute;
 	top: 19.685%;
 	left: 15%;
@@ -930,9 +930,8 @@ nav a {
 	max-width: 80rem;
 }
 
-
-.composition figure:not([data-device]) img {
-    width: 80%;
+.composition:not([data-device]) figure img {
+  width: 80%;
 }
 
 .portfolio header {
