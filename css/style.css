@@ -446,7 +446,8 @@ h4,
 h5,
 h6,
 header,
-nav {
+nav,
+.client {
 	text-align: center;
 	transition: font-size .4s
 }
