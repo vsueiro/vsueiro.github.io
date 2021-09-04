@@ -19,21 +19,6 @@
 	font-style: normal;
 }
 
-
-@font-face {
-	font-family: Lato;
-	font-style: normal;
-	font-weight: 400;
-	src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Lato;
-	font-style: normal;
-	font-weight: 900;
-	src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype')
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 .list,
@@ -418,10 +403,10 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Lato, sans-serif;
-	font-size: 2.1rem;
-	line-height: 1.5;
-	letter-spacing: .033em
+	font-family: 'League Spartan', sans-serif;
+	font-weight: 400;
+	font-size: 2.4rem;
+	line-height: 1.333;
 }
 
 blockquote p,
@@ -434,7 +419,8 @@ h4,
 h5,
 h6,
 header,
-nav {
+nav,
+.button {
 	font-family: 'League Spartan', sans-serif;
 	line-height: calc( 1.5 * 1 / var(--factor) );
 	letter-spacing: -0.024em;
@@ -498,12 +484,9 @@ nav {
 }
 
 .portfolio .description {
-	font-weight: 400
-}
-
-.portfolio .client {
-	/* font-size: calc( 1.6rem * var(--factor) ); */
-	letter-spacing: .033em;
+	font-weight: 400;
+	width: 100%;
+	max-width: none;
 }
 
 [data-page=index] .portfolio h1 {
@@ -539,9 +522,6 @@ nav {
 	[data-page=work] .cover h1 {
 		font-size: calc( 4.8rem * var(--factor) )
 	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.4rem
-	}
 }
 
 @media (max-width:720px) {
@@ -552,16 +532,13 @@ nav {
 		font-size: calc( 2.8rem * var(--factor) )
 	}
 	body {
-		font-size: 1.8rem
+		font-size: 2.1rem
 	}
 	[data-page=index] .portfolio h1 {
 		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
 		font-size: calc( 4.2rem * var(--factor) )
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.6rem
 	}
 	footer {
 		font-size: 2.1rem
@@ -578,9 +555,6 @@ nav {
 	[data-page=work] .cover h1 {
 		font-size: calc( 3.6rem * var(--factor) )
 	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.6rem
-	}
 }
 
 @media (max-width:520px) {
@@ -595,9 +569,6 @@ nav {
 	}
 	[data-page=work] .cover h1 {
 		font-size: calc( 3.2rem * var(--factor) )
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.4rem
 	}
 	.list {
 		font-size: 100%
@@ -619,8 +590,11 @@ nav {
 	h2 {
 		font-size: calc( 2.4rem * var(--factor) )
 	}
+	[data-page=index] .portfolio .client {
+		font-size: calc( 1.4rem * var(--factor) );
+	}
 	body {
-		font-size: 1.6rem
+		font-size: 1.8rem
 	}
 }
 
@@ -660,7 +634,7 @@ nav a {
 }
 
 .button {
-	font-family: Lato;
+	letter-spacing: 0.096em;
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -668,19 +642,25 @@ nav a {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+	-webkit-align-items: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
 	margin: 4.8rem 0;
-	padding: 0 2.4rem;
+	padding: .8rem 2.4rem;
 	border: .2rem solid rgba(0, 0, 0, 1);
 	border-radius: 999rem;
 	height: 4.8rem;
-	font-size: 80%;
+	line-height: 1.5;
+	font-size: 1.8rem;
 	text-transform: uppercase;
 	user-select: none;
 	white-space: nowrap;
 	transition: background-color .4s, color .4s, height .4s, padding .4s
+}
+
+.button:not(.circle)::after {
+  content: '​'; /* Zero-width space to center text vertically using baseline */
+  font-family: Inter;
 }
 
 .button.goto::after {
@@ -697,7 +677,8 @@ nav a {
 
 .circle {
 	padding: 0;
-	width: 4.8rem
+	width: 4.8rem;
+	align-items: center;
 }
 
 .social .button {
@@ -719,7 +700,7 @@ nav a {
 @media (max-width:580px) {
 	.button {
 		height: 4.2rem;
-		padding: 0 2.1rem
+		padding: .48rem 2.1rem
 	}
 	.circle {
 		padding: 0;
@@ -1004,7 +985,7 @@ nav a {
 	}
 }
 
-@media (max-width:800px) {
+@media (max-width:960px) {
 
 	.description {
 		font-size: 100%
@@ -1578,6 +1559,7 @@ i.approx::before {
 	text-transform: uppercase;
 	font-weight: bold;
 	color: rgba( 0, 0, 0, .25 );
+	letter-spacing: 0.096em;
 }
 
 .news .news-list {
