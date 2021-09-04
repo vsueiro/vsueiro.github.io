@@ -625,8 +625,8 @@ nav .contain {
 }
 
 nav a {
-	display: flex
-	border: 0;
+	display: flex;
+	border-bottom: 0;
 	transition: color .2s
 }
 
@@ -678,14 +678,8 @@ nav a {
 	align-items: center;
 }
 
-.social .button {
-	font-size: 100%;
-	text-transform: lowercase
-}
-
-.social .button i {
-	margin-left: .2rem;
-	margin-top: .2rem
+.button svg {
+	width: 1.8rem;
 }
 
 .button:hover,
