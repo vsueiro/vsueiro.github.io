@@ -1,26 +1,30 @@
+:root {
+
+	/* Scaling factor for headings (from old to new version of League Spartan) */
+	--factor: 1.25;
+
+}
+
 @font-face {
 	font-family: 'League Spartan';
-	src: url(../fonts/leaguespartan-bold.eot);
-	src: url(../fonts/leaguespartan-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/leaguespartan-bold.woff2) format('woff2'), url(../fonts/leaguespartan-bold.woff) format('woff'), url(../fonts/leaguespartan-bold.ttf) format('truetype'), url(../fonts/leaguespartan-bold.svg#league_spartanbold) format('svg');
-	font-weight: 700;
-	font-style: normal
-}
-
-@font-face {
-	font-family: Lato;
-	font-style: normal;
+	src: url('../fonts/LeagueSpartan-Regular.woff2') format('woff2');
 	font-weight: 400;
-	src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype')
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Lato;
+	font-family: 'League Spartan';
+	src: url('../fonts/LeagueSpartan-Bold.woff2') format('woff2');
+	font-weight: 700;
 	font-style: normal;
-	font-weight: 900;
-	src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype')
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@font-face {
+	font-family: 'Inter';
+	src: url('../fonts/Inter-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
 
 .list,
 .list li:before,
@@ -29,8 +33,7 @@ p {
 	color: #7f7f7f
 }
 
-.contain,
-nav li {
+.contain {
 	transition: padding .4s
 }
 
@@ -289,9 +292,7 @@ nav {
 blockquote::before {
 	content: '“';
 	position: absolute;
-	font-family: 'League Spartan';
 	left: 0;
-	font-size: 150%;
 	color: rgba(0, 0, 0, .25)
 }
 
@@ -407,13 +408,15 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-family: Lato, sans-serif;
-	font-size: 2.1rem;
-	line-height: 1.5;
-	letter-spacing: .033em
+	font-family: 'League Spartan', sans-serif;
+	font-weight: 400;
+	font-size: 2.4rem;
+	line-height: 1.333;
 }
 
 blockquote p,
+blockquote::before,
+strong.number,
 h1,
 h2,
 h3,
@@ -421,8 +424,12 @@ h4,
 h5,
 h6,
 header,
-nav {
-	font-family: 'League Spartan', sans-serif
+nav,
+.button {
+	font-family: 'League Spartan', sans-serif;
+	line-height: calc( 1.5 * 1 / var(--factor) );
+	letter-spacing: -0.024em;
+	font-weight: 700;
 }
 
 h1,
@@ -433,19 +440,30 @@ h5,
 h6,
 header,
 nav {
-	letter-spacing: 0;
 	text-align: center;
 	transition: font-size .4s
 }
 
-h1 {
+h1,
+strong.number,
+blockquote::before {
 	text-align: left;
-	font-size: 3.6rem;
+	font-size: calc( 3.6rem * var(--factor) );
 	max-width: 92rem;
 }
 
 h2 {
-	font-size: 3.2rem
+	font-size: calc( 3.2rem * var(--factor) )
+}
+
+h3,
+nav {
+	font-size: calc( 2.4rem * var(--factor) )
+}
+
+h4,
+blockquote p {
+	font-size: calc( 2.1rem * var(--factor) )
 }
 
 p .emoji {
@@ -462,15 +480,8 @@ p .emoji {
 }
 
 nav {
-	font-size: 1.6rem;
-	text-transform: lowercase;
-	background: 0 0;
 	align-items: center;
 	padding: 4.8rem 0
-}
-
-.portfolio header {
-
 }
 
 .portfolio .context {
@@ -478,16 +489,13 @@ nav {
 }
 
 .portfolio .description {
-	font-weight: 400
-}
-
-.portfolio .client {
-	font-size: 1.6rem;
-	letter-spacing: .033em
+	font-weight: 400;
+	width: 100%;
+	max-width: none;
 }
 
 [data-page=index] .portfolio h1 {
-	font-size: 3.6rem
+	font-size: calc( 3.6rem * var(--factor) )
 }
 
 [data-page=index] header h1 {
@@ -495,7 +503,7 @@ nav {
 }
 
 [data-page=work] .cover h1 {
-	font-size: 6.4rem;
+	font-size: calc( 6.4rem * var(--factor) );
 	text-align: center;
 }
 
@@ -504,43 +512,38 @@ nav {
 }
 
 [data-page=index] .portfolio .client {
-	font-size: 1.6rem
+	font-size: calc( 1.6rem * var(--factor) );
 }
 
 [data-page=work] .client {
-	justify-content: center
+	justify-content: center;
+	font-size: calc( 2.1rem * var(--factor) );
 }
 
 @media (max-width:960px) {
 	[data-page=index] .portfolio h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 4.8rem
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.4rem
+		font-size: calc( 4.8rem * var(--factor) )
 	}
 }
 
 @media (max-width:720px) {
 	h1 {
-		font-size: 4.2rem
+		font-size: calc( 4.2rem * var(--factor) )
 	}
 	h2 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	body {
-		font-size: 1.8rem
+		font-size: 2.1rem
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 3.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 4.2rem
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.6rem
+		font-size: calc( 4.2rem * var(--factor) )
 	}
 	footer {
 		font-size: 2.1rem
@@ -549,34 +552,28 @@ nav {
 
 @media (max-width:580px) {
 	h1 {
-		font-size: 3.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 3.6rem
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.6rem
+		font-size: calc( 3.6rem * var(--factor) )
 	}
 }
 
 @media (max-width:520px) {
 	h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	nav {
-		font-size: 1.4rem
+		font-size: calc( 2.1rem * var(--factor) )
 	}
 	[data-page=index] .portfolio h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 3.2rem
-	}
-	[data-page=index] .portfolio .client {
-		font-size: 1.4rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 	.list {
 		font-size: 100%
@@ -585,7 +582,7 @@ nav {
 
 @media (max-width:480px) {
 	h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 	nav {
 		padding: 3.2rem 0
@@ -596,10 +593,13 @@ nav {
 	[data-page=index] .portfolio h1,
 	h1,
 	h2 {
-		font-size: 2.4rem
+		font-size: calc( 2.4rem * var(--factor) )
+	}
+	[data-page=index] .portfolio .client {
+		font-size: calc( 1.4rem * var(--factor) );
 	}
 	body {
-		font-size: 1.6rem
+		font-size: 1.8rem
 	}
 }
 
@@ -607,10 +607,10 @@ nav {
 	[data-page=index] .portfolio h1,
 	h1,
 	h2 {
-		font-size: 2.1rem
+		font-size: calc( 2.1rem * var(--factor) )
 	}
 	[data-page=work] .cover h1 {
-		font-size: 2.8rem
+		font-size: calc( 2.8rem * var(--factor) )
 	}
 }
 
@@ -621,11 +621,6 @@ nav .contain {
 	width: 100%
 }
 
-.brand {
-	align-items: center;
-	font-size: 150%
-}
-
 [data-page=index] nav .contain {
 	justify-content: center
 }
@@ -634,33 +629,14 @@ nav .contain {
 	display: none
 }
 
-nav a,
-nav ul {
-	display: flex
-}
-
-nav ul {
-	line-height: 4.8rem;
-	display: none;
-}
-
-nav li {
-	padding: 0 1.2rem
-}
-
 nav a {
-	border: 0;
+	display: flex;
+	border-bottom: 0;
 	transition: color .2s
 }
 
-@media (max-width:336px) {
-	nav li {
-		padding: 0 .8rem
-	}
-}
-
 .button {
-	font-family: Lato;
+	letter-spacing: 0.096em;
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -668,19 +644,25 @@ nav a {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
-	align-items: center;
+	-webkit-align-items: baseline;
+	-ms-flex-align: baseline;
+	align-items: baseline;
 	margin: 4.8rem 0;
-	padding: 0 2.4rem;
+	padding: .8rem 2.4rem;
 	border: .2rem solid rgba(0, 0, 0, 1);
 	border-radius: 999rem;
 	height: 4.8rem;
-	font-size: 80%;
+	line-height: 1.5;
+	font-size: 1.8rem;
 	text-transform: uppercase;
 	user-select: none;
 	white-space: nowrap;
 	transition: background-color .4s, color .4s, height .4s, padding .4s
+}
+
+.button:not(.circle)::after {
+  content: '​'; /* Zero-width space to center text vertically using baseline */
+  font-family: Inter;
 }
 
 .button.goto::after {
@@ -697,17 +679,12 @@ nav a {
 
 .circle {
 	padding: 0;
-	width: 4.8rem
+	width: 4.8rem;
+	align-items: center;
 }
 
-.social .button {
-	font-size: 100%;
-	text-transform: lowercase
-}
-
-.social .button i {
-	margin-left: .2rem;
-	margin-top: .2rem
+.button svg {
+	width: 1.8rem;
 }
 
 .button:hover,
@@ -719,7 +696,7 @@ nav a {
 @media (max-width:580px) {
 	.button {
 		height: 4.2rem;
-		padding: 0 2.1rem
+		padding: .48rem 2.1rem
 	}
 	.circle {
 		padding: 0;
@@ -1004,7 +981,7 @@ nav a {
 	}
 }
 
-@media (max-width:800px) {
+@media (max-width:960px) {
 
 	.description {
 		font-size: 100%
@@ -1157,7 +1134,7 @@ nav a {
 		padding: 2.1rem;
 	}
 	[data-page=work] .header h1 {
-		font-size: 3.2rem
+		font-size: calc( 3.2rem * var(--factor) )
 	}
 }
 
@@ -1292,21 +1269,6 @@ h1,
 	-webkit-animation: fade-up .4s forwards;
 	animation: fade-up .4s forwards
 }
-
-/* nav li:nth-child( 1) a {
-	-webkit-animation-delay: .4s;
-	animation-delay: .4s
-}
-
-nav li:nth-child( 2) a {
-	-webkit-animation-delay: .6s;
-	animation-delay: .6s
-}
-
-nav li:nth-child( 3) a {
-	-webkit-animation-delay: .8s;
-	animation-delay: .8s
-} */
 
 h1 {
 	-webkit-animation-delay: 1s;
@@ -1503,11 +1465,6 @@ i.increase::before {
 	content: '➔'
 }
 
-strong.number {
-	font-size: 150%;
-	font-family: League Spartan
-}
-
 i.approx::before,
 i.decrease::before,
 i.increase::before,
@@ -1594,10 +1551,11 @@ i.approx::before {
 }
 
 .news .complement span:not(.emoji) {
-	font-size: 80%;
+	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: rgba( 0, 0, 0, .25 );
+	letter-spacing: 0.096em;
 }
 
 .news .news-list {
