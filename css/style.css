@@ -387,6 +387,13 @@ figure.circle + blockquote {
 	.portfolio .context-content {
 		padding: 2.4rem;
 	}
+	[data-page=work] .composition[data-device="phone"]::before {
+		padding-top: 200%
+	}
+	[data-page=work] .composition[data-device="phone"] figure video,
+	[data-page=work] .composition[data-device="phone"] figure img {
+		transform: scale( 2 )
+	}
 }
 
 @media (max-width:320px) {
