@@ -534,6 +534,9 @@ nav {
 	[data-page=work] .cover h1 {
 		font-size: calc( 4.8rem * var(--factor) )
 	}
+	[data-page="work"] .client {
+		font-size: calc( 1.6rem * var(--factor) )
+	}
 }
 
 @media (max-width:720px) {
