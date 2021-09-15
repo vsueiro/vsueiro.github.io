@@ -29,6 +29,8 @@
 .list,
 .list li:before,
 blockquote cite,
+figcaption,
+.caption,
 p {
 	color: #7f7f7f
 }
@@ -141,13 +143,15 @@ header {
 
 .list,
 .split,
+.caption,
+figcaption,
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
 	-webkit-align-self: center;
 	-ms-flex-item-align: center;
 	-ms-grid-row-align: center;
@@ -161,6 +165,14 @@ p+p {
 
 .content p {
 	width: 100%;
+}
+
+.content p+figure {
+	margin: 9.6rem auto 9.6rem;
+}
+
+.content figure:last-child {
+	margin-bottom: 0;
 }
 
 main>header {
@@ -1063,8 +1075,13 @@ nav a {
 	padding-top: 9.6rem
 }
 
+figcaption.caption {
+	/* padding-top: 6.4rem; */
+	margin: 0 auto;
+}
+
 .media .caption {
-	padding-top: 4.8rem
+	padding-top: 6.4rem
 }
 
 .column {
