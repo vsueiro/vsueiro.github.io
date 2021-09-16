@@ -101,6 +101,10 @@ em {
 	font-style: normal;
 }
 
+.italic {
+	font-size: italic;
+}
+
 .list,
 article,
 footer,
