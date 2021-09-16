@@ -853,27 +853,27 @@ nav a {
 }
 
 .composition[data-device="phone"] figure::before {
-	background-image: url(../img/devices/fill-phone.svg);
+	background-image: url(../media/devices/fill-phone.svg);
 }
 
 .composition[data-device="phone"] figure::after {
-	background-image: url(../img/devices/frame-phone.svg);
+	background-image: url(../media/devices/frame-phone.svg);
 }
 
 .composition[data-device="phone-tablet"] figure::before {
-	background-image: url(../img/devices/fill-phone-tablet.svg);
+	background-image: url(../media/devices/fill-phone-tablet.svg);
 }
 
 .composition[data-device="phone-tablet"] figure::after {
-	background-image: url(../img/devices/frame-phone-tablet.svg);
+	background-image: url(../media/devices/frame-phone-tablet.svg);
 }
 
 .composition[data-device="laptop"] figure::before {
-	background-image: url(../img/devices/fill-laptop.svg);
+	background-image: url(../media/devices/fill-laptop.svg);
 }
 
 .composition[data-device="laptop"] figure::after {
-	background-image: url(../img/devices/frame-laptop.svg);
+	background-image: url(../media/devices/frame-laptop.svg);
 }
 
 .composition[data-device="phone"] figure video,
@@ -1666,7 +1666,7 @@ i.approx::before {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url(../img/portfolio/estadao/adoption/branch-age.gif);
+	background-image: url(../media/portfolio/estadao/adoption/branch-age.gif);
 	background-repeat: no-repeat;
 	background-position: center 37%;
 	background-size: 20%;
@@ -1679,7 +1679,7 @@ i.approx::before {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url(../img/portfolio/estadao/adoption/branch-disability.gif);
+	background-image: url(../media/portfolio/estadao/adoption/branch-disability.gif);
 	background-repeat: no-repeat;
 	background-position: center 37%;
 	background-size: 20%;
@@ -1692,7 +1692,7 @@ i.approx::before {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: url(../img/portfolio/estadao/adoption/branch-siblings.gif);
+	background-image: url(../media/portfolio/estadao/adoption/branch-siblings.gif);
 	background-repeat: no-repeat;
 	background-position: center 43%;
 	background-size: 20%;
