@@ -1,5 +1,7 @@
 (() => {
 
+  alert( 'If you’re seeing this, this is the most recent version' )
+
   // Autoplay fix for (some) iPhones
 
   // Checks if a video is currently playing
