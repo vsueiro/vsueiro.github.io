@@ -29,6 +29,11 @@
 	font-style: normal;
 }
 
+i,
+.icon {
+	font-family: Inter;
+}
+
 .list,
 .list li:before,
 blockquote cite,
@@ -202,7 +207,7 @@ p+p {
 	margin-bottom: 0;
 }
 
-main>header {
+main > header {
 	padding: 7.2rem 0
 }
 
