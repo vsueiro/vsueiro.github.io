@@ -3,6 +3,9 @@
 	/* Scaling factor for headings (from old to new version of League Spartan) */
 	--factor: 1.25;
 
+	/* Accent color (purple) */
+	--accent: #8A53FF;
+
 }
 
 @font-face {
@@ -225,6 +228,10 @@ a.invisible {
 	font-weight: inherit;
 	border: none;
 	color: inherit;
+}
+
+a:focus {
+	outline: solid var(--accent) 4px;
 }
 
 .list {
