@@ -116,6 +116,7 @@ em {
 }
 
 .list,
+.media
 article,
 footer,
 header,
@@ -142,6 +143,7 @@ strong {
 	color: rgba(0, 0, 0, 1)
 }
 
+.media,
 article,
 footer,
 header,
@@ -1114,6 +1116,11 @@ nav a {
 figcaption.caption {
 	/* padding-top: 6.4rem; */
 	margin: 0 auto;
+}
+
+.media {
+	max-width: 192rem;
+	align-self: center;
 }
 
 .media .caption {
