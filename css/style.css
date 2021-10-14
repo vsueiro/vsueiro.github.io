@@ -173,6 +173,10 @@ section {
 	padding: 7.2rem 0 14.4rem
 }
 
+section > .media:last-child {
+	padding-bottom: 0
+}
+
 header {
 	padding: 7.2rem 0 4.8rem
 }
@@ -525,14 +529,14 @@ nav,
 }
 
 h1,
-strong.number,
 blockquote::before {
 	text-align: left;
 	font-size: calc( 3.6rem * var(--factor) );
 	max-width: 92rem;
 }
 
-h2 {
+h2,
+strong.number {
 	font-size: calc( 3.2rem * var(--factor) )
 }
 
