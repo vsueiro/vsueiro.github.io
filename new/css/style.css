@@ -24,9 +24,15 @@ figure {
 	height: 75vh;
 }
 
-.showcase img {
-	width: 100%;
-	align-self: center;
+.showcase-item-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: lightblue;
+	transform: translateX( -50% ) /*translateY( 100% )*/;
 }
 
 .showcase-item {
@@ -50,4 +56,9 @@ figure {
 	display: flex;
 	width: 100%;
 	padding-top: 100%;
+}
+
+.showcase img {
+	width: 100%;
+	align-self: center;
 }
