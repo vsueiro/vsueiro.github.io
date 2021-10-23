@@ -27,38 +27,30 @@ figure {
 .showcase-item-container {
 	position: absolute;
 	top: 0;
-	left: 0;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	background: lightblue;
-	transform: translateX( -50% ) /*translateY( 100% )*/;
-}
-
-.showcase-item {
-	position: relative;
-	background: #ffffff;
-	min-width: calc( 1920px * .1 );
-	width: 20vw;
-	max-width: calc( 1920px * .2 );
-}
-
-.showcase-item > figure {
-	position: absolute;
-	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	display: flex;
+	pointer-events: none;
+	transform: translateY( 100% );
 }
 
-.showcase-item::before {
-	content: '';
-	display: flex;
-	width: 100%;
-	padding-top: 100%;
+.showcase-item-container > * {
+	pointer-events: all;
+}
+
+.showcase-item {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 20vw;
+	min-width: calc( 1920px * .1 );
+	max-width: calc( 1920px * .2 );
+	transform: translateX( -50% ) translateY( -50% );
 }
 
 .showcase img {
 	width: 100%;
 	align-self: center;
+	background: #ffffff;
 }
