@@ -1,127 +1,49 @@
-let app = {
+(() => {
 
-	random : ( min, max) => {
+	// Generates random float in a range
 
+	const random = ( min, max ) => {
 		return Math.random() * ( max - min ) + min
-		
-	},
+	}
 
-	showcase : {
+	// Animates showcase
 
-		items : [],
+	const animate = ( track ) => {
 
-		reset : () => {
+		// Randomizes horizontal position
+		track.style.left = random( 0, 100 ) + '%'
 
-			// Gets index of element that concluded animation
-			let index = parseInt( event.target.dataset.index )
+		// Randomizes animation initial delay
+		// track.style.animationDelay = random( 2, 6 ) + 's';
 
-			let item = app.showcase.items[ index ]
+		// Randomizes depth
 
-			// Resets all transition styles
-			item.container.style.transitionProperty = 'none'
-			item.container.style.transitionDuration = '0s'
-			item.container.style.transitionDelay = '0s'
+		// Calculates item scale
 
-			setTimeout( () => {
+		// Calculates item layer
 
-				// Resets all positioning styles
-				item.element.style.left = '0%'
-				item.figure.style.transform = ''
-				item.container.style.zIndex = '1'
-				item.container.style.transform = 'translateY( 100% )'
-
-				// Begins animation
-				app.showcase.animate( app.showcase.items[ index ] )
-
-			}, 100 )
-
-		},
-
-		animate : ( item ) => {
-
-			console.log( 'animating', item )
-
-			// Generates random values
-			item.depth = app.random( .5, 1)
-			item.left  = app.random( 0, 100 )
-			item.delay = app.random( 0, 10)
-
-			// Adds transition styles
-
-			// Sets animation only to transform
-			item.container.style.transitionProperty = 'transform'
-
-			// Defines transition speed (inversely based on depth)
-			item.container.style.transitionDuration = 20 * ( 1 - item.depth + .5) + 's'
-
-			// Defines transition delay
-			item.container.style.transitionDelay = item.delay + 's'
-
-
-			setTimeout( () => {
-
-				// Places item horizontally
-				item.element.style.left = item.left + '%'
-
-				// Scales element to simulate subtle depth
-				item.figure.style.transform = 'scale(' + item.depth + ')'
-
-				// Makes items with more depth appear behind others
-				item.container.style.zIndex = Math.round( 1000 * item.depth )
-
-				// Makes item move to destination
-				item.container.style.transform = 'translateY( -100% )'
-
-				// Resets animation when it ends
-				item.container.addEventListener( 'transitionend', app.showcase.reset, { once : true } )
-
-			}, 100 )
-
-		},
-
-		initialize : () => {
-
-			// Gathers all items to be animated
-
-			let containers = document.querySelectorAll( '.showcase-item-container' )
-
-			for ( let container of containers ) {
-
-				let element = container.querySelector( '.showcase-item' )
-				let figure  = container.querySelector( 'figure' )
-
-				let item = {
-
-					container : container,
-					element   : element,
-					figure    : figure,
-
-				}
-
-				// Adds index to container, to be used on reset function
-				container.dataset.index = app.showcase.items.length
-
-				app.showcase.items.push( item )
-
-			}
-
-			for ( let item of app.showcase.items ) {
-
-				app.showcase.animate( item )
-
-			} 
-
-		}
-
-	},
-
-	initialize : () => {
-
-		app.showcase.initialize()
+		// Calculates animation speed
+		// track.style.animationDuration = random( 2, 6 ) + 's';
 
 	}
 
-}
+	const reset = () => {
 
+		const track = event.target
+		animate( track )
 
-app.initialize()
+	}
+
+	const tracks = document.querySelectorAll( '.showcase-track' )
+
+	for ( let track of tracks ) {
+
+		// Begins animation
+		animate( track )
+
+		// Shuffles animation properties each time it runs
+		track.addEventListener( 'animationiteration', reset )
+
+	}
+
+})()
