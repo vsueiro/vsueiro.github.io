@@ -21,7 +21,7 @@ figure {
 	background: #f5f5f5;
 	overflow: hidden;
 	width: 100%;
-	height: calc( 100vh / 1.618 );
+	height: 80vh;
 }
 
 .showcase-track {
