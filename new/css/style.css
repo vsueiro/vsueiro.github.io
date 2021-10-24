@@ -21,6 +21,17 @@ body {
 	height: 100%;
 }
 
+/* Accessibility */
+
+.screen-reader {
+	position: absolute;
+	top: auto;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 /* Showcase */
 
 .showcase {
