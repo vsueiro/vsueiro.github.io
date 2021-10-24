@@ -33,11 +33,8 @@ figure {
 	animation-name: float;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	animation-play-state: running;
-	animation-duration: 4s;
-
+	animation-play-state: paused;
 }
-
 
 @keyframes float {
   0%   { transform: translateY(  100% ) }
