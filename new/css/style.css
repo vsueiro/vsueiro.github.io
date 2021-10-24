@@ -30,10 +30,8 @@ figure {
 	height: 100%;
 	pointer-events: none;
 	transform: translateY(  100% );
-	animation-name: float;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-play-state: paused;
+	animation-timing-function: ease-in;
+	animation-iteration-count: 1;
 }
 
 @keyframes float {
