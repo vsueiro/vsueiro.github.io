@@ -1,0 +1,214 @@
+/* Reset */
+
+*,
+:after,
+:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+img,
+video,
+figure {
+	display: flex;
+}
+
+img,
+video {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* General */
+
+html,
+body {
+	height: 100%;
+}
+
+/* Accessibility */
+
+.screen-reader {
+	position: absolute;
+	top: auto;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* Composition */
+
+.composition {
+	position: relative;
+	width: 100%;
+}
+
+.composition::before {
+	content: '';
+	display: flex;
+	position: relative;
+	height: 0;
+	padding-top: 100%;
+	flex-shrink: 0;
+	min-width: 100%;
+}
+
+.composition figure,
+.composition figure::before,
+.composition figure::after {
+	content: '';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.composition[data-device="phone"] figure::before {
+	background-image: url(../media/devices/fill-phone.svg);
+}
+
+.composition[data-device="phone"] figure::after {
+	background-image: url(../media/devices/frame-phone.svg);
+}
+
+.composition[data-device="phone-tablet"] figure::before {
+	background-image: url(../media/devices/fill-phone-tablet.svg);
+}
+
+.composition[data-device="phone-tablet"] figure::after {
+	background-image: url(../media/devices/frame-phone-tablet.svg);
+}
+
+.composition[data-device="laptop"] figure::before {
+	background-image: url(../media/devices/fill-laptop.svg);
+}
+
+.composition[data-device="laptop"] figure::after {
+	background-image: url(../media/devices/frame-laptop.svg);
+}
+
+.composition[data-device="phone"] figure video,
+.composition[data-device="phone"] figure img {
+	position: absolute;
+	top: 15%;
+	left: 33.836%;
+	width: 32.328%;
+	height: 70%;
+}
+
+.composition[data-device="phone-tablet"] figure video:nth-child(1),
+.composition[data-device="phone-tablet"] figure img:nth-child(1) {
+	position: absolute;
+	top: 15%;
+	left: 31.5%;
+	width: 52.5%;
+	height: 70%;
+}
+
+.composition[data-device="phone-tablet"] figure video:nth-child(2),
+.composition[data-device="phone-tablet"] figure img:nth-child(2) {
+	position: absolute;
+	top: 44%;
+	left: 15.05%;
+	width: 19.4%;
+	height: 42%;
+}
+
+.composition[data-device="laptop"] figure video,
+.composition[data-device="laptop"] figure img {
+	position: absolute;
+	top: 28.125%;
+	left: 15%;
+	width: 70%;
+	height: 43.75%;
+}
+
+.composition:not([data-device]) figure img {
+  width: 80%;
+}
+
+/* Showcase */
+
+.showcase {
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 75vh;
+	background: #f5f5f5;
+}
+
+.showcase-track {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	pointer-events: none;
+	animation-timing-function: ease-in;
+	transform: translate( -50%, 100% );
+}
+
+@keyframes float {
+  0%   { transform: translate( -50%,  100% ) }
+  100% { transform: translate( -50%, -100% ) }
+}
+
+.showcase-item {
+	position: relative;
+	width: 20vw;
+	min-width: calc( 1280px * .1 );
+	max-width: calc( 1280px * .2 );
+	height: 20vw;
+	min-height: calc( 1280px * .1 );
+	max-height: calc( 1280px * .2 );
+	transition: .4s;
+	pointer-events: all;
+}
+
+.showcase-item:hover {
+	opacity: .5
+}
+
+.showcase-item a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+}
+
+/* Temp */
+
+.showcase-track:nth-child(1) .showcase-item {
+	background: #d6c2b0;
+}
+
+.showcase-track:nth-child(2) .showcase-item {
+	background: #d97689;
+}
+
+.showcase-track:nth-child(3) .showcase-item {
+	background: #84a86c;
+}
+
+.showcase-track:nth-child(4) .showcase-item {
+	background: #a87094;
+}
+
+.showcase-track:nth-child(5) .showcase-item {
+	background: #f2cbaf;
+}
+
+.showcase-track:nth-child(6) .showcase-item {
+	background: #ffcbca;
+}
