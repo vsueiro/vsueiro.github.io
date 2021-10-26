@@ -263,7 +263,7 @@ a.invisible {
 	color: inherit;
 }
 
-a:focus {
+a:focus:not(:active):not(:hover) {
 	outline: solid var(--accent) 4px;
 }
 
