@@ -198,13 +198,24 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:not([disabled]):hover {
   background: var(--tint-100);
   color: var(--tint-0);
 }
 
 button span {
   margin: .1em 0 -.1em;
+  user-select: none;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+button[disabled] {
+  border: .2rem dashed var(--tint-25);
+  color: var(--tint-25);
+  pointer-events: none;
 }
 
 /* Links */
@@ -253,6 +264,19 @@ ul.works a:hover {
   cursor: text;
   user-select: all;
   margin-right: var(--size-10);
+}
+
+.clipboard[data-status="success"] button,
+.clipboard[data-status="success"] button:hover {
+  pointer-events: none;
+  background: var(--tint-100);
+  color: var(--tint-0);
+  animation: pulse ease-out .6s;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0rem rgba( 0, 0, 0, .5 ) }
+  100% { box-shadow: 0 0 0 2rem rgba( 0, 0, 0,  0 ) }
 }
 
 /* Flow */
