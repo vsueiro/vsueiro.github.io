@@ -93,10 +93,37 @@ img {
   /*box-shadow: 0 0 0 1px magenta, inset 0 0 0 1px magenta;*/
 }
 
+/* Overflow */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Scale */
 
 html {
   font-size: var(--zoom-10);
+}
+
+@media ( max-width: 1280px ) {
+  html {
+    font-size: var(--zoom-10);
+  }
+}
+
+@media ( max-width: 1152px ) {
+  html {
+    font-size: var(--zoom-9);
+  }
+}
+
+@media ( max-width: 1024px ) {
+  html {
+    font-size: var(--zoom-8);
+  }
 }
 
 /* Selection */
@@ -265,6 +292,8 @@ ul.works a:hover {
   display: flex;
   align-items: center;
   white-space: nowrap;
+/*  overflow: hidden;
+  text-overflow: ellipsis;*/
   padding: 0 2.5rem;
   border-radius: 2.5rem;
   height: var(--size-50);
@@ -307,6 +336,10 @@ body,
 
 .page {
   background: var(--tint-0);
+}
+
+section {
+  max-width: 100%;
 }
 
 .flow {
@@ -377,7 +410,7 @@ nav {
 
 /* Animation */
 
-.cover .animation {
+.animation {
   position: absolute;
   top: 0;
   left: 0;
@@ -385,13 +418,8 @@ nav {
   height: 100%;
   z-index: -1;
   background: var(--tint-5);
+  overflow: hidden;
   pointer-events: none;
-}
-
-.animation {
-  position: absolute;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .animation-track {
@@ -420,8 +448,6 @@ body *.animation-item {
   max-height: calc( 1280px * .2 );
   transition: .4s;
 }
-
-/* Temp */
 
 .animation-track:nth-child(1) .animation-item {
   background: #d6c2b0;
@@ -459,47 +485,26 @@ body *.animation-item {
 }
 
 @media ( max-width: 1280px ) {
-  html {
-    font-size: var(--zoom-10);
-  }
+
 }
 
 @media ( max-width: 1152px ) {
-  html {
-    font-size: var(--zoom-9);
-  }
+
 }
 
 @media ( max-width: 1024px ) {
-  html {
-    font-size: var(--zoom-8);
-  }
+
 }
 
 @media ( max-width: 896px ) {
-  html {
-    font-size: var(--zoom-7);
-  }
-
-  .button,
-  .clipboard > span {
-    padding: 0 3rem;
-    border-radius: 3rem;
-    height: var(--size-60);
-  }
 
 }
 
 @media ( max-width: 768px ) {
-/*  html {
-    font-size: var(--zoom-6);
-  }*/
+
 }
 
 @media ( max-width: 640px ) {
-/*  html {
-    font-size: var(--zoom-8);
-  }*/
 
   h1 {
     font-size: calc( var(--size-50) / var(--line-height-title) );
