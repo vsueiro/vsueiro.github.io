@@ -176,7 +176,7 @@ article li {
 }
 
 header label,
-button {
+.button {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ hr {
 
 /* Buttons */
 
-button {
+.button {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -204,21 +204,21 @@ button {
   cursor: pointer;
 }
 
-button:not([disabled]):hover {
+.button:not([disabled]):hover {
   background: var(--tint-100);
   color: var(--tint-0);
 }
 
-button span {
+.button span {
   margin: .1em 0 -.1em;
   user-select: none;
 }
 
-button > * {
+.button > * {
   pointer-events: none;
 }
 
-button[disabled] {
+.button[disabled] {
   border: .2rem dashed var(--tint-25);
   color: var(--tint-25);
   pointer-events: none;
@@ -226,13 +226,13 @@ button[disabled] {
 
 /* Links */
 
-a {
+a:not(.button) {
   font-weight: 700;
   border-bottom: .2rem solid var(--tint-100);
   cursor: pointer;
 }
 
-a:hover {
+a:not(.button):hover {
   opacity: .5;
 }
 
@@ -249,14 +249,17 @@ ul.works a:hover {
   opacity: unset;
 }
 
-/* Clipboard */
+/* Call to Action  */
 
-.clipboard {
+.call-to-action {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: var(--size-40) auto;
+  padding: var(--size-40) 0;
 }
+
+/* Clipboard */
 
 .clipboard > span {
   display: flex;
