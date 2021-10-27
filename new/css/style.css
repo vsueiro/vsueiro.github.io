@@ -16,10 +16,28 @@
   --size-160: 16rem;
   --size-320: 32rem;
 
+  --zoom-12: calc( 12 / 16 * 100% );
+  --zoom-11: calc( 11 / 16 * 100% );
+  --zoom-10: calc( 10 / 16 * 100% ); /* Designed for 1280w */
+  --zoom-9:  calc(  9 / 16 * 100% );
+  --zoom-8:  calc(  8 / 16 * 100% );
+  --zoom-7:  calc(  7 / 16 * 100% );
+  --zoom-6:  calc(  6 / 16 * 100% );
+  --zoom-5:  calc(  5 / 16 * 100% );
+  --zoom-4:  calc(  4 / 16 * 100% );
+
+
+
 }
 
 /* Reset */
 
+
+/* General */
+
+html {
+  font-size: var(--zoom-10);
+}
 
 /* Typography */
 
@@ -44,12 +62,6 @@
   font-style: italic;
 }
 
-/* General */
-
-html {
-  font-size: 62.5%;
-}
-
 body {
   font-family: 'League Spartan';
   font-weight: 400;
@@ -62,6 +74,7 @@ h2,
 h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: var(--line-height-title);
 }
 
 figcaption,
@@ -72,4 +85,75 @@ cite {
 header p,
 article li {
   font-size: calc( var(--size-50) / var(--line-height-text) ); 
+}
+
+header label {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: calc( var(--size-30) / var(--line-height-text) );
+  text-transform: uppercase;
+}
+
+
+
+
+
+/*@media ( max-width: 1536px ) {
+  html {
+    font-size: var(--zoom-12);
+  }
+}
+
+@media ( max-width: 1408px ) {
+  html {
+    font-size: var(--zoom-11);
+  }
+}*/
+
+@media ( max-width: 1280px ) {
+  html {
+    font-size: var(--zoom-10);
+  }
+}
+
+@media ( max-width: 1152px ) {
+  html {
+    font-size: var(--zoom-9);
+  }
+}
+
+@media ( max-width: 1024px ) {
+  html {
+    font-size: var(--zoom-8);
+  }
+}
+
+@media ( max-width: 896px ) {
+  html {
+    font-size: var(--zoom-7);
+  }
+}
+
+@media ( max-width: 768px ) {
+  html {
+    font-size: var(--zoom-6);
+  }
+}
+
+@media ( max-width: 640px ) {
+  html {
+    font-size: var(--zoom-5);
+  }
+}
+
+@media ( max-width: 512px ) {
+  html {
+    font-size: var(--zoom-4);
+  }
+}
+
+@media ( max-width: 384px ) {
+  html {
+    font-size: var(--zoom-4);
+  }
 }
