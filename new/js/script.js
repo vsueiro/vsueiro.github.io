@@ -9,7 +9,7 @@
 	let animate = ( track ) => {
 
 		// Finds respective item
-		let item = track.querySelector( '.showcase-item' )
+		let item = track.querySelector( '.animation-item' )
 
 		// Defines random apparent depth
 		let depth = random( .5, 1 )
@@ -38,7 +38,7 @@
 	}
 
 	// Gathers all elements to be animated
-	let tracks = document.querySelectorAll( '.showcase-track' )
+	let tracks = document.querySelectorAll( '.animation-track' )
 
 	// Loops through them
 	for ( let track of tracks ) {

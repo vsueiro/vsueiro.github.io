@@ -76,6 +76,17 @@ img {
   max-width: 100%;
 }
 
+/* Accessibility */
+
+.screen-reader {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Wireframe */
 
 * {
@@ -156,6 +167,12 @@ button {
   text-transform: uppercase;
   font-size: calc( var(--size-30) / var(--line-height-text) );
   color: var(--tint-100);
+}
+
+/* Selection */
+
+::selection {
+  background: rgba( 0, 0, 0, .1 );
 }
 
 /* Buttons */
@@ -243,7 +260,10 @@ body,
 .cover,
 .page {
   padding: var(--size-40) 0;
-  background: var(--tint-0)
+}
+
+.page {
+  background: var(--tint-0);
 }
 
 .flow {
@@ -255,36 +275,6 @@ body,
 .flow > * {
   max-width: 100%;
   margin: var(--size-20) var(--size-80);
-}
-
-/* Cover (Home) */
-
-html {
-  background: var(--tint-5);
-}
-
-.cover .animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.cover header {
-
-}
-
-.cover {
-  background: transparent;
-}
-
-/* Navigation */
-
-nav {
-  width: 100%;
-  margin-bottom: calc( -1 * var(--size-40) );
 }
 
 /* Full-width */
@@ -302,6 +292,92 @@ body *:not(.full) {
 .flow.half {
   max-width: calc( 72rem + var(--size-160) );
 }
+
+/* Navigation */
+
+nav {
+  width: 100%;
+  margin-bottom: calc( -1 * var(--size-40) );
+}
+
+/* Cover (Home) */
+
+.cover nav {
+  visibility: hidden;
+}
+
+/* Animation */
+
+.cover .animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--tint-5);
+  pointer-events: none;
+}
+
+.animation {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.animation-track {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  pointer-events: none;
+  animation-timing-function: ease-in;
+  transform: translate( -50%, 100% );
+}
+
+@keyframes float {
+  0%   { transform: translate( -50%,  100% ) }
+  100% { transform: translate( -50%, -100% ) }
+}
+
+.animation-item {
+  position: relative;
+  width: 20vw;
+  min-width: calc( 1280px * .1 );
+  max-width: calc( 1280px * .2 );
+  height: 20vw;
+  min-height: calc( 1280px * .1 );
+  max-height: calc( 1280px * .2 );
+  transition: .4s;
+}
+
+/* Temp */
+
+.animation-track:nth-child(1) .animation-item {
+  background: #d6c2b0;
+}
+
+.animation-track:nth-child(2) .animation-item {
+  background: #d97689;
+}
+
+.animation-track:nth-child(3) .animation-item {
+  background: #84a86c;
+}
+
+.animation-track:nth-child(4) .animation-item {
+  background: #a87094;
+}
+
+.animation-track:nth-child(5) .animation-item {
+  background: #f2cbaf;
+}
+
+.animation-track:nth-child(6) .animation-item {
+  background: #ffcbca;
+}
+
 
 /* Responsive */
 
