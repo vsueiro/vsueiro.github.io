@@ -151,7 +151,12 @@ h1 {
 }
 
 h2 {
+  text-align: center;
   font-size: calc( var(--size-60) / var(--line-height-title) ); 
+}
+
+ul h2 {
+  text-align: unset;
 }
 
 figcaption,
@@ -232,6 +237,7 @@ ul.works a:hover {
 .clipboard {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: var(--size-40) auto;
 }
 
