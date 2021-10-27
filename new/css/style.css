@@ -123,7 +123,7 @@ html {
 }
 
 body {
-  font-family: 'League Spartan';
+  font-family: 'League Spartan', sans-serif;
   font-weight: 400;
   font-size: calc( var(--size-40) / var(--line-height-text) );
   line-height: var(--line-height-text);
@@ -132,6 +132,10 @@ body {
 p,
 figcaption {
   color: var(--tint-66);
+}
+
+header p {
+  color: var(--tint-100);
 }
 
 h1,
@@ -277,7 +281,18 @@ body,
   margin: var(--size-20) var(--size-80);
 }
 
-/* Full-width */
+/* Media  */
+
+.media {
+  display: flex;
+  justify-content: center;
+}
+
+.media.round img {
+  border-radius: 999rem;
+}
+
+/* Sizing */
 
 .full { 
   width: 100%;
@@ -287,10 +302,24 @@ body *:not(.full) {
   max-width: 128rem;
 }
 
-/* Half-width */
+body *.max-200 {
+  max-width: 20rem;
+}
 
-.flow.half {
-  max-width: calc( 72rem + var(--size-160) );
+body *.max-300 {
+  max-width: 30rem;
+}
+
+body *.max-400 {
+  max-width: 40rem;
+}
+
+body *.max-600 {
+  max-width: 60rem;
+}
+
+body *.max-800 {
+  max-width: 80rem;
 }
 
 /* Navigation */
