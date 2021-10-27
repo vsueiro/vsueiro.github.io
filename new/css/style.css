@@ -187,7 +187,7 @@ header label,
 /* Divider  */
 
 hr {
-  border-top: .2rem solid var(--tint-5);
+  border-top: 2px solid var(--tint-5);
 }
 
 /* Buttons */
@@ -198,7 +198,7 @@ hr {
   white-space: nowrap;
   padding: 0 2.5rem;
   border-radius: 2.5rem;
-  border: .2rem solid var(--tint-100);
+  border: 2px solid var(--tint-100);
   background: var(--tint-0);
   height: var(--size-50);
   cursor: pointer;
@@ -219,7 +219,7 @@ hr {
 }
 
 .button[disabled] {
-  border: .2rem dashed var(--tint-25);
+  border: 2px dashed var(--tint-25);
   color: var(--tint-25);
   pointer-events: none;
 }
@@ -228,7 +228,7 @@ hr {
 
 a:not(.button) {
   font-weight: 700;
-  border-bottom: .2rem solid var(--tint-100);
+  border-bottom: 2px solid var(--tint-100);
   cursor: pointer;
 }
 
@@ -325,6 +325,7 @@ body,
 .media {
   display: flex;
   justify-content: center;
+  padding: var(--size-40) 0;
 }
 
 .media.round img {
@@ -409,7 +410,7 @@ nav {
   100% { transform: translate( -50%, -100% ) }
 }
 
-.animation-item {
+body *.animation-item {
   position: relative;
   width: 20vw;
   min-width: calc( 1280px * .1 );
@@ -479,16 +480,49 @@ nav {
   html {
     font-size: var(--zoom-7);
   }
+
+  .button,
+  .clipboard > span {
+    padding: 0 3rem;
+    border-radius: 3rem;
+    height: var(--size-60);
+  }
+
 }
 
 @media ( max-width: 768px ) {
-  html {
+/*  html {
     font-size: var(--zoom-6);
-  }
+  }*/
 }
 
 @media ( max-width: 640px ) {
+/*  html {
+    font-size: var(--zoom-8);
+  }*/
 
+  h1 {
+    font-size: calc( var(--size-50) / var(--line-height-title) );
+  }
+
+  h2 {
+    text-align: center;
+    font-size: calc( var(--size-50) / var(--line-height-title) ); 
+  }
+
+  header p,
+  article li {
+    font-size: calc( var(--size-40) / var(--line-height-text) ); 
+  }
+
+  .flow {
+    padding: var(--size-10) 0;
+  }
+
+  .flow > * {
+    max-width: 100%;
+    margin: var(--size-10) var(--size-40);
+  }
 }
 
 @media ( max-width: 512px ) {
