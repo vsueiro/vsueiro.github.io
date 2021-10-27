@@ -99,6 +99,12 @@ html {
   font-size: var(--zoom-10);
 }
 
+/* Selection */
+
+::selection {
+  background: rgba( 0, 0, 0, .1 );
+}
+
 /* Typography */
 
 @font-face {
@@ -178,10 +184,10 @@ button {
   color: var(--tint-100);
 }
 
-/* Selection */
+/* Divider  */
 
-::selection {
-  background: rgba( 0, 0, 0, .1 );
+hr {
+  border-top: .2rem solid var(--tint-5);
 }
 
 /* Buttons */
@@ -266,8 +272,8 @@ ul.works a:hover {
   margin-right: var(--size-10);
 }
 
-.clipboard[data-status="success"] button,
-.clipboard[data-status="success"] button:hover {
+.clipboard.success button,
+.clipboard.success button:hover {
   pointer-events: none;
   background: var(--tint-100);
   color: var(--tint-0);

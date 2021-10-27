@@ -82,14 +82,14 @@
 							success => {
 
 								// Applies success styling 
-								clipboard.dataset.status = 'success'
+								clipboard.classList.add( 'success' )
 
 								// Changes text
 								span.textContent = 'Copied ✨'
 
 								// Reverts changes after 2s
 								setTimeout( () => {
-									clipboard.dataset.status = ''
+									clipboard.classList.remove( 'success' )
 									span.textContent = 'Copy'
 								}, 2000 )
 								
@@ -104,7 +104,7 @@
 								
 							}
 						)
-						
+
 				}
 
 			} )
