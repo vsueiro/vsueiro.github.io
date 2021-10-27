@@ -5,6 +5,7 @@
   --line-height-title: 1.2;
   --line-height-text:  1.5;
 
+  --size-10:   1rem;
   --size-20:   2rem;
   --size-30:   3rem;
   --size-40:   4rem;
@@ -49,7 +50,20 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+img,
+video {
+  display: flex;
+}
+
+a {
+  display: inline-flex;
+  color: inherit;
+  text-decoration: none;
 }
 
 ol,
@@ -103,6 +117,11 @@ body {
   line-height: var(--line-height-text);
 }
 
+p,
+figcaption {
+  color: var(--tint-66);
+}
+
 h1,
 h2,
 h3 {
@@ -133,8 +152,9 @@ header label,
 button {
   font-weight: 700;
   letter-spacing: 0.08em;
-  font-size: calc( var(--size-30) / var(--line-height-text) );
   text-transform: uppercase;
+  font-size: calc( var(--size-30) / var(--line-height-text) );
+  color: var(--tint-100);
 }
 
 /* Buttons */
@@ -142,12 +162,13 @@ button {
 button {
   display: flex;
   align-items: center;
-  padding: 0 2.5rem;
   white-space: nowrap;
+  padding: 0 2.5rem;
   border-radius: 2.5rem;
   border: .2rem solid var(--tint-100);
-  cursor: pointer;
+  background: var(--tint-0);
   height: var(--size-50);
+  cursor: pointer;
 }
 
 button:hover {
@@ -182,6 +203,38 @@ ul.works a {
 
 ul.works a:hover {
   opacity: unset;
+}
+
+/* Clipboard */
+
+.clipboard {
+  display: flex;
+  align-items: center;
+}
+
+.clipboard > span {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 2.5rem;
+  border-radius: 2.5rem;
+  height: var(--size-50);
+  background: var(--tint-5);
+  color: var(--tint-66);
+  cursor: text;
+  user-select: all;
+  margin-right: var(--size-10);
+}
+
+/* Flow */
+
+.flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.flow > *:not(first-child) {
+  margin-top: var(--size-40);
 }
 
 /* Responsive */
