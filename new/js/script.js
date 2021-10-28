@@ -118,14 +118,12 @@
 		// Checks if browser is Safari
   	const safari = /^((?!chrome|android).)*safari/i.test( navigator.userAgent )
 
-  	alert( 'Is Safari?: ' + safari )
-
   	if ( safari ) {
 
   		// Creates browser-specific attribute
   		document.body.dataset.browser = 'safari'
 
-			{ // Fix autoplay for (some) iPhones
+			{ // Fixes autoplay for (some) iPhones
 
 		    // Checks if a video is currently playing
 		    const playing = ( video ) => {
@@ -157,7 +155,7 @@
 
 		  }
 
-  		{ // Fix VH units (for iOS Safari)
+  		{ // Fixes VH units (for iOS Safari)
 
 				const vh = () => {
 
@@ -192,6 +190,40 @@
 			}
 
 		}
+
+	}
+
+	{ // Entrance FX
+
+		window.addEventListener( 'load', () => {
+
+			// Gathers all elements to apply the transition
+			let elements = document.querySelectorAll( '.flow > *, .works li' )
+
+			// Defines arbitrary constant to calculate transition delay, in seconds
+			const basis = 1
+
+			// Loops through them
+			for ( let order = 1; order < elements.length; order++ ) {
+
+				// Gets current element
+				let element = elements[ order ]
+
+				// Increases number to prevent delay of 0
+				let number = order + 1
+
+				// Calculates delay (log makes delay smaller each time)
+				let delay = basis * Math.log( number )
+
+				// Applies transition delay
+				element.style.transitionDelay = delay + 's'
+
+			}
+
+			// Triggers transitions
+			document.body.dataset.loaded = true
+
+		} )
 
 	}
 
