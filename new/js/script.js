@@ -117,11 +117,25 @@
 
 		let vh = () => {
 
-		  // Calculates 100% of window height
-		  let value = window.innerHeight;
+			// Gets the main page cover
+			let cover = document.querySelector( '.cover' )
+			
+			// Gets the cover’s bounding box
+			let bounding = cover.getBoundingClientRect()
 
-		  // Stores value into a CSS variable
-		  document.documentElement.style.setProperty( '--vh-100', value + 'px' )
+			// Gets cover’s height
+			let height = cover.offsetHeight;
+
+			// Checks if at least part of the cover is visible in the viewport
+	    if ( bounding.top >= -height  && bounding.bottom <= window.innerHeight + height ) {
+
+				// Calculates 100% of window height
+		  	let value = window.innerHeight;
+
+		  	// Stores value into a CSS variable
+		  	document.documentElement.style.setProperty( '--vh-100', value + 'px' )
+
+	    }
 
 		}
 
