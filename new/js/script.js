@@ -17,7 +17,7 @@
 			let depth = random( .5, 1 )
 
 			// Defines random animation delay, in seconds
-			let delay = random( 0, 8 )
+			let delay = random( 0, 5 )
 
 			// Removes animation
 			track.style.animationName = ''
@@ -26,7 +26,7 @@
 			track.style.left = random( 0, 100 ) + '%'
 
 			// Calculates animation speed
-			track.style.animationDuration = 16 * ( 1 - depth + .5 ) + 's'
+			track.style.animationDuration = 10 * ( 1 - depth + .5 ) + 's'
 
 			// Calculates layer order
 			track.style.zIndex = Math.round( depth * 1000 )
