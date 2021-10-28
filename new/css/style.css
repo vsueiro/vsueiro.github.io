@@ -17,15 +17,9 @@
   --size-160: 16rem;
   --size-320: 32rem;
 
-  --zoom-12: calc( 12 / 16 * 100% );
-  --zoom-11: calc( 11 / 16 * 100% );
-  --zoom-10: calc( 10 / 16 * 100% ); /* Pixel-perfect design for 1280w */
-  --zoom-9:  calc(  9 / 16 * 100% );
-  --zoom-8:  calc(  8 / 16 * 100% );
-  --zoom-7:  calc(  7 / 16 * 100% );
-  --zoom-6:  calc(  6 / 16 * 100% );
-  --zoom-5:  calc(  5 / 16 * 100% );
-  --zoom-4:  calc(  4 / 16 * 100% );
+  --zoom-100: calc( 10 / 16 * 100% ); /* Pixel-perfect design for 1280w */
+  --zoom-90:  calc(  9 / 16 * 100% );
+  --zoom-80:  calc(  8 / 16 * 100% );
 
   --tint-0:   #ffffff; /* rgba( 0, 0, 0, 0    ) */
   --tint-5:   #f2f2f2; /* rgba( 0, 0, 0, .05  ) */
@@ -38,7 +32,7 @@
   --tint-90:  #1a1a1a; /* rgba( 0, 0, 0, .90  ) */
   --tint-100: #000000; /* rgba( 0, 0, 0, 1    ) */
 
-  --vh-100: 100vh; /* JS is used to override this  */
+  --vh-100: 100vh; /* JS overrides this on Safari */
 
 }
 
@@ -55,6 +49,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  backface-visibility: hidden;
 }
 
 img,
@@ -108,24 +103,24 @@ body {
 /* Scale */
 
 html {
-  font-size: var(--zoom-10);
+  font-size: var(--zoom-100);
 }
 
 @media ( max-width: 1280px ) {
   html {
-    font-size: var(--zoom-10);
+    font-size: var(--zoom-100);
   }
 }
 
 @media ( max-width: 1152px ) {
   html {
-    font-size: var(--zoom-9);
+    font-size: var(--zoom-90);
   }
 }
 
 @media ( max-width: 1024px ) {
   html {
-    font-size: var(--zoom-8);
+    font-size: var(--zoom-80);
   }
 }
 
