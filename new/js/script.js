@@ -123,8 +123,6 @@
 		  // Stores value into a CSS variable
 		  document.documentElement.style.setProperty( '--vh-100', value + 'px' )
 
-		  console.log( value )
-
 		}
 
 		// Updates value on load

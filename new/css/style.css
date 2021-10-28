@@ -179,6 +179,7 @@ h3 {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: var(--line-height-title);
+  transition: font-size 1.2s ease-in-out;
 }
 
 h1 {
@@ -187,7 +188,6 @@ h1 {
 
 h2 {
   text-align: center;
-  font-size: calc( var(--size-60) / var(--line-height-title) ); 
 }
 
 ul h2 {
@@ -197,6 +197,7 @@ ul h2 {
 figcaption,
 cite {
   font-size: calc( var(--size-30) / var(--line-height-text) );
+  transition: font-size 1.2s ease-in-out;
 }
 
 header p,
@@ -211,6 +212,18 @@ header label,
   text-transform: uppercase;
   font-size: calc( var(--size-30) / var(--line-height-text) );
   color: var(--tint-100);
+}
+
+p,
+figcaption,
+cite,
+span,
+li,
+label,
+h1,
+h2,
+h3 {
+  transition: font-size .6s ease-in-out;
 }
 
 @media ( max-width: 768px ) {
@@ -454,6 +467,7 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * 1 ) );
+  transition: min-height 1.2s ease-in-out;
 }
 
 @media ( max-width: 1152px ) {
