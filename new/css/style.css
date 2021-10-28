@@ -106,19 +106,13 @@ html {
   font-size: var(--zoom-100);
 }
 
-@media ( max-width: 1280px ) {
-  html {
-    font-size: var(--zoom-100);
-  }
-}
-
-@media ( max-width: 1152px ) {
+@media ( max-width: 1279px ) {
   html {
     font-size: var(--zoom-90);
   }
 }
 
-@media ( max-width: 1024px ) {
+@media ( max-width: 1152px ) {
   html {
     font-size: var(--zoom-80);
   }
@@ -263,11 +257,13 @@ hr {
 .button {
   display: flex;
   align-items: center;
+  align-self: flex-start;
+  flex-shrink: 0;
   white-space: nowrap;
   padding: 0 2.5rem;
   border-radius: 2.5rem;
   border: 2px solid var(--tint-100);
-  background: var(--tint-0);
+  background: transparent;
   height: var(--size-50);
   cursor: pointer;
 }
@@ -306,15 +302,6 @@ a:not(.button):hover {
 
 nav a:not(.button) {
   border: unset;
-}
-
-ul.works a {
-  font-weight: unset;
-  border: unset;
-}
-
-ul.works a:hover {
-  opacity: unset;
 }
 
 /* Call to Action  */
@@ -423,10 +410,6 @@ section {
   width: 100%;
 }
 
-.works li a {
-  width: 100%;
-}
-
 .works li article {
   display: flex;
   flex-direction: row;
@@ -471,8 +454,9 @@ section {
 }
 
 .works li h2,
-.works li p {
-  margin-top: var(--size-30);
+.works li p,
+.works li a {
+  margin-top: var(--size-20);
 }
 
 .works li article > div:last-child {
