@@ -733,8 +733,8 @@ nav {
   transition: opacity .6s ease-out, transform .6s ease-out;
 }
 
-[data-loaded=false] .flow > *,
-[data-loaded=false] .works li {
+[data-entrance=false] .flow > *,
+[data-entrance=false] .works li {
   transform: translateY( var(--size-40) );
   opacity: 0;
 }

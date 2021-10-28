@@ -17,7 +17,7 @@
 			let depth = random( .5, 1 )
 
 			// Defines random animation delay, in seconds
-			let delay = random( 0, 5 )
+			let delay = random( .5, 5 )
 
 			// Removes animation
 			track.style.animationName = ''
@@ -209,35 +209,36 @@
 
 	{ // Entrance FX
 
-		window.addEventListener( 'load', () => {
+		// Gathers all elements to apply the transition
+		const elements = document.querySelectorAll( '.flow > *, .works li' )
 
-			// Gathers all elements to apply the transition
-			let elements = document.querySelectorAll( '.flow > *, .works li' )
+		// Defines arbitrary constant to calculate transition delay, in seconds
+		const basis = 1
 
-			// Defines arbitrary constant to calculate transition delay, in seconds
-			const basis = 1
+		// Loops through them
+		for ( let order = 1; order < elements.length; order++ ) {
 
-			// Loops through them
-			for ( let order = 1; order < elements.length; order++ ) {
+			// Gets current element
+			let element = elements[ order ]
 
-				// Gets current element
-				let element = elements[ order ]
+			// Increases number to prevent delay of 0
+			let number = order + 1
 
-				// Increases number to prevent delay of 0
-				let number = order + 1
+			// Calculates delay (log makes delay smaller each time)
+			let delay = basis * Math.log( number )
 
-				// Calculates delay (log makes delay smaller each time)
-				let delay = basis * Math.log( number )
+			// Applies transition delay
+			element.style.transitionDelay = delay + 's'
 
-				// Applies transition delay
-				element.style.transitionDelay = delay + 's'
+		}
 
-			}
+		// Defines arbitrary delay before triggering transitions
+		setTimeout( () => {
 
 			// Triggers transitions
-			document.body.dataset.loaded = true
+			document.body.dataset.entrance = true
 
-		} )
+		}, 500 )
 
 	}
 
