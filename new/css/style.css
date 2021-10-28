@@ -561,6 +561,91 @@ section {
   border-radius: 999rem;
 }
 
+/* Devices */
+
+/* Composition */
+
+.square figure,
+.square figure::before,
+.square figure::after {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.square figure[data-device="phone"]::before {
+  background-image: url(../media/devices/fill-phone.svg);
+}
+
+.square figure[data-device="phone"]::after {
+  background-image: url(../media/devices/frame-phone.svg);
+}
+
+.square figure[data-device="phone-tablet"]::before {
+  background-image: url(../media/devices/fill-phone-tablet.svg);
+}
+
+.square figure[data-device="phone-tablet"]::after {
+  background-image: url(../media/devices/frame-phone-tablet.svg);
+}
+
+.square figure[data-device="laptop"]::before {
+  background-image: url(../media/devices/fill-laptop.svg);
+}
+
+.square figure[data-device="laptop"]::after {
+  background-image: url(../media/devices/frame-laptop.svg);
+}
+
+.square figure[data-device="phone"] video,
+.square figure[data-device="phone"] img {
+  position: absolute;
+  top: 15%;
+  left: 33.836%;
+  width: 32.328%;
+  height: 70%;
+}
+
+.square figure[data-device="phone-tablet"] video:nth-child(1),
+.square figure[data-device="phone-tablet"] img:nth-child(1) {
+  position: absolute;
+  top: 15%;
+  left: 31.5%;
+  width: 52.5%;
+  height: 70%;
+}
+
+.square figure[data-device="phone-tablet"] video:nth-child(2),
+.square figure[data-device="phone-tablet"] img:nth-child(2) {
+  position: absolute;
+  top: 44%;
+  left: 15.05%;
+  width: 19.4%;
+  height: 42%;
+}
+
+.square figure[data-device="laptop"] video,
+.square figure[data-device="laptop"] img {
+  position: absolute;
+  top: 28.125%;
+  left: 15%;
+  width: 70%;
+  height: 43.75%;
+}
+
+.square figure:not([data-device]) img {
+  width: 80%;
+}
+
 /* Sizing */
 
 .full { 
