@@ -113,7 +113,7 @@
 
 	}
 
-	{ // Fix vh units on iOS Safari
+	{ // VH Units Fix (for iOS Safari)
 
 		let vh = () => {
 
