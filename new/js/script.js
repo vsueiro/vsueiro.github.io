@@ -54,12 +54,14 @@
 			// Finds respective item
 			let item = track.querySelector( '.animation-item' )
 
-			console.log( item )
-
 			// Detects clicks on each item
 			item.addEventListener( 'click', event => {
 
-				console.log( event.target )
+				// Gets the URL
+				let url = event.target.dataset.href
+
+				// Opens URL
+				window.open( url, '_blank' )
 
 			} )
 
