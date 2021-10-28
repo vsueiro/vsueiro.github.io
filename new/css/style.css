@@ -158,6 +158,11 @@ html {
   font-style: italic;
 }
 
+i {
+  font-family: 'Fanwood Text';
+  font-style: italic;
+}
+
 body {
   font-family: 'League Spartan', sans-serif;
   font-weight: 400;
