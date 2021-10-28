@@ -113,4 +113,26 @@
 
 	}
 
+	{ // Fix vh units on iOS Safari
+
+		let vh = () => {
+
+		  // Calculates 100% of window height
+		  let value = ;
+
+		  // Stores value into a CSS variable
+		  document.documentElement.style.setProperty( '--vh-100', value + 'px' )
+
+		  console.log( value )
+
+		}
+
+		// Updates value on load
+		vh()
+
+		// Updates value on resize
+		window.addEventListener( 'resize', vh )
+
+	}
+
 })()

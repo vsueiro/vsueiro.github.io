@@ -38,6 +38,8 @@
   --tint-90:  #1a1a1a; /* rgba( 0, 0, 0, .90  ) */
   --tint-100: #000000; /* rgba( 0, 0, 0, 1    ) */
 
+  --vh-100: 100vh; /* JS is used to override this  */
+
 }
 
 /* Reset */
@@ -451,18 +453,18 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc( 100vh - calc( calc( 40px * 6 ) * 1 ) );
+  min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * 1 ) );
 }
 
 @media ( max-width: 1152px ) {
   .cover > header {
-    min-height: calc( 100vh - calc( calc( 40px * 6 ) * .9 ) );
+    min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * .9 ) );
   }
 }
 
 @media ( max-width: 1024px ) {
   .cover > header {
-    min-height: calc( 100vh - calc( calc( 40px * 6 ) * .8 ) );
+    min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * .8 ) );
   }
 }
 
