@@ -51,6 +51,18 @@
 			// Starts animation again after it ends
 			track.addEventListener( 'animationend', () => { animate( event.target ) } )
 
+			// Finds respective item
+			let item = track.querySelector( '.animation-item' )
+
+			console.log( item )
+
+			// Detects clicks on each item
+			item.addEventListener( 'click', event => {
+
+				console.log( event.target )
+
+			} )
+
 		}
 
 	}

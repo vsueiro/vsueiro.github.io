@@ -686,9 +686,15 @@ nav {
 
 /* Cover (Home) */
 
+.cover > *:not(.animation),
+.cover > *:not(.animation) * {
+  pointer-events: none !important;
+}
+
 .cover nav {
   visibility: hidden;
   margin-bottom: calc( -1 * var(--size-40) );
+  z-index: 1;
 }
 
 .cover > header {
@@ -696,6 +702,7 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * 1 ) );
+  z-index: 3;
 }
 
 [data-browser="safari"] .cover > header {
@@ -740,10 +747,9 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
   background: var(--tint-5);
   overflow: hidden;
-  pointer-events: none;
 }
 
 .animation-track {
@@ -752,7 +758,6 @@ nav {
   height: 100%;
   display: flex;
   align-items: flex-start;
-  pointer-events: none;
   animation-timing-function: ease-in;
   transform: translate( -50%, 100% );
 }
@@ -771,6 +776,12 @@ body *.animation-item {
   min-height: calc( 1280px * .1 );
   max-height: calc( 1280px * .2 );
   transition: .4s;
+  pointer-events: all !important;
+  cursor: pointer;
+}
+
+.animation-item:hover {
+  opacity: .5;
 }
 
 .animation-track:nth-child(1) .animation-item {
