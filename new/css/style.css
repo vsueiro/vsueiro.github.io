@@ -191,7 +191,8 @@ ul h2 {
 }
 
 figcaption,
-cite {
+cite,
+footer {
   font-size: calc( var(--size-30) / var(--line-height-text) );
   transition: font-size 1.2s ease-in-out;
 }
@@ -249,8 +250,12 @@ h3 {
 
 /* Divider  */
 
-hr {
-  border-top: 2px solid var(--tint-5);
+hr::before {
+  content: '';
+  display: flex;
+  height: 2px;
+  width: 100%;
+  background: var(--tint-5);
 }
 
 /* Buttons */
@@ -356,6 +361,10 @@ nav a:not(.button) {
   animation: pulse ease-out .6s;
 }
 
+.select {
+  user-select: all;
+}
+
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0rem rgba( 0, 0, 0, .5 ) }
   100% { box-shadow: 0 0 0 2rem rgba( 0, 0, 0,  0 ) }
@@ -364,6 +373,7 @@ nav a:not(.button) {
 /* Flow */
 
 body,
+footer,
 .cover,
 .page {
   position: relative;
@@ -733,6 +743,25 @@ nav {
   .cover h1 br {
     display: none;
   }
+}
+
+/* Footer  */
+
+footer {
+  margin-top: var(--size-40);
+  padding-top: var(--size-40);
+  text-align: center;
+  border-top: 2px solid var(--tint-5);
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+footer li {
+  margin: var(--size-10);
 }
 
 /* Entrance FX */
