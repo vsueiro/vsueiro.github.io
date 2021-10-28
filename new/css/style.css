@@ -523,7 +523,7 @@ section {
     display: none;
   }
 
-  .works li article .square > * {
+  .works li article .square:first-child > * {
     position: relative;
     top: 0;
     left: 0;
