@@ -468,7 +468,7 @@ nav {
   align-items: center;
   justify-content: center;
   min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * 1 ) );
-  transition: min-height 1.2s ease-in-out;
+  transition: min-height .6s ease-in-out;
 }
 
 @media ( max-width: 1152px ) {
