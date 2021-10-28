@@ -61,7 +61,7 @@
 				let url = event.target.dataset.href
 
 				// Opens URL
-				window.open( url, '_blank' )
+				window.open( url, '_self' )
 
 			} )
 
