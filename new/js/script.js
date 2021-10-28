@@ -85,7 +85,7 @@
 								clipboard.classList.add( 'success' )
 
 								// Changes text
-								span.textContent = 'Copied ✨'
+								span.textContent = 'Copied'
 
 								// Reverts changes after 2s
 								setTimeout( () => {
@@ -97,7 +97,7 @@
 							error => {
 
 								// Changes text
-								span.textContent = 'Error 💔'
+								span.textContent = 'Error'
 
 								// Disables button
 								button.disabled = true
