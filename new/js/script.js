@@ -113,37 +113,85 @@
 
 	}
 
-	{ // VH Units Fix (for iOS Safari)
+	{ // Safari Fixes
 
-		let vh = () => {
+		// Checks if browser is Safari
+  	const safari = /^((?!chrome|android).)*safari/i.test( navigator.userAgent )
 
-			// Gets the main page cover
-			let cover = document.querySelector( '.cover' )
-			
-			// Gets the cover’s bounding box
-			let bounding = cover.getBoundingClientRect()
+  	alert( 'Is Safari?: ' + safari )
 
-			// Gets cover’s height
-			let height = cover.offsetHeight;
+  	if ( safari ) {
 
-			// Checks if at least part of the cover is visible in the viewport
-	    if ( bounding.top >= -height  && bounding.bottom <= window.innerHeight + height ) {
+  		// Creates browser-specific attribute
+  		document.body.dataset.browser = 'safari'
 
-				// Calculates 100% of window height
-		  	let value = window.innerHeight;
+			{ // Fix autoplay for (some) iPhones
 
-		  	// Stores value into a CSS variable
-		  	document.documentElement.style.setProperty( '--vh-100', value + 'px' )
+		    // Checks if a video is currently playing
+		    const playing = ( video ) => {
 
-	    }
+		      if ( video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2 )
+		        return true
+
+		    }
+
+		    // Defines autoplay function
+		    const autoplay = () => {
+
+		      // Gathers all videos on the page
+		      let videos = document.querySelectorAll( 'video' )
+
+		      // Loops through them
+		      for ( let video of videos ) {
+
+		        // Plays the video (if it was supposed to be playing)
+		        if ( video.hasAttribute( 'autoplay' ) && !playing( video ) )
+		          video.play()
+
+		      }
+
+		    }
+
+		    // Runs autoplay function every time users touch the screen
+		    document.addEventListener( 'touchstart', autoplay )
+
+		  }
+
+  		{ // Fix VH units (for iOS Safari)
+
+				const vh = () => {
+
+					// Gets the main page cover
+					let cover = document.querySelector( '.cover' )
+					
+					// Gets the cover’s bounding box
+					let bounding = cover.getBoundingClientRect()
+
+					// Gets cover’s height
+					let height = cover.offsetHeight;
+
+					// Checks if at least part of the cover is visible in the viewport
+			    if ( bounding.top >= -height  && bounding.bottom <= window.innerHeight + height ) {
+
+						// Calculates 100% of window height
+				  	let value = window.innerHeight;
+
+				  	// Stores value into a CSS variable
+				  	document.documentElement.style.setProperty( '--vh-100', value + 'px' )
+
+			    }
+
+				}
+
+				// Updates value on load
+				vh()
+
+				// Updates value on resize
+				window.addEventListener( 'resize', vh )
+
+			}
 
 		}
-
-		// Updates value on load
-		vh()
-
-		// Updates value on resize
-		window.addEventListener( 'resize', vh )
 
 	}
 
