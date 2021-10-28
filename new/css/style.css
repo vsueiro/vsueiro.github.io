@@ -553,6 +553,10 @@ section {
   padding: var(--size-40) 0;
 }
 
+.media img {
+  align-self: center;
+}
+
 .media.round img {
   border-radius: 999rem;
 }
