@@ -202,6 +202,7 @@ article li {
 }
 
 header label,
+h3,
 .button {
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -291,9 +292,24 @@ hr {
 /* Links */
 
 a:not(.button) {
+  position: relative;
+  color: var(--tint-100);
+}
+
+a:not(.button) {
   font-weight: 700;
-  border-bottom: 2px solid var(--tint-100);
   cursor: pointer;
+}
+
+a:not(.button)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: .1em;
+  left: 0;
+  display: flex;
+  height: 2px;
+  background: var(--tint-100);
 }
 
 a:not(.button):hover {
@@ -366,10 +382,6 @@ body,
   background: var(--tint-0);
 }
 
-section {
-  max-width: 100%;
-}
-
 .flow {
   display: flex;
   flex-direction: column;
@@ -379,7 +391,16 @@ section {
 
 .flow > * {
   max-width: 100%;
-  margin: var(--size-20) var(--size-80);
+  padding: var(--size-20) var(--size-80);
+}
+
+.flow .flow > * {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+section {
+  max-width: 100%;
 }
 
 @media ( max-width: 640px ) {
@@ -390,7 +411,7 @@ section {
 
   .flow > * {
     max-width: 100%;
-    margin: var(--size-20) var(--size-40);
+    padding: var(--size-20) var(--size-40);
   }
 
 }
@@ -528,21 +549,59 @@ section {
 
 .media {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: var(--size-40) 0;
+  margin: var(--size-40) auto;
+  width: 100%;
+  max-width: 100%;
 }
 
 .media img {
   align-self: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .media.round img {
   border-radius: 999rem;
 }
 
-/* Devices */
+figcaption {
+  margin-top: var(--size-40);
+}
 
-/* Composition */
+/* Sizing */
+
+.full { 
+  width: 100%;
+}
+
+body *:not(.full) {
+  max-width: 128rem;
+}
+
+body *.max-200 {
+  max-width: 20rem;
+}
+
+body *.max-300 {
+  max-width: 30rem;
+}
+
+body *.max-400 {
+  max-width: 40rem;
+}
+
+body *.max-600 {
+  max-width: 60rem;
+}
+
+body *.max-800 {
+  max-width: 80rem;
+}
+
+/* Devices */
 
 .square figure,
 .square figure::before,
@@ -623,36 +682,6 @@ section {
 
 .square figure:not([data-device]) img {
   width: 80%;
-}
-
-/* Sizing */
-
-.full { 
-  width: 100%;
-}
-
-body *:not(.full) {
-  max-width: 128rem;
-}
-
-body *.max-200 {
-  max-width: 20rem;
-}
-
-body *.max-300 {
-  max-width: 30rem;
-}
-
-body *.max-400 {
-  max-width: 40rem;
-}
-
-body *.max-600 {
-  max-width: 60rem;
-}
-
-body *.max-800 {
-  max-width: 80rem;
 }
 
 /* Navigation */
