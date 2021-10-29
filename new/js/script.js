@@ -137,8 +137,6 @@
 
   	alert( 'Safari? ' + safari + 'iOS? ' + ios )
 
-  	console.log( ios, safari )
-
   	if ( ios && safari ) {
 
   		// Creates browser-specific attribute
