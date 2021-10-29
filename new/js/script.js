@@ -135,8 +135,6 @@
   	// Checks if system is iOS
   	const ios = /iP(ad|od|hone)/i.test( window.navigator.userAgent )
 
-  	alert( 'Safari? ' + safari + 'iOS? ' + ios )
-
   	if ( ios && safari ) {
 
   		// Creates browser-specific attribute
