@@ -32,7 +32,7 @@
   --tint-90:  #1a1a1a; /* rgba( 0, 0, 0, .90  ) */
   --tint-100: #000000; /* rgba( 0, 0, 0, 1    ) */
 
-  --vh-100: 100vh; /* JS overrides this on Safari */
+  /*--vh-100: 100vh;  JS overrides this on Safari */
 
 }
 
@@ -723,24 +723,36 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * 1 ) );
+  min-height: calc( 100vh - calc( calc( 40px * 6 ) * 1 ) );
   z-index: 3;
 }
 
 [data-browser="safari"] .cover > header {
-  transition: min-height .6s ease-in-out;
+  min-height: calc( 90vh - calc( calc( 40px * 6 ) * 1 ) );
 }
 
 @media ( max-width: 1152px ) {
+
   .cover > header {
-    min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * .9 ) );
+    min-height: calc( 100vh - calc( calc( 40px * 6 ) * .9 ) );
   }
+
+  [data-browser="safari"] .cover > header {
+    min-height: calc( 90vh - calc( calc( 40px * 6 ) * .9 ) ); 
+  }
+
 }
 
 @media ( max-width: 1024px ) {
+
   .cover > header {
-    min-height: calc( var(--vh-100) - calc( calc( 40px * 6 ) * .8 ) );
+    min-height: calc( 100vh - calc( calc( 40px * 6 ) * .8 ) );
   }
+
+  [data-browser="safari"] .cover > header {
+    min-height: calc( 90vh - calc( calc( 40px * 6 ) * .8 ) ); 
+  }
+
 }
 
 @media ( max-width: 768px ) {

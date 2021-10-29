@@ -132,10 +132,15 @@
 		// Checks if browser is Safari
   	const safari = /^((?!chrome|android).)*safari/i.test( navigator.userAgent )
 
-  	if ( safari ) {
+  	// Checks if system is iOS
+  	const ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent)
+
+  	console.log( ios, safari )
+
+  	if ( ios && safari ) {
 
   		// Creates browser-specific attribute
-  		document.body.dataset.browser = 'safari'
+  		document.body.dataset.safari = true
 
 			{ // Fixes autoplay for (some) iPhones
 
@@ -168,6 +173,8 @@
 		    document.addEventListener( 'touchstart', autoplay )
 
 		  }
+
+			/*
 
   		{ // Fixes VH units (for iOS Safari)
 
@@ -202,6 +209,8 @@
 				window.addEventListener( 'resize', vh )
 
 			}
+
+			*/
 
 		}
 
