@@ -133,7 +133,9 @@
   	const safari = /^((?!chrome|android).)*safari/i.test( navigator.userAgent )
 
   	// Checks if system is iOS
-  	const ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent)
+  	const ios = /iP(ad|od|hone)/i.test( window.navigator.userAgent )
+
+  	alert( 'Safari? ' + safari + 'iOS? ' + ios )
 
   	console.log( ios, safari )
 
