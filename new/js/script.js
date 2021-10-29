@@ -142,7 +142,7 @@
   	if ( ios && safari ) {
 
   		// Creates browser-specific attribute
-  		document.body.dataset.safari = true
+  		document.body.dataset.browser = 'safari'
 
 			{ // Fixes autoplay for (some) iPhones
 
