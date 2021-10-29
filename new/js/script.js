@@ -174,44 +174,6 @@
 
 		  }
 
-			/*
-
-  		{ // Fixes VH units (for iOS Safari)
-
-				const vh = () => {
-
-					// Gets the main page cover
-					let cover = document.querySelector( '.cover' )
-					
-					// Gets the cover’s bounding box
-					let bounding = cover.getBoundingClientRect()
-
-					// Gets cover’s height
-					let height = cover.offsetHeight;
-
-					// Checks if at least part of the cover is visible in the viewport
-			    if ( bounding.top >= -height  && bounding.bottom <= window.innerHeight + height ) {
-
-						// Calculates 100% of window height
-				  	let value = window.innerHeight;
-
-				  	// Stores value into a CSS variable
-				  	document.documentElement.style.setProperty( '--vh-100', value + 'px' )
-
-			    }
-
-				}
-
-				// Updates value on load
-				vh()
-
-				// Updates value on resize
-				window.addEventListener( 'resize', vh )
-
-			}
-
-			*/
-
 		}
 
 	}
