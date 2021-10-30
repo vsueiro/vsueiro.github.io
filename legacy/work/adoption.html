@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vinicius Sueiro — Child Adoption Simulation</title>
+		<meta name="google" content="notranslate" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Vinicius Sueiro">
+		<meta name="description" content="Simulation shows which children are adopted (and which are not) in Brazil">
+		<meta property="og:title" name="title" content="Vinicius Sueiro — Child Adoption Simulation">
+		<meta property="og:image" content="https://vsueiro.com/legacy/media/share/1280x1280.png" />
+		<meta name="theme-color" content="#ffffff">
+		<link rel="canonical" href="https://vsueiro.com/legacy/work/adoption">
+		<link rel="shortcut icon" href="../media/share/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../media/share/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body>
+		<div data-page="work" data-project="adoption">
+			<nav>
+				<div class="contain">
+					<div class="brand">
+						<a href="https://vsueiro.com/">vsueiro</a>
+					</div>
+				</div>
+			</nav>
+			<main>
+				<div class="contain">
+					<header class="cover">
+
+						<div class="client">
+							<span>Estadão</span>
+							<time datetime="2019">2019</time>
+						</div>
+						<h1>Child&nbsp;Adoption <br>Simulation&nbsp;</h1>
+
+						<div class="composition" data-device="phone-tablet">
+							<figure>
+
+								<img src="../media/portfolio/estadao/adoption/tablet.png" alt="">
+
+								<video autoplay muted loop playsinline>
+									<source src="../media/portfolio/estadao/adoption/phone.mp4" type="video/mp4">
+								</video>
+
+								<figcaption class="screen-reader">Desktop and mobile (animated) version of an interactive chart that represents children as tiny plants, that grow as time passes – while they wait for a new parent to adopt them. These plants are also grouped by categories such as ethnicity, siblings and disabilities.</figcaption>
+							</figure>
+						</div>
+
+					</header>
+				</div>
+				<div class="contain">
+					<p class="lead">
+						Simulation shows which children are adopted (and which are not) in Brazil
+					</p>
+				</div>
+				<section>
+					<div class="contain">
+						<p style="text-align: center"><i class="emoji">🏆</i>&nbsp;<a href="https://www.informationisbeautifulawards.com/showcase/3793-simulation-shows-which-children-are-adopted-and-which-are-not-in-brazil" target="_blank">Information is Beautiful</a> sole winner</p>
+						<!--<p style="text-align: center"><i class="emoji">🏆</i>&nbsp;Best data-driven according to <a href="https://en.wikipedia.org/wiki/Inter_American_Press_Association" target="_blank">SIP</a></p>-->
+						<p style="text-align: center"><i class="emoji">🥉</i>&nbsp; Bronze for “innovation” at <a href="https://www.malofiejgraphics.com/general/list-award/2020/08" target="_blank">Malofiej</a></p>
+						<p style="text-align: center"><i class="emoji">🎤</i>&nbsp;Featured project on my talk at <a href="https://www.instagram.com/dataviz.rio/" target="_blank">Dataviz.Rio</a></p>
+					</div>
+				</section>
+				<section>
+					<div class="contain">
+						<header>
+							<h2>Overview</h2>
+						</header>
+						<div class="content">
+							<p>Among children living at a temporary home, you could probably find a 14-year-old black boy who has a brother or sister. These are the most common attributes of children available for adoption.</p>
+							<p>However, the profile most sought out by future parents is that of a 2-year-old white girl and only child.</p>
+							<p>According to our simulation, the 14-year-old’s chance of being adopted within 12 months is <strong>1 in 1,000</strong>. The girl’s adoption is taken for granted.</p>
+							<p>In search for a more sensitive approach, we opted for a visual metaphor and represented each child as a small plant <span style="color: black">🌻</span> that grows as the years go by.</p>
+							<!-- <p>In Brazil, couples that want to adopt children need to go through an extensive examination and backround check. After they are accepted into the adoption proccess, they also need to fill a form in which they declare which kind of child they are willing to take in. This is when characteristics such as age, existance of siblings, special needs, gender and race come into play.</p> -->
+							<!-- <p>Long story short: the wannabe adoptive parents are looking for very specific traits. For most of the children and teenagers living at government foster homes, this makes the odds of moving in with a new family very low. Age is the most decisive factor: after one turns 10, the chances drop drastically. Along with that, having disabilities and siblings are also key factors.</p> -->
+							<!-- <p>To show how parental preferences impact the likelihood of adoption, I’ve developed a simulator that displays how long it would take for specific kid to be selected. Each child is represented as a plant that grows as time passes.</p> -->
+						</div>
+					</div>
+				</section>
+
+				<section class="feature">
+					<div class="contain">
+						<div class="shots">
+							<figure>
+								<div class="screen" data-adoption-explainer="age">
+									<img src="../media/portfolio/estadao/adoption/explainer-age.png" alt="">
+								</div>
+							</figure>
+							<figure>
+								<div class="screen" data-adoption-explainer="disability">
+									<img src="../media/portfolio/estadao/adoption/explainer-disability.png" alt="">
+								</div>
+							</figure>
+							<figure>
+								<div class="screen" data-adoption-explainer="siblings">
+									<img src="../media/portfolio/estadao/adoption/explainer-siblings.png" alt="">
+								</div>
+							</figure>
+						</div>
+						<div class="caption">
+							<p>The higher the plant, the older the child. The V-shaped ending means that the child has at least one brother or sister. The <strong>flower</strong> indicates that this child has a physical or cognitive disability.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>When this story was published, the link between prospective parents and children available for adoption was manually performed by judges – through their own spreadsheets, for example.</p>
+							<p>But a new tool was on the horizon. It would match parents and children using an integrated national system.</p>
+							<p>Inspired by this new system, I developed an <a href="https://github.com/estadao/simulador-de-adocao/blob/master/scripts/simulation.min.js" target="_blank">open source</a> simulator of our own, which also matches prospective parents and children.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure style="max-width: 80rem">
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/animated.gif" alt=""></div>
+							</figure>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>This simulator lets you interactively track <strong>how long</strong> it would take for a 2-year-old to be adopted – and compare it with the waiting time of a 10-year-old.</p>
+							<p>Users probably ran this simulation once. We have performed it <strong>thousands of times</strong>.</p>
+							<p>Doing so, it was possible to identify the attributes that most facilitate or hinder the adoption of a child. Being over 5 years old, having siblings or some kind of disability makes adoption extremely difficult.</p>
+						</div>
+					</div>
+				</section>
+
+				<section class="feature">
+					<div class="contain">
+						<div class="shots">
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/mobile-age.png" alt=""></div>
+							</figure>
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/mobile-disability.png" alt=""></div>
+							</figure>
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/mobile-siblings.png" alt=""></div>
+							</figure>
+						</div>
+						<div class="caption">
+							<p>After running the simulation up until a total of 1,000 children were adopted, we grouped them by different categories: race, disability and siblings</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>We then compared the characteristics of children available for adoption with those of children who were adopted. This indicates that, although skin color plays an important role during selection, there are other more selective filters in action.</p>
+							<p>For example, almost half of the children with cognitive impairments are not adopted. In addition, children that have brothers or sisters are much less likely to be adopted if they are over 10.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<header>
+							<h2>Outcomes</h2>
+						</header>
+						<div class="content">
+							<p>Before talking about some actual results, let’s look at the situation we were in.</p>
+							<p>The charts below represent the prospective parents preferences around August 2019, at the time when the article was being created.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure style="max-width: 57.6rem">
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/age-histogram.png" alt=""></div>
+							</figure>
+							<div class="caption">
+								<p>It seems harsh to me that only 1% of parents accept children over 10.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="feature">
+					<div class="contain">
+						<div class="shots">
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/bars-race.png" alt=""></div>
+							</figure>
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/bars-siblings.png" alt=""></div>
+							</figure>
+							<figure>
+								<div class="screen"><img src="../media/portfolio/estadao/adoption/bars-disability.png" alt=""></div>
+							</figure>
+						</div>
+						<div class="caption">
+							<p>When a couple or a single person is able to apply for the adoption process, it is necessary for them to define the attributes of the desired child. These decisions involve maximum age, sex, race and many others.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p style="width: 100%">Just to name a couple of discrepancies:</p>
+							<p>White kids are accepted by 92% of the prospects, but only 56% of them accept black boys and girls. Also, children that have at least one brother or sister are only accepted by 37% of the prospective parents.</p>
+							<p>These numbers don’t add up when you compare them with the Brazilian population, from babies to teenagers.</p>
+							<p>To address this kind of problem, a Brazilian senator spoke up the at the national Upper House.</p>
+						</div>
+					</div>
+				</section>
+
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<figure style="max-width: 80rem; padding: 2.4rem; border: .2rem solid rgba(0, 0, 0, .05)">
+								<div class="screen" style="background: none"><img src="../media/portfolio/estadao/adoption/senate.png" alt=""></div>
+							</figure>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>The adoption of older kids <a href="https://www12.senado.leg.br/noticias/materias/2019/09/11/katia-abreu-defende-adocao-de-criancas-com-mais-de-3-anos-de-idade" target="_blank">was promoted</a> by Kátia Abreu only two days after this article was published – and the newspaper’s name was mentioned during her speech.</p>
+							<p>She was announcing the creation of a local branch for the National Association of Adoption Support Groups, at the state that she represents.</p>
+							<p>But it’s not all about official repercussion. The quotes below were extracted from tweets that shared the online article – and I feel like the comments they wrote really made all the months spent on this project worth it.</p>
+
+							<figure class="circle">
+								<img src="../media/portfolio/estadao/adoption/@julliocardia.jpg">
+							</figure>
+							<blockquote>
+								<p>It’s time to adopt a new way of thinking</p>
+								<footer>
+									<cite><a href="https://twitter.com/julliocardia/status/1171170376426098690" target="_blank">Julio</a>, Director of the LGBTS+ Center in Brasília</cite>
+								</footer>
+							</blockquote>
+
+							<figure class="circle">
+								<img src="../media/portfolio/estadao/adoption/@acarolinacp.jpg">
+							</figure>
+							<blockquote>
+								<p>Reading about adoption, watching the simulator they developed and crying inside an Uber. I really want to be a stable adult to be the mother of these kids</p>
+								<footer>
+									<cite>
+									<a href="https://twitter.com/acarolinacp/status/1171535887206928384" target="_blank">Carol</a>, on September 10
+									</cite>
+								</footer>
+							</blockquote>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>Besides publishing a delicate visual story about adoption, our underlying goal was to promote a shift in perception, so that those charts and numbers could look – a few years from now – a bit different.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<header>
+							<h2>My role</h2>
+						</header>
+						<div class="content">
+							<ul class="list">
+								<li>Ideation Workshop</li>
+								<li>Design</li>
+								<li>Coding</li>
+								<li>Data analysis</li>
+								<li>Team Management</li>
+								<li>Content Editing</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<p>Some of the people that made this project happen include <a href="http://brunoponceano.com/" target="_blank">Bruno Ponceano</a> (designer), <a href="https://twitter.com/macunhaima" target="_blank">Mariana Cunha</a> (visual journalist) and <a href="https://www.linkedin.com/in/julia-marques-09984382/" target="_blank">Julia Marques</a> (reporter).</p>
+					</div>
+				</section>
+
+				<hr style="
+					margin-right: auto;
+					margin-left: auto;
+					max-width: 57.6rem;
+				">
+
+				<section>
+					<div class="contain">
+						<p>Fun fact: the team and I had this idea while sorting random verbs, nouns and adjectives during an outdoor ideation workshop that we organized ourselves.</p>
+						<p>You can read more about it on <a href="https://www.informationisbeautifulawards.com/news/540-interview-with-2019-s-best-non-english-language-winner" target="_blank">our interview</a> for the Kantar Information is Beautiful Awards.</p>
+					</div>
+				</section>
+
+				<section class="feature" style="
+					position: relative;
+					background: transparent;
+					padding: 0;
+					width: 100%;
+					max-width: 96rem;
+					padding: 0 2.4rem;
+					margin-left: auto;
+					margin-right: auto;
+				">
+					<div class="contain" style="
+						padding: 0;
+					">
+						<div class="shots">
+							<figure style="
+								width: 100%;
+								max-width: 50%;
+								margin: 0 1.2rem 0 0;
+							">
+								<div class="screen">
+									<img src="../media/portfolio/estadao/adoption/iib-01.jpg" alt="">
+								</div>
+							</figure>
+							<figure style="
+								width: 100%;
+								max-width: 50%;
+								margin: 0 0 0 1.2rem;
+							">
+								<div class="screen">
+									<img src="../media/portfolio/estadao/adoption/iib-02.jpg" alt="">
+								</div>
+							</figure>
+						</div>
+
+						<div class="caption">
+							<p>Stage and trophies photographed during the ceremony for the KANTAR Information is Beautiful Awards 2019, at the London Symphony Orchestra’s St. Luke’s, an 18th century church turned cathedral of the arts.</p>
+						</div>
+
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<p>After this data visualization won the trophy as the <a href="https://www.informationisbeautifulawards.com/showcase?action=index&controller=showcase&page=1&pcategory=best-non-english-language&type=awards" target="_blank">Best Non-English</a> project of 2019, the folks responsible for Information is Beautiful asked us to present a behind-the-scenes look at our story. Feel free to <a href="https://www.informationisbeautifulawards.com/news/540-interview-with-2019-s-best-non-english-language-winner" target="_blank">check it out</a>.</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="contain">
+						<div class="content">
+							<a href="https://arte.estadao.com.br/brasil/adocao/criancas/" target="_blank" class="button goto">See live project</a>
+						</div>
+					</div>
+				</section>
+
+				<div id="contact" class="contact">
+					<footer>
+						<div class="contain">
+							<header>
+								<h2>Get in touch</h2>
+							</header>
+							<div class="content">
+								<div class="email">
+									<span>&#104;&#105;&#64;&#118;&#115;&#117;&#101;&#105;&#114;&#111;&#46;&#99;&#111;&#109;</span>
+								</div>
+								<div class="phone">
+									<span>&#x2b;&#x35;&#x35;&#x20;&#x28;&#x31;&#x31;&#x29;&#x20;&#x39;&#x39;&#x37;&#x20;&#x33;&#x35;&#x31;&#x20;&#x36;&#x38;&#x36;</span>
+								</div>
+								<div class="social">
+									<a href="https://www.linkedin.com/in/vsueiro" target="_blank" class="button circle">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+										<span class="screen-reader">LinkedIn</span>
+									</a>
+									<a href="https://twitter.com/viniciussueiro" target="_blank" class="button circle">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+										<span class="screen-reader">Twitter</span>
+									</a>
+									<a href="https://github.com/vsueiro" target="_blank" class="button circle">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+										<span class="screen-reader">GitHub</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</main>
+		</div>
+		<script src="../js/script.js"></script>
+	</body>
+</html>
