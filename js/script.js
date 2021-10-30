@@ -1,5 +1,7 @@
 (() => {
 	
+	window.animationCounter = 0;
+
 	{ // Animation
 
 		// Generates random float in a range
@@ -35,7 +37,13 @@
 			item.style.transform = 'scale(' + depth +')'
 
 			// Begins animation after delay
-			setTimeout( () => { track.style.animationName = 'float' }, delay * 1000 )
+			setTimeout( () => {
+				track.style.animationName = 'float'
+
+				console.log( 'Counting animated tracks: ' + window.animationCounter )
+				window.animationCounter++;
+
+			}, delay * 1000 )
 
 		}
 
@@ -66,6 +74,15 @@
 			} )
 
 		}
+
+		// Pauses animation when tab is inactive
+		document.addEventListener( 'visibilitychange', () => {
+
+			// Assigns “hidden” or “visible”
+			document.body.dataset.visibility = document.visibilityState
+
+		} )
+			
 
 	}
 

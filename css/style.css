@@ -868,6 +868,10 @@ footer li {
   transform: translate( -50%, 100% );
 }
 
+[data-visibility="hidden"] .animation-track {
+  animation-play-state: paused;
+}
+
 @keyframes float {
   0%   { transform: translate( -50%,  100% ) }
   100% { transform: translate( -50%, -100% ) }
