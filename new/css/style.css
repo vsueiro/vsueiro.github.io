@@ -86,7 +86,7 @@ img {
 /* Wireframe */
 
 * {
-  /*box-shadow: 0 0 0 1px magenta, inset 0 0 0 1px magenta;*/
+  box-shadow: 0 0 0 1px magenta, inset 0 0 0 1px magenta;
 }
 
 /* Overflow */
@@ -322,10 +322,6 @@ a:not(.button):hover {
   opacity: .5;
 }
 
-nav a:not(.button) {
-  border: unset;
-}
-
 /* Call to Action  */
 
 .call-to-action {
@@ -384,7 +380,6 @@ footer,
   width: 100%;
 }
 
-.cover,
 .page {
   padding: var(--size-40) 0;
 }
@@ -702,61 +697,83 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: var(--size-40) var(--size-80);
+}
+
+nav a::after {
+  display: none !important;
+}
+
+@media ( max-width: 640px ) {
+
+  nav {
+    padding: var(--size-40);
+  }
+
 }
 
 /* Cover (Home) */
 
-.cover > *:not(.animation),
-.cover > *:not(.animation) * {
+[data-template="home"] .cover {
+  padding-bottom: var(--size-40);
+}
+
+[data-template="home"] .cover > *:not(.animation),
+[data-template="home"] .cover > *:not(.animation) * {
   pointer-events: none !important;
 }
 
-.cover nav {
+[data-template="home"] .cover nav {
   visibility: hidden;
-  margin-bottom: calc( -1 * var(--size-40) );
-  z-index: 1;
+  z-index: 3;
 }
 
-.cover > header {
+[data-template="home"] .cover > header {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: calc( 100vh - calc( calc( 40px * 6 ) * 1 ) );
-  z-index: 3;
+  z-index: 2;
 }
 
-[data-browser="safari"] .cover > header {
+[data-template="home"][data-browser="safari"] .cover > header {
   min-height: calc( 80vh - calc( calc( 40px * 6 ) * 1 ) );
 }
 
-@media ( max-width: 1152px ) {
+@media ( max-width: 1279px ) {
 
-  .cover > header {
+  [data-template="home"] .cover > header {
     min-height: calc( 100vh - calc( calc( 40px * 6 ) * .9 ) );
   }
 
-  [data-browser="safari"] .cover > header {
+  [data-template="home"][data-browser="safari"] .cover > header {
     min-height: calc( 80vh - calc( calc( 40px * 6 ) * .9 ) ); 
   }
 
 }
 
-@media ( max-width: 1024px ) {
+@media ( max-width: 1152px ) {
 
-  .cover > header {
+  [data-template="home"] .cover > header {
     min-height: calc( 100vh - calc( calc( 40px * 6 ) * .8 ) );
   }
 
-  [data-browser="safari"] .cover > header {
+  [data-template="home"][data-browser="safari"] .cover > header {
     min-height: calc( 80vh - calc( calc( 40px * 6 ) * .8 ) ); 
   }
 
 }
 
 @media ( max-width: 768px ) {
-  .cover h1 br {
+  [data-template="home"] .cover h1 br {
     display: none;
   }
+}
+
+/* Cover (Work) */
+
+[data-template="work"] {
+
 }
 
 /* Footer  */
