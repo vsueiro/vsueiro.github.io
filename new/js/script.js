@@ -179,7 +179,7 @@
 	{ // Entrance FX
 
 		// Gathers all elements to apply the transition
-		const elements = document.querySelectorAll( '.flow > *, .works li' )
+		const elements = document.querySelectorAll( '.entrance, .flow > *, .works li' )
 
 		// Defines arbitrary constant to calculate transition delay, in seconds
 		const basis = 1
