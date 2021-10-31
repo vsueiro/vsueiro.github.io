@@ -129,6 +129,12 @@ html {
   background: rgba( 0, 0, 0, .1 );
 }
 
+/* Abbreviations */
+
+abbr {
+  cursor: help;
+}
+
 /* Typography */
 
 @font-face {
@@ -286,7 +292,6 @@ hr::before {
 [data-theme="montadino"] {
   background: var(--theme-montadino);
 }
-
 
 /* Buttons */
 
