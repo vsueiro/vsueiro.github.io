@@ -266,6 +266,28 @@ hr::before {
   background: var(--tint-5);
 }
 
+/* Themes */
+
+[data-theme="epicenter"] {
+  background: var(--theme-epicenter);
+}
+[data-theme="supertunnel"] {
+  background: var(--theme-supertunnel);
+}
+[data-theme="adoption"] {
+  background: var(--theme-adoption);
+}
+[data-theme="barbecues"] {
+  background: var(--theme-barbecues);
+}
+[data-theme="faceapp"] {
+  background: var(--theme-faceapp);
+}
+[data-theme="montadino"] {
+  background: var(--theme-montadino);
+}
+
+
 /* Buttons */
 
 .button {
