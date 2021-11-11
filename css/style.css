@@ -715,6 +715,19 @@ body *.max-800 {
 	background-position: 50% 55%;
 }
 
+@media ( max-width: 512px ) {
+
+  [data-template="work"] .square[data-device="phone"]::before {
+		padding-top: 200%;
+	}
+
+	[data-template="work"] .square[data-device="phone"] figure video,
+	[data-template="work"] .square[data-device="phone"] figure img {
+		transform: scale( 2 );
+	}
+
+}
+
 /* Navigation */
 
 nav {
