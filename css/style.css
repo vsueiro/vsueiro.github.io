@@ -715,7 +715,8 @@ body *.max-800 {
 	background-position: 50% 55%;
 }
 
-[data-template="work"] .square:not([data-device]) {
+[data-template="work"] .square:not([data-device]),
+[data-template="work"] .square[data-device="phone"] {
   max-width: 80rem;
 }
 
