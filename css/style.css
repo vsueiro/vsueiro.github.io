@@ -839,12 +839,14 @@ nav a::after {
 
 [data-template="work"] .cover h1,
 [data-template="work"] .cover label {
+  max-width: 80rem;
+  padding-bottom: 0;
   color: var(--tint-0);
 }
 
 [data-template="work"] .cover h1,
 [data-template="work"] .cover label {
-  padding-bottom: 0;
+
 }
 
 @media ( max-width: 640px ) {
