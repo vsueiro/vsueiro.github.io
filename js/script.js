@@ -1,6 +1,4 @@
 (() => {
-	
-	window.animationCounter = 0;
 
 	{ // Animation
 
@@ -39,10 +37,6 @@
 			// Begins animation after delay
 			setTimeout( () => {
 				track.style.animationName = 'float'
-
-				console.log( 'Counting animated tracks: ' + window.animationCounter )
-				window.animationCounter++;
-
 			}, delay * 1000 )
 
 		}
@@ -82,7 +76,7 @@
 			document.body.dataset.visibility = document.visibilityState
 
 		} )
-			
+
 
 	}
 
@@ -104,15 +98,15 @@
 				// Checks if click was on button
 				if ( event.target === button ) {
 
-					// Gathers the desired text 
+					// Gathers the desired text
 					let text = clipboard.querySelector( 'span' ).textContent
-					
+
 					// Tries to copy to clipboard
 					navigator.clipboard.writeText( text )
 						.then(
 							success => {
 
-								// Applies success styling 
+								// Applies success styling
 								clipboard.classList.add( 'success' )
 
 								// Changes text
@@ -123,8 +117,8 @@
 									clipboard.classList.remove( 'success' )
 									span.textContent = 'Copy'
 								}, 2000 )
-								
-							}, 
+
+							},
 							error => {
 
 								// Changes text
@@ -132,7 +126,7 @@
 
 								// Disables button
 								button.disabled = true
-								
+
 							}
 						)
 
