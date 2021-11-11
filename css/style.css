@@ -93,7 +93,7 @@ img {
 /* Wireframe */
 
 * {
-  /*box-shadow: 0 0 0 1px magenta, inset 0 0 0 1px magenta;*/
+  /* box-shadow: 0 0 0 1px magenta, inset 0 0 0 1px magenta; */
 }
 
 /* Overflow */
@@ -175,7 +175,7 @@ figcaption {
   color: var(--tint-66);
 }
 
-header p {
+[data-template="home"] header p {
   color: var(--tint-100);
 }
 
@@ -634,32 +634,32 @@ body *.max-800 {
   background-size: cover;
 }
 
-.square figure[data-device="phone"]::before {
+.square[data-device="phone"] figure::before {
   background-image: url(../media/devices/fill-phone.svg);
 }
 
-.square figure[data-device="phone"]::after {
+.square[data-device="phone"] figure::after {
   background-image: url(../media/devices/frame-phone.svg);
 }
 
-.square figure[data-device="phone-tablet"]::before {
+.square[data-device="phone-tablet"] figure::before {
   background-image: url(../media/devices/fill-phone-tablet.svg);
 }
 
-.square figure[data-device="phone-tablet"]::after {
+.square[data-device="phone-tablet"] figure::after {
   background-image: url(../media/devices/frame-phone-tablet.svg);
 }
 
-.square figure[data-device="laptop"]::before {
+.square[data-device="laptop"] figure::before {
   background-image: url(../media/devices/fill-laptop.svg);
 }
 
-.square figure[data-device="laptop"]::after {
+.square[data-device="laptop"] figure::after {
   background-image: url(../media/devices/frame-laptop.svg);
 }
 
-.square figure[data-device="phone"] video,
-.square figure[data-device="phone"] img {
+.square[data-device="phone"] figure video,
+.square[data-device="phone"] figure img {
   position: absolute;
   top: 15%;
   left: 33.836%;
@@ -667,8 +667,8 @@ body *.max-800 {
   height: 70%;
 }
 
-.square figure[data-device="phone-tablet"] video:nth-child(1),
-.square figure[data-device="phone-tablet"] img:nth-child(1) {
+.square[data-device="phone-tablet"] figure video:nth-child(1),
+.square[data-device="phone-tablet"] figure img:nth-child(1) {
   position: absolute;
   top: 15%;
   left: 31.5%;
@@ -676,8 +676,8 @@ body *.max-800 {
   height: 70%;
 }
 
-.square figure[data-device="phone-tablet"] video:nth-child(2),
-.square figure[data-device="phone-tablet"] img:nth-child(2) {
+.square[data-device="phone-tablet"] figure video:nth-child(2),
+.square[data-device="phone-tablet"] figure img:nth-child(2) {
   position: absolute;
   top: 44%;
   left: 15.05%;
@@ -685,8 +685,8 @@ body *.max-800 {
   height: 42%;
 }
 
-.square figure[data-device="laptop"] video,
-.square figure[data-device="laptop"] img {
+.square[data-device="laptop"] figure video,
+.square[data-device="laptop"] figure img {
   position: absolute;
   top: 28.125%;
   left: 15%;
@@ -694,8 +694,25 @@ body *.max-800 {
   height: 43.75%;
 }
 
-.square figure:not([data-device]) img {
+.square:not([data-device]) figure img {
   width: 80%;
+}
+
+[data-template="work"] .square[data-device="laptop"]::before {
+  padding-top: 76.2%;
+}
+
+[data-template="work"] .square[data-device="laptop"] figure video,
+[data-template="work"] .square[data-device="laptop"] figure img {
+	top: 19.685%;
+	left: 15%;
+	width: 70%;
+	height: 57.415%;
+}
+
+[data-template="work"] .square[data-device="laptop"] figure::before,
+[data-template="work"] .square[data-device="laptop"] figure::after {
+	background-position: 50% 55%;
 }
 
 /* Navigation */
@@ -792,6 +809,7 @@ nav a::after {
 }
 
 [data-template="work"] > header p {
+  margin: var(--size-80) auto;
   text-align: center;
 }
 
@@ -802,12 +820,18 @@ nav a::after {
   align-items: center;
   text-align: center;
   width: 100%;
+  padding-top: var(--size-60);
   padding-bottom: 0;
 }
 
 [data-template="work"] .cover h1,
 [data-template="work"] .cover label {
   color: var(--tint-0);
+}
+
+[data-template="work"] .cover h1,
+[data-template="work"] .cover label {
+  padding-bottom: 0;
 }
 
 @media ( max-width: 640px ) {
@@ -817,7 +841,6 @@ nav a::after {
   }
 
 }
-
 
 /* Footer  */
 
