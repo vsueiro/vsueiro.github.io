@@ -37,7 +37,7 @@
   --theme-adoption:    #84a86c;
   --theme-barbecues:   #a87094;
   --theme-faceapp:     #f2cbaf;
-  --theme-montadino:   #ffcbca;
+  --theme-montadino:   #ffc4c3;
 
 }
 
@@ -713,6 +713,10 @@ body *.max-800 {
 [data-template="work"] .square[data-device="laptop"] figure::before,
 [data-template="work"] .square[data-device="laptop"] figure::after {
 	background-position: 50% 55%;
+}
+
+[data-template="work"] .square:not([data-device]) {
+  max-width: 80rem;
 }
 
 @media ( max-width: 512px ) {
