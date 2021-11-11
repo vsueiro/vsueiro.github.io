@@ -250,7 +250,7 @@ h3 {
 
 @media ( max-width: 640px ) {
 
-  h1 {
+  [data-template="home"] h1 {
     font-size: calc( var(--size-50) / var(--line-height-title) );
   }
 
