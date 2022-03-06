@@ -387,8 +387,6 @@ a:not(.button):hover {
   display: flex;
   align-items: center;
   white-space: nowrap;
-/*  overflow: hidden;
-  text-overflow: ellipsis;*/
   padding: 0 2.5rem;
   border-radius: 2.5rem;
   height: var(--size-50);
@@ -615,10 +613,6 @@ figcaption {
   width: 100%;
 }
 
-body *:not(.full) {
-  max-width: 128rem;
-}
-
 body *.max-200 {
   max-width: 20rem;
 }
@@ -637,6 +631,18 @@ body *.max-600 {
 
 body *.max-800 {
   max-width: 80rem;
+}
+
+body *.max-1000 {
+  max-width: 100rem;
+}
+
+body *.max-1280 {
+  max-width: 128rem;
+}
+
+body *.max-1920 {
+  max-width: 192rem;
 }
 
 /* Devices */
