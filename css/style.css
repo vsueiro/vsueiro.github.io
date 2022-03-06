@@ -770,7 +770,7 @@ body *.max-1920 {
 
 /* Navigation */
 
-nav {
+nav.full {
   display: flex;
   flex-direction: row;
   padding: var(--size-40) var(--size-80);
@@ -783,7 +783,7 @@ nav a::after {
 
 @media ( max-width: 640px ) {
 
-  nav {
+  nav.full {
     padding: var(--size-40);
   }
 
