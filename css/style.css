@@ -168,6 +168,7 @@ body {
   font-weight: 400;
   font-size: calc( var(--size-40) / var(--line-height-text) );
   line-height: var(--line-height-text);
+  color: var(--tint-100);
 }
 
 .highlights li,
@@ -914,6 +915,41 @@ nav a::after {
     font-size: calc( var(--size-50) / var(--line-height-title) );
   }
 
+}
+
+/* Quotes */
+
+blockquote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: var(--size-80) 0;
+}
+
+blockquote p {
+  font-weight: bold;
+  color: var(--tint-100);
+}
+
+blockquote cite {
+  color: var(--tint-66);
+  margin-top: var(--size-20);
+}
+
+blockquote p::before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  font-size: 2em;
+  left: calc( var(--size-60) * -1 );
+  line-height: 1.2;
+}
+
+blockquote p,
+blockquote cite {
+  position: relative;
+  width: calc( 100% - var(--size-60) );
 }
 
 /* Footer  */
