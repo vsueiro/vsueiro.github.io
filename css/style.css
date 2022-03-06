@@ -443,6 +443,10 @@ footer,
   padding: var(--size-20) var(--size-80);
 }
 
+.flow.full > * {
+  padding: var(--size-20) 0;
+}
+
 .flow .flow > * {
   margin-right: 0;
   margin-left: 0;
@@ -611,6 +615,7 @@ figcaption {
 
 .full {
   width: 100%;
+  padding: 0;
 }
 
 body *.max-200 {
