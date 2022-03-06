@@ -451,6 +451,10 @@ footer,
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -969,6 +973,22 @@ footer ul {
 
 footer li {
   margin: var(--size-10);
+}
+
+/* List */
+
+.list {
+  width: 100%;
+  color: var(--tint-66);
+}
+
+.list li::before {
+  content: '—';
+  margin-right: 1em;
+}
+
+.list li + li {
+  margin-top: var(--size-20);
 }
 
 /* Entrance FX */
