@@ -596,7 +596,8 @@ section section {
   max-width: 100%;
 }
 
-.media img {
+.media img,
+.media video {
   align-self: center;
   width: 100%;
   max-width: 100%;
@@ -608,6 +609,18 @@ section section {
 
 figcaption {
   margin-top: var(--size-40);
+}
+
+.media .group {
+  display: flex;
+}
+
+.media .group .media {
+  margin: 0;
+}
+
+.media .group .media {
+  padding: 0 var(--size-10);
 }
 
 /* Sizing */
