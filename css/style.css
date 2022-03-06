@@ -456,6 +456,11 @@ section {
   align-items: center;
   width: 100%;
   max-width: 100%;
+  margin: var(--size-120) auto;
+}
+
+section section {
+  margin: 0;
 }
 
 @media ( max-width: 640px ) {
@@ -477,7 +482,7 @@ section {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: var(--size-120) var(--size-80);
+  padding: var(--size-120) var(--size-80) 0;
 }
 
 .works li {
