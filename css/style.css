@@ -454,7 +454,7 @@ section {
   align-items: center;
   width: 100%;
   max-width: 100%;
-  margin: var(--size-120) auto;
+  margin-top: var(--size-120);
 }
 
 section section {
@@ -588,7 +588,7 @@ section section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: var(--size-40) auto;
+  margin: var(--size-80) 0;
   width: 100%;
   max-width: 100%;
 }
@@ -853,7 +853,7 @@ nav a::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 var(--size-80) var(--size-80);
+  padding: 0 var(--size-80);
 }
 
 [data-template="work"] > header p {
@@ -897,6 +897,7 @@ nav a::after {
 .metrics {
   display: flex;
   justify-content: center;
+  margin: var(--size-80) 0;
 }
 
 .metrics li {
@@ -970,7 +971,7 @@ blockquote cite {
 /* Footer  */
 
 footer {
-  margin-top: var(--size-40);
+  margin-top: var(--size-120);
   padding-top: var(--size-40);
   text-align: center;
   border-top: 2px solid var(--tint-5);
@@ -990,6 +991,7 @@ footer li {
 
 .list {
   width: 100%;
+  margin: var(--size-80) 0;
   color: var(--tint-66);
 }
 
