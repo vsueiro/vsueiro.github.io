@@ -176,6 +176,11 @@ figcaption {
   color: var(--tint-66);
 }
 
+p strong {
+  color: var(--tint-100);
+  font-weight: bold;
+}
+
 [data-template="home"] header p {
   color: var(--tint-100);
 }
