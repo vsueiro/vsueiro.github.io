@@ -1004,6 +1004,15 @@ footer li {
   margin: var(--size-10);
 }
 
+/* Embed */
+
+.embed {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: var(--size-80) 0;
+}
+
 /* List */
 
 .list {

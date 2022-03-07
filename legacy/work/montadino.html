@@ -161,7 +161,7 @@
 						<div class="content">
 							<p>If you walk into a kindergarten classroom, there would probably be a recycling bin laying on a corner.</p>
 							<p>Now imagine there were also a bin only for of used EVA.</p>
-							<p>Finally, imagine that waste sorting was a <strong>fun and enganing</strong> experience for kids… Like feeding a T-Rex! </p>
+							<p>Finally, imagine that waste sorting was a <strong>fun and enganing</strong> experience for kids… Like feeding a T-Rex!</p>
 						</div>
 					</div>
 				</section>
@@ -552,140 +552,6 @@
 				</div>
 			</main>
 		</div>
-
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:900&amp;display=swap">
-		<style>
-		.shuffle {
-			font-family: Nunito, sans-serif;
-			font-weight: 900;
-			font-size: 250%;
-			margin: 0 auto;
-			user-select: none;
-			/* cursor: pointer; */
-		}
-		.shuffle span {
-			position: relative;
-			display: inline-flex;
-			transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			color: #404040;
-		}
-		.shuffle span:nth-child(n+6) {
-			color: #FF7272;
-		}
-		</style>
-		<script>
-		( function() {
-
-		  let shuffle = {
-
-		    container : document.querySelector( '.shuffle' ),
-
-		    render : function( string ) {
-
-		      for ( let i = 0; i < string.length; i++ ) {
-
-		        let char = string.charAt( i )
-
-		        let
-		        letter = document.createElement( 'span' )
-		        letter.innerHTML = char
-
-		        shuffle.container.appendChild( letter )
-
-		      }
-
-		      shuffle.standard()
-
-		    },
-
-		    random : function( start, end, increments ) {
-
-		      let numbers = []
-
-		      for ( let n = start; n <= end; n += increments ) {
-		        numbers.push( n )
-		      }
-
-		      let randomIndex = Math.floor( Math.random() * numbers.length )
-		      return numbers[ randomIndex ]
-
-		    },
-
-		    update : function() {
-
-		      for ( let letter of shuffle.container.childNodes ) {
-
-		        let translate = shuffle.random( -16, 16, 16 )
-
-		        letter.style.transform = 'translateY( ' + translate + '% )'
-
-		      }
-
-		    },
-
-		    standard : function() {
-
-		      let positions = [ 0, 0, -16, 0, -16, 0, -16, 0, -16 ]
-		      let count = 0
-
-		      for ( let letter of shuffle.container.childNodes ) {
-
-		        let translate = positions[ count ]
-
-		        letter.style.transform = 'translateY( ' + translate + '% )'
-
-		        count++
-
-		      }
-
-		    },
-
-		    auto : function() {
-
-		      let count = 0
-
-		      let interval = setInterval( function() {
-
-		        shuffle.update()
-
-		        if ( count >= 3 ) {
-
-		          clearInterval( interval )
-		          shuffle.standard()
-		          count = 0
-
-		        } else {
-
-		          count++
-
-		        }
-
-		      }, 400 )
-
-		    },
-
-		  }
-
-		  shuffle.render( 'Montadino' )
-
-			/*
-		  shuffle.container.addEventListener( 'click', function( event ) {
-		    shuffle.update()
-		    event.stopPropagation()
-		  } )
-
-		  document.addEventListener( 'click', function( event ) {
-		    if ( !shuffle.container.contains( event.target ) )
-		      shuffle.standard()
-		  } )
-			*/
-
-		  setInterval( function() {
-		    shuffle.auto()
-		  }, 4000 )
-
-		} )()
-		</script>
 		<script src="../js/script.js"></script>
 	</body>
 </html>

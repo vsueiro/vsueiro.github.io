@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+
+.shuffle {
+  font-family: Nunito, sans-serif;
+  font-weight: 900;
+  font-size: 250%;
+  margin: 0 auto;
+  user-select: none;
+}
+.shuffle span {
+  position: relative;
+  display: inline-flex;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #404040;
+}
+.shuffle span:nth-child(n+6) {
+  color: #FF7272;
+}
