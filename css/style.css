@@ -635,6 +635,10 @@ figcaption {
   padding: 0;
 }
 
+body *.max-100 {
+  max-width: 10rem;
+}
+
 body *.max-200 {
   max-width: 20rem;
 }
