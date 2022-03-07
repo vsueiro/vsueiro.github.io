@@ -179,7 +179,8 @@ figcaption {
   color: var(--tint-66);
 }
 
-p strong {
+p strong,
+figcaption strong {
   color: var(--tint-100);
   font-weight: bold;
 }
