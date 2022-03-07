@@ -219,7 +219,6 @@ figcaption,
 cite,
 footer {
   font-size: calc( var(--size-30) / var(--line-height-text) );
-  transition: font-size 1.2s ease-in-out;
 }
 
 header p,
@@ -235,18 +234,6 @@ h3,
   text-transform: uppercase;
   font-size: calc( var(--size-30) / var(--line-height-text) );
   color: var(--tint-100);
-}
-
-p,
-figcaption,
-cite,
-span,
-li,
-label,
-h1,
-h2,
-h3 {
-  transition: font-size .6s ease-in-out;
 }
 
 @media ( max-width: 768px ) {
