@@ -1,25 +1,33 @@
-// Entrance FX
+// Entrance effects
 
 // Gathers all elements to apply the transition
 const elements = document.querySelectorAll( '.entrance, .flow > *, .works li' )
 
-// Defines arbitrary constant to calculate transition delay, in seconds
-const basis = 1
+// Stores accessibility setting
+const reducedMotion = window.matchMedia( '(prefers-reduced-motion)' ).matches
 
-// Loops through them
-for ( let order = 1; order < elements.length; order++ ) {
+// Checks accessibility setting
+if ( !reducedMotion ) {
+  
+  // Defines arbitrary constant to calculate transition delay, in seconds
+  const basis = 1
 
-  // Gets current element
-  let element = elements[ order ]
+  // Loops through them
+  for ( let order = 1; order < elements.length; order++ ) {
 
-  // Increases number to prevent delay of 0
-  let number = order + 1
+    // Gets current element
+    let element = elements[ order ]
 
-  // Calculates delay (log makes delay smaller each time)
-  let delay = basis * Math.log( number )
+    // Increases number to prevent delay of 0
+    let number = order + 1
 
-  // Applies transition delay
-  element.style.transitionDelay = delay + 's'
+    // Calculates delay (log makes delay smaller each time)
+    let delay = basis * Math.log( number )
+
+    // Applies transition delay
+    element.style.transitionDelay = delay + 's'
+
+  }
 
 }
 

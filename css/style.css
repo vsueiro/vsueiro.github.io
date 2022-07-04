@@ -1061,6 +1061,22 @@ footer li {
   opacity: 0;
 }
 
+@media ( prefers-reduced-motion ) {
+  .entrance,
+  .flow > *,
+  .works li {
+    transition: none;
+  }
+
+  [data-entrance=false] .entrance,
+  [data-entrance=false] .flow > *,
+  [data-entrance=false] .works li {
+    transform: none;
+    opacity: 1;
+  }
+
+}
+
 /* Animation */
 
 .animation {
