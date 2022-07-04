@@ -864,6 +864,12 @@ nav a::after {
   }
 }
 
+@media ( prefers-reduced-motion ) {
+  [data-template="home"] .cover .animation-track {
+    display: none;
+  }
+}
+
 /* Cover (Work) */
 
 [data-template="work"] > header {
