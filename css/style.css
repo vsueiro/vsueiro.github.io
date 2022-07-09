@@ -262,6 +262,10 @@ h3,
 
 /* Divider  */
 
+hr {
+  border: none;
+}
+
 hr::before {
   content: '';
   display: flex;
