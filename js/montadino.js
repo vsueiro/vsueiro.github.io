@@ -1,99 +1,72 @@
-( function() {
-
+(function () {
   let shuffle = {
+    container: document.querySelector(".shuffle"),
 
-    container : document.querySelector( '.shuffle' ),
+    render: function (string) {
+      for (let i = 0; i < string.length; i++) {
+        let char = string.charAt(i);
 
-    render : function( string ) {
+        let letter = document.createElement("span");
+        letter.innerHTML = char;
 
-      for ( let i = 0; i < string.length; i++ ) {
-
-        let char = string.charAt( i )
-
-        let
-        letter = document.createElement( 'span' )
-        letter.innerHTML = char
-
-        shuffle.container.appendChild( letter )
-
+        shuffle.container.appendChild(letter);
       }
 
-      shuffle.standard()
-
+      shuffle.standard();
     },
 
-    random : function( start, end, increments ) {
+    random: function (start, end, increments) {
+      let numbers = [];
 
-      let numbers = []
-
-      for ( let n = start; n <= end; n += increments ) {
-        numbers.push( n )
+      for (let n = start; n <= end; n += increments) {
+        numbers.push(n);
       }
 
-      let randomIndex = Math.floor( Math.random() * numbers.length )
-      return numbers[ randomIndex ]
-
+      let randomIndex = Math.floor(Math.random() * numbers.length);
+      return numbers[randomIndex];
     },
 
-    update : function() {
+    update: function () {
+      for (let letter of shuffle.container.childNodes) {
+        let translate = shuffle.random(-16, 16, 16);
 
-      for ( let letter of shuffle.container.childNodes ) {
-
-        let translate = shuffle.random( -16, 16, 16 )
-
-        letter.style.transform = 'translateY( ' + translate + '% )'
-
+        letter.style.transform = "translateY( " + translate + "% )";
       }
-
     },
 
-    standard : function() {
+    standard: function () {
+      let positions = [0, 0, -16, 0, -16, 0, -16, 0, -16];
+      let count = 0;
 
-      let positions = [ 0, 0, -16, 0, -16, 0, -16, 0, -16 ]
-      let count = 0
+      for (let letter of shuffle.container.childNodes) {
+        let translate = positions[count];
 
-      for ( let letter of shuffle.container.childNodes ) {
+        letter.style.transform = "translateY( " + translate + "% )";
 
-        let translate = positions[ count ]
-
-        letter.style.transform = 'translateY( ' + translate + '% )'
-
-        count++
-
+        count++;
       }
-
     },
 
-    auto : function() {
+    auto: function () {
+      let count = 0;
 
-      let count = 0
+      let interval = setInterval(function () {
+        shuffle.update();
 
-      let interval = setInterval( function() {
-
-        shuffle.update()
-
-        if ( count >= 3 ) {
-
-          clearInterval( interval )
-          shuffle.standard()
-          count = 0
-
+        if (count >= 3) {
+          clearInterval(interval);
+          shuffle.standard();
+          count = 0;
         } else {
-
-          count++
-
+          count++;
         }
-
-      }, 400 )
-
+      }, 400);
     },
+  };
 
-  }
+  shuffle.render("Montadino");
 
-  shuffle.render( 'Montadino' )
-
-  setInterval( function() {
-    shuffle.auto()
-  }, 4000 )
-
-} )()
+  setInterval(function () {
+    shuffle.auto();
+  }, 4000);
+})();

@@ -1,5 +1,5 @@
-import './modules/animation.js'
-import './modules/clipboard.js'
-import './modules/safari-fixes.js'
-import './modules/entrance-fx.js'
-import './modules/thumbnail-click.js'
+import "./modules/animation.js";
+import "./modules/clipboard.js";
+import "./modules/safari-fixes.js";
+import "./modules/entrance-fx.js";
+import "./modules/thumbnail-click.js";
