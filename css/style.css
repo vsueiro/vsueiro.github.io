@@ -228,7 +228,7 @@ article li {
   font-size: calc(var(--size-50) / var(--line-height-text));
 }
 
-header label,
+header .label,
 h3,
 .button {
   font-weight: 700;
@@ -896,7 +896,7 @@ nav a::after {
 }
 
 [data-template="work"] .cover h1,
-[data-template="work"] .cover label {
+[data-template="work"] .cover .label {
   max-width: 80rem;
   padding-bottom: 0;
   color: var(--tint-0);
