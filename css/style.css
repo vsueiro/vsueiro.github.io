@@ -31,6 +31,7 @@
   --tint-66: #555555; /* rgba( 0, 0, 0, .666 ) */
   --tint-75: #404040; /* rgba( 0, 0, 0, .75  ) */
   --tint-90: #1a1a1a; /* rgba( 0, 0, 0, .90  ) */
+  --tint-95: #0d0d0d; /* rgba( 0, 0, 0, .95  ) */
   --tint-100: #000000; /* rgba( 0, 0, 0, 1    ) */
 
   --theme-epicenter: #d6c2b0;
@@ -364,7 +365,7 @@ a:not(.button) {
   cursor: pointer;
 }
 
-a:not(.button)::after {
+a:not(.button, .experiments)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -375,7 +376,7 @@ a:not(.button)::after {
   background: var(--tint-100);
 }
 
-a:not(.button):hover {
+a:not(.button, .experiments):hover {
   opacity: 0.5;
 }
 
@@ -805,6 +806,49 @@ nav a::after {
   }
 }
 
+/* Playground Link */
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+a.experiments {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+a.experiments .button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: 0;
+  aspect-ratio: 1;
+  z-index: 1;
+}
+
+a.experiments svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 6s linear infinite;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
 /* Cover (Home) */
 
 [data-template="home"] .cover {
@@ -822,7 +866,8 @@ nav a::after {
 }
 
 [data-template="home"] .cover nav {
-  visibility: hidden;
+  justify-content: end;
+  /* visibility: hidden; */
   z-index: 3;
 }
 
@@ -868,6 +913,9 @@ nav a::after {
   [data-template="home"] .cover .animation-track {
     display: none;
   }
+  a.experiments svg {
+    animation: none;
+  }
 }
 
 /* Cover (Work) */
@@ -899,11 +947,12 @@ nav a::after {
 [data-template="work"] .cover .label {
   max-width: 80rem;
   padding-bottom: 0;
-  color: var(--tint-0);
+  color: var(--tint-100);
 }
 
-[data-template="work"] .cover h1,
-[data-template="work"] .cover label {
+[data-template="work"] .cover[data-theme] h1,
+[data-template="work"] .cover[data-theme] label {
+  color: var(--tint-0);
 }
 
 @media (max-width: 640px) {
@@ -1122,6 +1171,109 @@ body *.animation-item {
 
 .animation-item:hover {
   opacity: 0.5;
+}
+
+/* Dark mode */
+
+body[data-mode="dark"] {
+  background: var(--tint-100);
+  color: var(--tint-0);
+}
+
+[data-mode="dark"] .highlights li,
+[data-mode="dark"] p,
+[data-mode="dark"] figcaption {
+  color: var(--tint-33);
+}
+
+[data-mode="dark"] p strong,
+[data-mode="dark"] figcaption strong {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"][data-template="home"] header p {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"] header .label,
+[data-mode="dark"] h3,
+[data-mode="dark"] .button {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"] .button:not([disabled]):hover {
+  background: var(--tint-0);
+  color: var(--tint-100);
+}
+
+[data-mode="dark"] .button[disabled] {
+  border: var(--thickness) dashed var(--tint-66);
+  color: var(--tint-66);
+}
+
+[data-mode="dark"] a:not(.button) {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"] a:not(.button, .experiments)::after {
+  background: var(--tint-0);
+}
+
+[data-mode="dark"] .clipboard > span {
+  background: var(--tint-90);
+  color: var(--tint-33);
+}
+
+[data-mode="dark"] .clipboard.success button,
+[data-mode="dark"] .clipboard.success button:hover {
+  background: var(--tint-0);
+  color: var(--tint-100);
+}
+
+[data-mode="dark"][data-template="work"] .cover h1,
+[data-mode="dark"][data-template="work"] .cover .label {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"][data-template="work"] .cover[data-theme] h1,
+[data-mode="dark"][data-template="work"] .cover[data-theme] label {
+  color: var(--tint-100);
+}
+
+[data-mode="dark"] .metrics span {
+  color: var(--tint-33);
+}
+
+[data-mode="dark"] .metrics li + li {
+  border-left: var(--thickness) solid var(--tint-90);
+}
+
+[data-mode="dark"] blockquote p {
+  color: var(--tint-0);
+}
+
+[data-mode="dark"] blockquote cite {
+  color: var(--tint-33);
+}
+
+[data-mode="dark"] .list {
+  color: var(--tint-33);
+}
+
+[data-mode="dark"]::selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-mode="dark"]] hr::before {
+  background: var(--tint-90);
+}
+
+[data-mode="dark"] .button {
+  border: var(--thickness) solid var(--tint-0);
+}
+
+[data-mode="dark"] footer {
+  border-top: var(--thickness) solid var(--tint-90);
 }
 
 /* Breakpoints */
