@@ -866,8 +866,7 @@ a.experiments svg {
 }
 
 [data-template="home"] .cover nav {
-  justify-content: end;
-  /* visibility: hidden; */
+  visibility: hidden;
   z-index: 3;
 }
 
