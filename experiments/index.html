@@ -19,7 +19,7 @@
     <header class="full">
       <div class="cover flow entrance max-1280">
         🧪<br />
-        <span class="label">My Place for Dumping</span>
+        <span class="label" aria-hidden="true">My Place for Dumping</span>
         <h1>Coding Experiments</h1>
       </div>
 
@@ -30,6 +30,80 @@
         </p>
       </div>
     </header>
+
+    <section>
+      <div class="flow max-1280">
+        <!--
+        <header>
+          <h2>Filter By</h2>
+        </header>
+  
+        <form id="tags">
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>SVG</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>JS</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>CSS</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>Canvas</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>3D</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>Tool</span>
+          </label>
+          <label>
+            <input type="checkbox" name="tag" />
+            <span>Game</span>
+          </label>
+        </form>
+        -->
+
+        <div class="columns">
+          <script>
+            const colors = [
+              "#40E0D0",
+              "#4B0082",
+              "#663399",
+              "#B0E0E6",
+              "#DDA0DD",
+              "#E6E6FA",
+              "#F8F8FF",
+              "#FF1493",
+              "#FF6347",
+              "#FF69B4",
+              "#FF7F50",
+            ];
+
+            for (let i = 0; i < 20; i++) {
+              let w = 200;
+              let h = 100;
+
+              let addition = 15 * Math.floor(Math.random() * 20);
+              h += addition;
+
+              let index = Math.floor(Math.random() * colors.length);
+              let color = colors[index].replace("#", "");
+
+              document.write(
+                `<img src="https://placehold.jp/${color}/ffffff/${w}x${h}.png?text=%20">`
+              );
+            }
+          </script>
+        </div>
+      </div>
+    </section>
 
     <footer class="full">
       <div class="flow max-800">
