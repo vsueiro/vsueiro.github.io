@@ -89,17 +89,38 @@
             // Aspect ratios: 16:9, 8:5, 1:1, 9:16
             const heights = [112.5, 125, 200, 356];
 
+            const captions = [
+              "Lorem ipsum",
+              "Dolor sit amet",
+              "Consectetur",
+              "Adipisicing elit",
+              "Voluptatum maiores, itaque quas eligendi",
+              "Sunt illum asperiores",
+              "Iusto eveniet!",
+              "Laboriosam",
+              "Accusantium nostrum possimus fugiat",
+              "Culpa beatae impedit",
+              "Quisquam (eaque) similique",
+            ];
+
             function randomFrom(items) {
               return items[Math.floor(Math.random() * items.length)];
             }
 
             for (let i = 0; i < 20; i++) {
-              let w = 200;
-              let h = randomFrom(heights);
-              let color = randomFrom(colors).replace("#", "");
+              const w = 200;
+              const h = randomFrom(heights);
+              const color = randomFrom(colors).replace("#", "");
+              const caption = randomFrom(captions);
 
               document.write(
-                `<img src="https://placehold.jp/${color}/ffffff/${w}x${h}.png?text=%20">`
+                `<figure class="column-item">
+                  <img src="https://placehold.jp/${color}/ffffff/${w}x${h}.png?text=%20">
+                  <figcaption aria-hidden="true">
+                    ${caption}
+                    <a href="#" target="_blank" class="subtle">Open</a>
+                  </figcaption>
+                </figure>`
               );
             }
           </script>
