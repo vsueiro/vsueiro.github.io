@@ -86,15 +86,17 @@
               "#FF7F50",
             ];
 
+            // Aspect ratios: 16:9, 8:5, 1:1, 9:16
+            const heights = [112.5, 125, 200, 356];
+
+            function randomFrom(items) {
+              return items[Math.floor(Math.random() * items.length)];
+            }
+
             for (let i = 0; i < 20; i++) {
               let w = 200;
-              let h = 100;
-
-              let addition = 15 * Math.floor(Math.random() * 20);
-              h += addition;
-
-              let index = Math.floor(Math.random() * colors.length);
-              let color = colors[index].replace("#", "");
+              let h = randomFrom(heights);
+              let color = randomFrom(colors).replace("#", "");
 
               document.write(
                 `<img src="https://placehold.jp/${color}/ffffff/${w}x${h}.png?text=%20">`
