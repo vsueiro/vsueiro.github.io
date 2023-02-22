@@ -806,7 +806,7 @@ nav a::after {
   }
 }
 
-/* Playground Link */
+/* Experiments Link */
 
 @keyframes spin {
   0% {
@@ -822,7 +822,7 @@ a.experiments {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: var(--size-120);
   aspect-ratio: 1;
 }
 
