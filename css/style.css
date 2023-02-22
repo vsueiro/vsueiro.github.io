@@ -22,17 +22,17 @@
   --zoom-90: calc(9 / 16 * 100%);
   --zoom-80: calc(8 / 16 * 100%);
 
-  --tint-0: #ffffff; /* rgba( 0, 0, 0, 0    ) */
-  --tint-5: #f2f2f2; /* rgba( 0, 0, 0, .05  ) */
-  --tint-10: #e6e6e6; /* rgba( 0, 0, 0, .1   ) */
-  --tint-25: #bfbfbf; /* rgba( 0, 0, 0, .25  ) */
+  --tint-0: #ffffff; /* rgba( 0, 0, 0, 0 ) */
+  --tint-5: #f2f2f2; /* rgba( 0, 0, 0, .05 ) */
+  --tint-10: #e6e6e6; /* rgba( 0, 0, 0, .1 ) */
+  --tint-25: #bfbfbf; /* rgba( 0, 0, 0, .25 ) */
   --tint-33: #aaaaaa; /* rgba( 0, 0, 0, .333 ) */
-  --tint-50: #808080; /* rgba( 0, 0, 0, .5   ) */
+  --tint-50: #808080; /* rgba( 0, 0, 0, .5 ) */
   --tint-66: #555555; /* rgba( 0, 0, 0, .666 ) */
-  --tint-75: #404040; /* rgba( 0, 0, 0, .75  ) */
-  --tint-90: #1a1a1a; /* rgba( 0, 0, 0, .90  ) */
-  --tint-95: #0d0d0d; /* rgba( 0, 0, 0, .95  ) */
-  --tint-100: #000000; /* rgba( 0, 0, 0, 1    ) */
+  --tint-75: #404040; /* rgba( 0, 0, 0, .75 ) */
+  --tint-90: #1a1a1a; /* rgba( 0, 0, 0, .90 ) */
+  --tint-95: #0d0d0d; /* rgba( 0, 0, 0, .95 ) */
+  --tint-100: #000000; /* rgba( 0, 0, 0, 1 ) */
 
   --theme-epicenter: #d6c2b0;
   --theme-supertunnel: #d97689;
