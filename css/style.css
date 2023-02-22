@@ -364,7 +364,7 @@ a:not(.button) {
   cursor: pointer;
 }
 
-a:not(.button)::after {
+a:not(.button, .playground)::after {
   content: "";
   position: absolute;
   right: 0;
@@ -375,7 +375,7 @@ a:not(.button)::after {
   background: var(--tint-100);
 }
 
-a:not(.button):hover {
+a:not(.button, .playground):hover {
   opacity: 0.5;
 }
 
@@ -805,6 +805,48 @@ nav a::after {
   }
 }
 
+/* Playground Link */
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+a.playground {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  aspect-ratio: 1;
+}
+
+a.playground .button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: 0;
+  aspect-ratio: 1;
+  z-index: 1;
+}
+
+a.playground svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 10s linear infinite;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
 /* Cover (Home) */
 
 [data-template="home"] .cover {
@@ -822,7 +864,8 @@ nav a::after {
 }
 
 [data-template="home"] .cover nav {
-  visibility: hidden;
+  justify-content: end;
+  /* visibility: hidden; */
   z-index: 3;
 }
 
