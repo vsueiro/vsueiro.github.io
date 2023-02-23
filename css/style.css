@@ -1283,8 +1283,8 @@ body[data-mode="dark"] {
   color: var(--tint-33);
 }
 
-[data-mode="dark"]::selection {
-  background: rgba(255, 255, 255, 0.1);
+[data-mode="dark"] ::selection {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 [data-mode="dark"]] hr::before {
