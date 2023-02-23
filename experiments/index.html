@@ -25,8 +25,8 @@
 
       <div class="flow max-800">
         <p>
-          You’re curious, huh? There is nothing to see here yet. I will be
-          adding some of my experiments by mid-2023.
+          Here you’ll find playful interactions, tools, mini-games, and… art?
+          All built with pure HTML, CSS & JavaScript
         </p>
       </div>
     </header>
@@ -71,59 +71,162 @@
         -->
 
         <div class="columns">
-          <script>
-            const colors = [
-              "#40E0D0",
-              "#4B0082",
-              "#663399",
-              "#B0E0E6",
-              "#DDA0DD",
-              "#E6E6FA",
-              "#F8F8FF",
-              "#FF1493",
-              "#FF6347",
-              "#FF69B4",
-              "#FF7F50",
-            ];
-
-            // Aspect ratios: 16:9, 8:5, 1:1, 9:16
-            const heights = [112.5, 125, 200, 356];
-
-            const captions = [
-              "Lorem ipsum",
-              "Dolor sit amet",
-              "Consectetur",
-              "Adipisicing elit",
-              "Voluptatum maiores, itaque quas eligendi",
-              "Sunt illum asperiores",
-              "Iusto eveniet!",
-              "Laboriosam",
-              "Accusantium nostrum possimus fugiat",
-              "Culpa beatae impedit",
-              "Quisquam (eaque) similique",
-            ];
-
-            function randomFrom(items) {
-              return items[Math.floor(Math.random() * items.length)];
-            }
-
-            for (let i = 0; i < 20; i++) {
-              const w = 200;
-              const h = randomFrom(heights);
-              const color = randomFrom(colors).replace("#", "");
-              const caption = randomFrom(captions);
-
-              document.write(
-                `<figure class="column-item">
-                  <img src="https://placehold.jp/${color}/ffffff/${w}x${h}.png?text=%20">
-                  <figcaption aria-hidden="true">
-                    ${caption}
-                    <a href="#" target="_blank" class="subtle">Open</a>
-                  </figcaption>
-                </figure>`
-              );
-            }
-          </script>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/curious-eyes.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Curious Eyes
+              <a
+                href="https://codesandbox.io/s/curious-eyes-u3u85p"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/garden.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Generative Garden
+              <a
+                href="https://codesandbox.io/s/generative-garden-nt5puk"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/particles.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Moving Particles
+              <a
+                href="https://codesandbox.io/s/moving-particles-yup12g"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/popup.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Pop-Up Hell
+              <a
+                href="https://codesandbox.io/s/pop-up-hell-hly3ev"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/sky.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Day & Night Sky
+              <a
+                href="https://codesandbox.io/s/day-night-sky-p3mzuu"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <iframe
+              src="https://noise-from-palette.vercel.app/"
+              data-ratio="16:9"
+            ></iframe>
+            <figcaption>
+              Noise From Palette
+              <a
+                href="https://codesandbox.io/s/noise-from-palette-z8r38q"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/scroll-with-love.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Scroll With Love
+              <a
+                href="https://codesandbox.io/s/scroll-with-love-t415m5"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/evaporating-intestines.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Evaporating Intestines
+              <a
+                href="https://codesandbox.io/s/evaporating-intestines-rxl227"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/cookie-factory-game.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Cookie Factory Game
+              <a
+                href="https://codesandbox.io/s/cookie-factory-game-z2oprg"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <iframe
+              src="https://pixel-grid-painter.vercel.app/"
+              data-ratio="1:1"
+            ></iframe>
+            <figcaption>
+              Pixel Grid Painter
+              <a
+                href="https://codesandbox.io/s/pixel-grid-painter-jsk2nh"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
+          <figure class="column-item">
+            <video autoplay muted loop playsinline>
+              <source src="media/random-dots.mp4" type="video/mp4" />
+            </video>
+            <figcaption>
+              Random Dots Generator
+              <a
+                href="https://vsueiro.com/random-dots-generator/"
+                target="_blank"
+                class="subtle"
+                >Open</a
+              >
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
