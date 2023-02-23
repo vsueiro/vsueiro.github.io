@@ -1354,10 +1354,13 @@ body[data-mode="dark"] {
   text-align: left;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 640px) {
   .columns {
     column-count: 2;
     column-width: auto;
+  }
+  .flow > .columns {
+    padding: var(--size-20) var(--size-20);
   }
 }
 
