@@ -1312,7 +1312,11 @@ body[data-mode="dark"] {
 }
 
 .columns [data-ratio] {
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.columns [data-ratio="2:3"] {
+  aspect-ratio: 2/3;
 }
 
 .columns [data-ratio="16:9"] {
