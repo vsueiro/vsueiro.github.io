@@ -1306,6 +1306,7 @@ body[data-mode="dark"] {
 .columns iframe {
   display: flex;
   width: 100%;
+  background: var(--tint-90);
   border-radius: var(--size-10);
   border: none;
   margin: 0;
