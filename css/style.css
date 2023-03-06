@@ -966,7 +966,7 @@ a.experiments svg {
 }
 
 [data-template="work"] .cover[data-theme] h1,
-[data-template="work"] .cover[data-theme] label {
+[data-template="work"] .cover[data-theme] .label {
   color: var(--tint-0);
 }
 
@@ -1256,11 +1256,6 @@ body[data-mode="dark"] {
 [data-mode="dark"][data-template="work"] .cover h1,
 [data-mode="dark"][data-template="work"] .cover .label {
   color: var(--tint-0);
-}
-
-[data-mode="dark"][data-template="work"] .cover[data-theme] h1,
-[data-mode="dark"][data-template="work"] .cover[data-theme] label {
-  color: var(--tint-100);
 }
 
 [data-mode="dark"] .metrics span {
