@@ -618,6 +618,11 @@ section section {
   max-width: 100%;
 }
 
+.media.compact {
+  margin: 1em 0;
+  align-items: start;
+}
+
 .media img,
 .media video {
   align-self: center;
@@ -630,6 +635,10 @@ section section {
 
 figcaption {
   margin-top: var(--size-40);
+}
+
+.media.compact figcaption {
+  text-align: left;
 }
 
 .media .group {
