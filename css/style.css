@@ -241,6 +241,15 @@ h3,
   color: var(--tint-100);
 }
 
+.badge {
+  font-size: smaller;
+  background: rgba(128, 128, 128, 0.25);
+  border-radius: 4px;
+  padding: 0.4em 0.4em 0.2em;
+  text-transform: initial;
+  opacity: 0.5;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: calc(var(--size-60) / var(--line-height-title));
