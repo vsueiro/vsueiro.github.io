@@ -1333,6 +1333,10 @@ body[data-mode="dark"] {
   aspect-ratio: 2/3;
 }
 
+.columns [data-ratio="4:3"] {
+  aspect-ratio: 4/3;
+}
+
 .columns [data-ratio="16:9"] {
   aspect-ratio: 16/9;
 }
