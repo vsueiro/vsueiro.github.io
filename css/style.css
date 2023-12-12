@@ -406,6 +406,11 @@ a.subtle:hover {
   opacity: 1;
 }
 
+nav a:not(.button) {
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* Call to Action  */
 
 .call-to-action {
