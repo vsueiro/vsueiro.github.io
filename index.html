@@ -15,6 +15,12 @@
     <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
     <link rel="icon" type="image/png" href="/media/share/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" type="module"></script>
   </head>
   <body data-template="home" data-entrance="false">
     <div class="cover full">
@@ -127,22 +133,52 @@
           2023.
         </p>
 
-        <figure class="media compact">
-          <img
-            src="media/profile/dataviz-em-perspectiva.jpg"
-            alt="Photo of a pile of two colorful books on a blue background. The book is titled “Dataviz em perspectiva: ensino e prática profissional da visualização de dados no design brasileiro”"
-            lang="pt-br"
-          />
-          <figcaption style="text-align: left">
-            In 2021, I wrote my first book chapter!
-            <a
-              href="https://www.riobooks.com.br/pd-94a479-dataviz-em-perspectiva-ensino-e-pratica-profissional-da-visualizacao.html"
-              target="_blank"
-              >Buy the book here</a
-            >
-            (in Portuguese).
-          </figcaption>
-        </figure>
+        <swiper-container
+          slides-per-view="1"
+          speed="500"
+          autoplay="true"
+          effect="fade"
+          fade-effect-cross-fade="true"
+        >
+          <swiper-slide>
+            <figure class="media compact">
+              <img
+                src="media/profile/dataviz-em-perspectiva.jpg"
+                alt="Photo of a pile of two colorful books on a blue background. The book is titled “Dataviz em perspectiva: ensino e prática profissional da visualização de dados no design brasileiro”"
+                lang="pt-br"
+                style="aspect-ratio: 3/2; object-fit: cover"
+              />
+              <figcaption style="text-align: left">
+                In 2021, I wrote my first book chapter!
+                <a
+                  href="https://www.riobooks.com.br/pd-94a479-dataviz-em-perspectiva-ensino-e-pratica-profissional-da-visualizacao.html"
+                  target="_blank"
+                  >Buy the book here</a
+                >
+                (in Portuguese).
+              </figcaption>
+            </figure>
+          </swiper-slide>
+          <swiper-slide>
+            <figure class="media compact">
+              <img src="media/profile/vinicius-sueiro-2023.jpg" />
+              <figcaption style="text-align: left">
+                Me and some
+                <a
+                  href="https://www.informationisbeautifulawards.com/showcase?action=index&award=2023&controller=showcase&page=1&pcategory=winner&type=awards"
+                  target="_blank"
+                  >winners</a
+                >
+                of IIB Awards 2023. Photo by
+                <a
+                  href="https://www.datavisualizationsociety.org/iib-awards-2023-photos"
+                  target="_blank"
+                  >Data Visualization Society</a
+                >
+              </figcaption>
+            </figure>
+          </swiper-slide>
+        </swiper-container>
 
         <p>
           In early 2022, I taught datavis and web development at
@@ -575,7 +611,5 @@
         </div>
       </footer>
     </div>
-
-    <script src="js/script.js" type="module"></script>
   </body>
 </html>

@@ -48,7 +48,11 @@
 
 /* Reset */
 
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+*:where(
+    :not(iframe, canvas, img, svg, video, swiper-container, swiper-slide):not(
+        svg *
+      )
+  ) {
   all: unset;
   display: revert;
 }
@@ -482,9 +486,13 @@ footer,
   width: 100%;
 }
 
-.flow > * {
+.flow > *:not(swiper-container) {
   max-width: 100%;
   padding: var(--size-20) var(--size-80);
+}
+
+swiper-container {
+  margin: var(--size-20) var(--size-80);
 }
 
 .flow.full > * {
