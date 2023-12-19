@@ -522,9 +522,13 @@ section section {
     padding: var(--size-20) 0;
   }
 
-  .flow > * {
+  .flow > *:not(swiper-container) {
     max-width: 100%;
     padding: var(--size-20) var(--size-40);
+  }
+
+  swiper-container {
+    margin: var(--size-20) var(--size-40);
   }
 }
 
