@@ -42,7 +42,7 @@
   --theme-barbecues: #a87094;
   --theme-faceapp: #f2cbaf;
   --theme-vaccination: #81c8e9;
-
+  --theme-composition: #cfb6e6;
   --theme-montadino: #ffc4c3;
 }
 
@@ -315,6 +315,9 @@ hr::before {
 }
 [data-theme="montadino"] {
   background: var(--theme-montadino);
+}
+[data-theme="composition"] {
+  background: var(--theme-composition);
 }
 
 /* Theme Adjustments */
