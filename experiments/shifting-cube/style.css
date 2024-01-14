@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: GhostWhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  background: Lavender;
+  max-width: 480px;
+  border-radius: 16px;
+  margin: 48px 24px;
+}
+
+circle.big-circle {
+  /* opacity: 0; */
+  transition: opacity 0.4s;
+}
+
+circle.big-circle:hover {
+  /* opacity: 0.25; */
+}
+
+circle.small-circle {
+  /* opacity: 0; */
+  pointer-events: none;
+}
+
+path {
+  pointer-events: none;
+}

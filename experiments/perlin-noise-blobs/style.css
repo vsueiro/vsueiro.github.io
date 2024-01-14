@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background: Indigo;
+}
+canvas {
+  display: flex;
+  width: 100% !important;
+  height: initial !important;
+  aspect-ratio: 16/9 !important;
+  image-rendering: pixelated;
+}

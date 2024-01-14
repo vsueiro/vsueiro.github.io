@@ -1,0 +1,45 @@
+body {
+  background: Lavender;
+}
+
+.popup {
+  position: fixed;
+  background: GhostWhite;
+  border-radius: 0.2vw;
+  border: 0.2vw solid RebeccaPurple;
+  box-shadow: 0 0 0 0.1vw Lavender;
+  transform: translate(-50%, -50%);
+}
+
+.popup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+}
+
+.popup::after {
+  content: "×";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1vw 0.2vw;
+  font-size: 1vw;
+  height: 2vw;
+  background: RebeccaPurple;
+  color: GhostWhite;
+}
+
+.popup:hover {
+  cursor: pointer;
+  border-color: DeepPink;
+}
+
+.popup:hover::before,
+.popup:hover::after {
+  background: DeepPink;
+}

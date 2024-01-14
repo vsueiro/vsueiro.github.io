@@ -1,0 +1,61 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: Lavender;
+}
+
+.heart {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  padding: 12px;
+  cursor: pointer;
+  transform: rotateZ(45deg) scale(0.666);
+  transition: all 1s;
+}
+.heart .atrium {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 64px;
+  height: 12px;
+  border-radius: 999px;
+  background: RebeccaPurple;
+  pointer-events: none;
+  transition: all 1s;
+}
+.heart .ventricle {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 12px;
+  height: 64px;
+  border-radius: 999px;
+  background: RebeccaPurple;
+  pointer-events: none;
+  transition: all 1s;
+}
+.heart:hover {
+  transform: rotateZ(45deg) scale(1);
+}
+.heart:hover .atrium {
+  height: 36px;
+  border-radius: 999px 0 0 999px;
+  background: DeepPink;
+}
+.heart:hover .ventricle {
+  width: 36px;
+  border-radius: 999px 999px 0 0;
+  background: DeepPink;
+}
