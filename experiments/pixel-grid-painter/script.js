@@ -1,3 +1,3 @@
-import { Grid } from "./modules/Grid.js";
+import { Grid } from "./Grid.js";
 
 new Grid();
