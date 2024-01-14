@@ -78,7 +78,7 @@ class Eye {
 
     Object.assign(this.element.querySelector(".pupil").style, {
       top: 50 - x + "%",
-      left: 50 - y + "%"
+      left: 50 - y + "%",
     });
 
     this.blink();
