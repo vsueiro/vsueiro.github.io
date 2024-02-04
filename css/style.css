@@ -211,6 +211,8 @@ h3 {
 
 h1 {
   font-size: calc(var(--size-80) / var(--line-height-title));
+  max-width: 96rem !important;
+  text-wrap: balance;
 }
 
 h2 {
@@ -918,9 +920,9 @@ a.experiments svg {
   width: 100%;
 }
 
-[data-template="home"] .cover > *:not(.animation),
-[data-template="home"] .cover > *:not(.animation) * {
-  pointer-events: none !important;
+[data-template="home"] .cover nav,
+[data-template="home"] .cover header {
+  pointer-events: none;
 }
 
 [data-template="home"] .cover nav {
@@ -1409,6 +1411,25 @@ body[data-mode="dark"] {
   .flow > .columns {
     padding: var(--size-20) var(--size-20);
   }
+}
+
+/* Rotator */
+
+#rotator {
+  padding-top: 0 !important;
+}
+
+#rotator swiper-container {
+  display: inline-block;
+  height: calc(1em + var(--size-10));
+  margin: 0;
+  position: relative;
+  top: var(--size-10);
+  cursor: default;
+}
+
+#rotator swiper-slide {
+  width: fit-content;
 }
 
 /* Breakpoints */
