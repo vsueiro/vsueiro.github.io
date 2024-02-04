@@ -938,18 +938,18 @@ a.experiments svg {
   z-index: 2;
 }
 
-[data-template="home"][data-browser="safari"] .cover > header {
+/* [data-template="home"][data-browser="safari"] .cover > header {
   min-height: calc(80vh - calc(calc(40px * 6) * 1));
-}
+} */
 
 @media (max-width: 1279px) {
   [data-template="home"] .cover > header {
     min-height: calc(100vh - calc(calc(40px * 6) * 0.9));
   }
 
-  [data-template="home"][data-browser="safari"] .cover > header {
+  /* [data-template="home"][data-browser="safari"] .cover > header {
     min-height: calc(80vh - calc(calc(40px * 6) * 0.9));
-  }
+  } */
 }
 
 @media (max-width: 1152px) {
@@ -957,9 +957,9 @@ a.experiments svg {
     min-height: calc(100vh - calc(calc(40px * 6) * 0.8));
   }
 
-  [data-template="home"][data-browser="safari"] .cover > header {
+  /* [data-template="home"][data-browser="safari"] .cover > header {
     min-height: calc(80vh - calc(calc(40px * 6) * 0.8));
-  }
+  } */
 }
 
 @media (max-width: 768px) {
