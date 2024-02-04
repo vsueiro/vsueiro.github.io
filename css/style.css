@@ -940,31 +940,22 @@ a.experiments svg {
   display: flex;
   justify-content: center;
   min-height: calc(100vh - calc(calc(40px * 6) * 1));
+  min-height: calc(100svh - calc(calc(40px * 6) * 1));
   z-index: 2;
 }
-
-/* [data-template="home"][data-browser="safari"] .cover > header {
-  min-height: calc(80vh - calc(calc(40px * 6) * 1));
-} */
 
 @media (max-width: 1279px) {
   [data-template="home"] .cover > header {
     min-height: calc(100vh - calc(calc(40px * 6) * 0.9));
+    min-height: calc(100svh - calc(calc(40px * 6) * 0.9));
   }
-
-  /* [data-template="home"][data-browser="safari"] .cover > header {
-    min-height: calc(80vh - calc(calc(40px * 6) * 0.9));
-  } */
 }
 
 @media (max-width: 1152px) {
   [data-template="home"] .cover > header {
     min-height: calc(100vh - calc(calc(40px * 6) * 0.8));
+    min-height: calc(100svh - calc(calc(40px * 6) * 0.8));
   }
-
-  /* [data-template="home"][data-browser="safari"] .cover > header {
-    min-height: calc(80vh - calc(calc(40px * 6) * 0.8));
-  } */
 }
 
 @media (max-width: 768px) {
