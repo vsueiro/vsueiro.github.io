@@ -275,7 +275,12 @@ h3,
     font-size: calc(var(--size-50) / var(--line-height-title));
   }
 
-  header p,
+  header p {
+    font-size: calc(
+      calc(var(--size-40) + var(--size-5)) / var(--line-height-text)
+    );
+  }
+
   article li {
     font-size: calc(var(--size-40) / var(--line-height-text));
   }
