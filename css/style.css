@@ -1416,19 +1416,21 @@ body[data-mode="dark"] {
 /* Rotator */
 
 #rotator {
+  line-height: 1;
   padding-top: 0 !important;
 }
 
 #rotator swiper-container {
-  display: inline-block;
-  height: calc(1em + var(--size-10));
-  margin: 0;
-  position: relative;
-  top: var(--size-10);
   cursor: default;
+  display: inline-block;
+  height: 1em;
+  margin: 0;
+  top: 0.24em;
 }
 
 #rotator swiper-slide {
+  align-items: center;
+  display: flex;
   width: fit-content;
 }
 
