@@ -1413,7 +1413,13 @@ body[data-mode="dark"] {
 
 #rotator {
   line-height: 1;
-  padding-top: 0 !important;
+  padding-top: 0;
+}
+
+@media (max-width: 640px) {
+  #rotator {
+    padding-top: var(--size-20);
+  }
 }
 
 #rotator swiper-container {
@@ -1427,6 +1433,7 @@ body[data-mode="dark"] {
 #rotator swiper-slide {
   align-items: center;
   display: flex;
+  white-space: nowrap;
   width: fit-content;
 }
 
