@@ -230,6 +230,7 @@ figcaption {
 }
 
 .highlights li,
+.tools li,
 figcaption,
 cite,
 footer {
@@ -1449,7 +1450,6 @@ body[data-mode="dark"] {
 
 .tools {
   margin: 0;
-  font-size: 75%;
 }
 
 .tools {
