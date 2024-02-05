@@ -14,7 +14,8 @@ function showNext() {
   ems[current].classList.remove("show");
 
   // Get next <em>
-  let next = getRandomIndex(ems.length, current);
+  // let next = getRandomIndex(ems.length, current);
+  let next = getNextIndex();
   current = next;
 
   // Show next <em>
@@ -27,11 +28,21 @@ function showNext() {
   timeout = setTimeout(showNext, 4000);
 }
 
-// Get a random index, but not the same as the current one
-function getRandomIndex(max, exclude) {
-  let randomIndex = Math.floor(Math.random() * max);
-  return randomIndex === exclude ? getRandomIndex(max, exclude) : randomIndex;
+function getNextIndex() {
+  let next = current + 1;
+
+  if (next >= ems.length) {
+    next = 0;
+  }
+
+  return next;
 }
+
+// Get a random index, but not the same as the current one
+// function getRandomIndex(max, exclude) {
+//   let randomIndex = Math.floor(Math.random() * max);
+//   return randomIndex === exclude ? getRandomIndex(max, exclude) : randomIndex;
+// }
 
 // Change the em element after 5 seconds
 timeout = setTimeout(showNext, 5000);
