@@ -1449,11 +1449,12 @@ body[data-mode="dark"] {
 
 .tools {
   margin: 0;
+  font-size: 75%;
 }
 
 .tools {
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   gap: 0.25em;
 }
