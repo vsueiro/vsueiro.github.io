@@ -1,22 +1,40 @@
 // Rotator
 
-// Get text rotator swiper
-const rotatorSwiper = document.querySelector("#rotator swiper-container");
+let ems = document.querySelectorAll("#rotator em");
+let current = 0;
+let timeout;
 
-// Add click event listener
-rotatorSwiper.addEventListener("click", () => {
-  // Get the number of slides
-  const total = rotatorSwiper.swiper.slides.length;
-
-  // Get the current active slide index
-  const current = rotatorSwiper.swiper.activeIndex;
-
-  let randomSlide;
-  // Generate a random slide index
-  do {
-    randomSlide = Math.floor(Math.random() * total);
-  } while (randomSlide === current); // Ensure it's not the current slide
-
-  // Slide to the random slide
-  rotatorSwiper.swiper.slideTo(randomSlide);
+// Overlap all <em> elements
+ems.forEach((em, index) => {
+  em.style.transform = `translateY(-${1.5 * index}em)`;
 });
+
+function showNext() {
+  // Hide current <em>
+  ems[current].classList.remove("show");
+
+  // Get next <em>
+  let next = getRandomIndex(ems.length, current);
+  current = next;
+
+  // Show next <em>
+  ems[next].classList.add("show");
+
+  // Reset timer
+  clearTimeout(timeout);
+
+  // Change the em element after 4 seconds
+  timeout = setTimeout(showNext, 4000);
+}
+
+// Get a random index, but not the same as the current one
+function getRandomIndex(max, exclude) {
+  let randomIndex = Math.floor(Math.random() * max);
+  return randomIndex === exclude ? getRandomIndex(max, exclude) : randomIndex;
+}
+
+// Change the em element after 5 seconds
+timeout = setTimeout(showNext, 5000);
+
+// Change the em element on click
+document.querySelector("#rotator span").addEventListener("click", showNext);
