@@ -3,13 +3,13 @@
 // Checks if browser is Safari
 const safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
+// Creates browser-specific attribute
+document.body.dataset.browser = "safari";
+
 // Checks if system is iOS
 const ios = /iP(ad|od|hone)/i.test(window.navigator.userAgent);
 
 if (ios && safari) {
-  // Creates browser-specific attribute
-  document.body.dataset.browser = "safari";
-
   {
     // Fixes autoplay for (some) iPhones
 

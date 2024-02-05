@@ -1430,6 +1430,10 @@ body[data-mode="dark"] {
   top: 0.24em;
 }
 
+[data-browser="safari"] #rotator swiper-container {
+  top: 0;
+}
+
 #rotator swiper-slide {
   align-items: center;
   display: flex;
