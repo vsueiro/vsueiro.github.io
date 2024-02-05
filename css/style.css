@@ -1445,6 +1445,38 @@ body[data-mode="dark"] {
   opacity: 1;
 }
 
+/* Tools */
+
+.tools {
+  margin: 0;
+}
+
+.tools {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25em;
+}
+
+.tools li {
+  width: fit-content;
+}
+
+.tools li::before {
+  content: unset;
+  position: unset;
+  left: unset;
+}
+
+.tools li + li {
+  margin: 0;
+}
+
+.tools li + li::before {
+  content: "•";
+  margin-right: 0.25em;
+}
+
 /* Breakpoints */
 
 @media (max-width: 1536px) {
