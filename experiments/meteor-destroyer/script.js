@@ -1,3 +1,7 @@
+import Background from "./classes/Background.js";
+import Meteor from "./classes/Meteor.js";
+import Mountains from "./classes/Mountains.js";
+
 let width = 1920;
 let height = 1080;
 
@@ -12,26 +16,9 @@ class MeteorsScene extends Phaser.Scene {
   }
 
   create() {
-    const background = this.add.image(0, 0, "background");
-    background.setOrigin(0, 0);
-
-    const meteor = this.physics.add.image(100, 100, "meteor");
-    meteor.setBlendMode("ADD");
-    meteor.setVelocity(400, 100);
-    meteor.setBounce(0, 0);
-    meteor.setCollideWorldBounds(true);
-
-    const particles = this.add.particles(0, 0, "meteor-trace", {
-      speed: 10,
-      quantity: 5,
-      scale: { start: 1, end: 0 },
-      alpha: { start: 0.5, end: 0 },
-      blendMode: "ADD",
-    });
-    particles.startFollow(meteor);
-
-    const mountains = this.add.image(0, height - 72, "mountains");
-    mountains.setOrigin(0, 0);
+    const background = new Background(this);
+    const meteor = new Meteor(this);
+    const mountains = new Mountains(this);
   }
 }
 
