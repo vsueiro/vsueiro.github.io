@@ -9,8 +9,6 @@ const defaults = {
 
 class Meteor {
   constructor(scene, options = {}) {
-    console.log(scene);
-
     this.scene = scene;
     this.gameObject = undefined;
     this.options = { ...defaults, ...options };
@@ -19,8 +17,6 @@ class Meteor {
   }
 
   create() {
-    console.log(this.scene);
-
     this.gameObject = this.scene.physics.add.image(
       this.options.x,
       this.options.y,

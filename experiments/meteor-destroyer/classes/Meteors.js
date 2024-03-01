@@ -21,8 +21,25 @@ class Meteors {
     const meteor = new Meteor(this.scene, options);
 
     this.list.push(meteor);
+  }
 
-    // TODO: delete meteor from this.list when that meteor explodes
+  removeUnused(index) {
+    if (index) {
+      this.list[index].gameObject.destroy();
+      this.list.splice(index, 1);
+      return;
+    }
+
+    const limit = this.scene.options.height + 100;
+
+    for (let i = this.list.length - 1; i >= 0; i--) {
+      let meteor = this.list[i];
+
+      if (meteor.gameObject.y > limit) {
+        meteor.gameObject.destroy();
+        this.list.splice(i, 1);
+      }
+    }
   }
 }
 

@@ -8,6 +8,8 @@ const options = {
   gravity: { y: 100 },
 };
 
+let meteors;
+
 class MeteorsScene extends Phaser.Scene {
   preload() {
     this.load.setBaseURL("./assets/");
@@ -22,10 +24,11 @@ class MeteorsScene extends Phaser.Scene {
     this.options = options;
 
     const background = new Background(this);
-    const meteors = new Meteors(this);
+
+    meteors = new Meteors(this);
 
     this.time.addEvent({
-      delay: Phaser.Math.Between(200, 800),
+      delay: Phaser.Math.Between(400, 2000),
       callback: () => {
         meteors.createMeteor(this);
       },
@@ -34,6 +37,10 @@ class MeteorsScene extends Phaser.Scene {
     });
 
     const mountains = new Mountains(this);
+  }
+
+  update() {
+    meteors.removeUnused();
   }
 }
 
