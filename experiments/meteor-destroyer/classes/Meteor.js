@@ -1,20 +1,19 @@
+const defaults = {
+  x: 100,
+  y: 0,
+  z: 0,
+  vx: 400,
+  vy: 0,
+  s: 1,
+};
+
 class Meteor {
   constructor(scene, options = {}) {
+    console.log(scene);
+
     this.scene = scene;
-
-    // Define default values
-    const defaults = {
-      x: 100,
-      y: 0,
-      z: 0,
-    };
-
-    // Merge defaults with provided options
+    this.gameObject = undefined;
     this.options = { ...defaults, ...options };
-    // this.x
-    // this.y
-    // this.z
-    // this.scale = this.z
 
     this.create();
   }
@@ -22,24 +21,24 @@ class Meteor {
   create() {
     console.log(this.scene);
 
-    const meteor = this.scene.physics.add.image(
+    this.gameObject = this.scene.physics.add.image(
       this.options.x,
       this.options.y,
       "meteor"
     );
-    meteor.setBlendMode("ADD");
-    meteor.setVelocity(400, 100);
-    // meteor.setBounce(0, 0);
-    // meteor.setCollideWorldBounds(true);
+    this.gameObject.setScale(this.options.s);
+    this.gameObject.setBlendMode("ADD");
+    this.gameObject.setVelocity(this.options.vx, this.options.vy);
+    this.gameObject.setDepth(1);
 
-    const particles = this.scene.add.particles(0, 0, "meteor-trace", {
+    this.particles = this.scene.add.particles(0, 0, "meteor-trace", {
       speed: 10,
       quantity: 5,
-      scale: { start: 1, end: 0 },
+      scale: { start: this.options.s, end: 0 },
       alpha: { start: 0.5, end: 0 },
       blendMode: "ADD",
     });
-    particles.startFollow(meteor);
+    this.particles.startFollow(this.gameObject);
   }
 }
 
