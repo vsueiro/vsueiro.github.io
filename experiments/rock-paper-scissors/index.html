@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rock Paper Scissors Cellular Automata</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+      }
+      canvas {
+        image-rendering: pixelated;
+        width: 100% !important;
+        height: initial !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let grid;
+
+      const gridWidth = 192;
+      const gridHeight = 108;
+      const cellSize = 1;
+      const threshold = 2;
+      const chance = 0.04;
+
+      let states = [
+        {
+          // rock
+          color: "rebeccapurple",
+        },
+        {
+          // paper
+          color: "hotpink",
+        },
+        {
+          // scissor
+          color: "deeppink",
+        },
+        {
+          // lizard
+          color: "powderblue",
+        },
+        {
+          // spock
+          color: "indigo",
+        },
+      ];
+
+      states = balance(states);
+
+      function setup() {
+        const w = gridWidth * cellSize;
+        const h = gridHeight * cellSize;
+
+        createCanvas(w, h).parent(document.body);
+
+        pixelDensity(1);
+        frameRate(24);
+        noStroke();
+
+        grid = makeGrid(gridWidth, gridHeight);
+      }
+
+      function draw() {
+        background(0);
+        drawGrid(grid);
+        grid = updateGrid(grid);
+      }
+
+      function balance(states) {
+        const N = states.length;
+
+        if (N % 2 === 0) {
+          alert("works best with even states");
+        }
+
+        for (let i = 0; i < N; i++) {
+          let defeats = [];
+          let defeatedBy = [];
+
+          for (let j = 1; j <= (N - 1) / 2; j++) {
+            let defeat = (i + j) % N;
+            defeats.push(defeat);
+
+            let defeatBy = (i - j + N) % N;
+            defeatedBy.push(defeatBy);
+          }
+
+          states[i].defeats = defeats;
+          states[i].defeatedBy = defeatedBy;
+        }
+
+        return states;
+      }
+
+      function makeGrid(cols, rows) {
+        let arr = new Array(cols);
+        for (let i = 0; i < arr.length; i++) {
+          arr[i] = new Array(rows);
+          for (let j = 0; j < rows; j++) {
+            arr[i][j] = floor(random(states.length));
+          }
+        }
+        return arr;
+      }
+
+      function drawGrid(grid) {
+        for (let i = 0; i < grid.length; i++) {
+          for (let j = 0; j < grid[i].length; j++) {
+            fill(states[grid[i][j]].color);
+            rect(i * cellSize, j * cellSize, cellSize, cellSize);
+          }
+        }
+      }
+
+      function updateGrid(grid) {
+        let newGrid = makeGrid(gridWidth, gridHeight);
+        for (let i = 0; i < grid.length; i++) {
+          for (let j = 0; j < grid[i].length; j++) {
+            let state = grid[i][j];
+            let neighbors = getNeighbors(grid, i, j);
+            let newState = determineOutcome(state, neighbors);
+            newGrid[i][j] = newState;
+          }
+        }
+        return newGrid;
+      }
+
+      function getNeighbors(grid, x, y) {
+        let neighbors = [];
+        for (let i = -1; i <= 1; i++) {
+          for (let j = -1; j <= 1; j++) {
+            if (i === 0 && j === 0) continue;
+            const col = (x + i + gridWidth) % gridWidth;
+            const row = (y + j + gridHeight) % gridHeight;
+            neighbors.push(grid[col][row]);
+          }
+        }
+        return neighbors;
+      }
+
+      function determineOutcome(state, neighbors) {
+        const counts = new Array(states.length).fill(0);
+
+        for (let i = 0; i < neighbors.length; i++) {
+          counts[neighbors[i]]++;
+        }
+
+        if (chance && Math.random() < chance) {
+          return floor(random(states.length));
+        }
+
+        for (let defeatedByState of states[state].defeatedBy) {
+          if (counts[defeatedByState] > threshold) {
+            return defeatedByState;
+          }
+        }
+
+        return state;
+      }
+    </script>
+  </body>
+</html>
