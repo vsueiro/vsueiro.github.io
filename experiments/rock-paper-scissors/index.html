@@ -32,7 +32,8 @@
       const gridHeight = 72;
       const cellSize = 1;
       const threshold = 2;
-      const chance = 0; //0.05;
+      let chance = 0;
+      const alpha = Math.round(255 * 0.2);
 
       let states = [
         {
@@ -57,8 +58,6 @@
         },
       ];
 
-      states = balance(states);
-
       function setup() {
         const w = gridWidth * cellSize;
         const h = gridHeight * cellSize;
@@ -66,16 +65,34 @@
         createCanvas(w, h).parent(document.body);
 
         pixelDensity(1);
-        frameRate(15);
+        frameRate(24);
         noStroke();
+
+        states = balance(states);
+        states = addAlpha(states);
 
         grid = makeGrid(gridWidth, gridHeight);
       }
 
       function draw() {
-        background(0);
+        // background(0);
         drawGrid(grid);
-        grid = updateGrid(grid);
+
+        // frameCount % 1000 === 0
+        if (mouseIsPressed) {
+          grid = makeGrid(gridWidth, gridHeight);
+        } else {
+          grid = updateGrid(grid);
+        }
+      }
+
+      function addAlpha(states) {
+        const N = states.length;
+        for (let i = 0; i < N; i++) {
+          states[i].color = color(states[i].color);
+          states[i].color.setAlpha(alpha);
+        }
+        return states;
       }
 
       function balance(states) {
