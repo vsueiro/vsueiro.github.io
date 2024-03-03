@@ -32,8 +32,8 @@
       const gridHeight = 72;
       const cellSize = 1;
       const threshold = 2;
-      let chance = 0;
-      const alpha = Math.round(255 * 0.2);
+      const chance = 0;
+      const alpha = Math.round(255 * 1);
 
       let states = [
         {
@@ -65,7 +65,7 @@
         createCanvas(w, h).parent(document.body);
 
         pixelDensity(1);
-        frameRate(24);
+        frameRate(20);
         noStroke();
 
         states = balance(states);
@@ -78,7 +78,6 @@
         // background(0);
         drawGrid(grid);
 
-        // frameCount % 1000 === 0
         if (mouseIsPressed) {
           grid = makeGrid(gridWidth, gridHeight);
         } else {
