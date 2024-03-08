@@ -12,6 +12,7 @@ class Meteor {
     this.scene = scene;
     this.gameObject = undefined;
     this.options = { ...defaults, ...options };
+    this.isExploding = false;
 
     this.create();
   }
@@ -35,6 +36,27 @@ class Meteor {
       blendMode: "ADD",
     });
     this.particles.startFollow(this.gameObject);
+  }
+
+  explode(index) {
+    if (this.isExploding) {
+      return;
+    }
+
+    this.isExploding = true;
+    const x = this.gameObject.x;
+    const y = this.gameObject.y;
+
+    this.scene.meteors.addExplosion(x, y, this.s);
+
+    this.scene.meteors.list.splice(index, 1);
+    this.gameObject.setVelocity(0, 0);
+    this.gameObject.destroy();
+    this.particles.stop();
+
+    this.scene.time.delayedCall(2000, () => {
+      this.particles.destroy();
+    });
   }
 }
 

@@ -8,8 +8,6 @@ const options = {
   gravity: { y: 100 },
 };
 
-let meteors;
-
 class MeteorsScene extends Phaser.Scene {
   preload() {
     this.load.setBaseURL("./assets/");
@@ -17,6 +15,7 @@ class MeteorsScene extends Phaser.Scene {
     this.load.image("background", "background.png");
     this.load.image("meteor", "meteor.png");
     this.load.image("meteor-trace", "meteor-trace.png");
+    this.load.image("meteor-fragments", "meteor-trace.png");
     this.load.image("mountains", "mountains.png");
   }
 
@@ -25,12 +24,12 @@ class MeteorsScene extends Phaser.Scene {
 
     const background = new Background(this);
 
-    meteors = new Meteors(this);
+    this.meteors = new Meteors(this);
 
     this.time.addEvent({
       delay: Phaser.Math.Between(400, 2000),
       callback: () => {
-        meteors.createMeteor(this);
+        this.meteors.createMeteor(this);
       },
       callbackScope: this,
       loop: true,
@@ -40,7 +39,7 @@ class MeteorsScene extends Phaser.Scene {
   }
 
   update() {
-    meteors.removeUnused();
+    this.meteors.checkCollision();
   }
 }
 
