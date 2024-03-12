@@ -5,7 +5,8 @@ import Mountains from "./classes/Mountains.js";
 const options = {
   width: 1920,
   height: 1080,
-  gravity: { y: 100 },
+  ground: 1080 - 32,
+  gravity: { y: 128 },
 };
 
 class MeteorsScene extends Phaser.Scene {
@@ -16,30 +17,31 @@ class MeteorsScene extends Phaser.Scene {
     this.load.image("meteor", "meteor.png");
     this.load.image("meteor-trace", "meteor-trace.png");
     this.load.image("meteor-fragments", "meteor-trace.png");
+    this.load.image("glare", "meteor.png");
     this.load.image("mountains", "mountains.png");
   }
 
   create() {
     this.options = options;
 
-    const background = new Background(this);
+    this.background = new Background(this);
 
     this.meteors = new Meteors(this);
 
     this.time.addEvent({
       delay: Phaser.Math.Between(400, 2000),
+      loop: true,
+      callbackScope: this,
       callback: () => {
         this.meteors.createMeteor(this);
       },
-      callbackScope: this,
-      loop: true,
     });
 
-    const mountains = new Mountains(this);
+    this.mountains = new Mountains(this);
   }
 
   update() {
-    this.meteors.checkCollision();
+    this.meteors.checkCollisions();
   }
 }
 

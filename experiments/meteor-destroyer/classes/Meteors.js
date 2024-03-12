@@ -3,7 +3,6 @@ import Meteor from "./Meteor.js";
 class Meteors {
   constructor(scene) {
     this.scene = scene;
-    this.ground = this.scene.options.height - 0;
     this.list = [];
   }
 
@@ -24,15 +23,10 @@ class Meteors {
     this.list.push(meteor);
   }
 
-  checkCollision() {
+  checkCollisions() {
     for (let i = this.list.length - 1; i >= 0; i--) {
       const meteor = this.list[i];
-      const x = meteor.gameObject.x;
-      const y = meteor.gameObject.y;
-
-      if (y > this.ground) {
-        meteor.explode(i);
-      }
+      meteor.checkCollision(i);
     }
   }
 }

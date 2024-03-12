@@ -40,6 +40,17 @@ class Meteor {
     this.particles.startFollow(this.gameObject);
   }
 
+  checkCollision(index) {
+    const x = this.gameObject.x;
+    const y = this.gameObject.y;
+
+    console.log(this.gameObject);
+
+    if (y > this.scene.options.ground) {
+      this.explode(index);
+    }
+  }
+
   explode(index) {
     if (this.isExploding) {
       return;
