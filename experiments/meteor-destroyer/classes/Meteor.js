@@ -1,3 +1,5 @@
+import Explosion from "./Explosion.js";
+
 const defaults = {
   x: 100,
   y: 0,
@@ -46,8 +48,9 @@ class Meteor {
     this.isExploding = true;
     const x = this.gameObject.x;
     const y = this.gameObject.y;
+    const s = this.options.s;
 
-    this.scene.meteors.addExplosion(x, y, this.s);
+    new Explosion(this.scene, { x, y, s });
 
     this.scene.meteors.list.splice(index, 1);
     this.gameObject.setVelocity(0, 0);

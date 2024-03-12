@@ -35,9 +35,6 @@ class Meteors {
       }
     }
   }
-
-  // TODO
-  addExplosion(x, y, s) {}
 }
 
 export default Meteors;

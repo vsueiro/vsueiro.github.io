@@ -1,31 +1,34 @@
-// const defaults = {
-//   x: 200,
-//   y: 200,
-//   s: 1,
-// };
+const defaults = {
+  x: 0,
+  y: 0,
+  s: 1,
+};
 
-// class Explosion {
-//   constructor(scene, options = {}) {
-//     this.scene = scene;
-//     this.gameObject = undefined;
-//     this.options = { ...defaults, ...options };
+class Explosion {
+  constructor(scene, options = {}) {
+    this.scene = scene;
+    this.options = { ...defaults, ...options };
 
-//     this.create();
-//   }
+    this.create();
+  }
+  create() {
+    this.emitter = this.scene.add.particles(
+      this.options.x,
+      this.options.y,
+      "meteor-fragments",
+      {
+        lifespan: 1000,
+        speed: { min: 200, max: 600 },
+        scale: { start: this.options.s, end: 0 },
+        gravityY: this.scene.physics.world.gravity.y * 6,
+        blendMode: "ADD",
+        emitting: false,
+      }
+    );
 
-//   create() {
-//     this.particles = this.scene.add.particles("meteor-fragments");
+    const amount = Phaser.Math.Between(16, 32);
+    this.emitter.explode(amount);
+  }
+}
 
-//     this.emitter = this.particles.createEmitter({
-//       speed: 200,
-//       quantity: 5,
-//       scale: { start: this.options.s, end: 0 },
-//       alpha: { start: 0.5, end: 0 },
-//       blendMode: "ADD",
-//     });
-
-//     this.emitter.explode(5, this.options.x, this.options.y);
-//   }
-// }
-
-// export default Explosion;
+export default Explosion;
