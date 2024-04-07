@@ -6,7 +6,12 @@ const swiperElements = document.querySelectorAll("swiper-container");
 // Loops through every swiper element on the page
 for (let swiperElement of swiperElements) {
   // Detects when user clicks it
-  swiperElement.addEventListener("click", () => {
+  swiperElement.addEventListener("click", (event) => {
+    // Ignore clicks on caption
+    if (event.target.tagName === "FIGCAPTION") {
+      return;
+    }
+
     // Goes to the next slide
     swiperElement.swiper.slideNext();
   });
