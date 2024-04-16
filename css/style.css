@@ -860,12 +860,14 @@ body *.max-1920 {
 nav.full {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   max-width: calc(128rem + 16rem);
   padding: var(--size-40) var(--size-80);
 }
 
-nav a::after {
-  display: none !important;
+nav .pages a {
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 @media (max-width: 640px) {
@@ -938,8 +940,12 @@ a.experiments svg {
 }
 
 [data-template="home"] .cover nav {
-  visibility: hidden;
+  /* visibility: hidden; */
   z-index: 3;
+}
+
+[data-template="home"] .cover nav a {
+  pointer-events: all;
 }
 
 [data-template="home"] .cover > header {
@@ -1454,9 +1460,9 @@ body[data-mode="dark"] {
 
 .tools {
   flex-direction: row;
-  justify-content: start;
   flex-wrap: wrap;
   gap: 0.25em;
+  justify-content: start;
 }
 
 .tools li {
@@ -1465,8 +1471,8 @@ body[data-mode="dark"] {
 
 .tools li::before {
   content: unset;
-  position: unset;
   left: unset;
+  position: unset;
 }
 
 .tools li + li {
