@@ -72,9 +72,15 @@
         states = addAlpha(states);
 
         grid = makeGrid(gridWidth, gridHeight);
+
+        drawGrid(grid);
       }
 
       function draw() {
+        if (window.matchMedia("(prefers-reduced-motion)").matches) {
+          return;
+        }
+
         // background(0);
         drawGrid(grid);
 
