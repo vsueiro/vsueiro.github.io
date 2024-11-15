@@ -394,6 +394,7 @@ a:not(.button) {
   color: inherit;
   cursor: pointer;
   text-decoration: underline;
+  text-underline-position: under;
 }
 
 a:not(.button, .experiments)::after {
