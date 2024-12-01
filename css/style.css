@@ -100,6 +100,12 @@ video {
   width: 1px;
 }
 
+/* Fade between pages */
+
+@view-transition {
+  navigation: auto;
+}
+
 /* Wireframe */
 
 * {
@@ -154,21 +160,21 @@ a abbr {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/league-spartan-regular.woff2") format("woff2");
+  src: url("/fonts/league-spartan-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "League Spartan";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/league-spartan-bold.woff2") format("woff2");
+  src: url("/fonts/league-spartan-bold.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Fanwood Text";
   font-style: italic;
   font-weight: 400;
-  src: url("../fonts/fanwood-text-italic.woff") format("woff");
+  src: url("/fonts/fanwood-text-italic.woff") format("woff");
 }
 
 i,
@@ -760,27 +766,27 @@ body *.max-1920 {
 }
 
 .square[data-device="phone"] figure::before {
-  background-image: url(../media/devices/fill-phone.svg);
+  background-image: url(/media/devices/fill-phone.svg);
 }
 
 .square[data-device="phone"] figure::after {
-  background-image: url(../media/devices/frame-phone.svg);
+  background-image: url(/media/devices/frame-phone.svg);
 }
 
 .square[data-device="phone-tablet"] figure::before {
-  background-image: url(../media/devices/fill-phone-tablet.svg);
+  background-image: url(/media/devices/fill-phone-tablet.svg);
 }
 
 .square[data-device="phone-tablet"] figure::after {
-  background-image: url(../media/devices/frame-phone-tablet.svg);
+  background-image: url(/media/devices/frame-phone-tablet.svg);
 }
 
 .square[data-device="laptop"] figure::before {
-  background-image: url(../media/devices/fill-laptop.svg);
+  background-image: url(/media/devices/fill-laptop.svg);
 }
 
 .square[data-device="laptop"] figure::after {
-  background-image: url(../media/devices/frame-laptop.svg);
+  background-image: url(/media/devices/frame-laptop.svg);
 }
 
 .square[data-device="phone"] figure video,

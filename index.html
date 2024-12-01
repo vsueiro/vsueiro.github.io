@@ -12,13 +12,25 @@
 
     <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
     <link rel="icon" type="image/png" href="/media/share/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
       defer
     ></script>
-    <script src="js/script.js" type="module"></script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="home" data-entrance="false">
     <div class="cover full">
@@ -26,56 +38,56 @@
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/epicenter"
+            data-href="/work/epicenter"
             data-theme="epicenter"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/supertunnel"
+            data-href="/work/supertunnel"
             data-theme="supertunnel"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/adoption"
+            data-href="/work/adoption"
             data-theme="adoption"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/barbecues"
+            data-href="/work/barbecues"
             data-theme="barbecues"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/faceapp"
+            data-href="/work/faceapp"
             data-theme="faceapp"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/vaccination"
+            data-href="/work/vaccination"
             data-theme="vaccination"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/montadino"
+            data-href="/work/montadino"
             data-theme="montadino"
           ></div>
         </div>
         <div class="animation-track">
           <div
             class="animation-item"
-            data-href="work/composition"
+            data-href="/work/composition"
             data-theme="composition"
           ></div>
         </div>
@@ -220,7 +232,7 @@
                   <i lang="pt-BR">“No Epicentro”</i> tries to humanize an
                   evergrowing number
                 </p>
-                <a class="button" href="work/epicenter"
+                <a class="button" href="/work/epicenter"
                   ><span>Learn more</span></a
                 >
               </div>
@@ -257,7 +269,7 @@
                   hole through Earth, indicating where in the world you would
                   end up if you dug in a certain direction
                 </p>
-                <a class="button" href="work/supertunnel"
+                <a class="button" href="/work/supertunnel"
                   ><span>Learn more</span></a
                 >
               </div>
@@ -298,7 +310,7 @@
                   of being chosen by a foster parent, using growing plants as a
                   visual metaphor
                 </p>
-                <a class="button" href="work/adoption"
+                <a class="button" href="/work/adoption"
                   ><span>Learn more</span></a
                 >
               </div>
@@ -343,7 +355,7 @@
                   Thousands of overpriced meals were purchased by the Brazilian
                   government with public money. This fiery chart shows them all
                 </p>
-                <a class="button" href="work/barbecues"
+                <a class="button" href="/work/barbecues"
                   ><span>Learn more</span></a
                 >
               </div>
@@ -381,7 +393,7 @@
                   used to train the app’s
                   <abbr title="Artificial Intelligence">AI</abbr>
                 </p>
-                <a class="button" href="work/faceapp"
+                <a class="button" href="/work/faceapp"
                   ><span>Learn more</span></a
                 >
               </div>
@@ -418,7 +430,7 @@
                   this series of social media videos try to explain
                   <em>why</em> vaccination is important
                 </p>
-                <a class="button" disabled href="work/vaccination"
+                <a class="button" disabled href="/work/vaccination"
                   ><span>Case Study Soon</span></a
                 >
               </div>
@@ -462,7 +474,7 @@
                   fibers like cotton, viscose & linen
                 </p>
                 <!--
-                <a class="button" disabled href="work/composition"
+                <a class="button" disabled href="/work/composition"
                   ><span>Case Study Soon</span></a
                 >
                 -->
@@ -503,7 +515,7 @@
                   crafting toys from reused EVA foam, which is largely used in
                   schools and often goes to waste
                 </p>
-                <a class="button" href="work/montadino"
+                <a class="button" href="/work/montadino"
                   ><span>Learn more</span></a
                 >
               </div>

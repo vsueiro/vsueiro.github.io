@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -24,7 +38,7 @@
           <figure>
             <video autoplay muted loop playsinline>
               <source
-                src="../media/portfolio/malmo/supertunnel/laptop.mp4"
+                src="/media/portfolio/malmo/supertunnel/laptop.mp4"
                 type="video/mp4"
               />
             </video>
@@ -97,7 +111,7 @@
       <div class="flow max-800">
         <figure class="media">
           <img
-            src="../media/portfolio/malmo/supertunnel/sketch.png"
+            src="/media/portfolio/malmo/supertunnel/sketch.png"
             alt="Hand-drawn sketch of a physical shovel controlling a simulated tunnel through the globe"
           />
         </figure>
@@ -144,7 +158,7 @@
       <div class="flow max-1000">
         <figure class="media">
           <img
-            src="../media/portfolio/malmo/supertunnel/interviews.png"
+            src="/media/portfolio/malmo/supertunnel/interviews.png"
             alt="Diagram representing remote interviews conducted with three experts"
           />
           <figcaption class="screen-reader">
@@ -166,7 +180,7 @@
       <div class="flow max-1280">
         <figure class="media">
           <img
-            src="../media/portfolio/malmo/supertunnel/principles.png"
+            src="/media/portfolio/malmo/supertunnel/principles.png"
             alt="Diagram representing the five pedagogic principles that were defined based on the interviews"
           />
           <figcaption class="screen-reader">
@@ -202,7 +216,7 @@
       <div class="flow max-1280">
         <figure class="media">
           <img
-            src="../media/portfolio/malmo/supertunnel/scale.png"
+            src="/media/portfolio/malmo/supertunnel/scale.png"
             alt="Three schematic drawings of people (both adults and children) handling the shovel (tangible interface) to simulate a tunnel in that direction"
           />
           <figcaption>
@@ -228,7 +242,7 @@
             <figure class="media">
               <video autoplay muted loop playsinline>
                 <source
-                  src="../media/portfolio/malmo/supertunnel/arduino-led.mp4"
+                  src="/media/portfolio/malmo/supertunnel/arduino-led.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -242,7 +256,7 @@
             <figure class="media">
               <video autoplay muted loop playsinline>
                 <source
-                  src="../media/portfolio/malmo/supertunnel/arduino-motion.mp4"
+                  src="/media/portfolio/malmo/supertunnel/arduino-motion.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -281,7 +295,7 @@
       <div class="flow max-600">
         <figure class="media">
           <img
-            src="../media/portfolio/malmo/supertunnel/holder.jpg"
+            src="/media/portfolio/malmo/supertunnel/holder.jpg"
             alt="Photo of phone holder attached to the handle of the shovel"
           />
           <figcaption>
@@ -314,7 +328,7 @@
         <figure class="media">
           <video autoplay muted loop playsinline>
             <source
-              src="../media/portfolio/malmo/supertunnel/demo-4x3.mp4"
+              src="/media/portfolio/malmo/supertunnel/demo-4x3.mp4"
               type="video/mp4"
             />
           </video>
@@ -388,7 +402,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>

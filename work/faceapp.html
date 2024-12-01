@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -23,7 +37,7 @@
         <div class="square" data-device="laptop">
           <figure>
             <img
-              src="../media/portfolio/estadao/faceapp/laptop.gif"
+              src="/media/portfolio/estadao/faceapp/laptop.gif"
               alt="Composition shows photos of Terry Crews before and after FaceApp filter was over-applied"
             />
             <figcaption class="screen-reader">
@@ -95,7 +109,7 @@
       <div class="flow max-800">
         <figure class="media">
           <img
-            src="../media/portfolio/estadao/faceapp/idris-before-after.jpg"
+            src="/media/portfolio/estadao/faceapp/idris-before-after.jpg"
             alt=""
           />
           <figcaption></figcaption>
@@ -154,7 +168,7 @@
       <div class="flow max-1000">
         <figure class="media">
           <img
-            src="../media/portfolio/estadao/faceapp/faceapp-mosaic.jpg"
+            src="/media/portfolio/estadao/faceapp/faceapp-mosaic.jpg"
             alt=""
           />
           <figcaption></figcaption>
@@ -165,27 +179,27 @@
         <p>Here are some of the most evident outcomes:</p>
 
         <figure class="media">
-          <img src="../media/portfolio/estadao/faceapp/terry.jpg" alt="" />
+          <img src="/media/portfolio/estadao/faceapp/terry.jpg" alt="" />
           <figcaption><strong>Terry Crews</strong>, Actor</figcaption>
         </figure>
 
         <figure class="media">
-          <img src="../media/portfolio/estadao/faceapp/iza.jpg" alt="" />
+          <img src="/media/portfolio/estadao/faceapp/iza.jpg" alt="" />
           <figcaption><strong>Iza</strong>, Singer</figcaption>
         </figure>
 
         <figure class="media">
-          <img src="../media/portfolio/estadao/faceapp/jayz.jpg" alt="" />
+          <img src="/media/portfolio/estadao/faceapp/jayz.jpg" alt="" />
           <figcaption><strong>Jay-Z</strong>, Rapper</figcaption>
         </figure>
 
         <figure class="media">
-          <img src="../media/portfolio/estadao/faceapp/viola.jpg" alt="" />
+          <img src="/media/portfolio/estadao/faceapp/viola.jpg" alt="" />
           <figcaption><strong>Viola Davis</strong>, Actress</figcaption>
         </figure>
 
         <figure class="media">
-          <img src="../media/portfolio/estadao/faceapp/barack.jpg" alt="" />
+          <img src="/media/portfolio/estadao/faceapp/barack.jpg" alt="" />
           <figcaption><strong>Barack Obama</strong>, Politician</figcaption>
         </figure>
 
@@ -206,10 +220,7 @@
         </blockquote>
 
         <figure class="media">
-          <img
-            src="../media/portfolio/estadao/faceapp/biased-data.png"
-            alt=""
-          />
+          <img src="/media/portfolio/estadao/faceapp/biased-data.png" alt="" />
           <figcaption>
             The simplified diagrams above were published on the original
             article. They represent 2 image datasets used to train a machine.
@@ -317,7 +328,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>

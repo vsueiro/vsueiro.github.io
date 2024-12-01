@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -24,7 +38,7 @@
           <figure>
             <video autoplay muted loop playsinline>
               <source
-                src="../media/portfolio/google/epicenter/phone.mp4"
+                src="/media/portfolio/google/epicenter/phone.mp4"
                 type="video/mp4"
               />
             </video>
@@ -100,7 +114,7 @@
 
       <div class="flow max-1000">
         <figure class="media">
-          <img src="../media/portfolio/google/epicenter/lo-fi-hi-fi.gif" />
+          <img src="/media/portfolio/google/epicenter/lo-fi-hi-fi.gif" />
           <figcaption>
             Early sketches (used to pitch the idea) compared to their final UI
             counterparts.
@@ -139,7 +153,7 @@
       <div class="flow full max-1920">
         <figure class="media">
           <img
-            src="../media/portfolio/google/epicenter/phones.png"
+            src="/media/portfolio/google/epicenter/phones.png"
             alt="Composition made out of 10 screen captures of the mobile version of the website, representing several moments of the data-driven narrative."
           />
           <figcaption>
@@ -210,7 +224,7 @@
       <div class="flow max-1000">
         <figure class="media">
           <img
-            src="../media/portfolio/google/epicenter/tweets.gif"
+            src="/media/portfolio/google/epicenter/tweets.gif"
             alt="Composition made out of 5 tweets from Brazilian people after using the website:
             User @biba_targhetta says “Eu tô chocada com essa simulação.”.
             User @distopiafever says “Que porrada. No meu caso, é como se tivesse morrido toda a minha vizinhança, a do colégio do meu filho, a do meu trabalho, a do colégio que estudei, da faculdade que fiz… É brutal.”.
@@ -246,7 +260,7 @@
       <div class="square max-1000" data-device="laptop">
         <figure>
           <img
-            src="../media/portfolio/google/epicenter/laptop-wapost.png"
+            src="/media/portfolio/google/epicenter/laptop-wapost.png"
             alt="Screen capture of The Washington Post’s homepage in September 26, 2020 – when the U.S. version of “At the Epicenter” was published."
           />
           <figcaption class="screen-reader">
@@ -374,7 +388,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>

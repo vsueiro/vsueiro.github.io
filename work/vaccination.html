@@ -9,13 +9,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -26,7 +40,7 @@
           <figure>
             <video autoplay muted loop playsinline>
               <source
-                src="../media/portfolio/who/vaccination/chat-capacity.mp4"
+                src="/media/portfolio/who/vaccination/chat-capacity.mp4"
                 type="video/mp4"
               />
             </video>
@@ -150,13 +164,13 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/sketch-full-capacity.png"
+                src="/media/portfolio/who/vaccination/sketch-full-capacity.png"
                 alt="Sketch of hospital at full capacity (cup filled with circles, representing each patient)"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/sketch-over-capacity.png"
+                src="/media/portfolio/who/vaccination/sketch-over-capacity.png"
                 alt="Sketch of hospital over capacity (cup overflown with circles, representing patients being left untreated)"
               />
             </figure>
@@ -179,37 +193,37 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-1.png"
+                src="/media/portfolio/who/vaccination/gif/spread-1.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-2.png"
+                src="/media/portfolio/who/vaccination/gif/spread-2.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-3.png"
+                src="/media/portfolio/who/vaccination/gif/spread-3.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-4.png"
+                src="/media/portfolio/who/vaccination/gif/spread-4.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-5.png"
+                src="/media/portfolio/who/vaccination/gif/spread-5.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-6.png"
+                src="/media/portfolio/who/vaccination/gif/spread-6.png"
                 alt=""
               />
             </figure>
@@ -234,13 +248,13 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread.gif"
+                src="/media/portfolio/who/vaccination/gif/spread.gif"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/gif/spread-protections.gif"
+                src="/media/portfolio/who/vaccination/gif/spread-protections.gif"
                 alt=""
               />
             </figure>
@@ -256,7 +270,7 @@
         <figure>
           <video autoplay muted loop playsinline style="background: #f8e8da">
             <source
-              src="../media/portfolio/who/vaccination/chat-spread-crop.mp4"
+              src="/media/portfolio/who/vaccination/chat-spread-crop.mp4"
               type="video/mp4"
             />
           </video>
@@ -277,7 +291,7 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/who/vaccination/sketch-spread.png"
+                src="/media/portfolio/who/vaccination/sketch-spread.png"
                 alt="Sketch of network graphs representing how one person infects others, who will infect others, and so in…"
               />
             </figure>
@@ -447,7 +461,7 @@
       <div class="square max-1000" data-device="laptop">
         <figure>
           <img
-            src="../media/portfolio/who/vaccination/laptop-sheets.png"
+            src="/media/portfolio/who/vaccination/laptop-sheets.png"
             alt="Screen capture of Google Sheets used to organized translated content for the videos. It displays columns for English, Russian, and Georgian languages"
           />
         </figure>
@@ -483,7 +497,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>

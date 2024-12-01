@@ -7,14 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/montadino.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/montadino.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
+    <script src="/js/montadino.js" defer></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -24,7 +39,7 @@
         <div class="square">
           <figure>
             <img
-              src="../media/portfolio/personal/montadino/cover.png"
+              src="/media/portfolio/personal/montadino/cover.png"
               alt="Animated photo of two dinosaur toys"
             />
             <figcaption class="screen-reader">
@@ -96,7 +111,7 @@
 
       <div class="flow max-400">
         <figure class="media">
-          <img src="../media/portfolio/personal/montadino/sheets.svg" alt="" />
+          <img src="/media/portfolio/personal/montadino/sheets.svg" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -163,7 +178,7 @@
 
       <div class="flow max-800">
         <figure class="media">
-          <img src="../media/portfolio/personal/montadino/bin.gif" alt="" />
+          <img src="/media/portfolio/personal/montadino/bin.gif" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -199,7 +214,7 @@
         <figure class="media">
           <video autoplay muted loop playsinline>
             <source
-              src="../media/portfolio/personal/montadino/animation-1.mp4"
+              src="/media/portfolio/personal/montadino/animation-1.mp4"
               type="video/mp4"
             />
           </video>
@@ -221,7 +236,7 @@
         <figure class="media">
           <video autoplay muted loop playsinline>
             <source
-              src="../media/portfolio/personal/montadino/animation-2.mp4"
+              src="/media/portfolio/personal/montadino/animation-2.mp4"
               type="video/mp4"
             />
           </video>
@@ -239,7 +254,7 @@
       <div class="flow max-400">
         <figure class="media round">
           <img
-            src="../media/portfolio/personal/montadino/die-cut-remains.png"
+            src="/media/portfolio/personal/montadino/die-cut-remains.png"
             alt=""
           />
           <figcaption></figcaption>
@@ -255,7 +270,7 @@
 
       <div class="flow max-1280">
         <figure class="media">
-          <img src="../media/portfolio/personal/montadino/pieces.jpg" alt="" />
+          <img src="/media/portfolio/personal/montadino/pieces.jpg" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -278,7 +293,7 @@
       <div class="flow max-800">
         <figure class="media">
           <img
-            src="../media/portfolio/personal/montadino/stop-motion-t-rex-bronto.gif"
+            src="/media/portfolio/personal/montadino/stop-motion-t-rex-bronto.gif"
             alt=""
           />
           <figcaption></figcaption>
@@ -292,7 +307,7 @@
       <div class="flow max-800">
         <figure class="media">
           <img
-            src="../media/portfolio/personal/montadino/purple-dinos.jpg"
+            src="/media/portfolio/personal/montadino/purple-dinos.jpg"
             alt=""
           />
           <figcaption></figcaption>
@@ -310,7 +325,7 @@
       <div class="flow max-300">
         <figure class="media">
           <img
-            src="../media/portfolio/personal/montadino/missing-leg.jpg"
+            src="/media/portfolio/personal/montadino/missing-leg.jpg"
             alt=""
           />
           <figcaption></figcaption>
@@ -334,13 +349,13 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/personal/montadino/shot-filters.png"
+                src="/media/portfolio/personal/montadino/shot-filters.png"
                 alt=""
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/personal/montadino/shot-results.png"
+                src="/media/portfolio/personal/montadino/shot-results.png"
                 alt=""
               />
             </figure>
@@ -420,10 +435,7 @@
 
       <div class="flow max-1280">
         <figure class="media">
-          <img
-            src="../media/portfolio/personal/montadino/evolution.jpg"
-            alt=""
-          />
+          <img src="/media/portfolio/personal/montadino/evolution.jpg" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -448,7 +460,7 @@
       <div class="flow max-600">
         <figure class="media">
           <img
-            src="../media/portfolio/personal/montadino/laser-cut-wooden-prototype.jpg"
+            src="/media/portfolio/personal/montadino/laser-cut-wooden-prototype.jpg"
             alt=""
           />
           <figcaption></figcaption>
@@ -481,10 +493,7 @@
 
       <div class="flow max-800">
         <figure class="media">
-          <img
-            src="../media/portfolio/personal/montadino/mounting.jpg"
-            alt=""
-          />
+          <img src="/media/portfolio/personal/montadino/mounting.jpg" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -585,8 +594,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
-    <script src="../js/montadino.js"></script>
   </body>
 </html>

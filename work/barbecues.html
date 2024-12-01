@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -24,7 +38,7 @@
           <figure>
             <video autoplay muted loop playsinline>
               <source
-                src="../media/portfolio/personal/barbecues/laptop.mp4"
+                src="/media/portfolio/personal/barbecues/laptop.mp4"
                 type="video/mp4"
               />
             </video>
@@ -136,7 +150,7 @@
       <div class="flow max-1280">
         <figure class="media">
           <img
-            src="../media/portfolio/personal/barbecues/chart-animated.png"
+            src="/media/portfolio/personal/barbecues/chart-animated.png"
             alt=""
           />
           <figcaption></figcaption>
@@ -162,7 +176,7 @@
 
       <div class="flow max-600">
         <figure class="media">
-          <img src="../media/portfolio/personal/barbecues/blend.png" alt="" />
+          <img src="/media/portfolio/personal/barbecues/blend.png" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -195,7 +209,7 @@
 
       <div class="flow max-1280">
         <figure class="media">
-          <img src="../media/portfolio/personal/barbecues/award.jpg" alt="" />
+          <img src="/media/portfolio/personal/barbecues/award.jpg" alt="" />
           <figcaption></figcaption>
         </figure>
       </div>
@@ -315,7 +329,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>

@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta property="og:image" content="" />
 
-    <link rel="icon" type="image/svg+xml" href="../media/share/favicon.svg" />
-    <link rel="icon" type="image/png" href="../media/share/favicon.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
+    <link rel="icon" type="image/png" href="/media/share/favicon.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script type="speculationrules">
+      {
+        "prerender": [
+          {
+            "where": {
+              "href_matches": "/*"
+            },
+            "eagerness": "moderate"
+          }
+        ]
+      }
+    </script>
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
     <nav class="full entrance">
-      <a href="../">vsueiro</a>
+      <a href="/">vsueiro</a>
     </nav>
 
     <header class="full">
@@ -23,12 +37,12 @@
         <div class="square" data-device="phone-tablet">
           <figure>
             <img
-              src="../media/portfolio/estadao/adoption/tablet.png"
+              src="/media/portfolio/estadao/adoption/tablet.png"
               alt="Visual composition of charts made from clusters of plants. Each plant represents a child in a foster home."
             />
             <video autoplay muted loop playsinline>
               <source
-                src="../media/portfolio/estadao/adoption/phone.mp4"
+                src="/media/portfolio/estadao/adoption/phone.mp4"
                 type="video/mp4"
               />
             </video>
@@ -107,19 +121,19 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/explainer-age.gif"
+                src="/media/portfolio/estadao/adoption/explainer-age.gif"
                 alt="Screen capture of chart legend"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/explainer-disability.gif"
+                src="/media/portfolio/estadao/adoption/explainer-disability.gif"
                 alt="Screen capture of chart legend"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/explainer-siblings.gif"
+                src="/media/portfolio/estadao/adoption/explainer-siblings.gif"
                 alt="Screen capture of chart legend"
               />
             </figure>
@@ -158,7 +172,7 @@
       <div class="flow max-1000">
         <figure class="media">
           <img
-            src="../media/portfolio/estadao/adoption/animated.gif"
+            src="/media/portfolio/estadao/adoption/animated.gif"
             alt="Screen recording of the simulation being run"
           />
         </figure>
@@ -187,19 +201,19 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/mobile-race.png"
+                src="/media/portfolio/estadao/adoption/mobile-race.png"
                 alt="Screen capture of chart depicting our findings regarding race"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/mobile-disability.png"
+                src="/media/portfolio/estadao/adoption/mobile-disability.png"
                 alt="Screen capture of chart depicting our findings regarding disabilities"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/mobile-siblings.png"
+                src="/media/portfolio/estadao/adoption/mobile-siblings.png"
                 alt="Screen capture of chart depicting our findings regarding siblings"
               />
             </figure>
@@ -246,7 +260,7 @@
       <div class="flow max-800">
         <figure class="media">
           <img
-            src="../media/portfolio/estadao/adoption/age-histogram.png"
+            src="/media/portfolio/estadao/adoption/age-histogram.png"
             alt="Screen capture of age histogram"
           />
           <figcaption>
@@ -261,19 +275,19 @@
           <div class="group">
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/bars-race.png"
+                src="/media/portfolio/estadao/adoption/bars-race.png"
                 alt="Screen capture of bar chart about race"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/bars-siblings.png"
+                src="/media/portfolio/estadao/adoption/bars-siblings.png"
                 alt="Screen capture of bar chart about siblings"
               />
             </figure>
             <figure class="media">
               <img
-                src="../media/portfolio/estadao/adoption/bars-disability.png"
+                src="/media/portfolio/estadao/adoption/bars-disability.png"
                 alt="Screen capture of bar chart about disabilities"
               />
             </figure>
@@ -307,7 +321,7 @@
       <div class="square max-1000" data-device="laptop">
         <figure>
           <img
-            src="../media/portfolio/estadao/adoption/laptop-senate.png"
+            src="/media/portfolio/estadao/adoption/laptop-senate.png"
             alt="Screen capture of Senado Notícias’s homepage, featuring an article published on September 11, 2019"
           />
         </figure>
@@ -340,7 +354,7 @@
           <figure class="media round">
             <img
               class="max-100"
-              src="../media/portfolio/estadao/adoption/@julliocardia.jpg"
+              src="/media/portfolio/estadao/adoption/@julliocardia.jpg"
               alt="…"
             />
           </figure>
@@ -358,7 +372,7 @@
           <figure class="media round">
             <img
               class="max-100"
-              src="../media/portfolio/estadao/adoption/@acarolinacp.jpg"
+              src="/media/portfolio/estadao/adoption/@acarolinacp.jpg"
               alt="…"
             />
           </figure>
@@ -438,16 +452,10 @@
         <figure class="media">
           <div class="group">
             <figure class="media">
-              <img
-                src="../media/portfolio/estadao/adoption/iib-03.jpg"
-                alt=""
-              />
+              <img src="/media/portfolio/estadao/adoption/iib-03.jpg" alt="" />
             </figure>
             <figure class="media">
-              <img
-                src="../media/portfolio/estadao/adoption/iib-02.jpg"
-                alt=""
-              />
+              <img src="/media/portfolio/estadao/adoption/iib-02.jpg" alt="" />
             </figure>
           </div>
           <figcaption>
@@ -517,7 +525,5 @@
         </p>
       </div>
     </footer>
-
-    <script src="../js/script.js" type="module"></script>
   </body>
 </html>
