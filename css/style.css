@@ -106,6 +106,16 @@ video {
   navigation: auto;
 }
 
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+::view-transition-old(root) {
+  animation: 0.4s ease-in fade-out;
+}
+
 /* Wireframe */
 
 * {
