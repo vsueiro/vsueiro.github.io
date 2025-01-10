@@ -1,9 +1,3 @@
-/* Fade between pages */
-
-@view-transition {
-  navigation: auto;
-}
-
 /* Variables */
 
 :root {
