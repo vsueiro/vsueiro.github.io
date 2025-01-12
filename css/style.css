@@ -338,6 +338,12 @@ hr::before {
   background: var(--theme-composition);
 }
 
+/* Theme Adjustments */
+
+[data-theme="vaccination"] video {
+  background: #d8eef8;
+}
+
 /* Highlights */
 
 .highlights {
