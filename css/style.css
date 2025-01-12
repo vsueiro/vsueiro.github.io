@@ -85,6 +85,14 @@ video {
   max-width: 100%;
 }
 
+small {
+  font-size: smaller;
+}
+
+b {
+  font-weight: bold;
+}
+
 /* Accessibility */
 
 .screen-reader {
@@ -187,7 +195,8 @@ figcaption {
 }
 
 p strong,
-figcaption strong {
+figcaption strong,
+b {
   color: var(--tint-100);
   font-weight: bold;
 }
@@ -1122,6 +1131,10 @@ footer li {
   justify-content: center;
   margin: var(--size-80) 0;
   width: 100%;
+}
+
+.twitter-tweet {
+  margin-inline: auto;
 }
 
 /* List */
