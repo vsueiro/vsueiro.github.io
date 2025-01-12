@@ -93,6 +93,11 @@ b {
   font-weight: bold;
 }
 
+sup {
+  font-size: smaller;
+  vertical-align: super;
+}
+
 /* Accessibility */
 
 .screen-reader {
@@ -331,12 +336,6 @@ hr::before {
 }
 [data-theme="composition"] {
   background: var(--theme-composition);
-}
-
-/* Theme Adjustments */
-
-[data-theme="vaccination"] video {
-  background: #d8eef8;
 }
 
 /* Highlights */

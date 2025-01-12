@@ -1,3 +1,40 @@
 [data-theme="vaccination"] video {
   background: #d8eef7;
 }
+
+/* Scrollable table */
+
+table.scrollable {
+  border-collapse: collapse;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 1px var(--tint-25);
+  font-size: smaller;
+  table-layout: fixed;
+}
+
+table.scrollable tbody {
+  display: block;
+  max-height: var(--size-320);
+  overflow: auto;
+  width: 100%;
+}
+
+table.scrollable tr {
+  border-bottom: 1px solid var(--tint-5);
+}
+
+table.scrollable thead tr {
+  border-bottom: 1px solid var(--tint-25);
+  display: block;
+}
+
+table.scrollable th {
+  font-weight: bold;
+}
+
+table.scrollable th,
+table.scrollable td {
+  line-height: 1;
+  min-width: var(--size-160);
+  padding: var(--size-10);
+}

@@ -10,6 +10,7 @@
     <link rel="icon" type="image/svg+xml" href="/media/share/favicon.svg" />
     <link rel="icon" type="image/png" href="/media/share/favicon.png" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/vaccination.css" />
 
     <script src="/js/script.js" type="module"></script>
   </head>
@@ -177,8 +178,8 @@
         </p>
 
         <p>
-          The idea here was to simulate a conversation between the reader and WHO, using visual
-          <strong>analogies</strong> to convey the message. 💬
+          The idea here to simulate a conversation between a person and WHO, using
+          <strong>analogies</strong> to convey the message.&nbsp;💬
         </p>
       </div>
 
@@ -198,11 +199,15 @@
               />
             </figure>
           </div>
-          <figcaption>
-            Hand-drawn sketches of the cup analogy, used to pitch the idea to my former team at
-            <abbr title="World Health Organization">WHO</abbr>/Europe.
-          </figcaption>
+          <figcaption>Hand-drawn sketches of the cup analogy, used to pitch the idea internally.</figcaption>
         </figure>
+      </div>
+
+      <div class="flow max-800">
+        <p>
+          In the final version, the overflowing circles are not all red. Instead, they are of different colors, meaning
+          not only COVID-19 patients would be left untreated, but also other patients that need care.
+        </p>
       </div>
 
       <div class="square max-1280" data-device="laptop">
@@ -212,6 +217,13 @@
           </video>
           <figcaption class="screen-reader"></figcaption>
         </figure>
+      </div>
+
+      <div class="flow max-800">
+        <p>
+          Another video in this series was about additional protective measures, like wearing a mask. It illustrated how
+          protecting yourself could <b>prevent transmission</b> – and protect countless others.
+        </p>
       </div>
 
       <div class="flow max-1000">
@@ -228,6 +240,16 @@
             Hand-drawn sketches of the infection spreading, also used to pitch the idea to the team.
           </figcaption>
         </figure>
+      </div>
+
+      <div class="flow max-800">
+        <p>The starting point for visualizing the spread of the disease was exactly that: a starting point.</p>
+        <p>
+          If that dot on the center, represening a person with COVID-19, transmits the disease to 2 other people, this
+          is what a
+          <a href="https://flourish.studio/visualisations/network-charts/" target="_blank">network diagram</a> could
+          look like after 5 cycles:
+        </p>
       </div>
 
       <div class="flow max-1280">
@@ -260,11 +282,6 @@
         </figure>
       </div>
 
-      <!-- <div class="flow max-800">
-        <p>…</p>
-        <p>…</p>
-      </div> -->
-
       <div class="flow max-1280">
         <figure class="media">
           <div class="group">
@@ -276,10 +293,291 @@
             </figure>
           </div>
           <figcaption>
-            Animated versions of the graphics, created with
-            <a href="https://ezgif.com/" target="_blank">ezgif.com</a>.
+            Animated versions of the graphics. In the 2<sup>nd</sup> one, whole branches of infections are prevented.
+            Created with <a href="https://ezgif.com/" target="_blank">ezgif.com</a>.
           </figcaption>
         </figure>
+      </div>
+
+      <div class="flow max-800">
+        <p>
+          As a side note, I created this network diagram connecting
+          <strong>data points that I generated in Python</strong>.
+        </p>
+        <p>
+          Each dot has a unique <code>Source</code> value, and it gets connect to the dot under
+          <code>Target</code> column, like so:
+        </p>
+      </div>
+
+      <figure class="media">
+        <table class="scrollable">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>01</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>02</td>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>011</td>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>012</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>0111</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>0112</td>
+            </tr>
+            <tr>
+              <td>0111</td>
+              <td>01111</td>
+            </tr>
+            <tr>
+              <td>0111</td>
+              <td>01112</td>
+            </tr>
+            <tr>
+              <td>01111</td>
+              <td>011111</td>
+            </tr>
+            <tr>
+              <td>01111</td>
+              <td>011112</td>
+            </tr>
+            <tr>
+              <td>01112</td>
+              <td>011121</td>
+            </tr>
+            <tr>
+              <td>01112</td>
+              <td>011122</td>
+            </tr>
+            <tr>
+              <td>0112</td>
+              <td>01121</td>
+            </tr>
+            <tr>
+              <td>0112</td>
+              <td>01122</td>
+            </tr>
+            <tr>
+              <td>01121</td>
+              <td>011211</td>
+            </tr>
+            <tr>
+              <td>01121</td>
+              <td>011212</td>
+            </tr>
+            <tr>
+              <td>01122</td>
+              <td>011221</td>
+            </tr>
+            <tr>
+              <td>01122</td>
+              <td>011222</td>
+            </tr>
+            <tr>
+              <td>012</td>
+              <td>0121</td>
+            </tr>
+            <tr>
+              <td>012</td>
+              <td>0122</td>
+            </tr>
+            <tr>
+              <td>0121</td>
+              <td>01211</td>
+            </tr>
+            <tr>
+              <td>0121</td>
+              <td>01212</td>
+            </tr>
+            <tr>
+              <td>01211</td>
+              <td>012111</td>
+            </tr>
+            <tr>
+              <td>01211</td>
+              <td>012112</td>
+            </tr>
+            <tr>
+              <td>01212</td>
+              <td>012121</td>
+            </tr>
+            <tr>
+              <td>01212</td>
+              <td>012122</td>
+            </tr>
+            <tr>
+              <td>0122</td>
+              <td>01221</td>
+            </tr>
+            <tr>
+              <td>0122</td>
+              <td>01222</td>
+            </tr>
+            <tr>
+              <td>01221</td>
+              <td>012211</td>
+            </tr>
+            <tr>
+              <td>01221</td>
+              <td>012212</td>
+            </tr>
+            <tr>
+              <td>01222</td>
+              <td>012221</td>
+            </tr>
+            <tr>
+              <td>01222</td>
+              <td>012222</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>021</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>022</td>
+            </tr>
+            <tr>
+              <td>021</td>
+              <td>0211</td>
+            </tr>
+            <tr>
+              <td>021</td>
+              <td>0212</td>
+            </tr>
+            <tr>
+              <td>0211</td>
+              <td>02111</td>
+            </tr>
+            <tr>
+              <td>0211</td>
+              <td>02112</td>
+            </tr>
+            <tr>
+              <td>02111</td>
+              <td>021111</td>
+            </tr>
+            <tr>
+              <td>02111</td>
+              <td>021112</td>
+            </tr>
+            <tr>
+              <td>02112</td>
+              <td>021121</td>
+            </tr>
+            <tr>
+              <td>02112</td>
+              <td>021122</td>
+            </tr>
+            <tr>
+              <td>0212</td>
+              <td>02121</td>
+            </tr>
+            <tr>
+              <td>0212</td>
+              <td>02122</td>
+            </tr>
+            <tr>
+              <td>02121</td>
+              <td>021211</td>
+            </tr>
+            <tr>
+              <td>02121</td>
+              <td>021212</td>
+            </tr>
+            <tr>
+              <td>02122</td>
+              <td>021221</td>
+            </tr>
+            <tr>
+              <td>02122</td>
+              <td>021222</td>
+            </tr>
+            <tr>
+              <td>022</td>
+              <td>0221</td>
+            </tr>
+            <tr>
+              <td>022</td>
+              <td>0222</td>
+            </tr>
+            <tr>
+              <td>0221</td>
+              <td>02211</td>
+            </tr>
+            <tr>
+              <td>0221</td>
+              <td>02212</td>
+            </tr>
+            <tr>
+              <td>02211</td>
+              <td>022111</td>
+            </tr>
+            <tr>
+              <td>02211</td>
+              <td>022112</td>
+            </tr>
+            <tr>
+              <td>02212</td>
+              <td>022121</td>
+            </tr>
+            <tr>
+              <td>02212</td>
+              <td>022122</td>
+            </tr>
+            <tr>
+              <td>0222</td>
+              <td>02221</td>
+            </tr>
+            <tr>
+              <td>0222</td>
+              <td>02222</td>
+            </tr>
+            <tr>
+              <td>02221</td>
+              <td>022211</td>
+            </tr>
+            <tr>
+              <td>02221</td>
+              <td>022212</td>
+            </tr>
+            <tr>
+              <td>02222</td>
+              <td>022221</td>
+            </tr>
+            <tr>
+              <td>02222</td>
+              <td>022222</td>
+            </tr>
+          </tbody>
+        </table>
+        <figcaption>Scroll table rows to see <i>very</i> interesting numbers</figcaption>
+      </figure>
+
+      <div class="flow max-800">
+        <p>
+          You can see that the dot with source 0 (the one in the center of the diagram), is linked to 2 others (01 and
+          02).
+        </p>
+        <p>Anyways, this is how the visual narrative turned out:</p>
       </div>
 
       <div class="square max-1280" data-device="laptop">
@@ -291,50 +589,46 @@
         </figure>
       </div>
 
-      <!-- <div class="flow max-800">
-        <p>…</p>
-        <p>…</p>
-      </div> -->
+      <div class="flow max-800">
+        <p>One cool thing is that hese videos were generated from HTML elements.</p>
+
+        <p>
+          I naturally used CSS to style them, and JavaScript to make them dynamic (including
+          <a href="https://gsap.com/" target="_blank">GSAP</a> for timeline animation and
+          <a href="https://brm.io/matter-js/" target="_blank">matter.js</a> for physics).
+        </p>
+
+        <p>
+          This means it is very easy to change the content of the simulated messages – as well as to create versions in
+          different languages.
+        </p>
+
+        <p>
+          So, in order to support country-specific teams, I created an <b>automated tool for translating</b> those
+          videos into other languages, like Georgian ❤️
+        </p>
+      </div>
+
+      <div class="square max-1280" data-device="laptop">
+        <figure>
+          <img
+            src="/media/portfolio/who/vaccination/laptop-sheets.png"
+            alt="Screen capture of Google Sheets used to organized translated content for the videos. It displays columns for English, Russian, and Georgian languages"
+          />
+        </figure>
+      </div>
+
+      <div class="flow max-800">
+        <p>
+          The (human) translator would add the contents of each message in a spreadsheet. The video would then be
+          populated with the translated messages and all animations would be re-generated.
+        </p>
+
+        <p>As a bonus, this tool made the whole text editing process (even in English!) very fast and easy.</p>
+
+        <p>These videos achieved around <strong>10 million views</strong> across social media.</p>
+      </div>
     </section>
-
-    <div class="flow max-800">
-      <p>One cool thing is that hese videos were generated from HTML elements.</p>
-
-      <p>
-        I naturally used CSS to style them, and JavaScript to make them dynamic (including GSAP for timeline animation
-        and matter.js for physics)
-      </p>
-
-      <p>
-        This means it is very easy to change the content of the simulated messages – as well as to create versions in
-        different languages.
-      </p>
-
-      <p>
-        So, in order to support country-specific teams, I created an automated tool for translating those videos for
-        other locations, like Georgia 🇬🇪 and Ukraine 🇺🇦.
-      </p>
-    </div>
-
-    <div class="square max-1280" data-device="laptop">
-      <figure>
-        <img
-          src="/media/portfolio/who/vaccination/laptop-sheets.png"
-          alt="Screen capture of Google Sheets used to organized translated content for the videos. It displays columns for English, Russian, and Georgian languages"
-        />
-      </figure>
-    </div>
-
-    <div class="flow max-800">
-      <p>
-        The (human) translator would add the contents of each message in a spreadsheet. The video would then be
-        populated with the translated messages and all animations would be re-generated.
-      </p>
-
-      <p>As a bonus, this tool made the whole text editing process (even in English!) very fast and easy.</p>
-
-      <p>These videos achieved around <strong>10 million views</strong> across social media.</p>
-    </div>
 
     <section>
       <div class="flow max-800">
