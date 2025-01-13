@@ -706,7 +706,7 @@ figcaption {
 }
 
 .media .group .media {
-  padding: 0 var(--size-10);
+  padding: 0 var(--size-5);
 }
 
 /* Sizing */
