@@ -5,6 +5,7 @@ table.scrollable {
   border-radius: 1rem;
   box-shadow: 0 0 0 1px var(--tint-25);
   font-size: smaller;
+  overflow: hidden;
   table-layout: fixed;
 }
 
