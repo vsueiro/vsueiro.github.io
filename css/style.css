@@ -554,6 +554,13 @@ section section {
   }
 }
 
+@media (max-width: 512px) {
+  .flow > *:not(swiper-container) {
+    max-width: 100%;
+    padding: var(--size-20) var(--size-30);
+  }
+}
+
 /* Works  */
 
 .works {
