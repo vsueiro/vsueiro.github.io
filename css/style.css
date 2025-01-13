@@ -795,6 +795,11 @@ body *.max-1920 {
   background-image: url(/media/devices/frame-laptop.svg);
 }
 
+.square[data-device] figure::before,
+.square[data-device] figure::after {
+  pointer-events: none;
+}
+
 .square[data-device="phone"] figure video,
 .square[data-device="phone"] figure img {
   height: 70%;
