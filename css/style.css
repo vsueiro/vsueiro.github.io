@@ -44,6 +44,7 @@
   --theme-vaccination: #81c8e9;
   --theme-composition: #cfb6e6;
   --theme-montadino: #ffc4c3;
+  --theme-uva: #7a6996;
 }
 
 /* Reset */
@@ -336,6 +337,9 @@ hr::before {
 }
 [data-theme="composition"] {
   background: var(--theme-composition);
+}
+[data-theme="uva"] {
+  background: var(--theme-uva);
 }
 
 /* Theme Adjustments */
