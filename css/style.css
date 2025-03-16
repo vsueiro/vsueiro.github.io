@@ -799,6 +799,10 @@ body *.max-1920 {
   background-image: url(/media/devices/frame-laptop.svg);
 }
 
+.square.outline[data-device="laptop"] figure::after {
+  background-image: url(/media/devices/frame-laptop-outline.svg);
+}
+
 .square[data-device] figure::before,
 .square[data-device] figure::after {
   pointer-events: none;
