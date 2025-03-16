@@ -81,6 +81,10 @@ li {
   list-style: none;
 }
 
+main {
+  width: 100%;
+}
+
 img,
 video {
   max-width: 100%;
@@ -97,6 +101,10 @@ b {
 sup {
   font-size: smaller;
   vertical-align: super;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Accessibility */
@@ -247,6 +255,7 @@ footer {
   font-size: calc(var(--size-30) / var(--line-height-text));
 }
 
+/* TODO: Check if this is doing anything */
 article li {
   font-size: calc(var(--size-50) / var(--line-height-text));
 }
@@ -256,9 +265,11 @@ header p {
 }
 
 header .label,
+.header .label,
 h3,
 .button {
   color: var(--tint-100);
+  display: inline-block;
   font-size: calc(var(--size-30) / var(--line-height-text));
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -293,6 +304,7 @@ h3,
     font-size: calc(calc(var(--size-40) + var(--size-5)) / var(--line-height-text));
   }
 
+  /* TODO: Check if this is doing anything */
   article li {
     font-size: calc(var(--size-40) / var(--line-height-text));
   }
@@ -581,13 +593,13 @@ section section {
   width: 100%;
 }
 
-.works li article {
+.works li .article {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-.works li:nth-child(odd) article {
+.works li:nth-child(odd) .article {
   display: flex;
   flex-direction: row-reverse;
 }
@@ -631,7 +643,7 @@ section section {
   margin-top: var(--size-20);
 }
 
-.works li article > div:last-child {
+.works li .article > div:last-child {
 }
 
 @media (max-width: 1024px) {
@@ -639,16 +651,16 @@ section section {
     max-width: 80rem;
   }
 
-  .works li article,
-  .works li:nth-child(odd) article {
+  .works li .article,
+  .works li:nth-child(odd) .article {
     flex-direction: column-reverse;
   }
 
-  .works li article .square:first-child::before {
+  .works li .article .square:first-child::before {
     display: none;
   }
 
-  .works li article .square:first-child > * {
+  .works li .article .square:first-child > * {
     height: auto;
     left: 0;
     position: relative;
@@ -662,7 +674,7 @@ section section {
     padding: var(--size-80) var(--size-20);
   }
 
-  .works li article .square:first-child > * {
+  .works li .article .square:first-child > * {
     padding: var(--size-40) var(--size-40);
   }
 }
@@ -751,6 +763,10 @@ body *.max-1000 {
 
 body *.max-1280 {
   max-width: 128rem;
+}
+
+body *.max-1440 {
+  max-width: 144rem;
 }
 
 body *.max-1920 {
@@ -892,14 +908,43 @@ nav.full {
   padding: var(--size-40) var(--size-80);
 }
 
+nav > * {
+  height: var(--size-40);
+  line-height: var(--size-40);
+}
+
+[data-template="home"] nav.full {
+  left: 0;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  translate: -50%;
+  z-index: 1;
+}
+
+nav .pages {
+  display: flex;
+  gap: 0.25em;
+}
+
 nav .pages a {
   font-variant: small-caps;
+  padding-inline: 0.5em;
   text-transform: lowercase;
 }
 
 @media (max-width: 640px) {
   nav.full {
     padding: var(--size-40);
+  }
+
+  nav .pages {
+    display: flex;
+    gap: 0;
+  }
+
+  nav .pages a {
+    padding-inline: 0.25em;
   }
 }
 
@@ -956,6 +1001,7 @@ a.experiments svg {
   display: flex;
   flex-direction: column;
   padding-bottom: var(--size-40);
+  padding-top: var(--size-120);
   position: relative;
   width: 100%;
 }
@@ -983,6 +1029,11 @@ a.experiments svg {
   min-height: calc(100svh - calc(calc(40px * 6) * 1));
   z-index: 2;
 }
+
+/* [data-template="home"] .cover header .flow > * {
+  padding-right: 0;
+  padding-right: 0;
+} */
 
 @media (max-width: 1279px) {
   [data-template="home"] .cover > header {
