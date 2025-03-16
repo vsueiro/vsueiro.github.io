@@ -372,6 +372,7 @@ hr::before {
   cursor: pointer;
   display: flex;
   flex-shrink: 0;
+  gap: 0.5rem;
   height: var(--size-50);
   padding: 0 2.5rem;
   white-space: nowrap;
