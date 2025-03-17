@@ -1066,14 +1066,14 @@ a.experiments svg {
 
 /* Cover (Work) */
 
-[data-template="work"] > header {
+[data-template="work"] header {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 0 var(--size-80);
 }
 
-[data-template="work"] > header p {
+[data-template="work"] header p {
   margin: var(--size-80) auto 0;
   text-align: center;
 }
@@ -1102,7 +1102,7 @@ a.experiments svg {
 }
 
 @media (max-width: 640px) {
-  [data-template="work"] > header {
+  [data-template="work"] header {
     padding: 0 0 var(--size-80);
   }
 }

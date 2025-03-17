@@ -18,637 +18,663 @@
     <nav class="full entrance">
       <a href="/">vsueiro</a>
     </nav>
+    <main>
+      <article>
+        <header class="full">
+          <div class="cover flow entrance max-1280" data-theme="vaccination">
+            <span class="label">World Health Organization — 2021</span>
+            <h1>Explaining Covid&#8209;19 Vaccination Benefits</h1>
+            <div class="square" data-device="laptop">
+              <figure>
+                <video autoplay muted loop playsinline>
+                  <source src="/media/portfolio/who/vaccination/chat-capacity.mp4" type="video/mp4" />
+                </video>
+                <figcaption class="screen-reader">
+                  A social media post simulates a chat between a person and
+                  <abbr title="World Health Organization">WHO</abbr>. It explains why vaccination is important to
+                  prevent hospitals from being overwhelmed, which leads to people (COVID&#8209;19 patients, but also
+                  other patients) being left untreated. To explain that, the video uses an analogy of a cup
+                  (representing the capacity of a hospital), which is overflown with colored balls. Every ball
+                  represents a patient. Those who fell outside of the cup represent patients who were not able to get
+                  treatment due to overcrowded hospitals.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
 
-    <header class="full">
-      <div class="cover flow entrance max-1280" data-theme="vaccination">
-        <span class="label">World Health Organization — 2021</span>
-        <h1>Explaining Covid&#8209;19 Vaccination Benefits</h1>
-        <div class="square" data-device="laptop">
-          <figure>
-            <video autoplay muted loop playsinline>
-              <source src="/media/portfolio/who/vaccination/chat-capacity.mp4" type="video/mp4" />
-            </video>
-            <figcaption class="screen-reader">
-              A social media post simulates a chat between a person and
-              <abbr title="World Health Organization">WHO</abbr>. It explains why vaccination is important to prevent
-              hospitals from being overwhelmed, which leads to people (COVID&#8209;19 patients, but also other patients)
-              being left untreated. To explain that, the video uses an analogy of a cup (representing the capacity of a
-              hospital), which is overflown with colored balls. Every ball represents a patient. Those who fell outside
-              of the cup represent patients who were not able to get treatment due to overcrowded hospitals.
-            </figcaption>
+          <div class="flow max-800">
+            <p>
+              With illustrated analogies & a friendly conversational tone, these short videos try to explain
+              <em>why</em> vaccination is important
+            </p>
+          </div>
+        </header>
+
+        <section>
+          <div class="flow max-800">
+            <h2>Overview</h2>
+
+            <p>
+              In November of 2021, I began a 4&#8209;month collaboration with the
+              <abbr title="World Health Organization">WHO</abbr> Regional Office for Europe
+              <a href="https://who.int/europe/" target="_blank">(WHO/Europe)</a> as a Data Visualization Consultant.
+            </p>
+
+            <p>
+              As part of the
+              <a
+                href="https://www.who.int/europe/teams/risk-communication--community-engagement-and-infodemic-management-(rci)-unit"
+                target="_blank"
+                >Risk Communication<span class="screen-reader">, Community Engagement and Infodemic Management</span></a
+              >
+              team, my goal was to <strong>turn raw technical data into stories</strong> and develop data visualizations
+              to illuminate new scientific evidence.
+            </p>
+
+            <p>
+              During my time there, I built internal tools, prototyped dozens of charts, and published 2 projects that I
+              want to highlight in this case study:
+            </p>
+
+            <ul class="list">
+              <li>Lives Saved</li>
+              <li>Chat with WHO <small>(the thumbnail one)</small></li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="flow max-800">
+            <h2>Outcomes</h2>
+
+            <p>
+              The deliverables for both those projects were short animated <i>videos</i> for social media – but here
+              you’ll also see some <i>behind-the-scenes</i>, like early sketches and prototypes.
+            </p>
+
+            <hr />
+
+            <h3>Lives Saved</h3>
+
+            <p>
+              I created animated charts and diagrams to communicate findings from a
+              <a href="https://doi.org/10.2807/1560-7917.ES.2021.26.47.2101021" target="_blank"
+                >study by WHO and ECDC</a
+              >
+              (European Centre for Disease Prevention and Control) that estimated over
+              <strong>470,000 lives had been saved</strong> by COVID&#8209;19 vaccination – in people over 60 years old
+              – throughout the European Region.
+            </p>
+
+            <p>
+              The final infographic looks <i>nothing</i> like the early prototype below, built in
+              <a href="https://observablehq.com/" target="_blank">Observable</a> ↓
+            </p>
+          </div>
+
+          <div class="square max-1280" data-device="laptop">
+            <figure>
+              <img
+                src="/media/portfolio/who/vaccination/laptop-observable-lives-saved.png"
+                alt="Screen capture of Observable platform used to prototype charts. It displays 32 small unit charts for lives saved in European countries, sorted by percentage and absolute numbers"
+              />
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              It was actually my first time using
+              <a href="https://observablehq.com/documentation/cells/observable-javascript" target="_blank"
+                >“Observable JavaScript”</a
+              >
+              – and sharing its
+              <a href="https://observablehq.com/documentation/notebooks/">interactive notebooks</a> with the team was
+              great for testing, as members could <b>play with different settings, colors, and filters</b>.
+            </p>
+
+            <p>
+              We ended up ditching the
+              <a href="https://en.wikipedia.org/wiki/Small_multiple" target="_blank">small multiple</a> approach with
+              <a href="https://datavizproject.com/data-type/percentage-grid/" target="_blank">waffle charts</a>, as it
+              was too detailed.
+            </p>
+
+            <p>
+              The solution? A simple chart describing 2 scenarios: how many people would have died <i>with</i> and
+              <i>without</i> vaccination.
+            </p>
+          </div>
+
+          <div class="flow max-1280">
+            <figure class="media">
+              <div class="group">
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/lives-saved-europe.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/lives-saved-scotland.png" alt="" />
+                </figure>
+              </div>
+              <figcaption>
+                Screenshots from video
+                <a href="https://x.com/WHO_Europe/status/1463918827876532228" target="_blank">posted on social media</a
+                >.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              This project has been viewed over <b>3 million</b> times on social media and was even
+              <a href="https://x.com/NicolaSturgeon/status/1463976460658651137" target="_blank">shared on Twitter</a> by
+              then <strong>First Minister of Scotland, Nicola Sturgeon</strong>.
+            </p>
+
+            <hr />
+
+            <h3>Chat with WHO</h3>
+
+            <p>
+              I also created a series of 2 videos with animated graphics to explain the benefits of vaccination and
+              protective measures against COVID&#8209;19.
+            </p>
+
+            <p>
+              The idea was to simulate a conversation between a person and WHO, using
+              <strong>analogies</strong> to convey the message.&nbsp;💬
+            </p>
+          </div>
+
+          <div class="flow max-1000">
+            <figure class="media">
+              <div class="group">
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/who/vaccination/sketch-full-capacity.png"
+                    alt="Sketch of hospital at full capacity (cup filled with circles, representing each patient)"
+                  />
+                </figure>
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/who/vaccination/sketch-over-capacity.png"
+                    alt="Sketch of hospital over capacity (cup overflown with circles, representing patients being left untreated)"
+                  />
+                </figure>
+              </div>
+              <figcaption>Hand-drawn sketches of the cup analogy, used to pitch the idea internally.</figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              In the final version, the overflowing circles are not all red. Instead, they are of different colors,
+              meaning not only COVID&#8209;19 patients would be left untreated, but also any other patients who needed
+              care.
+            </p>
+          </div>
+
+          <div class="square max-1280" data-device="laptop">
+            <figure>
+              <video autoplay muted loop playsinline style="background: #d8eef8">
+                <source src="/media/portfolio/who/vaccination/chat-capacity.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="screen-reader"></figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              Another video in this series was about additional protective measures, like wearing a mask. It illustrated
+              how protecting yourself could <b>prevent transmission</b> – and protect countless others.
+            </p>
+          </div>
+
+          <div class="flow max-1000">
+            <figure class="media">
+              <div class="group">
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/who/vaccination/sketch-spread.png"
+                    alt="Sketch of network graphs representing how one person infects others, who will infect others, and so in…"
+                  />
+                </figure>
+              </div>
+              <figcaption>
+                Hand-drawn sketches of the infection spreading, also used to pitch the idea to the team.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>The starting point for visualizing the spread of the disease was exactly that: a starting point.</p>
+            <p>
+              Considering that dot on the center, represening 1 person with COVID&#8209;19, transmits the disease to 2
+              other people, this is what a
+              <a href="https://flourish.studio/visualisations/network-charts/" target="_blank">network diagram</a> could
+              look like, after 5 cycles:
+            </p>
+          </div>
+
+          <div class="flow max-1280">
+            <figure class="media">
+              <div class="group">
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-1.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-2.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-3.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-4.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-5.png" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-6.png" alt="" />
+                </figure>
+              </div>
+              <figcaption>
+                Frames of the infection spreading (from 1 person to 2 more). Created on
+                <a href="https://flourish.studio/" target="_blank">Flourish</a> & edited on
+                <a href="https://www.figma.com/" target="_blank">Figma</a>.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-1280">
+            <figure class="media">
+              <div class="group">
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread.gif" alt="" />
+                </figure>
+                <figure class="media">
+                  <img src="/media/portfolio/who/vaccination/gif/spread-protections.gif" alt="" />
+                </figure>
+              </div>
+              <figcaption>
+                Animated versions of the graphics. In the 2<sup>nd</sup> one, whole branches of infections are
+                prevented. Created with <a href="https://ezgif.com/" target="_blank">ezgif.com</a>.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              As a side note, I created this network diagram connecting
+              <strong>data points that I generated in Python</strong>.
+            </p>
+            <p>
+              Each dot has a unique <code>Source</code> value, and it gets connected to the dots under the
+              <code>Target</code> column, like so:
+            </p>
+          </div>
+
+          <figure class="media">
+            <table class="scrollable">
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th>Target</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0</td>
+                  <td>01</td>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>02</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>011</td>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>012</td>
+                </tr>
+                <tr>
+                  <td>011</td>
+                  <td>0111</td>
+                </tr>
+                <tr>
+                  <td>011</td>
+                  <td>0112</td>
+                </tr>
+                <tr>
+                  <td>0111</td>
+                  <td>01111</td>
+                </tr>
+                <tr>
+                  <td>0111</td>
+                  <td>01112</td>
+                </tr>
+                <tr>
+                  <td>01111</td>
+                  <td>011111</td>
+                </tr>
+                <tr>
+                  <td>01111</td>
+                  <td>011112</td>
+                </tr>
+                <tr>
+                  <td>01112</td>
+                  <td>011121</td>
+                </tr>
+                <tr>
+                  <td>01112</td>
+                  <td>011122</td>
+                </tr>
+                <tr>
+                  <td>0112</td>
+                  <td>01121</td>
+                </tr>
+                <tr>
+                  <td>0112</td>
+                  <td>01122</td>
+                </tr>
+                <tr>
+                  <td>01121</td>
+                  <td>011211</td>
+                </tr>
+                <tr>
+                  <td>01121</td>
+                  <td>011212</td>
+                </tr>
+                <tr>
+                  <td>01122</td>
+                  <td>011221</td>
+                </tr>
+                <tr>
+                  <td>01122</td>
+                  <td>011222</td>
+                </tr>
+                <tr>
+                  <td>012</td>
+                  <td>0121</td>
+                </tr>
+                <tr>
+                  <td>012</td>
+                  <td>0122</td>
+                </tr>
+                <tr>
+                  <td>0121</td>
+                  <td>01211</td>
+                </tr>
+                <tr>
+                  <td>0121</td>
+                  <td>01212</td>
+                </tr>
+                <tr>
+                  <td>01211</td>
+                  <td>012111</td>
+                </tr>
+                <tr>
+                  <td>01211</td>
+                  <td>012112</td>
+                </tr>
+                <tr>
+                  <td>01212</td>
+                  <td>012121</td>
+                </tr>
+                <tr>
+                  <td>01212</td>
+                  <td>012122</td>
+                </tr>
+                <tr>
+                  <td>0122</td>
+                  <td>01221</td>
+                </tr>
+                <tr>
+                  <td>0122</td>
+                  <td>01222</td>
+                </tr>
+                <tr>
+                  <td>01221</td>
+                  <td>012211</td>
+                </tr>
+                <tr>
+                  <td>01221</td>
+                  <td>012212</td>
+                </tr>
+                <tr>
+                  <td>01222</td>
+                  <td>012221</td>
+                </tr>
+                <tr>
+                  <td>01222</td>
+                  <td>012222</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>021</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>022</td>
+                </tr>
+                <tr>
+                  <td>021</td>
+                  <td>0211</td>
+                </tr>
+                <tr>
+                  <td>021</td>
+                  <td>0212</td>
+                </tr>
+                <tr>
+                  <td>0211</td>
+                  <td>02111</td>
+                </tr>
+                <tr>
+                  <td>0211</td>
+                  <td>02112</td>
+                </tr>
+                <tr>
+                  <td>02111</td>
+                  <td>021111</td>
+                </tr>
+                <tr>
+                  <td>02111</td>
+                  <td>021112</td>
+                </tr>
+                <tr>
+                  <td>02112</td>
+                  <td>021121</td>
+                </tr>
+                <tr>
+                  <td>02112</td>
+                  <td>021122</td>
+                </tr>
+                <tr>
+                  <td>0212</td>
+                  <td>02121</td>
+                </tr>
+                <tr>
+                  <td>0212</td>
+                  <td>02122</td>
+                </tr>
+                <tr>
+                  <td>02121</td>
+                  <td>021211</td>
+                </tr>
+                <tr>
+                  <td>02121</td>
+                  <td>021212</td>
+                </tr>
+                <tr>
+                  <td>02122</td>
+                  <td>021221</td>
+                </tr>
+                <tr>
+                  <td>02122</td>
+                  <td>021222</td>
+                </tr>
+                <tr>
+                  <td>022</td>
+                  <td>0221</td>
+                </tr>
+                <tr>
+                  <td>022</td>
+                  <td>0222</td>
+                </tr>
+                <tr>
+                  <td>0221</td>
+                  <td>02211</td>
+                </tr>
+                <tr>
+                  <td>0221</td>
+                  <td>02212</td>
+                </tr>
+                <tr>
+                  <td>02211</td>
+                  <td>022111</td>
+                </tr>
+                <tr>
+                  <td>02211</td>
+                  <td>022112</td>
+                </tr>
+                <tr>
+                  <td>02212</td>
+                  <td>022121</td>
+                </tr>
+                <tr>
+                  <td>02212</td>
+                  <td>022122</td>
+                </tr>
+                <tr>
+                  <td>0222</td>
+                  <td>02221</td>
+                </tr>
+                <tr>
+                  <td>0222</td>
+                  <td>02222</td>
+                </tr>
+                <tr>
+                  <td>02221</td>
+                  <td>022211</td>
+                </tr>
+                <tr>
+                  <td>02221</td>
+                  <td>022212</td>
+                </tr>
+                <tr>
+                  <td>02222</td>
+                  <td>022221</td>
+                </tr>
+                <tr>
+                  <td>02222</td>
+                  <td>022222</td>
+                </tr>
+              </tbody>
+            </table>
+            <figcaption>Scroll table rows to see <i>very</i> interesting numbers</figcaption>
           </figure>
-        </div>
-      </div>
 
+          <div class="flow max-800">
+            <p>
+              You can see that the dot with source 0 (the one in the center of the diagram), is linked to 2 others (01
+              and 02).
+            </p>
+            <p>Anyways, this is how the visual narrative turned out:</p>
+          </div>
+
+          <div class="square max-1280" data-device="laptop">
+            <figure>
+              <video autoplay muted loop playsinline style="background: #f8e8da">
+                <source src="/media/portfolio/who/vaccination/chat-spread-crop.mp4" type="video/mp4" />
+              </video>
+              <figcaption class="screen-reader"></figcaption>
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>One cool thing is that these videos were generated from HTML elements.</p>
+
+            <p>
+              I naturally used CSS to style them, and JavaScript to make them dynamic (including
+              <a href="https://gsap.com/" target="_blank">GSAP</a> for timeline animation and
+              <a href="https://brm.io/matter-js/" target="_blank">matter.js</a> for physics).
+            </p>
+
+            <p>
+              But, essentially, being HTML elements means it’s easy to change the content of the simulated messages – as
+              well as to create versions in different languages.
+            </p>
+
+            <p>
+              So, in order to support country-specific teams, I created an <b>automated tool for translating</b> those
+              videos into other languages, like Georgian. 🇬🇪
+            </p>
+          </div>
+
+          <div class="square max-1280" data-device="laptop">
+            <figure>
+              <img
+                src="/media/portfolio/who/vaccination/laptop-sheets.png"
+                alt="Screen capture of Google Sheets used to organized translated content for the videos. It displays columns for English, Russian, and Georgian languages"
+              />
+            </figure>
+          </div>
+
+          <div class="flow max-800">
+            <p>
+              The (human) translator would add the contents of each message in a spreadsheet. The video would then be
+              populated with the translated messages and all animations would be re-generated.
+            </p>
+
+            <p>
+              As a bonus, this tool made the whole text editing process (even in English!) very fast and easy – which is
+              useful when editors make constant changes to the narrative.
+            </p>
+
+            <p>These videos achieved around <strong>10 million views</strong> across social media.</p>
+          </div>
+        </section>
+
+        <section>
+          <div class="flow max-800">
+            <h2>My Role</h2>
+
+            <ul class="list">
+              <li>Ideation</li>
+              <li>Prototyping</li>
+              <li>Design</li>
+              <li>Development</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="full">
       <div class="flow max-800">
-        <p>
-          With illustrated analogies & a friendly conversational tone, these short videos try to explain
-          <em>why</em> vaccination is important
-        </p>
-      </div>
-    </header>
-
-    <section>
-      <div class="flow max-800">
-        <header>
-          <h2>Overview</h2>
-        </header>
-
-        <p>
-          In November of 2021, I began a 4&#8209;month collaboration with the
-          <abbr title="World Health Organization">WHO</abbr> Regional Office for Europe
-          <a href="https://who.int/europe/" target="_blank">(WHO/Europe)</a> as a Data Visualization Consultant.
-        </p>
-
-        <p>
-          As part of the
-          <a
-            href="https://www.who.int/europe/teams/risk-communication--community-engagement-and-infodemic-management-(rci)-unit"
-            target="_blank"
-            >Risk Communication<span class="screen-reader">, Community Engagement and Infodemic Management</span></a
-          >
-          team, my goal was to <strong>turn raw technical data into stories</strong> and develop data visualizations to
-          illuminate new scientific evidence.
-        </p>
-
-        <p>
-          During my time there, I built internal tools, prototyped dozens of charts, and published 2 projects that I
-          want to highlight in this case study:
-        </p>
-
-        <ul class="list">
-          <li>Lives Saved</li>
-          <li>Chat with WHO <small>(the thumbnail one)</small></li>
+        <p class="select">&#104;&#105;&#64;&#118;&#115;&#117;&#101;&#105;&#114;&#111;&#46;&#99;&#111;&#109;</p>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/vsueiro" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/vsueiro.bsky.social" target="_blank">Bluesky</a>
+          </li>
+          <li>
+            <a href="https://github.com/vsueiro" target="_blank">GitHub</a>
+          </li>
         </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="flow max-800">
-        <header>
-          <h2>Outcomes</h2>
-        </header>
-
         <p>
-          The deliverables for both those projects were short animated <i>videos</i> for social media – but here you’ll
-          also see some <i>behind-the-scenes</i>, like early sketches and prototypes.
-        </p>
-
-        <hr />
-
-        <h3>Lives Saved</h3>
-
-        <p>
-          I created animated charts and diagrams to communicate findings from a
-          <a href="https://doi.org/10.2807/1560-7917.ES.2021.26.47.2101021" target="_blank">study by WHO and ECDC</a>
-          (European Centre for Disease Prevention and Control) that estimated over
-          <strong>470,000 lives had been saved</strong> by COVID&#8209;19 vaccination – in people over 60 years old –
-          throughout the European Region.
-        </p>
-
-        <p>
-          The final infographic looks <i>nothing</i> like the early prototype below, built in
-          <a href="https://observablehq.com/" target="_blank">Observable</a> ↓
+          Curiously enough, this website does not collect <i>any</i> data from you. No cookies, no trackers, nothing. I
+          care for my privacy — and I also care for yours.
         </p>
       </div>
+    </footer>
+  </body>
+</html>
 
-      <div class="square max-1280" data-device="laptop">
-        <figure>
-          <img
-            src="/media/portfolio/who/vaccination/laptop-observable-lives-saved.png"
-            alt="Screen capture of Observable platform used to prototype charts. It displays 32 small unit charts for lives saved in European countries, sorted by percentage and absolute numbers"
-          />
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          It was actually my first time using
-          <a href="https://observablehq.com/documentation/cells/observable-javascript" target="_blank"
-            >“Observable JavaScript”</a
-          >
-          – and sharing its <a href="https://observablehq.com/documentation/notebooks/">interactive notebooks</a> with
-          the team was great for testing, as members could <b>play with different settings, colors, and filters</b>.
-        </p>
-
-        <p>
-          We ended up ditching the
-          <a href="https://en.wikipedia.org/wiki/Small_multiple" target="_blank">small multiple</a> approach with
-          <a href="https://datavizproject.com/data-type/percentage-grid/" target="_blank">waffle charts</a>, as it was
-          too detailed.
-        </p>
-
-        <p>
-          The solution? A simple chart describing 2 scenarios: how many people would have died <i>with</i> and
-          <i>without</i> vaccination.
-        </p>
-      </div>
-
-      <div class="flow max-1280">
-        <figure class="media">
-          <div class="group">
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/lives-saved-europe.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/lives-saved-scotland.png" alt="" />
-            </figure>
-          </div>
-          <figcaption>
-            Screenshots from video
-            <a href="https://x.com/WHO_Europe/status/1463918827876532228" target="_blank">posted on social media</a>.
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          This project has been viewed over <b>3 million</b> times on social media and was even
-          <a href="https://x.com/NicolaSturgeon/status/1463976460658651137" target="_blank">shared on Twitter</a> by
-          then <strong>First Minister of Scotland, Nicola Sturgeon</strong>.
-        </p>
-
-        <hr />
-
-        <h3>Chat with WHO</h3>
-
-        <p>
-          I also created a series of 2 videos with animated graphics to explain the benefits of vaccination and
-          protective measures against COVID&#8209;19.
-        </p>
-
-        <p>
-          The idea was to simulate a conversation between a person and WHO, using
-          <strong>analogies</strong> to convey the message.&nbsp;💬
-        </p>
-      </div>
-
-      <div class="flow max-1000">
-        <figure class="media">
-          <div class="group">
-            <figure class="media">
-              <img
-                src="/media/portfolio/who/vaccination/sketch-full-capacity.png"
-                alt="Sketch of hospital at full capacity (cup filled with circles, representing each patient)"
-              />
-            </figure>
-            <figure class="media">
-              <img
-                src="/media/portfolio/who/vaccination/sketch-over-capacity.png"
-                alt="Sketch of hospital over capacity (cup overflown with circles, representing patients being left untreated)"
-              />
-            </figure>
-          </div>
-          <figcaption>Hand-drawn sketches of the cup analogy, used to pitch the idea internally.</figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          In the final version, the overflowing circles are not all red. Instead, they are of different colors, meaning
-          not only COVID&#8209;19 patients would be left untreated, but also any other patients who needed care.
-        </p>
-      </div>
-
-      <div class="square max-1280" data-device="laptop">
-        <figure>
-          <video autoplay muted loop playsinline style="background: #d8eef8">
-            <source src="/media/portfolio/who/vaccination/chat-capacity.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="screen-reader"></figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          Another video in this series was about additional protective measures, like wearing a mask. It illustrated how
-          protecting yourself could <b>prevent transmission</b> – and protect countless others.
-        </p>
-      </div>
-
-      <div class="flow max-1000">
-        <figure class="media">
-          <div class="group">
-            <figure class="media">
-              <img
-                src="/media/portfolio/who/vaccination/sketch-spread.png"
-                alt="Sketch of network graphs representing how one person infects others, who will infect others, and so in…"
-              />
-            </figure>
-          </div>
-          <figcaption>
-            Hand-drawn sketches of the infection spreading, also used to pitch the idea to the team.
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>The starting point for visualizing the spread of the disease was exactly that: a starting point.</p>
-        <p>
-          Considering that dot on the center, represening 1 person with COVID&#8209;19, transmits the disease to 2 other
-          people, this is what a
-          <a href="https://flourish.studio/visualisations/network-charts/" target="_blank">network diagram</a> could
-          look like, after 5 cycles:
-        </p>
-      </div>
-
-      <div class="flow max-1280">
-        <figure class="media">
-          <div class="group">
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-1.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-2.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-3.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-4.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-5.png" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-6.png" alt="" />
-            </figure>
-          </div>
-          <figcaption>
-            Frames of the infection spreading (from 1 person to 2 more). Created on
-            <a href="https://flourish.studio/" target="_blank">Flourish</a> & edited on
-            <a href="https://www.figma.com/" target="_blank">Figma</a>.
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-1280">
-        <figure class="media">
-          <div class="group">
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread.gif" alt="" />
-            </figure>
-            <figure class="media">
-              <img src="/media/portfolio/who/vaccination/gif/spread-protections.gif" alt="" />
-            </figure>
-          </div>
-          <figcaption>
-            Animated versions of the graphics. In the 2<sup>nd</sup> one, whole branches of infections are prevented.
-            Created with <a href="https://ezgif.com/" target="_blank">ezgif.com</a>.
-          </figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          As a side note, I created this network diagram connecting
-          <strong>data points that I generated in Python</strong>.
-        </p>
-        <p>
-          Each dot has a unique <code>Source</code> value, and it gets connected to the dots under the
-          <code>Target</code> column, like so:
-        </p>
-      </div>
-
-      <figure class="media">
-        <table class="scrollable">
-          <thead>
-            <tr>
-              <th>Source</th>
-              <th>Target</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0</td>
-              <td>01</td>
-            </tr>
-            <tr>
-              <td>0</td>
-              <td>02</td>
-            </tr>
-            <tr>
-              <td>01</td>
-              <td>011</td>
-            </tr>
-            <tr>
-              <td>01</td>
-              <td>012</td>
-            </tr>
-            <tr>
-              <td>011</td>
-              <td>0111</td>
-            </tr>
-            <tr>
-              <td>011</td>
-              <td>0112</td>
-            </tr>
-            <tr>
-              <td>0111</td>
-              <td>01111</td>
-            </tr>
-            <tr>
-              <td>0111</td>
-              <td>01112</td>
-            </tr>
-            <tr>
-              <td>01111</td>
-              <td>011111</td>
-            </tr>
-            <tr>
-              <td>01111</td>
-              <td>011112</td>
-            </tr>
-            <tr>
-              <td>01112</td>
-              <td>011121</td>
-            </tr>
-            <tr>
-              <td>01112</td>
-              <td>011122</td>
-            </tr>
-            <tr>
-              <td>0112</td>
-              <td>01121</td>
-            </tr>
-            <tr>
-              <td>0112</td>
-              <td>01122</td>
-            </tr>
-            <tr>
-              <td>01121</td>
-              <td>011211</td>
-            </tr>
-            <tr>
-              <td>01121</td>
-              <td>011212</td>
-            </tr>
-            <tr>
-              <td>01122</td>
-              <td>011221</td>
-            </tr>
-            <tr>
-              <td>01122</td>
-              <td>011222</td>
-            </tr>
-            <tr>
-              <td>012</td>
-              <td>0121</td>
-            </tr>
-            <tr>
-              <td>012</td>
-              <td>0122</td>
-            </tr>
-            <tr>
-              <td>0121</td>
-              <td>01211</td>
-            </tr>
-            <tr>
-              <td>0121</td>
-              <td>01212</td>
-            </tr>
-            <tr>
-              <td>01211</td>
-              <td>012111</td>
-            </tr>
-            <tr>
-              <td>01211</td>
-              <td>012112</td>
-            </tr>
-            <tr>
-              <td>01212</td>
-              <td>012121</td>
-            </tr>
-            <tr>
-              <td>01212</td>
-              <td>012122</td>
-            </tr>
-            <tr>
-              <td>0122</td>
-              <td>01221</td>
-            </tr>
-            <tr>
-              <td>0122</td>
-              <td>01222</td>
-            </tr>
-            <tr>
-              <td>01221</td>
-              <td>012211</td>
-            </tr>
-            <tr>
-              <td>01221</td>
-              <td>012212</td>
-            </tr>
-            <tr>
-              <td>01222</td>
-              <td>012221</td>
-            </tr>
-            <tr>
-              <td>01222</td>
-              <td>012222</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>021</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>022</td>
-            </tr>
-            <tr>
-              <td>021</td>
-              <td>0211</td>
-            </tr>
-            <tr>
-              <td>021</td>
-              <td>0212</td>
-            </tr>
-            <tr>
-              <td>0211</td>
-              <td>02111</td>
-            </tr>
-            <tr>
-              <td>0211</td>
-              <td>02112</td>
-            </tr>
-            <tr>
-              <td>02111</td>
-              <td>021111</td>
-            </tr>
-            <tr>
-              <td>02111</td>
-              <td>021112</td>
-            </tr>
-            <tr>
-              <td>02112</td>
-              <td>021121</td>
-            </tr>
-            <tr>
-              <td>02112</td>
-              <td>021122</td>
-            </tr>
-            <tr>
-              <td>0212</td>
-              <td>02121</td>
-            </tr>
-            <tr>
-              <td>0212</td>
-              <td>02122</td>
-            </tr>
-            <tr>
-              <td>02121</td>
-              <td>021211</td>
-            </tr>
-            <tr>
-              <td>02121</td>
-              <td>021212</td>
-            </tr>
-            <tr>
-              <td>02122</td>
-              <td>021221</td>
-            </tr>
-            <tr>
-              <td>02122</td>
-              <td>021222</td>
-            </tr>
-            <tr>
-              <td>022</td>
-              <td>0221</td>
-            </tr>
-            <tr>
-              <td>022</td>
-              <td>0222</td>
-            </tr>
-            <tr>
-              <td>0221</td>
-              <td>02211</td>
-            </tr>
-            <tr>
-              <td>0221</td>
-              <td>02212</td>
-            </tr>
-            <tr>
-              <td>02211</td>
-              <td>022111</td>
-            </tr>
-            <tr>
-              <td>02211</td>
-              <td>022112</td>
-            </tr>
-            <tr>
-              <td>02212</td>
-              <td>022121</td>
-            </tr>
-            <tr>
-              <td>02212</td>
-              <td>022122</td>
-            </tr>
-            <tr>
-              <td>0222</td>
-              <td>02221</td>
-            </tr>
-            <tr>
-              <td>0222</td>
-              <td>02222</td>
-            </tr>
-            <tr>
-              <td>02221</td>
-              <td>022211</td>
-            </tr>
-            <tr>
-              <td>02221</td>
-              <td>022212</td>
-            </tr>
-            <tr>
-              <td>02222</td>
-              <td>022221</td>
-            </tr>
-            <tr>
-              <td>02222</td>
-              <td>022222</td>
-            </tr>
-          </tbody>
-        </table>
-        <figcaption>Scroll table rows to see <i>very</i> interesting numbers</figcaption>
-      </figure>
-
-      <div class="flow max-800">
-        <p>
-          You can see that the dot with source 0 (the one in the center of the diagram), is linked to 2 others (01 and
-          02).
-        </p>
-        <p>Anyways, this is how the visual narrative turned out:</p>
-      </div>
-
-      <div class="square max-1280" data-device="laptop">
-        <figure>
-          <video autoplay muted loop playsinline style="background: #f8e8da">
-            <source src="/media/portfolio/who/vaccination/chat-spread-crop.mp4" type="video/mp4" />
-          </video>
-          <figcaption class="screen-reader"></figcaption>
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>One cool thing is that these videos were generated from HTML elements.</p>
-
-        <p>
-          I naturally used CSS to style them, and JavaScript to make them dynamic (including
-          <a href="https://gsap.com/" target="_blank">GSAP</a> for timeline animation and
-          <a href="https://brm.io/matter-js/" target="_blank">matter.js</a> for physics).
-        </p>
-
-        <p>
-          But, essentially, being HTML elements means it’s easy to change the content of the simulated messages – as
-          well as to create versions in different languages.
-        </p>
-
-        <p>
-          So, in order to support country-specific teams, I created an <b>automated tool for translating</b> those
-          videos into other languages, like Georgian. 🇬🇪
-        </p>
-      </div>
-
-      <div class="square max-1280" data-device="laptop">
-        <figure>
-          <img
-            src="/media/portfolio/who/vaccination/laptop-sheets.png"
-            alt="Screen capture of Google Sheets used to organized translated content for the videos. It displays columns for English, Russian, and Georgian languages"
-          />
-        </figure>
-      </div>
-
-      <div class="flow max-800">
-        <p>
-          The (human) translator would add the contents of each message in a spreadsheet. The video would then be
-          populated with the translated messages and all animations would be re-generated.
-        </p>
-
-        <p>
-          As a bonus, this tool made the whole text editing process (even in English!) very fast and easy – which is
-          useful when editors make constant changes to the narrative.
-        </p>
-
-        <p>These videos achieved around <strong>10 million views</strong> across social media.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="flow max-800">
-        <header>
-          <h2>My Role</h2>
-        </header>
-
-        <ul class="list">
-          <li>Ideation</li>
-          <li>Prototyping</li>
-          <li>Design</li>
-          <li>Development</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Hospital Occupancy 
+<!-- Hospital Occupancy 
     <iframe
       src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWHOEurope%2Fvideos%2F1879798598867016%2F&show_text=false&width=476&t=0"
       width="476"
@@ -662,7 +688,7 @@
     ></iframe>
     -->
 
-    <!-- Protective Measures 
+<!-- Protective Measures 
     <iframe
       src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FWHOEurope%2Fvideos%2F1566470917064310%2F&show_text=false&width=476&t=0"
       width="476"
@@ -676,7 +702,7 @@
     ></iframe>
     -->
 
-    <!--
+<!--
     <section>
       <div class="flow max-800">
         <header>
@@ -805,7 +831,7 @@
 
         -->
 
-    <!--
+<!--
         <div
           class="fb-video"
           data-href="https://www.facebook.com/WHOEurope/videos/lives-saved-due-to-covid-19-vaccination/973818590014265"
@@ -848,27 +874,4 @@
     https://twitter.com/NicolaSturgeon/status/1463976460658651137 Study
     https://www.ecdc.europa.eu/en/news-events/who-ecdc-nearly-half-million-lives-saved-covid-19-vaccination
     
-    -->
-
-    <footer class="full">
-      <div class="flow max-800">
-        <p class="select">&#104;&#105;&#64;&#118;&#115;&#117;&#101;&#105;&#114;&#111;&#46;&#99;&#111;&#109;</p>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/vsueiro" target="_blank">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://bsky.app/profile/vsueiro.bsky.social" target="_blank">Bluesky</a>
-          </li>
-          <li>
-            <a href="https://github.com/vsueiro" target="_blank">GitHub</a>
-          </li>
-        </ul>
-        <p>
-          Curiously enough, this website does not collect <i>any</i> data from you. No cookies, no trackers, nothing. I
-          care for my privacy — and I also care for yours.
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+-->
