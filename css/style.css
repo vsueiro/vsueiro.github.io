@@ -632,7 +632,7 @@ section section {
   width: 100%;
 }
 
-.square:not([data-theme]) > * {
+.works .square:not([data-theme]) > * {
   align-items: stretch;
   background: var(--tint-5);
   display: flex;
