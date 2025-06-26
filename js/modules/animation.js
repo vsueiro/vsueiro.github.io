@@ -58,8 +58,10 @@ for (let track of tracks) {
     // Gets the URL
     let url = event.target.dataset.href;
 
+    const target = url.startsWith("http") ? "_blank" : "_self";
+
     // Opens URL
-    window.open(url, "_self");
+    window.open(url, target);
   });
 }
 
