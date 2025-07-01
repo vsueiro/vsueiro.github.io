@@ -24,7 +24,7 @@ for (let item of items) {
       let url = anchor.href;
 
       // Opens URL
-      window.open(url, "_self");
+      window.open(url, anchor.target);
     }
   });
 }
