@@ -1,6 +1,8 @@
 // Rotator
 
-let ems = document.querySelectorAll("#rotator em");
+const span = document.querySelector("#rotator span");
+const ems = document.querySelectorAll("#rotator em");
+
 let current = 0;
 let timeout;
 
@@ -38,14 +40,17 @@ function getNextIndex() {
   return next;
 }
 
+// Change the em element after 5 seconds
+if (ems.length) timeout = setTimeout(showNext, 5000);
+
+// Change the em element on click
+if (span) span.addEventListener("click", showNext);
+
 // Get a random index, but not the same as the current one
 // function getRandomIndex(max, exclude) {
 //   let randomIndex = Math.floor(Math.random() * max);
 //   return randomIndex === exclude ? getRandomIndex(max, exclude) : randomIndex;
 // }
 
-// Change the em element after 5 seconds
-timeout = setTimeout(showNext, 5000);
 
-// Change the em element on click
-document.querySelector("#rotator span").addEventListener("click", showNext);
+
