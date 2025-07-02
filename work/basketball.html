@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="/media/share/favicon.png" />
     <link rel="stylesheet" href="/css/style.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js" defer></script>
     <script src="/js/script.js" type="module"></script>
   </head>
   <body data-template="work" data-entrance="false">
@@ -107,8 +108,55 @@
             </figure>
           </div>
 
-          <div class="flow max-800">
+          <div class="flow max-1000">
             <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+
+            <swiper-container
+              slides-per-view="1"
+              speed="1"
+              autoplay="true"
+              loop="true"
+              allow-touch-move="true"
+              effect="fade"
+              fade-effect-cross-fade="true" 
+              autoplay-disable-on-interaction="true"
+              pagination="true"
+            >
+              <swiper-slide data-swiper-autoplay="600">
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/personal/basketball/ui-1.png"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    <abbr title="User Interface">UI</abbr> version <b>1</b>
+                  </figcaption>
+                </figure>
+              </swiper-slide>
+              <swiper-slide data-swiper-autoplay="600">
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/personal/basketball/ui-2.png"
+                    loading="lazy"
+                  />
+                  <figcaption>
+                    <abbr title="User Interface">UI</abbr> version <b>2</b>
+                  </figcaption>
+                </figure>
+              </swiper-slide>
+              <swiper-slide data-swiper-autoplay="1200">
+                <figure class="media">
+                  <img
+                    src="/media/portfolio/personal/basketball/ui-3.png"
+                    loading="lazy"
+=                  />
+                  <figcaption>
+                    <abbr title="User Interface">UI</abbr> version <b>3</b> (final) ✨
+                  </figcaption>
+                </figure>
+              </swiper-slide>
+            </swiper-container>
+
           </div>
 
         </section>
