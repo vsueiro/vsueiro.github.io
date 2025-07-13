@@ -1,6 +1,8 @@
 /* Variables */
 
 :root {
+  color-scheme: light dark;
+
   --line-height-title: 1.2;
   --line-height-text: 1.5;
 
@@ -120,7 +122,7 @@ html {
 }
 
 *:focus-visible {
-  outline: var(--thickness) solid var(--tint-100);
+  outline: var(--thickness) solid light-dark( var(--tint-100), var(--tint-0) );
   outline-offset: var(--thickness);
 }
 
@@ -196,7 +198,7 @@ em {
 }
 
 body {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   font-family: "League Spartan", sans-serif;
   font-size: calc(var(--size-40) / var(--line-height-text));
   font-weight: 400;
@@ -206,18 +208,18 @@ body {
 .highlights li,
 p,
 figcaption {
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
 }
 
 p strong,
 figcaption strong,
 b {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   font-weight: bold;
 }
 
 [data-template="home"] header p {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
 }
 
 h1,
@@ -269,7 +271,7 @@ header .label,
 .header .label,
 h3,
 .button {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   display: inline-block;
   font-size: calc(var(--size-30) / var(--line-height-text));
   font-weight: 700;
@@ -318,7 +320,7 @@ hr {
 }
 
 hr::before {
-  background: var(--tint-5);
+  background: light-dark( var(--tint-5), var(--tint-90) );
   content: "";
   display: flex;
   height: var(--thickness);
@@ -326,6 +328,10 @@ hr::before {
 }
 
 /* Themes */
+
+html, body {
+  background-color: light-dark( var(--tint-0), var(--tint-100) );
+}
 
 [data-theme="epicenter"] {
   background: var(--theme-epicenter);
@@ -383,7 +389,7 @@ hr::before {
   align-items: center;
   align-self: flex-start;
   background: transparent;
-  border: var(--thickness) solid var(--tint-100);
+  border: var(--thickness) solid light-dark( var(--tint-100), var(--tint-0) );
   border-radius: 2.5rem;
   cursor: pointer;
   display: flex;
@@ -395,8 +401,8 @@ hr::before {
 }
 
 .button:not([disabled]):hover {
-  background: var(--tint-100);
-  color: var(--tint-0);
+  background: light-dark( var(--tint-100), var(--tint-0) );
+  color: light-dark( var(--tint-0), var(--tint-100) );
 }
 
 .button span {
@@ -409,8 +415,8 @@ hr::before {
 }
 
 .button[disabled] {
-  border: var(--thickness) dashed var(--tint-33);
-  color: var(--tint-33);
+  border: var(--thickness) dashed light-dark( var(--tint-33), var(--tint-66) );
+  color: light-dark( var(--tint-33), var(--tint-66) );
   pointer-events: none;
 }
 
@@ -424,7 +430,7 @@ a:not(.button) {
 }
 
 a:not(.button, .experiments)::after {
-  /* background: var(--tint-100);
+  /* background: light-dark( var(--tint-100), var(--tint-0) );
   bottom: 0.1em;
   content: "";
   display: flex;
@@ -436,17 +442,17 @@ a:not(.button, .experiments)::after {
 
 a:not(.button, .experiments):hover {
   /* opacity: 0.5; */
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
 }
 
 a.subtle {
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   font-size: var(--size-20);
   font-variant: all-small-caps;
 }
 
 a.subtle::after {
-  background: var(--tint-66);
+  background: light-dark( var(--tint-66), var(--tint-33) );
 }
 
 a.subtle:hover {
@@ -472,9 +478,9 @@ nav a:not(.button) {
 
 .clipboard > span {
   align-items: center;
-  background: var(--tint-5);
+  background: light-dark( var(--tint-5), var(--tint-90) );
   border-radius: 2.5rem;
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   cursor: text;
   display: flex;
   height: var(--size-50);
@@ -487,8 +493,8 @@ nav a:not(.button) {
 .clipboard.success button,
 .clipboard.success button:hover {
   animation: pulse ease-out 0.6s;
-  background: var(--tint-100);
-  color: var(--tint-0);
+  background: light-dark( var(--tint-100), var(--tint-0) );
+  color: light-dark( var(--tint-0), var(--tint-100) );
   pointer-events: none;
 }
 
@@ -518,7 +524,7 @@ footer,
 }
 
 .page {
-  background: var(--tint-0);
+  background: light-dark( var(--tint-0), var(--tint-100) );
   padding: var(--size-40) 0;
 }
 
@@ -535,7 +541,7 @@ footer,
 }
 
 swiper-container {
-  --swiper-theme-color: var(--tint-100);
+  --swiper-theme-color: light-dark( var(--tint-100), var(--tint-0) );
 
   margin: var(--size-20) var(--size-80);
 }
@@ -636,7 +642,7 @@ section section {
 
 .works .square:not([data-theme]) > * {
   align-items: stretch;
-  background: var(--tint-5);
+  background: light-dark( var(--tint-5), var(--tint-90) );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -968,7 +974,7 @@ nav .pages a {
 a.experiments {
   align-items: center;
   aspect-ratio: 1;
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   display: flex;
   font-weight: 700;
   justify-content: center;
@@ -1097,14 +1103,14 @@ a.experiments svg {
 
 [data-template="work"] .cover h1,
 [data-template="work"] .cover .label {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   max-width: 80rem;
   padding-bottom: 0;
 }
 
 [data-template="work"] .cover[data-theme] h1,
 [data-template="work"] .cover[data-theme] .label {
-  color: var(--tint-0);
+  color: light-dark( var(--tint-0), var(--tint-0) ); /* Always light */
 }
 
 @media (max-width: 640px) {
@@ -1129,7 +1135,7 @@ a.experiments svg {
 }
 
 .metrics li + li {
-  border-left: var(--thickness) solid var(--tint-5);
+  border-left: var(--thickness) solid light-dark( var(--tint-5), var(--tint-90) );
   margin-left: var(--size-20);
 }
 
@@ -1142,7 +1148,7 @@ a.experiments svg {
 }
 
 .metrics span {
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   text-align: center;
 }
 
@@ -1163,12 +1169,12 @@ blockquote {
 }
 
 blockquote p {
-  color: var(--tint-100);
+  color: light-dark( var(--tint-100), var(--tint-0) );
   font-weight: bold;
 }
 
 blockquote cite {
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   margin-top: var(--size-20);
 }
 
@@ -1190,14 +1196,14 @@ blockquote cite {
 /* Footer  */
 
 footer {
-  border-top: var(--thickness) solid var(--tint-5);
+  border-top: var(--thickness) solid light-dark( var(--tint-5), var(--tint-90) );
   margin-top: var(--size-120);
   padding-top: var(--size-40);
   text-align: center;
 }
 
 footer ul {
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1224,7 +1230,7 @@ footer li {
 
 .list {
   align-items: flex-end;
-  color: var(--tint-66);
+  color: light-dark( var(--tint-66), var(--tint-33) );
   display: flex;
   flex-direction: column;
   margin: var(--size-80) 0;
@@ -1280,7 +1286,7 @@ footer li {
 /* Animation */
 
 .animation {
-  background: var(--tint-5);
+  background: light-dark( var(--tint-5), var(--tint-90) );
   height: 100%;
   left: 0;
   overflow: hidden;
@@ -1330,118 +1336,12 @@ body *.animation-item {
   opacity: 0.5;
 }
 
-/* Dark mode */
-
-body[data-mode="dark"] {
-  background: var(--tint-100);
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] .highlights li,
-[data-mode="dark"] p,
-[data-mode="dark"] figcaption {
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] p strong,
-[data-mode="dark"] figcaption strong {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"][data-template="home"] header p {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] header .label,
-[data-mode="dark"] h3,
-[data-mode="dark"] .button {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] .button:not([disabled]):hover {
-  background: var(--tint-0);
-  color: var(--tint-100);
-}
-
-[data-mode="dark"] .button[disabled] {
-  border: var(--thickness) dashed var(--tint-66);
-  color: var(--tint-66);
-}
-
-[data-mode="dark"] a:not(.button) {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] a:not(.button, .experiments)::after {
-  background: var(--tint-0);
-}
-
-[data-mode="dark"] a.subtle {
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] a.subtle::after {
-  background: var(--tint-33);
-}
-
-[data-mode="dark"] .clipboard > span {
-  background: var(--tint-90);
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] .clipboard.success button,
-[data-mode="dark"] .clipboard.success button:hover {
-  background: var(--tint-0);
-  color: var(--tint-100);
-}
-
-[data-mode="dark"][data-template="work"] .cover h1,
-[data-mode="dark"][data-template="work"] .cover .label {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] .metrics span {
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] .metrics li + li {
-  border-left: var(--thickness) solid var(--tint-90);
-}
-
-[data-mode="dark"] blockquote p {
-  color: var(--tint-0);
-}
-
-[data-mode="dark"] blockquote cite {
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] .list {
-  color: var(--tint-33);
-}
-
-[data-mode="dark"] ::selection {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-[data-mode="dark"]] hr::before {
-  background: var(--tint-90);
-}
-
-[data-mode="dark"] .button {
-  border: var(--thickness) solid var(--tint-0);
-}
-
-[data-mode="dark"] footer {
-  border-top: var(--thickness) solid var(--tint-90);
-}
-
 /* Columns */
 
 .columns img,
 .columns video,
 .columns iframe {
-  background: var(--tint-90);
+  background: light-dark( var(--tint-90), var(--tint-10) );
   border: none;
   border-radius: var(--size-10);
   display: flex;
