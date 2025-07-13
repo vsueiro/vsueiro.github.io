@@ -155,7 +155,7 @@ html {
 /* Selection */
 
 ::selection {
-  background: rgba(0, 0, 0, 0.1);
+  background: light-dark( rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
 }
 
 /* Abbreviations */
@@ -277,15 +277,6 @@ h3,
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-}
-
-.badge {
-  background: rgba(128, 128, 128, 0.25);
-  border-radius: 4px;
-  font-size: smaller;
-  opacity: 0.5;
-  padding: 0.4em 0.4em 0.2em;
-  text-transform: initial;
 }
 
 @media (max-width: 768px) {
@@ -504,10 +495,10 @@ nav a:not(.button) {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 0rem light-dark( rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.5));
   }
   100% {
-    box-shadow: 0 0 0 2rem rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 2rem light-dark( rgba(0, 0, 0, 0), rgba(255, 255, 255, 0) );
   }
 }
 
