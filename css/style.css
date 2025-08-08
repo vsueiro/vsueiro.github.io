@@ -391,9 +391,11 @@ html, body {
   white-space: nowrap;
 }
 
-.button:not([disabled]):hover {
-  background: light-dark( var(--tint-100), var(--tint-0) );
-  color: light-dark( var(--tint-0), var(--tint-100) );
+@media (hover: hover) {
+  .button:not([disabled]):hover {
+    background: light-dark( var(--tint-100), var(--tint-0) );
+    color: light-dark( var(--tint-0), var(--tint-100) );
+  }
 }
 
 .button span {
@@ -431,9 +433,11 @@ a:not(.button, .experiments)::after {
   right: 0; */
 }
 
-a:not(.button, .experiments):hover {
-  /* opacity: 0.5; */
-  color: light-dark( var(--tint-100), var(--tint-0) );
+@media (hover: hover) {
+  a:not(.button, .experiments):hover {
+    /* opacity: 0.5; */
+    color: light-dark( var(--tint-100), var(--tint-0) );
+  }
 }
 
 a.subtle {
@@ -446,8 +450,10 @@ a.subtle::after {
   background: light-dark( var(--tint-66), var(--tint-33) );
 }
 
-a.subtle:hover {
-  opacity: 1;
+@media (hover: hover) {
+  a.subtle:hover {
+    opacity: 1;
+  }
 }
 
 nav a:not(.button) {
@@ -1323,8 +1329,10 @@ body *.animation-item {
   width: 20vw;
 }
 
-.animation-item:hover {
-  opacity: 0.5;
+@media (hover: hover) {
+  .animation-item:hover {
+    opacity: 0.5;
+  }
 }
 
 /* Columns */
