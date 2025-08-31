@@ -539,7 +539,6 @@ footer,
 
 swiper-container {
   --swiper-theme-color: light-dark( var(--tint-100), var(--tint-0) );
-
   margin: var(--size-20) var(--size-80);
 }
 
@@ -703,6 +702,24 @@ section section {
 .media.compact {
   align-items: start;
   margin: 1em 0;
+}
+
+swiper-container .media,
+swiper-container .media.compact {
+  margin: 0;
+}
+
+swiper-container:has(.media) {
+  margin-block: calc(var(--size-20) + var(--size-80));
+}
+
+swiper-container:has(.media.compact) {
+  margin-block: calc(var(--size-20) + 1em);
+}
+
+swiper-container::part(pagination) {
+  position: relative;
+  margin-block-start: var(--size-20);
 }
 
 .media img,
