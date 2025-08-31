@@ -539,6 +539,7 @@ footer,
 
 swiper-container {
   --swiper-theme-color: light-dark( var(--tint-100), var(--tint-0) );
+  --swiper-pagination-bullet-inactive-color: light-dark( var(--tint-100), var(--tint-0) );
   margin: var(--size-20) var(--size-80);
 }
 
