@@ -1217,6 +1217,7 @@ blockquote cite {
 
 .donate p {
   padding: 0;
+  margin-block-end: 1em;
 }
 
 /* Footer  */
