@@ -1208,6 +1208,17 @@ blockquote cite {
   width: calc(100% - var(--size-60));
 }
 
+/* Donate */
+
+.donate {
+  text-align: center;
+  margin-block-start: var(--size-40);
+}
+
+.donate p {
+  padding: 0;
+}
+
 /* Footer  */
 
 footer {
