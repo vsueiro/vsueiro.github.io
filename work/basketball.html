@@ -51,6 +51,34 @@
           </div>
         </header>
 
+        <!--
+        
+        What if could you look at your data from different angles, literally?
+
+        I’ve been playing with this 3D chart for NBA data. It shows every moment a team was leading (🟦) or trailing (🟥) during the season that just ended.
+
+        From one side, it’s a bar chart that shows the final point difference, and widest gaps during the game.
+
+        From the front, it’s looks like a line chart that shows early leads (and trails).
+
+        From the top, it’s a heat map where you can easily spot games when, say, a 4th quarter lead was blown.
+
+        Maybe it’s not easy to read, but it has been fun to explore. Love to hear your thoughts on it, as it is still a work in progress, *especially* the UI 😅
+
+        ---
+
+        I’ve been playing with this 3D chart for NBA data. It shows every moment a team was leading (🟦) or trailing (🟥) during the season – and the playoffs!
+
+        With the Finals starting in 30 minutes, why not take a moment to see how the Pacers and Thunder got here?
+
+        vsueiro[dot]com/hoop-hills
+
+        Feedback is welcome!
+
+        P.S. Desktop version has more features than the mobile one
+
+        -->
+
         <section>
           <div class="flow max-800">
             <h2>Context</h2>
@@ -85,20 +113,19 @@
               In this case, the red bars mean the Pistons were losing to the Heat — while the blue bars mean the Pistons were winning.
               The blue “mountain” on the right means the Pistons won, with a difference of 20-ish points.
             </p>
-
             <p>This is a good way to view the score of <strong>a game</strong> over time.</p>
-  
             <p>But what if we could view a team’s <strong>whole season</strong>?</p>
-            
           </div>
 
-          </div>
+          <!-- <p>As someone who loves data, I ended up gathering score data for all teams over a 10-year period, as you can explore in the tool</p> -->
+          <!-- <p>Hey, that was just one game! The Heat actually made it to the NBA finals that season!</p> -->
         </section>
 
         <section>
           <div class="flow max-800">
             <h2>Process</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse totam quis, velit veniam doloremque quos.</p>
+            <p>As you can imagine, I started sketching line charts. That should be our go-to for visualizing trends over time, right?</p>
+            <p>At first, I considered only using a snapshop of the scores by the end of each quarter, like the drawing on the left:</p>
           </div>
 
           <div class="flow max-800">
@@ -108,16 +135,32 @@
                 alt=""
                 loading="lazy"
               />
-              <figcaption>Caption goes here</figcaption>
+              <figcaption>Early sketches</figcaption>
             </figure>
           </div>
 
           <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
-          </div>
+            <p>But why stop there? Why not visualize <em>every</em> time the scoreboard changed? On the rightmost sketch above, those overlapping lines are precisely that.</p>
+            <p>So, just like the official tracker, I needed <strong>play-by-play</strong> data — which is a list of everything that happened in a game, along with the exact time it happened.</p>
+            <p>A great source of NBA data is <a href="https://basketball-reference.com/boxscores/pbp/202212060MIA.html" target="_blank">basketball-reference.com</a>. This link will take you to that Heat game, the first one I attended. See that huge table? That’s play-by-play data.</p>
+            <p>I then wrote a <a href="https://github.com/vsueiro/hoop-hills/blob/main/scraper/get-games.py">Python scraper</a> to automatically (and respectfully) extract those tables, turn them into a format I wanted, and save beautiful <code>.csv</code> in my <a href="https://github.com/vsueiro/hoop-hills" target="_blank">GitHub repo</a>.</p>
+            <p>I scraped every play, by every NBA teams, across all seasons since 2015. This amounts to:</p>
 
-          <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+            <ul class="metrics">
+              <li>
+                <strong>1.6M</strong> <!-- 3,317,680 datapoints / 2 -->
+                <span>Plays</span>
+              </li>
+              <li>
+                <strong>30</strong>
+                <span>Teams</span>
+              </li>
+              <li>
+                <strong>10+</strong>
+                <span>Seasons</span>
+              </li>
+            </ul>
+            
           </div>
 
           <div class="flow max-1000">
