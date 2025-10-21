@@ -35,50 +35,13 @@
                   and peak score differentials. Based on data from Basketball-Reference.com.
                 </figcaption>
               </figure>
-              </div>
+            </div>
           </div>
 
           <div class="flow max-800">
             <p>Exploring the peaks & valleys of NBA games with a 3D chart — where each angle provides new insights</p>
-            <!-- <ul class="highlights">
-              <li>
-                🎓 Part of my thesis on
-                <a href="https://urn.kb.se/resolve?urn=urn:nbn:se:mau:diva-45767" target="_blank"
-                  >Interactive Data Physicalizations</a
-                >
-              </li>
-            </ul> -->
           </div>
         </header>
-
-        <!--
-        
-        What if could you look at your data from different angles, literally?
-
-        I’ve been playing with this 3D chart for NBA data. It shows every moment a team was leading (🟦) or trailing (🟥) during the season that just ended.
-
-        From one side, it’s a bar chart that shows the final point difference, and widest gaps during the game.
-
-        From the front, it’s looks like a line chart that shows early leads (and trails).
-
-        From the top, it’s a heat map where you can easily spot games when, say, a 4th quarter lead was blown.
-
-        Maybe it’s not easy to read, but it has been fun to explore. Love to hear your thoughts on it, as it is still a work in progress, *especially* the UI 😅
-
-        ---
-
-        I’ve been playing with this 3D chart for NBA data. It shows every moment a team was leading (🟦) or trailing (🟥) during the season – and the playoffs!
-
-        With the Finals starting in 30 minutes, why not take a moment to see how the Pacers and Thunder got here?
-
-        vsueiro[dot]com/hoop-hills
-
-        Feedback is welcome!
-
-        P.S. Desktop version has more features than the mobile one
-
-        -->
-
         <section>
           <div class="flow max-800">
             <h2>Context</h2>
@@ -116,9 +79,6 @@
             <p>This is a good way to view the score of <strong>a game</strong> over time.</p>
             <p>But what if we could view a team’s <strong>whole season</strong>?</p>
           </div>
-
-          <!-- <p>As someone who loves data, I ended up gathering score data for all teams over a 10-year period, as you can explore in the tool</p> -->
-          <!-- <p>Hey, that was just one game! The Heat actually made it to the NBA finals that season!</p> -->
         </section>
 
         <section>
@@ -161,6 +121,8 @@
               </li>
             </ul>
             
+            <p>That’s a <em>lot</em> of numbers. How should I visualize all games of a season at once? How could interactivity help people navigate all those scores?</p>
+
           </div>
 
           <div class="flow max-1000">
@@ -170,12 +132,12 @@
                 alt=""
                 loading="lazy"
               />
-              <figcaption>Caption goes here</figcaption>
+              <figcaption>Sketches exploring interactions, from hover effects to camera movements</figcaption>
             </figure>
           </div>
 
           <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+            <p>One of my “shower ideas” was to visualize the whole thing in 3D, like a <a href="https://dataphys.org/list/gallery/" target="_blank">data physicalization</a>, but virtual.</p>
           </div>
 
           <div class="flow max-800">
@@ -183,50 +145,57 @@
               <video autoplay muted loop playsinline style="filter: contrast(.9) invert(1) hue-rotate(180deg)">
                 <source src="/media/portfolio/personal/basketball/heat-waves-640.mp4" type="video/mp4" />
               </video>
-              <figcaption>Lorem ipsum dolor sit amet</figcaption>
+              <figcaption>Early prototype of a <s>noodle</s> line chart with <a href="">three.js</a></figcaption>
             </figure>
           </div>
 
           <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+            <p>From my first coded prototypes, it was clear that, if I wanted to explore my chart in 3D without distortions due to <em>perspective</em>, I had to use an <a href="https://en.wikipedia.org/wiki/Orthographic_projection" target="_blank">orthographic</a> camera.</p>
+            <p>That camera creates “flat” views: objects far away would not seem smaller — they would be as big as closer ones. This provides a fair visual comparison, like a chart should.</p>
+            <p>In other words, I could build a single data “sculpture”, and it could resemble 3 different charts when viewed from 3 different angles:</p>
           </div>
 
-          <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
-          </div>
-
-          <!--
-          <div class="flow max-1000">
+          <div class="flow max-1200">
             <figure class="media">
               <div class="group">
                 <figure class="media">
                   <img
-                    src="/media/portfolio/personal/basketball/ui-1.png"
-                    alt=""
+                    src="/media/portfolio/personal/basketball/front.png"
+                    alt="Screen capture of front view"
                     loading="lazy"
                   />
                 </figure>
                 <figure class="media">
                   <img
-                    src="/media/portfolio/personal/basketball/ui-2.png"
-                    alt=""
+                    src="/media/portfolio/personal/basketball/side.png"
+                    alt="Screen capture of side view"
                     loading="lazy"
                   />
                 </figure>
                 <figure class="media">
                   <img
-                    src="/media/portfolio/personal/basketball/ui-3.png"
-                    alt=""
+                    src="/media/portfolio/personal/basketball/top.png"
+                    alt="Screen capture of top view"
                     loading="lazy"
                   />
                 </figure>
               </div>
               <figcaption>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit qui officia natus accusantium
+                Front, side, and top views of the Knicks’ 2024-25 season
               </figcaption>
             </figure>
           </div>
-          -->
+
+          <div class="flow max-800">
+            <p>From the front, it’s looks like a line chart that shows early leads (and trails).</p>
+            <p>From one side, it’s a bar chart that shows the final point difference, and widest gaps during the game.</p>
+            <p>From the top, it’s a heat map where you can easily spot games when, say, a 4th quarter lead was blown.</p>
+
+            <hr/>
+
+            <p>To make sense and explore all those angles and insights, the visual interface went through a lot of changes.</p>
+            <p>Since I’m both a designer and developer, I often enjoy creating functional prototypes early. That’s why the first <abbr title="User Interface">UI</abbr> was basically a raw HTML form. But it gets better:</p>
+          </div>
 
           <div class="flow max-1000">
 
@@ -279,11 +248,19 @@
           </div>
 
           <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+            <p>As time went by (and this was a 1+ year passion project), I kept refining the visual interface — focused on making it clearer, more consistent, and <em>balanced</em>.</p>
+            <p>Given the shape of the “terrain” created by those 3D bars, the corners of the screen offered the most precious real estate for interactive widgets. That’s what I embraced.</p>
           </div>
+        </section>
+        <section>
 
           <div class="flow max-800">
-            <p>Tempore quia quod harum sequi ducimus itaque rem perferendis eum non porro nemo fugiat aliquid.</p>
+            <h2>Project</h2>
+
+            <p>In the end, I believe this project answers a simple question:</p>
+            <p><em>“What if could you look at your data from different angles, literally?”</em></p>
+            <p>I spent over a year been playing with this 3D chart for NBA data. It (ambitiously) shows every moment a team was leading (🟦) or trailing (🟥) during a season.</p>
+            <p>And that means we can visually compare teams across a whole season. The differences are <em>especially</em> clear when we pick teams that performed very differently:</p>
           </div>
 
           <div class="flow max-1200">
@@ -293,10 +270,21 @@
                 alt=""
                 loading="lazy"
               />
-              <figcaption>Caption goes here</figcaption>
+              <figcaption>
+                Compare the amount of blue we see in certain teams during the 2024-25 season:
+                <br>
+                <abbr title="Oklahoma City Thunder">OKC</abbr> dominating, <abbr title="Washington Wizards">WAS</abbr> losing, and <abbr title="Miami Heat">MIA</abbr> being mid.</p>
+              </figcaption>
             </figure>
           </div>
-
+          <div class="flow max-800">
+            <p>But those are just a few teams I cherrypicked. Head to the <a href="https://vsueiro.com/hoop-hills/" target="_blank"><strong>Hoop Hills</strong></a> web app to explore the NBA on your own:</p>
+            <div class="call-to-action">
+              <a href="https://vsueiro.com/hoop-hills/" target="_blank" class="button"
+                ><span>Check it live</span></a
+              >
+            </div>
+          </div>
         </section>
       </article>
     </main>

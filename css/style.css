@@ -197,6 +197,10 @@ em {
   font-style: italic;
 }
 
+s {
+  text-decoration: line-through;
+}
+
 body {
   color: light-dark( var(--tint-100), var(--tint-0) );
   font-family: "League Spartan", sans-serif;
