@@ -1,7 +1,7 @@
 // Entrance effects
 
 // Gathers all elements to apply the transition
-const elements = document.querySelectorAll(".entrance, .flow > *, .works li");
+const elements = document.querySelectorAll(".entrance, .flow > *, .works li, [data-device]");
 
 // Stores if reduced motion accessibility setting is on
 const reducedMotion = window.matchMedia("(prefers-reduced-motion)").matches;
@@ -14,8 +14,9 @@ const hasHash = window.location.hash.length > 0;
 
 // Checks if accessibility setting is off and page is not scrolled
 if (!reducedMotion && !isScrolled && !hasHash) {
+
   // Defines arbitrary constant to calculate transition delay, in seconds
-  let basis = 1;
+  let basis = .4;
 
   // Loops through them
   for (let order = 1; order < elements.length; order++) {
@@ -37,4 +38,4 @@ if (!reducedMotion && !isScrolled && !hasHash) {
 setTimeout(() => {
   // Triggers transitions
   document.body.dataset.entrance = true;
-}, 500);
+}, 400);
