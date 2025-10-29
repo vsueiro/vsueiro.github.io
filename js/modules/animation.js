@@ -46,7 +46,7 @@ for (let track of tracks) {
   animate(track);
 
   // Starts animation again after it ends
-  track.addEventListener("animationend", () => {
+  track.addEventListener("animationend", (event) => {
     animate(event.target);
   });
 
