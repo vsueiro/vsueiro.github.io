@@ -38,6 +38,14 @@ class MeteorsScene extends Phaser.Scene {
     });
 
     this.mountains = new Mountains(this);
+
+    // Pause when reduced motion is on
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (reducedMotion.matches) this.scene.pause();
+    reducedMotion.addEventListener('change', (event) => {
+      if (event.matches) this.scene.pause();
+      else this.scene.resume();
+    });
   }
 
   update() {

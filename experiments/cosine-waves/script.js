@@ -33,7 +33,11 @@ function setup() {
   }
 }
 
+const reducedMotion = window.matchMedia('(prefers-reduced-motion)');
+
 function draw() {
+  if (reducedMotion.matches) return;
+
   for (let wave of waves) {
     wave.update();
     wave.render();

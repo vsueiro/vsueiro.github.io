@@ -72,12 +72,16 @@ const colors = [
 
 function setup() {
   createCanvas(w, h);
-  background(0);
+  background(colors.at(-1).code);
   noStroke();
   noiseDetail(2, 0.5);
 }
 
+const reducedMotion = window.matchMedia('(prefers-reduced-motion)');
+
 function draw() {
+  if (reducedMotion.matches) return;
+  
   t = millis() * 0.0001;
 
   for (let col = 0; col < w; col++) {
