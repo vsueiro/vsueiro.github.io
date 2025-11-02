@@ -1,4 +1,7 @@
 (function () {
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion)');
+
   let shuffle = {
     container: document.querySelector(".shuffle"),
 
@@ -48,6 +51,8 @@
     },
 
     auto: function () {
+      if (reducedMotion.matches) return;
+
       let count = 0;
 
       let interval = setInterval(function () {
