@@ -74,7 +74,7 @@ figure {
 
 a {
   color: inherit;
-  display: inline-flex;
+  display: inline;
   text-decoration: none;
 }
 
@@ -1242,6 +1242,10 @@ footer ul {
 
 footer li {
   margin: var(--size-10);
+}
+
+footer p img {
+  margin-inline: auto;
 }
 
 /* Embed */
